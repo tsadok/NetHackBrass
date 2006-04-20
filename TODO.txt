@@ -17,4 +17,21 @@ Desired Enhancements:
  * statuscolors or status_hilights
  * auto-open doors
  * annotate/overview
- 
+   + ad29017482 (quest portal)
+   + e03c14eeae10 (escape <-- you are here)
+   + 63a9879ebca (quoted annotations)
+   + bc19360ae0 (command help)
+   + 9b751e7d1ca8 (Guidebook)
+   + 3903381a2d1 (Astral temple ID, amnesia)
+   + c64036c97bd (quest portal)
+   + 29f9a8a33d (level numbers &c) [DO BY HAND]
+   + 4c3939bb767 (quest expulsion, endgame order)
+   + 6218a0eee2 (disclosure at game end)
+   + ec966362a6 (bits left out of 337e158009)
+   + 337e158009 (graves, bones, special levels)
+     - bones tracking may depend on b88c51deae5e8e, not sure.
+   + a7aaee910e (whitespace, bugfixes)
+   + 7c05c92eed99 (save/restore fix)
+   + 7333ca4705 (bones fix, fountain destruction)
+   + 0478af02b8 (build fix)
+   + 660d3589c57c (main commit)

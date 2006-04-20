@@ -1070,6 +1070,9 @@ mklev()
 {
 	struct mkroom *croom;
 
+#ifdef DUNGEON_OVERVIEW
+	init_mapseen(&u.uz);
+#endif
 	if(getbones()) return;
 	in_mklev = TRUE;
 	makelevel();
