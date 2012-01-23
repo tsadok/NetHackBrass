@@ -501,6 +501,15 @@ setrandom()
 #endif /* RAND_MT */
 }
 
+time_t
+getnow()
+{
+	time_t datetime = 0;
+
+	(void) time((time_t) &datetime);
+	return datetime;
+}
+
 static struct tm *
 getlt()
 {

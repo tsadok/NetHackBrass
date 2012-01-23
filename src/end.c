@@ -647,6 +647,7 @@ int how;
 	winid endwin = WIN_ERR;
 	boolean bones_ok, have_windows = iflags.window_inited;
 	struct obj *corpse = (struct obj *)0;
+	time_t endtime;
 	long umoney;
 
 	if (how == TRICKED) {
@@ -749,6 +750,11 @@ die:
          * game. */
         realtime_data.realtime = get_realtime();
 #endif /* RECORD_REALTIME */
+
+	/* remember time of death here instead of having bones, rip, and
+	   topten figure it out separately and possibly getting different
+           time or even day if player is slow responding to --More-- */
+	endtime = getnow();
 
 	/* Sometimes you die on the first move.  Life's not fair.
 	 * On those rare occasions you get hosed immediately, go out
@@ -879,7 +885,7 @@ die:
 #ifdef WIZARD
 	    if (!wizard || yn(E_J("Save bones?","骨ファイルを保存する？")) == 'y')
 #endif
-		savebones(corpse);
+		savebones(how, endtime, corpse);
 	    /* corpse may be invalid pointer now so
 		ensure that it isn't used again */
 	    corpse = (struct obj *)0;
@@ -906,7 +912,7 @@ die:
 		endwin = create_nhwindow(NHW_TEXT);
 
 	    if (how < GENOCIDED && flags.tombstone && endwin != WIN_ERR)
-		outrip(endwin, how);
+	      outrip(endwin, how, endtime);
 	} else
 	    done_stopprint = 1; /* just avoid any more output */
 
@@ -1110,15 +1116,11 @@ die:
 
 	/* "So when I die, the first thing I will see in Heaven is a
 	 * score list?" */
-	if (flags.toptenwin) {
-	    topten(how);
-	    if (have_windows)
-		exit_nhwindows((char *)0);
-	} else {
-	    if (have_windows)
-		exit_nhwindows((char *)0);
-	    topten(how);
-	}
+	if (have_windows && !flags.toptenwin)
+	    exit_nhwindows((char *)0), have_windows = FALSE;
+	topten(how, endtime);
+	if (have_windows)
+	    exit_nhwindows((char *)0);
 
 	if(done_stopprint) { raw_print(""); raw_print(""); }
 	terminate(EXIT_SUCCESS);

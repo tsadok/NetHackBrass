@@ -1,4 +1,4 @@
-/*	SCCS Id: @(#)rip.c	3.4	2003/01/08	*/
+/* NetHack 3.5	rip.c	$Date$  $Revision$ */
 /* Copyright (c) Stichting Mathematisch Centrum, Amsterdam, 1985. */
 /* NetHack may be freely redistributed.  See license for details. */
 
@@ -103,13 +103,15 @@ char *text;
 
 
 void
-genl_outrip(tmpwin, how)
+genl_outrip(tmpwin, how, when)
 winid tmpwin;
 int how;
+time_t when;
 {
 	register char **dp;
 	register char *dpx;
 	char buf[BUFSZ];
+	long year;
 	register int x;
 	int line;
 
@@ -135,33 +137,7 @@ int how;
 	center(GOLD_LINE, buf);
 
 	/* Put together death description */
-	switch (killer_format) {
-		default: impossible("bad killer format?");
-		case KILLED_BY_AN:
-#ifndef JP
-			Strcpy(buf, killed_by_prefix[how]);
-			Strcat(buf, an(killer));
-			break;
-#endif /*JP*/		/* fallthru for JP */
-		case KILLED_BY:
-#ifndef JP
-			Strcpy(buf, killed_by_prefix[how]);
-			Strcat(buf, killer);
-#else
-			Strcpy(buf, killer_buf_with_separator);
-			Strcat(buf, killed_by_prefix[how]);
-#endif /*JP*/
-			break;
-		case NO_KILLER_PREFIX:
-			Strcpy(buf, E_J(killer, killer_buf_with_separator));
-			break;
-#ifdef JP
-		case KILLED_SUFFIX:
-			Strcpy(buf, killer_buf_with_separator);
-			Strcat(buf, "ŽE‚³‚ê‚½");
-			break;
-#endif /*JP*/
-	}
+	formatkiller(buf, sizeof buf, how);
 
 	/* Put death type on stone */
 #ifndef JP
@@ -195,7 +171,8 @@ int how;
 #endif /*JP*/
 
 	/* Put year on stone */
-	Sprintf(buf, "%4d", getyear());
+	year = yyyymmdd(when) / 10000L;
+	Sprintf(buf, "%4ld", year);
 	center(YEAR_LINE, buf);
 
 	putstr(tmpwin, 0, "");

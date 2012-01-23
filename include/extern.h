@@ -124,7 +124,7 @@ E void NDECL(drag_down);
 /* ### bones.c ### */
 
 E boolean NDECL(can_make_bones);
-E void FDECL(savebones, (struct obj *));
+E void FDECL(savebones, (int,time_t,struct obj *));
 E int NDECL(getbones);
 
 /* ### botl.c ### */
@@ -782,6 +782,7 @@ E char *FDECL(strstri, (const char *,const char *));
 #endif
 E boolean FDECL(fuzzymatch, (const char *,const char *,const char *,BOOLEAN_P));
 E void NDECL(setrandom);
+E time_t NDECL(getnow);
 E int NDECL(getyear);
 #if 0
 E char *FDECL(yymmdd, (time_t));
@@ -1837,7 +1838,7 @@ E void FDECL(mread, (int,genericptr_t,unsigned int));
 
 /* ### rip.c ### */
 
-E void FDECL(genl_outrip, (winid,int));
+E void FDECL(genl_outrip, (winid,int,time_t));
 
 /* ### rnd.c ### */
 
@@ -1912,6 +1913,7 @@ E void FDECL(bufoff, (int));
 E void FDECL(bflush, (int));
 E void FDECL(bwrite, (int,genericptr_t,unsigned int));
 E void FDECL(bclose, (int));
+E void FDECL(def_bclose, (int));
 E void FDECL(savefruitchn, (int,int));
 E void NDECL(free_dungeons);
 E void NDECL(freedynamicdata);
@@ -2151,7 +2153,8 @@ E void FDECL(end_suffocation, (long));
 
 /* ### topten.c ### */
 
-E void FDECL(topten, (int));
+E void FDECL(formatkiller, (char *,unsigned,int));
+E void FDECL(topten, (int,time_t));
 E void FDECL(prscore, (int,char **));
 E struct obj *FDECL(tt_oname, (struct obj *));
 

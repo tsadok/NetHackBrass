@@ -18,6 +18,9 @@ extern void FDECL(substitute_tiles, (d_level *));       /* from tile.c */
 #ifdef ZEROCOMP
 static int NDECL(mgetc);
 #endif
+STATIC_DCL void NDECL(def_minit);
+STATIC_DCL void FDECL(def_mread, (int,genericptr_t,unsigned int));
+
 STATIC_DCL void NDECL(find_lev_obj);
 STATIC_DCL void FDECL(restlevchn, (int));
 STATIC_DCL void FDECL(restdamage, (int,BOOLEAN_P));
@@ -31,6 +34,28 @@ STATIC_DCL void FDECL(restlevelstate, (unsigned int, unsigned int));
 STATIC_DCL int FDECL(restlevelfile, (int,XCHAR_P));
 STATIC_DCL void FDECL(reset_oattached_mids, (BOOLEAN_P));
 STATIC_DCL struct monst *FDECL(id_to_monptr, (unsigned, struct monst *, BOOLEAN_P));
+STATIC_DCL void FDECL(restcemetery, (int));
+STATIC_DCL void FDECL(rest_levl, (int,BOOLEAN_P));
+
+static struct restore_procs {
+	const char *name;
+	int mread_flags;
+	void NDECL((*restore_minit));
+	void FDECL((*restore_mread), (int,genericptr_t,unsigned int));
+	void FDECL((*restore_bclose), (int));
+} restoreprocs = {
+#if !defined(ZEROCOMP) || (defined(COMPRESS) || defined(ZLIB_COMP))
+	"externalcomp", 0,
+	def_minit,
+	def_mread,
+	def_bclose,
+#else
+	"zerocomp", 0,
+	zerocomp_minit,
+	zerocomp_mread,
+	zerocomp_bclose,
+#endif
+};
 
 /*
  * Save a mapping of IDs from ghost levels to the current level.  This
@@ -711,6 +736,27 @@ register int fd;
 	return(1);
 }
 
+STATIC_OVL void
+restcemetery(fd)
+int fd;
+{
+    struct cemetery *bonesinfo, **bonesaddr;
+    int flag;
+
+    mread(fd, (genericptr_t)&flag, sizeof flag);
+    if (flag == 0) {
+	bonesaddr = &level.bonesinfo;
+	do {
+	    bonesinfo = (struct cemetery *)alloc(sizeof *bonesinfo);
+	    mread(fd, (genericptr_t)bonesinfo, sizeof *bonesinfo);
+	    *bonesaddr = bonesinfo;
+	    bonesaddr = &(*bonesaddr)->next;
+	} while (*bonesaddr);
+    } else {
+	level.bonesinfo = 0;
+    }
+}
+
 void
 trickery(reason)
 char *reason;
@@ -779,6 +825,7 @@ boolean ghostly;
 #endif
 	    trickery(trickbuf);
 	}
+	restcemetery(fd);
 
 #ifdef RLECOMP
 	{
@@ -1124,6 +1171,42 @@ register unsigned len;
 }
 
 #else /* ZEROCOMP */
+
+STATIC_OVL void
+def_minit()
+{
+    return;
+}
+
+STATIC_OVL void
+def_mread(fd, buf, len)
+register int fd;
+register genericptr_t buf;
+register unsigned int len;
+{
+	register int rlen;
+
+#if defined(BSD) || defined(ULTRIX)
+	rlen = read(fd, buf, (int) len);
+	if(rlen != len){
+#else /* e.g. SYSV, __TURBOC__ */
+	rlen = read(fd, buf, (unsigned) len);
+	if((unsigned)rlen != len){
+#endif
+	    if (restoreprocs.mread_flags == 1) { /* means "return anyway" */
+		restoreprocs.mread_flags = -1;
+		return;
+	    } else {
+		pline("Read %d instead of %u bytes.", rlen, len);
+		if(restoring) {
+			(void) close(fd);
+			(void) delete_savefile();
+			error("Error restoring old game.");
+		}
+		panic("Error reading level file.");
+	    }
+	}
+}
 
 void
 minit()

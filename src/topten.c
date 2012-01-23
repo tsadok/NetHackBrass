@@ -104,6 +104,47 @@ static winid toptenwin = WIN_ERR;
 static time_t deathtime = 0L;
 #endif
 
+/* "killed by",&c ["an"] 'killer.name' */
+void
+formatkiller(buf, siz, how)
+char *buf;
+unsigned siz;
+int how;
+{
+    unsigned l;
+
+    buf[0] = '\0'; /* so strncat() can find the end */
+    switch (killer_format) {
+    default:
+	    impossible("bad killer format? (%d)", killer_format);
+	    /*FALLTHRU*/
+    case KILLED_BY_AN:
+#ifndef JP
+			Strcpy(buf, killed_by_prefix[how]);
+			Strcat(buf, an(killer));
+			break;
+#endif /*JP*/		/* fallthru for JP */
+    case KILLED_BY:
+#ifndef JP
+			Strcpy(buf, killed_by_prefix[how]);
+			Strcat(buf, killer);
+#else
+			Strcpy(buf, killer_buf_with_separator);
+			Strcat(buf, killed_by_prefix[how]);
+#endif /*JP*/
+	    break;
+    case NO_KILLER_PREFIX:
+			Strcpy(buf, E_J(killer, killer_buf_with_separator));
+	    break;
+#ifdef JP
+		case KILLED_SUFFIX:
+			Strcpy(buf, killer_buf_with_separator);
+			Strcat(buf, "ŽE‚³‚ê‚½");
+			break;
+#endif /*JP*/
+    }
+}
+
 STATIC_OVL void
 topten_print(x)
 const char *x;
@@ -378,8 +419,9 @@ struct toptenentry *tt;
 }
 
 void
-topten(how)
+topten(how, when)
 int how;
+time_t when;
 {
 	int uid = getuid();
 	int rank, rank0 = -1, rank1 = 0;
@@ -455,53 +497,9 @@ int how;
 	(void) strncpy(t0->name, plname, NAMSZ);
 	t0->name[NAMSZ] = '\0';
 	t0->death[0] = '\0';
-	switch (killer_format) {
-		default: impossible("bad killer format?");
-		case KILLED_BY_AN:
-#ifndef JP
-			Strcat(t0->death, killed_by_prefix[how]);
-			(void) strncat(t0->death, an(killer),
-						DTHSZ-strlen(t0->death));
-			break;
-#endif /*JP*/		/* fallthru for JP */
-		case KILLED_BY:
-#ifndef JP
-			Strcat(t0->death, killed_by_prefix[how]);
-			(void) strncat(t0->death, killer,
-						DTHSZ-strlen(t0->death));
-#else
-			(void) strncat(t0->death, killer_buf_with_separator,
-						DTHSZ-strlen(t0->death));
-			(void) strncat(t0->death, killed_by_prefix[how],
-						DTHSZ-strlen(t0->death));
-#endif /*JP*/
-			break;
-		case NO_KILLER_PREFIX:
-			(void) strncat(t0->death, E_J(killer,killer_buf_with_separator), DTHSZ);
-			break;
-#ifdef JP
-		case KILLED_SUFFIX:
-			(void) strncat(t0->death, killer_buf_with_separator, DTHSZ);
-			Strcat(t0->death, "ŽE‚³‚ê‚½");
-			break;
-#endif /*JP*/
-	}
+	formatkiller(t0->death, sizeof t0->death, how);
 	t0->birthdate = yyyymmdd(u.ubirthday);
-
-#ifdef RECORD_START_END_TIME
-  /* Make sure that deathdate and deathtime refer to the same time; it
-   * wouldn't be good to have deathtime refer to the day after deathdate. */
-
-#if defined(BSD) && !defined(POSIX_TYPES)
-        (void) time((long *)&deathtime);
-#else
-        (void) time(&deathtime);
-#endif
-
-        t0->deathdate = yyyymmdd(deathtime);
-#else
-        t0->deathdate = yyyymmdd((time_t)0L);
-#endif /* RECORD_START_END_TIME */
+    t0->deathdate = yyyymmdd(when);
 
 	t0->tt_next = 0;
 #ifdef UPDATE_RECORD_IN_PLACE

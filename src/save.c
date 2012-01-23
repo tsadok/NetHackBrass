@@ -26,6 +26,7 @@ int dotcnt, dotrow;	/* also used in restore */
 STATIC_DCL void FDECL(bputc, (int));
 #endif
 STATIC_DCL void FDECL(savelevchn, (int,int));
+STATIC_DCL void FDECL(savecemetery, (int,int));
 STATIC_DCL void FDECL(savedamage, (int,int));
 STATIC_DCL void FDECL(saveobjchn, (int,struct obj *,int));
 STATIC_DCL void FDECL(savemonchn, (int,struct monst *,int));
@@ -494,6 +495,7 @@ int mode;
 #else
 	bwrite(fd,(genericptr_t) &lev,sizeof(lev));
 #endif
+	savecemetery(fd, mode);
 #ifdef RLECOMP
 	{
 	    /* perform run-length encoding of rm structs */
@@ -838,6 +840,27 @@ register int fd, mode;
 	}
 	if (release_data(mode))
 	    sp_levchn = 0;
+}
+
+STATIC_OVL void
+savecemetery(fd, mode)
+int fd;
+int mode;
+{
+    struct cemetery *thisbones, *nextbones;
+    int flag;
+
+    flag = level.bonesinfo ? 0 : -1;
+    if (perform_bwrite(mode))
+	bwrite(fd, (genericptr_t)&flag, sizeof flag);
+    nextbones = level.bonesinfo;
+    while ((thisbones = nextbones) != 0) {
+	nextbones = thisbones->next;
+	if (perform_bwrite(mode))
+	    bwrite(fd, (genericptr_t)thisbones, sizeof *thisbones);
+	if (release_data(mode))
+	    free((genericptr_t)thisbones);
+    }
 }
 
 STATIC_OVL void

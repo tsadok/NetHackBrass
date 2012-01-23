@@ -63,7 +63,7 @@ struct window_procs {
     void NDECL((*win_start_screen));
     void NDECL((*win_end_screen));
 
-    void FDECL((*win_outrip), (winid,int));
+    void FDECL((*win_outrip), (winid,int,time_t));
     void FDECL((*win_preference_update), (const char *));
 };
 
