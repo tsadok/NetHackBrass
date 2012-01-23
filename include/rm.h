@@ -497,6 +497,18 @@ struct damage {
 	schar typ;
 };
 
+/* for bones levels:  identify the dead character, who might have died on
+   an existing bones level; if so, most recent victim will be first in list */
+struct cemetery {
+	struct cemetery *next; /* next struct is previous dead character... */
+	/* "plname" + "-ROLe" + "-RACe" + "-GENder" + "-ALIgnment" + \0 */
+	char who[PL_NSIZ + 4*(1+3) + 1];
+	/* death reason, same as in score/log file */
+	char how[100 + 1]; /* [DTHSZ+1] */
+	/* date+time in string of digits rather than binary */
+	char when[4+2+2 + 2+2+2 + 1]; /* "YYYYMMDDhhmmss\0" */
+};
+
 struct levelflags {
 	uchar	nfountains;		/* number of fountains on level */
 	uchar	nsinks;			/* number of sinks on the level */
@@ -522,6 +534,9 @@ struct levelflags {
 	Bitfield(is_cavernous_lev,1);
 	Bitfield(arboreal, 1);		/* Trees replace rock */
 	Bitfield(nomongen, 1);		/* No monster generation */
+	Bitfield(wizard_bones,1);       /* set if level came from a bones file
+					   which was created in wizard mode (or
+					   normal mode descendant of such) */
 };
 
 typedef struct
@@ -547,6 +562,7 @@ typedef struct
     struct monst	*monlist;
     struct damage	*damagelist;
     struct cloud	*cloudlist;
+    struct cemetery     *bonesinfo;
     struct levelflags	flags;
 }
 dlevel_t;
