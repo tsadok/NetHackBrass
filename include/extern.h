@@ -1197,6 +1197,7 @@ E void FDECL(save_rooms, (int));
 E void FDECL(rest_rooms, (int));
 E struct mkroom *FDECL(search_special, (SCHAR_P));
 E struct permonst * NDECL(morguemon);
+E int FDECL(cmap_to_type, (int));
 
 /* ### mon.c ### */
 
