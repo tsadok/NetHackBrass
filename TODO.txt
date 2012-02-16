@@ -28,4 +28,3 @@ Desired Enhancements:
    + 29f9a8a33d (level numbers &c) [DO BY HAND]
    + 4c3939bb767 (quest expulsion, endgame order)
    + 6218a0eee2 (disclosure at game end)
-   + ec966362a6 (bits left out of 337e158009)
