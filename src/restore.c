@@ -34,7 +34,6 @@ STATIC_DCL void FDECL(restlevelstate, (unsigned int, unsigned int));
 STATIC_DCL int FDECL(restlevelfile, (int,XCHAR_P));
 STATIC_DCL void FDECL(reset_oattached_mids, (BOOLEAN_P));
 STATIC_DCL struct monst *FDECL(id_to_monptr, (unsigned, struct monst *, BOOLEAN_P));
-STATIC_DCL void FDECL(restcemetery, (int));
 STATIC_DCL void FDECL(rest_levl, (int,BOOLEAN_P));
 
 static struct restore_procs {
@@ -736,16 +735,17 @@ register int fd;
 	return(1);
 }
 
-STATIC_OVL void
-restcemetery(fd)
+void
+restcemetery(fd, cemeteryaddr)
 int fd;
+struct cemetery **cemeteryaddr;
 {
     struct cemetery *bonesinfo, **bonesaddr;
     int flag;
 
     mread(fd, (genericptr_t)&flag, sizeof flag);
     if (flag == 0) {
-	bonesaddr = &level.bonesinfo;
+	bonesaddr = cemeteryaddr;
 	do {
 	    bonesinfo = (struct cemetery *)alloc(sizeof *bonesinfo);
 	    mread(fd, (genericptr_t)bonesinfo, sizeof *bonesinfo);
@@ -753,7 +753,7 @@ int fd;
 	    bonesaddr = &(*bonesaddr)->next;
 	} while (*bonesaddr);
     } else {
-	level.bonesinfo = 0;
+	*cemeteryaddr = 0;
     }
 }
 
@@ -825,7 +825,7 @@ boolean ghostly;
 #endif
 	    trickery(trickbuf);
 	}
-	restcemetery(fd);
+	restcemetery(fd, &level.bonesinfo);
 
 #ifdef RLECOMP
 	{

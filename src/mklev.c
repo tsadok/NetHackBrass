@@ -1071,6 +1071,7 @@ void
 mklev()
 {
 	struct mkroom *croom;
+    int ridx;
 
 #ifdef DUNGEON_OVERVIEW
 	init_mapseen(&u.uz);
@@ -1095,6 +1096,10 @@ mklev()
 #endif
 	}
 	set_wall_state();
+    /* for many room types, rooms[].rtype is zeroed once the room has been
+       entered; rooms[].orig_rtype always retains original rtype value */
+    for (ridx = 0; ridx < SIZE(rooms); ridx++)
+        rooms[ridx].orig_rtype = rooms[ridx].rtype;
 }
 
 void

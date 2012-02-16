@@ -26,7 +26,6 @@ int dotcnt, dotrow;	/* also used in restore */
 STATIC_DCL void FDECL(bputc, (int));
 #endif
 STATIC_DCL void FDECL(savelevchn, (int,int));
-STATIC_DCL void FDECL(savecemetery, (int,int));
 STATIC_DCL void FDECL(savedamage, (int,int));
 STATIC_DCL void FDECL(saveobjchn, (int,struct obj *,int));
 STATIC_DCL void FDECL(savemonchn, (int,struct monst *,int));
@@ -495,7 +494,7 @@ int mode;
 #else
 	bwrite(fd,(genericptr_t) &lev,sizeof(lev));
 #endif
-	savecemetery(fd, mode);
+	savecemetery(fd, mode, &level.bonesinfo);
 #ifdef RLECOMP
 	{
 	    /* perform run-length encoding of rm structs */
@@ -842,18 +841,20 @@ register int fd, mode;
 	    sp_levchn = 0;
 }
 
-STATIC_OVL void
-savecemetery(fd, mode)
+/* used when saving a level and also when saving dungeon overview data */
+void
+savecemetery(fd, mode, cemeteryaddr)
 int fd;
 int mode;
+struct cemetery **cemeteryaddr;
 {
     struct cemetery *thisbones, *nextbones;
     int flag;
 
-    flag = level.bonesinfo ? 0 : -1;
+    flag = *cemeteryaddr ? 0 : -1;
     if (perform_bwrite(mode))
 	bwrite(fd, (genericptr_t)&flag, sizeof flag);
-    nextbones = level.bonesinfo;
+    nextbones = *cemeteryaddr;
     while ((thisbones = nextbones) != 0) {
 	nextbones = thisbones->next;
 	if (perform_bwrite(mode))
@@ -861,6 +862,8 @@ int mode;
 	if (release_data(mode))
 	    free((genericptr_t)thisbones);
     }
+    if (release_data(mode))
+	*cemeteryaddr = 0;
 }
 
 STATIC_OVL void

@@ -372,7 +372,12 @@ struct obj *corpse;
 		genders[flags.female].filecode,
 		aligns[1 - u.ualign.type].filecode);
 	formatkiller(newbones->how, sizeof newbones->how, how);
-	Strcpy(newbones->when, yyyymmdd(when));
+	Strcpy(newbones->when, yyyymmddhhmmss(when));
+#ifdef DUNGEON_OVERVIEW
+	/* final resting place, used to decide when bones are discovered */
+	newbones->frpx = u.ux, newbones->frpy = u.uy;
+	newbones->bonesknown = FALSE;
+#endif
 	/* if current character died on a bones level, the cememtery list
 	   will have multiple entries, most recent (this dead hero) first */
 	newbones->next = level.bonesinfo;

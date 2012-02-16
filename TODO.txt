@@ -16,6 +16,7 @@ Desired Enhancements:
  * showbuc
  * statuscolors or status_hilights
  * auto-open doors
+ * fixuporacle()
  * annotate/overview
    + ad29017482 (quest portal)
    + e03c14eeae10 (escape <-- you are here)
@@ -28,4 +29,3 @@ Desired Enhancements:
    + 4c3939bb767 (quest expulsion, endgame order)
    + 6218a0eee2 (disclosure at game end)
    + ec966362a6 (bits left out of 337e158009)
-   + 337e158009 (graves, bones, special levels)

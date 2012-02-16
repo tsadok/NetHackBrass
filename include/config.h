@@ -287,6 +287,13 @@ typedef signed char	schar;
 typedef unsigned char	uchar;
 #endif
 
+/* In the unlikely event struct tm * is wrong for your system, define
+   it to the right thing anywhere before this point, preferably inside
+   a #ifdef YOURWEIRDSYSTEM block. */
+#ifndef LOCALTIME_type
+#define LOCALTIME_type struct tm *
+#endif
+
 /*
  * Various structures have the option of using bitfields to save space.
  * If your C compiler handles bitfields well (e.g., it can initialize structs

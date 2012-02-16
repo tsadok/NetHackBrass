@@ -507,6 +507,8 @@ struct cemetery {
 	char how[100 + 1]; /* [DTHSZ+1] */
 	/* date+time in string of digits rather than binary */
 	char when[4+2+2 + 2+2+2 + 1]; /* "YYYYMMDDhhmmss\0" */
+    schar frpx, frpy;
+    boolean bonesknown;
 };
 
 struct levelflags {
@@ -529,8 +531,9 @@ struct levelflags {
 	Bitfield(hero_memory,1);	/* hero has memory */
 	Bitfield(shortsighted,1);	/* monsters are shortsighted */
 	Bitfield(graveyard,1);		/* has_morgue, but remains set */
-	Bitfield(is_maze_lev,1);
+    Bitfield(sokoban_rules, 1); /* fill pits and holes w/ boulders */
 
+	Bitfield(is_maze_lev,1);
 	Bitfield(is_cavernous_lev,1);
 	Bitfield(arboreal, 1);		/* Trees replace rock */
 	Bitfield(nomongen, 1);		/* No monster generation */

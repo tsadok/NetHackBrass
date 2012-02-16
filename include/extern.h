@@ -536,6 +536,8 @@ E int NDECL(dooverview);
 E void FDECL(forget_mapseen, (int));
 E void FDECL(init_mapseen, (d_level *));
 E void NDECL(recalc_mapseen);
+E void FDECL(mapseen_temple, (struct monst *));
+E void FDECL(room_discovered, (int));
 E void FDECL(recbranch_mapseen, (d_level *, d_level *));
 E void FDECL(remdun_mapseen, (int));
 #endif /* DUNGEON_OVERVIEW */
@@ -1826,6 +1828,7 @@ E void FDECL(restore_cloud, (int, long));
 
 E void FDECL(inven_inuse, (BOOLEAN_P));
 E int FDECL(dorecover, (int));
+E void FDECL(restcemetery, (int,struct cemetery **));
 E void FDECL(trickery, (char *));
 E void FDECL(getlev, (int,int,XCHAR_P,BOOLEAN_P));
 E void NDECL(minit);
@@ -1914,6 +1917,7 @@ E void FDECL(bflush, (int));
 E void FDECL(bwrite, (int,genericptr_t,unsigned int));
 E void FDECL(bclose, (int));
 E void FDECL(def_bclose, (int));
+E void FDECL(savecemetery, (int,int,struct cemetery **));
 E void FDECL(savefruitchn, (int,int));
 E void NDECL(free_dungeons);
 E void NDECL(freedynamicdata);

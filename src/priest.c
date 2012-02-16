@@ -138,6 +138,20 @@ register xchar x, y;
 	       on_level(&(EPRI(priest)->shrlevel), &u.uz)));
 }
 
+boolean
+inhistemple(priest)
+struct monst *priest;
+{
+    /* make sure we have a priest */
+    if (!priest || !priest->ispriest)
+        return FALSE;
+    /* priest must be on right level and in right room */
+    if (!histemple_at(priest, priest->mx, priest->my))
+        return FALSE;
+    /* temple room must still contain properly aligned altar */
+    return has_shrine(priest);
+}
+
 /*
  * pri_move: return 1: moved  0: didn't  -1: let m_move do it  -2: died
  */
@@ -417,6 +431,11 @@ register int roomno;
 		    else You(E_J("experience a strange sense of peace.",
 				 "不思議な安らぎに包まれた。"));
 		}
+#ifdef DUNGEON_OVERVIEW
+        /* recognize the Valley of the Dead and Moloch's Sanctum
+           once hero has encountered the temple priest on those levels */
+        mapseen_temple(priest);
+#endif
 	    } else {
 		switch(rn2(3)) {
 		  case 0: You(E_J("have an eerie feeling...","ぞっとした…。")); break;
