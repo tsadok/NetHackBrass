@@ -27,4 +27,3 @@ Desired Enhancements:
    + c64036c97bd (quest portal)
    + 29f9a8a33d (level numbers &c) [DO BY HAND]
    + 4c3939bb767 (quest expulsion, endgame order)
-   + 6218a0eee2 (disclosure at game end)

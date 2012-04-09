@@ -1977,8 +1977,9 @@ goodfruit:
 	/* things to disclose at end of game */
 	if (match_optname(opts, "disclose", 7, TRUE)) {
 		/*
-		 * The order that the end_disclore options are stored:
-		 * inventory, attribs, vanquished, genocided, conduct
+		 * The order that the end_disclose options are stored:
+		 *    inventory, attribs, vanquished, genocided,
+         *    conduct, overview
 		 * There is an array in flags:
 		 *	end_disclose[NUM_DISCLOSURE_OPT];
 		 * with option settings for the each of the following:
@@ -1999,6 +2000,7 @@ goodfruit:
 		boolean badopt = FALSE;
 		int idx, prefix_val;
 
+        //if (duplicate) complain_about_duplicate(opts,1);
 		op = string_for_opt(opts, TRUE);
 		if (op && negated) {
 			bad_negation("disclose", TRUE);
@@ -2018,7 +2020,6 @@ goodfruit:
 		num = 0;
 		prefix_val = -1;
 		while (*op && num < sizeof flags.end_disclose - 1) {
-			register char c, *dop;
 			static char valid_settings[] = {
 				DISCLOSE_PROMPT_DEFAULT_YES,
 				DISCLOSE_PROMPT_DEFAULT_NO,
@@ -2026,14 +2027,16 @@ goodfruit:
 				DISCLOSE_NO_WITHOUT_PROMPT,
 				'\0'
 			};
+			register char c, *dop;
+
 			c = lowc(*op);
 			if (c == 'k') c = 'v';	/* killed -> vanquished */
+            if (c == 'd') c = 'o';	/* dungeon -> overview */
 			dop = index(disclosure_options, c);
 			if (dop) {
 				idx = dop - disclosure_options;
 				if (idx < 0 || idx > NUM_DISCLOSURE_OPTIONS - 1) {
-				    impossible("bad disclosure index %d %c",
-							idx, c);
+				    impossible("bad disclosure index %d %c", idx, c);
 				    continue;
 				}
 				if (prefix_val != -1) {
@@ -2044,14 +2047,14 @@ goodfruit:
 			} else if (index(valid_settings, c)) {
 				prefix_val = c;
 			} else if (c == ' ') {
-				/* do nothing */
+				; /* do nothing */
 			} else
-				badopt = TRUE;				
+				badopt = TRUE;
 			op++;
 		}
 		if (badopt) badoption(opts);
 		return;
-	}
+	    }	    
 
 	/* scores:5t[op] 5a[round] o[wn] */
 	if (match_optname(opts, "scores", 4, TRUE)) {
@@ -2859,74 +2862,74 @@ boolean setinitial,setfromfile;
 	parseoptions(strcpy(buf, "pickup_types"), setinitial, setfromfile);
 	retval = TRUE;
     } else if (!strcmp("disclose", optname)) {
-	int pick_cnt, pick_idx, opt_idx;
-	menu_item *disclosure_category_pick = (menu_item *)0;
-	/*
-	 * The order of disclose_names[]
-         * must correspond to disclosure_options in decl.h
-         */
+	/* The order of disclose_names[] must correspond to
+       disclosure_options in decl.h */
 	static const char *disclosure_names[] = {
 #ifndef JP
-		"inventory", "attributes", "vanquished", "genocides", "conduct"
+		"inventory", "attributes", "vanquished", "genocides",
+        "conduct", "overview"
 #else
-		"所持品", "能力", "打倒した敵", "虐殺した敵", "自発的挑戦"
+		"所持品", "能力", "打倒した敵", "虐殺した敵",
+        "自発的挑戦", "地図の索引"
 #endif /*JP*/
 	};
 	int disc_cat[NUM_DISCLOSURE_OPTIONS];
-	const char *disclosure_name;
+	int pick_cnt, pick_idx, opt_idx;
+	menu_item *disclosure_pick = (menu_item *)0;
 
         tmpwin = create_nhwindow(NHW_MENU);
 	start_menu(tmpwin);
 	for (i = 0; i < NUM_DISCLOSURE_OPTIONS; i++) {
-		disclosure_name = disclosure_names[i];
+	    Sprintf(buf, "%-12s[%c%c]", disclosure_names[i],
+                flags.end_disclose[i], disclosure_options[i]);
 		any.a_int = i + 1;
-		add_menu(tmpwin, NO_GLYPH, &any, disclosure_options[i], 0,
-			 ATR_NONE, disclosure_name, MENU_UNSELECTED);
+	    add_menu(tmpwin, NO_GLYPH, &any, disclosure_options[i], 0,
+                 ATR_NONE, buf, MENU_UNSELECTED);
 		disc_cat[i] = 0;
-        }
+	}
 	end_menu(tmpwin, E_J("Change which disclosure options categories:",
 			     "どの開示オプションを変更しますか:"));
-	if ((pick_cnt = select_menu(tmpwin, PICK_ANY, &disclosure_category_pick)) > 0) {
+	pick_cnt = select_menu(tmpwin, PICK_ANY, &disclosure_pick);
+	if (pick_cnt > 0) {
 	    for (pick_idx = 0; pick_idx < pick_cnt; ++pick_idx) {
-		opt_idx = disclosure_category_pick[pick_idx].item.a_int - 1;
+		opt_idx = disclosure_pick[pick_idx].item.a_int - 1;
 		disc_cat[opt_idx] = 1;
 	    }
-	    free((genericptr_t)disclosure_category_pick);
-	    disclosure_category_pick = (menu_item *)0;
+	    free((genericptr_t)disclosure_pick);
+	    disclosure_pick = (menu_item *)0;
 	}
 	destroy_nhwindow(tmpwin);
 
 	for (i = 0; i < NUM_DISCLOSURE_OPTIONS; i++) {
 	    if (disc_cat[i]) {
-	    	char dbuf[BUFSZ];
-		menu_item *disclosure_option_pick = (menu_item *)0;
-		Sprintf(dbuf, E_J("Disclosure options for %s:",
+		Sprintf(buf, E_J("Disclosure options for %s:",
 				  "%sに対する開示オプション:"), disclosure_names[i]);
-	        tmpwin = create_nhwindow(NHW_MENU);
+        tmpwin = create_nhwindow(NHW_MENU);
 		start_menu(tmpwin);
+		any.a_void = 0; /* 3.6: any = zeroany; */
+        /* 'y','n',and '+' work as alternate selectors; '-' doesn't */
 		any.a_char = DISCLOSE_NO_WITHOUT_PROMPT;
-		add_menu(tmpwin, NO_GLYPH, &any, 'a', 0,
-			ATR_NONE,E_J("Never disclose and don't prompt",
+		add_menu(tmpwin, NO_GLYPH, &any, 'a', any.a_char, ATR_NONE,
+                 E_J("Never disclose and don't prompt",
 				     "常に開示しない"), MENU_UNSELECTED);
-		any.a_void = 0;
 		any.a_char = DISCLOSE_YES_WITHOUT_PROMPT;
-		add_menu(tmpwin, NO_GLYPH, &any, 'b', 0,
-			ATR_NONE,E_J("Always disclose and don't prompt",
+		add_menu(tmpwin, NO_GLYPH, &any, 'b', any.a_char, ATR_NONE,
+                 E_J("Always disclose and don't prompt",
 				     "常に開示する"), MENU_UNSELECTED);
-		any.a_void = 0;
 		any.a_char = DISCLOSE_PROMPT_DEFAULT_NO;
-		add_menu(tmpwin, NO_GLYPH, &any, 'c', 0,
-			ATR_NONE,E_J("Prompt and default answer to \"No\"",
-				     "開示するかどうか聞く(デフォルト:いいえ)"), MENU_UNSELECTED);
-		any.a_void = 0;
+		add_menu(tmpwin, NO_GLYPH, &any, 'c', any.a_char, ATR_NONE,
+                 E_J("Prompt, with default answer of \"No\"",
+				     "開示するかどうか聞く(デフォルト:いいえ)"),
+                 MENU_UNSELECTED);
 		any.a_char = DISCLOSE_PROMPT_DEFAULT_YES;
-		add_menu(tmpwin, NO_GLYPH, &any, 'd', 0,
-			ATR_NONE,E_J("Prompt and default answer to \"Yes\"",
-				     "開示するかどうか聞く(デフォルト:はい)"), MENU_UNSELECTED);
-		end_menu(tmpwin, dbuf);
-		if (select_menu(tmpwin, PICK_ONE, &disclosure_option_pick) > 0) {
-			flags.end_disclose[i] = disclosure_option_pick->item.a_char;
-			free((genericptr_t)disclosure_option_pick);
+		add_menu(tmpwin, NO_GLYPH, &any, 'd', any.a_char, ATR_NONE,
+                 E_J("Prompt, with default answer of \"Yes\"",
+				     "開示するかどうか聞く(デフォルト:はい)"),
+                 MENU_UNSELECTED);
+		end_menu(tmpwin, buf);
+		if (select_menu(tmpwin, PICK_ONE, &disclosure_pick) > 0) {
+			flags.end_disclose[i] = disclosure_pick->item.a_char;
+			free((genericptr_t)disclosure_pick);
 		}
 		destroy_nhwindow(tmpwin);
 	    }
@@ -3220,13 +3223,9 @@ char *buf;
 		Sprintf(buf, "%s", catname[0] ? catname : none );
 	else if (!strcmp(optname, "disclose")) {
 		for (i = 0; i < NUM_DISCLOSURE_OPTIONS; i++) {
-			char topt[2];
-			if (i) Strcat(buf," ");
-			topt[1] = '\0';
-			topt[0] = flags.end_disclose[i];
-			Strcat(buf, topt);
-			topt[0] = disclosure_options[i];
-			Strcat(buf, topt);
+		    if (i) (void) strkitten(buf, ' ');
+		    (void) strkitten(buf, flags.end_disclose[i]);
+		    (void) strkitten(buf, disclosure_options[i]);
 		}
 	}
 	else if (!strcmp(optname, "dogname")) 

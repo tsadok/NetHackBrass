@@ -102,7 +102,7 @@ extern const char * const killed_by_prefix[];	/* from topten.c */
 /*ARGSUSED*/
 void
 done1(sig_unused)   /* called as signal() handler, so sent at least one arg */
-int sig_unused;
+int sig_unused/* UNUSED */;
 {
 #ifndef NO_SIGNAL
 	(void) signal(SIGINT,SIG_IGN);
@@ -168,7 +168,7 @@ done2()
 /*ARGSUSED*/
 STATIC_PTR void
 done_intr(sig_unused) /* called as signal() handler, so sent at least one arg */
-int sig_unused;
+int sig_unused/* UNUSED */;
 {
 	done_stopprint++;
 	(void) signal(SIGINT, SIG_IGN);
@@ -357,16 +357,16 @@ panic VA_DECL(const char *, str)
 			WIZARD_NAME,
 #  else
 			WIZARD,
-#  endif
+#  endif /* WIZARD_NAME */
 			!program_state.something_worth_saving ? "" :
 			E_J(" and it may be possible to rebuild.",
 			    "再ビルドが必要かもしれません。"));
-# endif
+# endif /* NOTIFY_NETHACK_BUGS */
 	if (program_state.something_worth_saving) {
 	    set_error_savefile();
 	    (void) dosave0();
 	}
-#endif
+#endif /* WIZARD && MICRO */
 	{
 	    char buf[BUFSZ];
 	    Vsprintf(buf,str,VA_ARGS);
@@ -410,7 +410,7 @@ char *defquery;
 	} else if (flags.end_disclose[idx] == DISCLOSE_PROMPT_DEFAULT_YES) {
 	    *defquery = 'y';
 	    return TRUE;
-	} else if (flags.end_disclose[idx] == DISCLOSE_PROMPT_DEFAULT_NO) {
+	} else {
 	    *defquery = 'n';
 	    return TRUE;
 	}
@@ -431,10 +431,10 @@ boolean taken;
 	char	qbuf[QBUFSZ];
 	boolean ask;
 
-	if (invent) {
+	if (invent && !done_stopprint) {
 	    if(taken)
 #ifndef JP
-		Sprintf(qbuf,"Do you want to see what you had when you %s?",
+		Sprintf(qbuf, "Do you want to see what you had when you %s?",
 			(how == QUIT) ? "quit" : "died");
 #else
 		Sprintf(qbuf,"%s時点で何を持っていたか見ますか？",
@@ -445,7 +445,6 @@ boolean taken;
 				"持ち物を識別しますか？"));
 
 	    ask = should_query_disclose_option('i', &defquery);
-	    if (!done_stopprint) {
 		c = ask ? yn_function(qbuf, ynqchars, defquery) : defquery;
 		if (c == 'y') {
 			struct obj *obj;
@@ -456,13 +455,12 @@ boolean taken;
 			}
 			(void) display_inventory((char *)0, TRUE);
 			container_contents(invent, TRUE, TRUE);
-		}
-		if (c == 'q')  done_stopprint++;
-	    }
+        }
+	    if (c == 'q')  done_stopprint++;
 	}
 
-	ask = should_query_disclose_option('a', &defquery);
 	if (!done_stopprint) {
+	    ask = should_query_disclose_option('a', &defquery);
 	    c = ask ? yn_function(E_J("Do you want to see your attributes?",
 				      "属性を見ますか？"),
 				  ynqchars, defquery) : defquery;
@@ -471,21 +469,32 @@ boolean taken;
 	    if (c == 'q') done_stopprint++;
 	}
 
-	ask = should_query_disclose_option('v', &defquery);
-	if (!done_stopprint)
-	    list_vanquished(defquery, ask);
-
-	ask = should_query_disclose_option('g', &defquery);
-	if (!done_stopprint)
-	    list_genocided(defquery, ask);
-
-	ask = should_query_disclose_option('c', &defquery);
 	if (!done_stopprint) {
+	    ask = should_query_disclose_option('v', &defquery);
+	    list_vanquished(defquery, ask);
+	}
+
+	if (!done_stopprint) {
+	    ask = should_query_disclose_option('g', &defquery);
+	    list_genocided(defquery, ask);
+	}
+
+	if (!done_stopprint) {
+	    ask = should_query_disclose_option('c', &defquery);
 	    c = ask ? yn_function(E_J("Do you want to see your conduct?",
 				      "守った戒律について確認しますか？"),
 				  ynqchars, defquery) : defquery;
 	    if (c == 'y')
-		show_conduct(how >= PANICKED ? 1 : 2);
+		show_conduct((how >= PANICKED) ? 1 : 2);
+	    if (c == 'q') done_stopprint++;
+	}
+
+	if (!done_stopprint) {
+	    ask = should_query_disclose_option('o', &defquery);
+	    c = ask ? yn_function("Do you want to see the dungeon overview?",
+				  ynqchars, defquery) : defquery;
+	    if (c == 'y')
+		show_overview((how >= PANICKED) ? 1 : 2, how);
 	    if (c == 'q') done_stopprint++;
 	}
 }
@@ -781,6 +790,37 @@ die:
 	if (how == TURNED_SLIME)
 	    u.ugrave_arise = PM_GREEN_SLIME;
 
+	if (how == QUIT) {
+		killer_format = NO_KILLER_PREFIX;
+		if (u.uhp < 1) {
+			how = DIED;
+			u.umortality++;	/* skipped above when how==QUIT */
+			/* note that killer is pointing at kilbuf */
+			Strcpy(kilbuf, E_J("quit while already on Charon's boat",
+					"カロンの舟の上でゲームを放棄した"));
+		}
+	}
+	if (how == ESCAPED || how == PANICKED)
+		killer_format = NO_KILLER_PREFIX;
+
+	if (how != PANICKED) {
+	    /* these affect score and/or bones, but avoid them during panic */
+	    taken = paybill((how == ESCAPED) ? -1 : (how != QUIT));
+	    paygd();
+	    clearpriests();
+	} else
+	    taken = FALSE;	/* lint; assert( !bones_ok ); */
+
+	clearlocks();
+
+	if (have_windows) display_nhwindow(WIN_MESSAGE, FALSE);
+
+	if (strcmp(flags.end_disclose, "none") && how != PANICKED)
+	    disclose(how, taken);
+
+	/* finish_paybill should be called after disclosure but before bones */
+	if (bones_ok && taken) finish_paybill();
+
 	if (bones_ok && u.ugrave_arise < LOW_PM) {
 	    /* corpse gets burnt up too */
 	    if (how == BURNING)
@@ -825,35 +865,26 @@ die:
 		make_grave(u.ux, u.uy, pbuf);
 	    }
 	}
+	/* grave creation should be after disclosure so it doesn't have
+	   this grave in the current level's features for #overview */
+	if (bones_ok && u.ugrave_arise == NON_PM &&
+		!(mvitals[u.umonnum].mvflags & G_NOCORPSE)) {
+	    int mnum = u.umonnum;
 
-	if (how == QUIT) {
-		killer_format = NO_KILLER_PREFIX;
-		if (u.uhp < 1) {
-			how = DIED;
-			u.umortality++;	/* skipped above when how==QUIT */
-			/* note that killer is pointing at kilbuf */
-			Strcpy(kilbuf, E_J("quit while already on Charon's boat",
-					"カロンの舟の上でゲームを放棄した"));
-		}
+	    if (!Upolyd) {
+		/* Base corpse on race when not poly'd since original
+		 * u.umonnum is based on role, and all role monsters
+		 * are human.
+		 */
+		mnum = (flags.female && urace.femalenum != NON_PM) ?
+				urace.femalenum : urace.malenum;
+	    }
+	    corpse = mk_named_object(CORPSE, &mons[mnum],
+				     u.ux, u.uy, plname);
+	    Sprintf(pbuf, "%s, ", plname);
+	    formatkiller(eos(pbuf), sizeof pbuf - strlen(pbuf), how);
+	    make_grave(u.ux, u.uy, pbuf);
 	}
-	if (how == ESCAPED || how == PANICKED)
-		killer_format = NO_KILLER_PREFIX;
-
-	if (how != PANICKED) {
-	    /* these affect score and/or bones, but avoid them during panic */
-	    taken = paybill((how == ESCAPED) ? -1 : (how != QUIT));
-	    paygd();
-	    clearpriests();
-	} else	taken = FALSE;	/* lint; assert( !bones_ok ); */
-
-	clearlocks();
-
-	if (have_windows) display_nhwindow(WIN_MESSAGE, FALSE);
-
-	if (strcmp(flags.end_disclose, "none") && how != PANICKED)
-		disclose(how, taken);
-	/* finish_paybill should be called after disclosure but before bones */
-	if (bones_ok && taken) finish_paybill();
 
 	/* calculate score, before creating bones [container gold] */
 	{

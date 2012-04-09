@@ -240,6 +240,27 @@ visctrl(c)		/* make a displayable string from a character */
 }
 #endif /* OVLB */
 
+/* substitute a word or phrase in a string (in place) */
+/* caller is responsible for ensuring that bp points to big enough buffer */
+char *
+strsubst(bp, orig, replacement)
+char *bp;
+const char *orig, *replacement;
+{
+    char *found, buf[BUFSZ];
+
+    if (bp) {
+        /* [this could be replaced by strNsubst(bp, orig, replacement, 1)] */
+        found = strstr(bp, orig);
+        if (found) {
+            Strcpy(buf, found + strlen(orig));
+            Strcpy(found, replacement);
+            Strcat(bp, buf);
+        }
+    }
+    return bp;
+}
+
 #ifdef OVL2
 const char *
 ordin(n)		/* return the ordinal suffix of a number */
