@@ -1684,6 +1684,7 @@ invocation_message()
 			      E_J(makeplural(body_part(FOOT)), body_part(FOOT)));
 
 	    You_feel(E_J("a strange vibration %s.","%s‚ÉŠï–­‚ÈU“®‚ðŠ´‚¶‚½B"), buf);
+	    u.uevent.uvibrated = 1;
 	    if (otmp && otmp->spe == 7 && otmp->lamplit)
 #ifndef JP
 		pline("%s %s!", The(xname(otmp)),
