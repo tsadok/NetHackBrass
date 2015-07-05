@@ -2101,13 +2101,17 @@ mapseen *mptr;
 # ifdef REINCARNATION
 	mptr->flags.roguelevel ||
 # endif
-	mptr->flags.castle || mptr->flags.valley ||
-	mptr->flags.msanctum) return TRUE;
+	mptr->flags.castle || mptr->flags.valley || mptr->flags.msanctum
+        || mptr->flags.quest_summons || mptr->flags.questing)
+        return TRUE;
     /* when in Sokoban, list all sokoban levels visited; when not in it,
-       list any visited Sokoban level which remains unsolved (could only
-       be furthest one reached, unless level teleporting in wizard mode) */
+       list any visited Sokoban level which remains unsolved (will usually
+       only be furthest one reached, but it's possible to enter pits and
+       climb out on the far side on the first Sokoban level; also, wizard
+       mode overrides teleport restrictions) */
     if (In_sokoban(&mptr->lev) &&
-	(In_sokoban(&u.uz) || !mptr->flags.sokosolved)) return TRUE;
+        (In_sokoban(&u.uz) || !mptr->flags.sokosolved))
+        return TRUE;
     /* when in the endgame, list all endgame levels visited, whether they
        have annotations or not, so that #overview doesn't become extremely
        sparse once the rest of the dungeon has been flagged as unreachable */
@@ -2172,6 +2176,14 @@ recalc_mapseen()
     mptr->flags.castletune = 0;
     /* flags.castle, flags.valley, flags.msanctum retain previous value */
     mptr->flags.forgot = 0;
+    /* flags.quest_summons disabled once quest finished */
+    mptr->flags.quest_summons = (at_dgn_entrance("The Quest")
+                                 && u.uevent.qcalled
+                                 && !(u.uevent.qcompleted
+                                      || u.uevent.qexpelled
+                                      || quest_status.leader_is_dead));
+    mptr->flags.questing = (on_level(&u.uz, &qstart_level)
+                            && quest_status.got_quest);
 
     /* track rooms the hero is in */
     for (i = 0; i < SIZE(u.urooms); ++i) {
@@ -2446,8 +2458,7 @@ br_string2(br)
 branch *br;
 {
     /* Special case: quest portal says closed if kicked from quest */
-    boolean closed_portal = 
-			(br->end2.dnum == quest_dnum && u.uevent.qexpelled);
+    boolean closed_portal = (br->end2.dnum == quest_dnum && u.uevent.qexpelled);
 
     switch (br->type) {
     case BR_PORTAL:  return closed_portal ? "Sealed portal" : "Portal";
@@ -2679,9 +2690,15 @@ boolean printdun;
     } else if (mptr->flags.roguelevel) {
 	Sprintf(buf, "%sA primitive area.", PREFIX);
 # endif
+    } else if (mptr->flags.quest_summons) {
+        Sprintf(buf, "%sSummoned by %s.", PREFIX, ldrname());
     } else if (on_level(&mptr->lev, &qstart_level)) {
-	Sprintf(buf, "%sHome%s.", PREFIX,
-		mptr->flags.unreachable ? " (no way back...)" : "");
+        Sprintf(buf, "%sHome%s.", PREFIX,
+                mptr->flags.unreachable ? " (no way back...)" : "");
+        if (u.uevent.qcompleted)
+            Sprintf(buf, "%sCompleted quest for %s.", PREFIX, ldrname());
+        else if (mptr->flags.questing)
+            Sprintf(buf, "%sGiven quest by %s.", PREFIX, ldrname());
     } else if (mptr->flags.ludios) {
 	/* presence of the ludios branch in #overview output indicates that
 	   the player has made it onto the level; presence of this annotation
