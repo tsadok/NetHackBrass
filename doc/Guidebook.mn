@@ -702,6 +702,17 @@ compiled with.
 Adjust inventory letters (most useful when the
 .op fixinv
 option is ``on'').
+.lp ""
+This command allows you to move an item from one particular inventory
+slot to another so that it has a letter which is more meaningful for you
+or that it will appear in a particular location when inventory listings
+are displayed.
+``#adjust'' can also be used to split a stack of objects; when
+choosing the item to adjust, enter a count prior to its letter.
+.lp #annotate
+Allows you to specify one line of text to associate with the current
+dungeon level.  All levels with annotations are displayed by the
+``#overview'' command.
 .lp #chat
 Talk to someone.
 .lp #conduct
@@ -726,13 +737,23 @@ Use a monster's special ability (when polymorphed into monster form).
 Name an item or type of object.
 .lp #offer
 Offer a sacrifice to the gods.
+.lp ""
+You'll need to find an altar to have any chance at success.
+Corpses of recently killed monsters are the fodder of choice.
+.lp #overview
+Display information you've discovered about the dungeon.  Any visited
+level (unless forgotten due to amnesia) with an annotation is included,
+and many things (altars, thrones, fountains, and so on; extra stairs
+leading to another dungeon branch) trigger an automatic annotation.
+If dungeon overview is chosen during end-of-game disclosure, every visited
+level will be included regardless of annotations.
 .lp #pray
 Pray to the gods for help.
 .lp #quit
 Quit the program without saving your game.
 .lp #ride
-Ride (or stop riding) a monster.
-.lp #rub
+Ride (or stop riding) a saddled creature.
+.lp "#rub "
 Rub a lamp or a stone.
 .lp #sit
 Sit down.
@@ -766,6 +787,8 @@ can be used in this fashion.
 #twoweapon (unless the number_pad option is enabled)
 .lp M-a
 #adjust
+.lp M-A
+#annotate
 .lp M-c
 #chat
 .lp M-d
@@ -786,12 +809,16 @@ can be used in this fashion.
 #name
 .lp M-o
 #offer
+.lp M-O
+#overview
 .lp M-p
 #pray
 .lp M-q
 #quit
 .lp M-r
 #rub
+.lp M-R
+#ride
 .lp M-s
 #sit
 .lp M-t

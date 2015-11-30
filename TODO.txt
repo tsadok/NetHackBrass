@@ -22,4 +22,3 @@ Desired Enhancements:
    + e03c14eeae10 (escape <-- you are here)
    + 63a9879ebca (quoted annotations)
    + bc19360ae0 (command help)
-   + 9b751e7d1ca8 (Guidebook)

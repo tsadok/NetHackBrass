@@ -895,6 +895,11 @@ Adjust inventory letters (most useful when the
 {\it fixinv\/}
 option is ``on'').
 %.lp
+\item[\tb{\#annotate}]
+Allows you to specify one line of text to associate with the current
+dungeon level.  All levels with annotations are displayed by the
+``{\tt \#overview}'' command.
+%.lp
 \item[\tb{\#chat}]
 Talk to someone.
 %.lp
@@ -930,6 +935,14 @@ Name an item or type of object.
 \item[\tb{\#offer}]
 Offer a sacrifice to the gods.
 %.lp
+\item[\tb{\#overview}]
+Display information you've discovered about the dungeon.  Any visited
+level (unless forgotten due to amnesia) with an annotation is included,
+and many things (altars, thrones, fountains, and so on; extra stairs
+leading to another dungeon branch) trigger an automatic annotation.
+If dungeon overview is chosen during end-of-game disclosure, every visited
+level will be included regardless of annotations.
+%.lp
 \item[\tb{\#pray}]
 Pray to the gods for help.
 %.lp
@@ -937,7 +950,7 @@ Pray to the gods for help.
 Quit the program without saving your game.
 %.lp
 \item[\tb{\#ride}]
-Ride (or stop riding) a monster.
+Ride (or stop riding) a saddled creature.
 %.lp
 \item[\tb{\#rub}]
 Rub a lamp or a stone.
@@ -987,6 +1000,9 @@ the `Alt' key can be used in this fashion.
 \item[\tb{M-a}]
 {\tt\#adjust}
 %.lp
+\item[\tb{M-A}]
+{\tt\#annotate}
+%.lp
 \item[\tb{M-c}]
 {\tt\#chat}
 %.lp
@@ -1017,6 +1033,9 @@ the `Alt' key can be used in this fashion.
 \item[\tb{M-o}]
 {\tt\#offer}
 %.lp
+\item[\tb{M-O}]
+{\tt\#overview}
+%.lp
 \item[\tb{M-p}]
 {\tt\#pray}
 %.Ip
@@ -1025,6 +1044,9 @@ the `Alt' key can be used in this fashion.
 %.lp
 \item[\tb{M-r}]
 {\tt\#rub}
+%.lp
+\item[\tb{M-R}]
+{\tt\#ride}
 %.lp
 \item[\tb{M-s}]
 {\tt\#sit}
