@@ -648,6 +648,8 @@ forget_map(howmuch)
 #ifdef DUNGEON_OVERVIEW
 		lastseentyp[zx][zy] = STONE;
 #endif
+        /* forget overview data for this level */
+        forget_mapseen(ledger_no(&u.uz));
 	    }
 }
 

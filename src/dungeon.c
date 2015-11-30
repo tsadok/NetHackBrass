@@ -1885,6 +1885,17 @@ d_level *dest;
     }
 }
 
+char *
+get_annotation(lev)
+d_level *lev;
+{
+    mapseen *mptr;
+
+    if ((mptr = find_mapseen(lev)))
+        return mptr->custom;
+    return NULL;
+}
+
 /* #annotate command - add a custom name to the current level */
 int
 donamelevel()
@@ -2298,7 +2309,10 @@ recalc_mapseen()
 		if (count <= 3) mptr->feat.ngrave = count;
 		break;
 	    case ALTAR:
-		atmp = Amask2msa(levl[x][y].altarmask);
+                atmp = (Is_astralevel(&u.uz)
+                        && (levl[x][y].seenv & SVALL) != SVALL)
+                         ? MSA_NONE
+                         : Amask2msa(levl[x][y].altarmask);
 		if (!mptr->feat.naltar)
 		    mptr->feat.msalign = atmp;
 		else if (mptr->feat.msalign != atmp)
