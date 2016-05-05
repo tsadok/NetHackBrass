@@ -2621,26 +2621,22 @@ boolean printdun;
     /* calculate level number */
     i = depthstart + mptr->lev.dlevel - 1;
     if (In_endgame(&mptr->lev))
-	Sprintf(buf, "%s%s:", TAB, endgamelevelname(tmpbuf, i));
+        Sprintf(buf, "%s%s:", TAB, endgamelevelname(tmpbuf, i));
     else
-	/* FIXME: when this branch has only one level (Ft.Ludios),
-	 * listing "Level 1:" for it might confuse inexperienced
-	 * players into thinking there's more than one.
-	 */
-	Sprintf(buf, "%sLevel %d:", TAB, i);
+        Sprintf(buf, "%sLevel %d:", TAB, i);
 	
 #ifdef WIZARD
     /* wizmode prints out proto dungeon names for clarity */
     if (wizard) {
-	s_level *slev;
+        s_level *slev;
 
-	if ((slev = Is_special(&mptr->lev)) != 0)
-	    Sprintf(eos(buf), " [%s]", slev->proto);
+        if ((slev = Is_special(&mptr->lev)) != 0)
+            Sprintf(eos(buf), " [%s]", slev->proto);
     }
 #endif
     /* [perhaps print custom annotation on its own line when it's long] */
     if (mptr->custom)
-	Sprintf(eos(buf), " (%s)", mptr->custom);
+        Sprintf(eos(buf), " \"%s\"", mptr->custom);
     if (on_level(&u.uz, &mptr->lev))
 	Sprintf(eos(buf), " <- You %s here.",
 		(!final || (final == 1 && how == ASCENDED)) ? "are" : "were");
