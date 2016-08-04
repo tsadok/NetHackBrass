@@ -2638,8 +2638,10 @@ boolean printdun;
     if (mptr->custom)
         Sprintf(eos(buf), " \"%s\"", mptr->custom);
     if (on_level(&u.uz, &mptr->lev))
-	Sprintf(eos(buf), " <- You %s here.",
-		(!final || (final == 1 && how == ASCENDED)) ? "are" : "were");
+        Sprintf(eos(buf), " <- You %s here.",
+                (!final || (final == 1 && how == ASCENDED)) ? "are"
+                : (final == 1 && how == ESCAPED) ? "left from"
+                : "were");
     putstr(win, !final ? ATR_BOLD : 0, buf);
 
     if (mptr->flags.forgot) return;
