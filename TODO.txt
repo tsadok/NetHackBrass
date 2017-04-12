@@ -17,5 +17,3 @@ Desired Enhancements:
  * statuscolors or status_hilights
  * auto-open doors
  * fixuporacle()
- * annotate/overview
-   + ad29017482 (quest portal)

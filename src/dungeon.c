@@ -2702,8 +2702,6 @@ boolean printdun;
     } else if (mptr->flags.roguelevel) {
 	Sprintf(buf, "%sA primitive area.", PREFIX);
 # endif
-    } else if (mptr->flags.quest_summons) {
-        Sprintf(buf, "%sSummoned by %s.", PREFIX, ldrname());
     } else if (on_level(&mptr->lev, &qstart_level)) {
         Sprintf(buf, "%sHome%s.", PREFIX,
                 mptr->flags.unreachable ? " (no way back...)" : "");
@@ -2724,6 +2722,11 @@ boolean printdun;
 	Sprintf(buf, "%sMoloch's Sanctum.", PREFIX);
     }
     if (*buf) putstr(win, 0, buf);
+    /* quest entrance is not mutually-exclusive with bigroom or rogue level */
+    if (mptr->flags.quest_summons) {
+        Sprintf(buf, "%sSummoned by %s.", PREFIX, ldrname());
+        putstr(win, 0, buf);
+    }
 
     /* print out branches */
     if (mptr->br) {
