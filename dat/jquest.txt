@@ -1,0 +1,5455 @@
+#	SCCS Id: @(#)quest.txt	3.4	2002/01/30
+#	Copyright (c) 1991 by M. Stephenson
+# NetHack may be freely redistributed.  See license for details.
+#
+#	The quest text file for NetHack 3.4
+#
+#	These are the "standard" message numbers from qtext.h.  All class
+#	dialogue must have at least these entries.
+#
+#	QT_FIRSTTIME	 1
+#	QT_NEXTTIME	 2
+#	QT_OTHERTIME	 3
+#
+#	QT_GUARDTALK	 5	/* 5 random things guards say before quest */
+#	QT_GUARDTALK2	10	/* 5 random things guards say after quest */
+#
+#	QT_FIRSTLEADER	15
+#	QT_NEXTLEADER	16
+#	QT_OTHERLEADER	17
+#	QT_LASTLEADER	18
+#	QT_BADLEVEL	19
+#	QT_BADALIGN	20
+#	QT_ASSIGNQUEST	21
+#
+#	QT_ENCOURAGE	25	/* 1-10 random encouragement messages */
+#
+#	QT_FIRSTLOCATE	35
+#	QT_NEXTLOCATE	36
+#
+#	QT_FIRSTACQUIRE	40
+#	QT_NEXTACQUIRE	41
+#
+#	QT_FIRSTNEMESIS	50
+#	QT_NEXTNEMESIS	51
+#	QT_OTHERNEMESIS	52
+#	QT_NEMWANTSIT	53	/* you somehow got the artifact */
+#
+#	QT_DISCOURAGE	60	/* 1-10 random maledictive messages */
+#
+#	QT_GOTIT	70
+#
+#	QT_KILLEDNEM	80
+#	QT_OFFEREDIT	81
+#	QT_OFFEREDIT2	82	/* if you throw artifact to leader after #81 */
+#
+#	QT_POSTHANKS	90
+#	QT_HASAMULET	91
+#
+#	Japanese version staff
+#
+#	director	issei@jaist.ac.jp
+#	A		issei@jaist.ac.jp
+#	B		issei@jaist.ac.jp
+#	C		issei@jaist.ac.jp
+#	E		fujieda@jaist.ac.jp
+#	F		issei@jaist.ac.jp
+#	H		tshira@mtl.t.u-tokyo.ac.jp
+#	K		mya@jaist.ac.jp	
+#	P		s92458km@sfc.keio.ac.jp
+#	R		issei@jaist.ac.jp
+#	S		issei@jaist.ac.jp
+#	T		s92458km@sfc.keio.ac.jp
+#	V		issei@jaist.ac.jp
+#	W		nao@jaist.ac.jp
+#	general		issei@jaist.ac.jp
+#	angelic/demonic	s92458km@sfc.keio.ac.jp
+#
+#	for 3.4.0	So-Miya and Kentaro Shirakata
+#
+#	refinement	youkan
+#
+
+#
+#	Archeologist
+#
+%Cc Arc 00001
+#You are suddenly in familiar surroundings.  The buildings in the distance
+#appear to be those of your old alma mater, but something is wrong.  It looks
+#as if there has been a riot recently, or %H has
+#been under siege.
+#
+#All of the windows are boarded up, and there are objects scattered around
+#the entrance.
+#
+#Strange forbidding shapes seem to be moving in the distance.
+あなたは突然見慣れた風景の中に立っていた。遠方に見える建物は
+あなたの懐かしい母校に違いないのだが、しかし何かおかしい。
+まるで最近、暴動があったか、%Hが包囲されていたかのようだ。
+
+全ての窓と言う窓は塞がれ、学校の入口の周囲には物が散乱している。
+
+遠くで、おぞましい影がうごめいているのが見えた。
+%E
+%Cp Arc 00002
+#Once again, you are back at %H.
+もう一度、あなたは%Hに戻ってきた。
+%E
+%Cp Arc 00003
+#You are back at %H.
+#You have an odd feeling this may be the last time you ever come here.
+あなたは%Hに戻った。
+不思議なことに、ここに戻って来るのはこれが最後となるような予感がした。
+%E
+%Cp Arc 00005
+#"Did you see Lash LaRue in 'Song of Old Wyoming' the other night?"
+# "Lash LaRue"は1940年代のTV西部劇シリーズの主人公 鞭の使い手
+「こないだの『古きワイオミングの歌』見た？」
+%E
+%Cp Arc 00006
+#"Hey man, got any potions of hallucination for sale?"
+「やぁ、幻覚の薬を売ってくれないかい？」
+%E
+%Cp Arc 00007
+#"Did you see the artifact %l brought back from the last dig?"
+「%lがこの前の発掘調査で持ち帰った聖器を見たかい？」
+%E
+%Cp Arc 00008
+#"So what species do *you* think we evolved from?"
+「我々はいったいどのような生物から進化したんだろう？」
+%E
+%Cp Arc 00009
+#"So you're %ls prize pupil!  I don't know what he sees in you."
+「君が%lの一番弟子だって？ %lが君に何を見出したのか解らないね。」
+%E
+%Cp Arc 00010
+#"Did you see Lash LaRue in 'Song of Old Wyoming' the other night?"
+「こないだの『古きワイオミングの歌』見た？」
+%E
+%Cp Arc 00011
+#"Hey man, got any potions of hallucination for sale?"
+「やぁ、幻覚の薬を売ってくれないかい？」
+%E
+%Cp Arc 00012
+#"I guess you are guaranteed to make full professor now."
+「今回、あなたが正教授になることは確実だと思います。」
+%E
+%Cp Arc 00013
+#"So, what was worse, %n or your entrance exams?"
+「そうすると、%nとあなたの入学試験と、どちらが悪かったのだろう？」
+%E
+%Cp Arc 00014
+#"%oC is impressive, but nothing like the bones I dug up!"
+「%oCは確かに凄いけど、私が掘り出した骨にはかなわないね！」
+%E
+%Cc Arc 00015
+#"Finally you have returned, %p.  You were always
+#my most promising student.  Allow me to see if you are ready for the
+#most difficult task of your career."
+「ついに戻ってきたか、%p。
+  君はいつも、私の期待にもっとも応えてくれる生徒だった。
+  君のなしてきた仕事の中でも、最も困難といえる今回の仕事を
+  任せられるかどうか、私に確かめさせてくれ。」
+%E
+%Cp Arc 00016
+#"Again, %p, you stand before me.
+#Let me see if you have gained experience in the interim."
+「また私の元へ来てくれたね、%p。
+  そして、君が経験を積んできたかどうか見せてくれたまえ。」
+%E
+%Cp Arc 00017
+#"Once more, %p, you have returned from the field.
+#Are you finally ready for the task that must be accomplished?"
+「今一度、%p、君は現場から戻ってきた。
+  君が達成しなければならない任務への準備は整ったか？」
+%E
+%Cc Arc 00018
+#"%p, you have failed us.  All of my careful training has been in
+#vain.  Begone!  Your tenure at this college has been revoked!
+#
+#"You are a disgrace to the profession!"
+「%p、君には失望した。私が苦労して君に教え込んだことはすべて無駄だった。
+  どこでも行きたまえ！　君の大学での在職権は無効とする！
+
+  君は考古学者の恥さらしだ！」
+%E
+%Cc Arc 00019
+#"%p, you are yet too inexperienced to undertake such a demanding
+#quest.  A mere %r could not possibly face the rigors demanded and
+#survive.  Go forth, and come here again when your adventures have further
+#taught you."
+「%p、君はこのような難題を引き受けるにはまだ未熟すぎる。
+  単なる%rでは、立ちはだかる苦難に耐え生き残ることはできない
+  だろう。行け、そして君が自分の冒険からさらに多くを学んだら、
+  またここへ戻ってきてくれ。」
+%E
+%Cc Arc 00020
+#"%pC!  I've heard that you've been using sloppy techniques.  Your
+#results lately can hardly be called suitable for %ra!
+#
+#"How could you have strayed from the %a path?  Go from here, and come
+#back only when you have purified yourself."
+「%p！　私は君がずさんなやり口を用いていると聞いている。
+  君の最近の成果はとても%rと呼べるものではない！
+
+　なぜこうも%aの道から外れてしまったのか？　ここから去れ、
+  自分の行いを改めるまで戻ってくるな。」
+%E
+%Cc Arc 00021
+#"Grave times have befallen the college, for %na has
+#stolen %o.  Without it, the board of directors of
+#the university will soon have no choice but to revoke our research grants.
+#
+#"You must locate the entrance to %i.  Within it,
+#you will find %n.
+#
+#"You must then defeat %n and return %o
+#to me.
+#
+#"Only in this way will we be able to prevent the budget cuts that could
+#close this college.
+#
+#"May the wisdom of %d be your guide."
+「深刻な事態が大学にふりかかっている。実は%nが%oを
+  盗んだのだ。あれがなければ、大学の理事会は近々
+  我々に対する研究費の補助を取りやめざるを得なくなるだろう。
+
+　君は%iの入口に行かねばならない。その中に%nがいる。
+
+　君は%nを打ち破らねばらなない。そして%oを
+  取り戻すのだ。
+
+　予算の削減を防ぎ、大学を閉鎖から救うにはこれ以外に方法がない。
+
+　%dの知恵が君を導かんことを。」
+%E
+%Cp Arc 00025
+#"Beware, for %n is powerful and cunning."
+「気をつけろ！%nは力強く狡猾なやつだ。」
+%E
+%Cp Arc 00026
+#"To locate the entrance to %i, you must pass
+#many traps."
+「%iの入口へ行くには、多くの危険な罠を通り抜けねばならない。」
+%E
+%Cp Arc 00027
+#"A %nt may be vulnerable to attacks by magical cold."
+「%nは冷気の魔法に弱いはずだ。」
+%E
+%Cp Arc 00028
+#"Call upon %d when you encounter %n."
+「%nに出逢ったら、%dに祈りを求めるのだ。」
+%E
+%Cp Arc 00029
+#"You must destroy %n.  It will pursue you otherwise."
+「君は%nを滅ぼさねばならない。でなければ追い回されることになる。」
+%E
+%Cp Arc 00030
+#"%oC is a mighty talisman.  With it you
+#can destroy %n."
+「%oは強力な護符だ。それがあれば君も%nを打ちのめせる。」
+%E
+%Cp Arc 00031
+#"Go forth with the blessings of %d."
+「%dの祝福のあらんことを。」
+%E
+%Cp Arc 00032
+#"I will have my %gP watch for your return."
+「我%gが君の帰還を見守らんことを。」
+%E
+%Cp Arc 00033
+#"Remember not to stray from the true %a path."
+「真の%aの道から外れないように。」
+%E
+%Cp Arc 00034
+#"You may be able to sense %o when you are near."
+「君なら%oに近づいたときその存在を感じることができるはずだ。」
+%E
+%Cp Arc 00035
+#A plain opens before you.  Beyond the plain lies a foreboding edifice.
+#
+#You have the feeling that you will soon find the entrance to
+#%i.
+平原があなたの眼前に広がった。その向こうには、禍々しい遺跡が聳えている。
+
+あなたは%iの入口が近いと感じた。
+%E
+%Cp Arc 00036
+#Once again, you are near the entrance to %i.
+もう一度、あなたは%iの入口の近くにやってきた。
+%E
+%Cp Arc 00040
+#A strange feeling washes over you, and you think back to things you
+#learned during the many lectures of %l.
+#
+#You realize the feeling must be the presence of %o.
+不思議な感覚があなたを押し包み、あなたは%lから学んだ数々の事柄を
+思い返していた。
+
+この感覚は%oの存在を示しているに違いない、とあなたは気づいた。
+%E
+%Cp Arc 00041
+#The familiar presence of %o is in the ether.
+懐かしい%oの存在がエーテルを通して感じられる。
+%E
+%Cc Arc 00050
+#"So, %p, you think that you can succeed in recovering
+#%o, when your teacher, %l, has already failed.
+#
+#"Come, try your best!  I shall destroy you, and gnaw on your bones."
+「ほう、%p、お前は%oを奪回できると思ったわけだ。
+  お前の師匠%lがすでに失敗しているのというのに。
+
+　さあ、あがいてみろ！　お前を破壊して骨を齧ってやる。」
+%E
+%Cc Arc 00051
+#"Again you try to best me, eh %p?  Well, you shall fail again.
+#
+#"You shall never recover %o.
+#
+#"I shall bear your soul to the Plane of Origins for my master's pleasure."
+「また俺を倒しに来たのか、え、%pよ？
+　どうせまた失敗するだろうがな。
+
+　お前に%oは取り戻せない。
+
+　我が主のために、お前の魂を始原の異界へ送ってやろう。」
+%E
+%Cp Arc 00052
+#"You persist yet %p!  Good.  Now, you shall die!"
+「まだ抗うか、%p！ いいだろう、今こそ死ね！」
+%E
+%Cp Arc 00053
+#"I shall have %o from you, %p, then feast
+#upon your entrails!"
+「%p！ おまえから%oを奪い、はらわたを喰らってやろう！」
+%E
+%Cp Arc 00060
+#"Try your best, %p.  You cannot defeat me."
+「全力で来るがいい、%p。お前に俺は倒せない。」
+%E
+%Cp Arc 00061
+#"I shall rend the flesh from your body whilst you still breathe!"
+「生きたままお前の肉を引き裂いてやる！」
+%E
+%Cp Arc 00062
+#"First you, %p, then I shall destroy your mentor, %l."
+「まずはお前だ、%p、次にお前の師%lを殺してやる。」
+%E
+%Cp Arc 00063
+#"Tiring yet, %p?  I draw my power from my master and cannot
+#falter!"
+「まだやるのか、%p？ 俺は我が主から力を得ている。決してひるまんぞ！」
+%E
+%Cp Arc 00064
+#"I shall rend thy soul from thy body and consume it!"
+「お前の魂を肉体からちぎり出し、潰してやろう！」
+%E
+%Cp Arc 00065
+#"You are far too %a -- it weakens you.  You shall die in this place."
+「お前は%aから外れすぎた ─ だから弱い。お前はここで死ぬがいい。」
+%E
+%Cp Arc 00066
+#"%d has forsaken you!  You are lost now!"
+「%dはお前を見捨てたぞ！ お前の負けだ！」
+%E
+%Cp Arc 00067
+#"A mere %r cannot hope to defeat me!"
+「ただの%rが俺には勝てるものか！」
+%E
+%Cp Arc 00068
+#"If you are the best %l can send, I have nothing to fear."
+「お前が%lの一番マシな兵隊だとするなら、
+  俺は何も恐れる必要がないな。」
+%E
+%Cp Arc 00069
+#"Die %c!  I shall exhibit your carcass as a trophy."
+「死ね、%c！ お前の死骸は我が戦利品として飾ってやろう。」
+%E
+%Cc Arc 00070
+#The power of %o flows through your body!  You feel
+#as if you could now take on the Wizard of Yendor himself and win, but
+#you know you must return %o to %l.
+%oの力があなたの身体に流れ込んだ！ あなたは、まるで
+イェンダーの魔法使いその人に立ち向かい、打ち負かせるかのような
+気分になった。だが、あなたは%oを%lへ
+返さねばならないと理解していた。
+%E
+%Cp Arc 00080
+#The body of %n dissipates in a cloud of noxious fumes.
+%nの肉体は毒々しい噴煙を上げながら、霧散した。
+%E
+%Cc Arc 00081
+#%lC touches %o briefly, gazes into it,
+#then smiles at you and says:
+#
+#"Well done, %p.  You have defeated %n and
+#recovered %o.  But I fear that it shall never be safe
+#here.
+#
+#Please take %o with you.  You, %p, can
+#guard it now far better than I.
+#
+#May the blessings of %d follow you and guard you."
+%lは軽く%oに触れ、それをじっと見つめ、あなたに向かって
+微笑みかけた:
+
+「%p、よくやった。君は%nを倒し、%oを
+  取り戻した。しかし、この大学はもはや
+  安全な保管場所たりえないと私は危惧している。
+
+  %oを持っていってくれ、%p。君なら私よりも
+  はるかに確実にこれを守ることができるだろう。
+
+  %dの祝福と加護が君を導かんことを。」
+%E
+%Cc Arc 00082
+#"Careful, %p!  %oC might break, and that would be
+#a tragic loss.  You are its keeper now, and the time has come to
+#resume your search for the Amulet.  %Z await your
+#return through the magic portal that brought you here."
+「気をつけろ、%p！ %oが壊れてしまう。
+  そんなことになれば痛ましい損失だ。
+  君は今や%oの守護者であり、
+  そして、魔除けの探索を再開する時が来た。
+  魔法の門の向こうで、%Zが君を待っているぞ。
+%E
+%Cc Arc 00090
+#"Welcome back, %p.  Have you progressed with your quest to
+#regain the Amulet of Yendor for %d?"
+「よく戻ってきた、%p。%dのためイェンダーの魔除けを探す旅は
+  進展したかね？」
+%E
+%Cc Arc 00091
+#"Congratulations, %p.  I wondered if anyone could prevail against
+#the Wizard and the minions of Moloch.  Now, you must embark on one
+#final adventure.
+#
+#"Take the Amulet, and find your way onto the astral plane.
+#There you must find the altar of %d and sacrifice the
+#Amulet on that altar to fulfill your destiny.
+#
+#"Remember, your path now should always be upwards."
+「おめでとう、%p！ 私は、魔法使いやモーロックの手下に
+  打ち勝てる者などいないのではないかと心配していたよ。
+  今、君は最後の冒険へと漕ぎ出さねばならない。
+
+  魔除けを手にし、天上界への道を見つけるのだ。使命を果たすため、
+  君はそこで%dの祭壇を見つけ、魔除けを捧げねばならない。
+
+  覚えておけ、君の進む道は今や常に上へと向かっているのだ。」
+%E
+#
+#	Barbarian
+#
+%Cc Bar 00001
+#Warily you scan your surroundings, all of your senses alert for signs
+#of possible danger.  Off in the distance, you can %x the familiar shapes
+#of %H.
+#
+#But why, you think, should %l be there?
+#
+#Suddenly, the hairs on your neck stand on end as you detect the aura of
+#evil magic in the air.
+#
+#Without thought, you ready your weapon, and mutter under your breath:
+#
+#    "By %d, there will be blood spilt today."
+あなたは用心深く周りを見渡した。ありとあらゆる感覚が、
+迫り来る危険の兆候をあなたに警告していた。
+遠いかなたに、%Hの懐かしい景色が見えた。
+
+しかし、何故%lがそこにいる？
+
+突然、首の後ろの毛が逆立ち、あなたは周囲に邪悪な魔法の気配を感じた。
+
+反射的に、あなたは武器を構え、小声で呟いた。
+
+    「%dにかけて、今日は血が流れよう」
+%E
+%Cp Bar 00002
+#Once again, you near %H.  You know that %l
+#will be waiting.
+今一度、あなたは%Hの近くまで来た。%lが待っている。
+%E
+%Cp Bar 00003
+#Again, and you think possibly for the last time, you approach
+#%H.
+ここへ来るのは最後になるかもしれないとの思いを胸に、
+再び、あなたは%Hへと近づいた。
+%E
+%Cp Bar 00005
+#"The battles here have been good -- our enemies' blood soaks the soil!"
+「ここでの戦いは好調だ。敵の血が地面にしみ込んでるぜ！」
+%E
+%Cp Bar 00006
+#"Remember that glory is crushing your enemies beneath your feet!"
+「栄光とは敵を足下で踏み砕く事だということを忘れるな！」
+%E
+%Cp Bar 00007
+#"There has been little treasure to loot, since the horde arrived."
+「あの軍団が来てからは、ほとんど略奪する財宝は残っていない。」
+%E
+%Cp Bar 00008
+#"The horde is mighty in numbers, but they have little courage."
+「軍団は数の力で押してはくるが、やつらは憶病者だ。」
+%E
+%Cp Bar 00009
+#"%lC is a strange one, but he has helped defend us."
+「%lは変ったやつだが、我々を守る手助けをしてくれている。」
+%E
+%Cp Bar 00010
+#"The battles here have been good -- our enemies' blood soaks the soil!"
+「ここでの戦いは好調だ。敵の血が地面にしみ込んでるぜ！」
+%E
+%Cp Bar 00011
+#"Remember that glory is crushing your enemies beneath your feet!"
+「栄光とは敵を足下で踏み砕く事だということを忘れるな！」
+%E
+%Cp Bar 00012
+#"Times will be good again, now that the horde is vanquished."
+「いまやあの軍団は打ち滅ぼされた。再びよい時代になるだろう。」
+%E
+%Cp Bar 00013
+#"You have brought our clan much honor in defeating %n."
+「お前は%nを打ち破り、我々一族に多くの名誉をもたらしてくれた。」
+%E
+%Cp Bar 00014
+#"You will be a worthy successor to %l."
+「お前は%lのよい後継者となるだろう。」
+%E
+%Cc Bar 00015
+#"Ah, %p.  You have returned at last.  The world is in dire
+#need of your help.  There is a great quest you must undertake.
+#
+#"But first, I must see if you are ready to take on such a challenge."
+「おお、%pよ。ようやく戻ってきてくれたか。この世界は今まさに
+  お前の助けを必要としている。お前に達成してもらわねばならない
+  大いなる任務があるのだ。
+
+  しかし、まずお前がそのような挑戦に耐えうる準備ができているか、
+  私に見せてもらわねばならぬ。」
+%E
+%Cp Bar 00016
+#"%p, you are back.  Are you ready now for the challenge?"
+「%pよ、戻ってきたな。挑戦への準備は整ったか？」
+%E
+%Cp Bar 00017
+#"Again, you stand before me, %p.  Surely you have prepared yourself."
+「再び私の前に現れたな、%pよ。お前は確かに準備を整えたはずだ。」
+%E
+%Cc Bar 00018
+#"Pah!  You have betrayed the gods, %p.  You will never attain
+#the glory which you aspire to.  Your failure to follow the true path has
+#closed this future to you.
+#
+#"I will protect these people as best I can, but soon %n will overcome
+#me and destroy all who once called you %s.  Now begone!"
+「ふん！　お前は神々を裏切った、%pよ。お前が欲してやまなかった名誉を、
+  お前が得ることはもうない。真実の道を外れたことが、お前の望んだ未来を
+  閉ざしたのだ。
+
+  私はここにいる人々を全力で守るつもりだ。しかしすぐにでも%nが
+  私を押し潰し、お前を一度は%sと呼んでくれた人々を殺すだろう。
+  消えうせろ！」
+%E
+%Cc Bar 00019
+#"%p, I fear that you are as yet too inexperienced to face
+#%n.  Only %Ra with the help of %d could ever hope to
+#defeat him."
+「%pよ、%nと相対するには、お前はまだまだ未熟だと言わざるを得ない。
+  %dの助けを得た%Rだけが、%nを倒し得よう。」
+%E
+%Cp Bar 00020
+#"%pC!  You have wandered from the path of the %a!
+#If you attempt to overcome %n in this state, he will surely
+#enslave your soul.  Your only hope, and ours, lies in your purification.
+#Go forth, and return when you feel ready."
+「%p！ お前は%aの道から外れ、さまよっている！
+  このざまで%nに挑みかかろうものなら、
+  お前の魂は確実に奴のとりこにされるだろう。
+  お前の、そして我々の唯一の希望は、お前の禊にかかっている。
+  行け、そして準備ができたなら戻ってこい。」
+%E
+%Cc Bar 00021
+#"The world is in great need of your assistance, %p.
+#
+#"About six months ago, I learned that a mysterious sorcerer, known
+#as %n, had begun to gather a large group of cutthroats and brigands
+#about him.
+#
+#"At about the same time, these people you once rode with `liberated' a
+#potent magical talisman, %o, from a Turanian caravan.
+#
+#"%nC and his Black Horde swept down upon %i and defeated
+#the people there, driving them out into the desert.  He has taken
+#%o, and seeks to bend it to his will.  I detected the
+#subtle changes in the currents of fate, and joined these people.
+#Then I sent forth a summons for you.
+#
+#"If %n can bend %o to his will, he will become
+#almost indestructible.  He will then be able to enslave the minds of
+#men across the world.  You are the only hope.  The gods smile upon you,
+#and with %d behind you, you alone can defeat %n.
+#
+#"You must go to %i.  From there, you can track down
+#%n, defeat him, and return %o to us.  Only
+#then will the world be safe."
+「この世界はまさにお前の助けを必要としているのだ、%p。
+
+  半年ほど前、私は%nとして知られる不気味な魔法使いが、
+  殺人鬼や略奪者の一団を集めているのを知った。
+
+  またほぼ同じころ、お前がかつて徒党を組んだこともある者どもが、
+  強力な魔法の護符である%oをツラニアンの洞窟から『解放』した。
+
+  %nおよび奴の『黒の軍団』は、%iに押し寄せ、人々を
+  打ち負かし、砂漠へと追いやった。奴は%oを手に入れ、
+  奴の意のままに操る方法を探っている。私は運命の流れに
+  わずかな変化を感じ取り、この地の人々と合流した。
+  そしてお前を召喚するために力を送ったのだ。
+
+  もし%nが%oを意のままにねじ曲げることができたならば、
+  奴はほとんど不滅の存在となる。そして、奴は
+  全世界の人間の魂を支配することができるだろう。
+  お前は唯一の希望だ。神々の祝福があらんことを、
+  また%dの加護があらんことを。%nを倒せるのは
+  お前だけだ。
+
+  お前は%iへ行かねばならぬ。そこから%nの行方を
+  突き止め、奴を倒し、%oを我々に取り戻してほしい。
+  それが世界を救う唯一の方法だ。」
+%E
+%Cp Bar 00025
+#"%nC is strong in the dark arts, but not immune to cold steel."
+「%nは暗黒の術には強い。しかし冷たい鋼に耐えることはできない。」
+%E
+%Cp Bar 00026
+#"Remember that %n is a great sorcerer.  He lived in the time
+#of Atlantis."
+「%nが強大な魔法使いであることを忘れるな。彼はアトランティスの
+  時代から生きているのだ。」
+%E
+%Cp Bar 00027
+#"If you fail, %p, I will not be able to protect these people long."
+「%pよ、お前がもし失敗したなら、私はこの地の人々を長くは守って
+  いられないだろう。」
+%E
+%Cp Bar 00028
+#"To enter %i, you must be very stealthy.  The horde will be on
+#guard."
+「%iに入るには、よほど静かに行動しなければならぬ。軍団が守って
+  いるはずだ。」
+%E
+%Cp Bar 00029
+#"Call upon %d in your time of need."
+「必要ならば%dの助けを請うのだ。」
+%E
+%Cp Bar 00030
+#"May %d protect you, and guide your steps."
+「%dの加護と導きのあらんことを。」
+%E
+%Cp Bar 00031
+#"If you can lay hands upon %o, carry it for good fortune."
+「%oを手にすることができたならば、御守りとして持って行くがいい。」
+%E
+%Cp Bar 00032
+#"I cannot stand against %ns sorcery.  But %d will help you."
+「%nの魔術の前に私は無力だ。しかし%dがお前を助けてくれよう。」
+%E
+%Cp Bar 00033
+#"Do not fear %n.  I know you can defeat him."
+「%nを恐れるな。お前なら奴を倒すことができる。」
+%E
+%Cp Bar 00034
+#"You have a great road to travel, %p, but only after you defeat
+#%n."
+「%pよ、お前の偉大なる冒険は%nを倒さねば始まらぬ。」
+%E
+%Cc Bar 00035
+#The scent of water comes to you in the desert breeze.  You know that
+#you have located %i.
+砂漠の風が水の匂いを運んでくる。あなたは%iを突き止めたのだ。
+%E
+%Cp Bar 00036
+#Yet again you have a chance to infiltrate %i.
+もう一度、%iに潜入する機会がやってきた。
+%E
+%Cc Bar 00040
+#The hairs on the nape of your neck lift as you sense an energy in the
+#very air around you.  You fight down a primordial panic that seeks to
+#make you turn and run.  This is surely the lair of %n.
+周囲のエネルギーを感じ取り、あなたのうなじの毛が逆立った。
+あなたは振り返って走り去りたいという本能的な恐怖を懸命に抑えつけた。
+ここはまさに%nのすみかなのだ。
+%E
+%Cp Bar 00041
+#Yet again you feel the air around you heavy with malevolent magical energy.
+あなたは再び、邪悪な魔力に満ちた空気が
+あなたに重くのしかかってくるのを感じた。
+%E
+%Cc Bar 00050
+#"So.  This is what that second rate sorcerer %l sends to do his bidding.
+#I have slain many before you.  You shall give me little sport.
+#
+#"Prepare to die, %c."
+「ほう。これが二流の魔術師%lがお使いによこした奴というわけか。
+  わしはお前の前に随分と殺したものだ。お前にはせいぜい楽しませて
+  もらおうか。
+
+  死ぬ準備は出来たか？ %cよ。」
+%E
+%Cp Bar 00051
+#"I have wasted too much time on you already.  Now, you shall die."
+「お前には随分と無駄な時間を使った。さあ、今こそ死ね。」
+%E
+%Cp Bar 00052
+#"You return yet again, %c!  Are you prepared for death now?"
+「また来たのか%c！ 今度こそ死ぬ準備はできたのか？」
+%E
+%Cp Bar 00053
+#"I shall have %o back, you pitiful excuse for %ca.
+#And your life as well."
+「%oを奪い返してやる、できそこないの%cめが。
+  おまえの命も同じく奪ってやろう。」
+%E
+%Cp Bar 00060
+#"My pets will dine on your carcass tonight!"
+「わしのペットどもにお前の屍を喰らわせてやろう！」
+%E
+%Cp Bar 00061
+#"You are a sorry excuse for %ra."
+「お前は%rの恥さらしだな。」
+%E
+%Cp Bar 00062
+#"Run while you can, %c.  My next spell will be your last."
+「逃げ惑え、%c。次の呪文がお前の最期だ。」
+%E
+%Cp Bar 00063
+#"I shall use your very skin to bind my next grimoire."
+「お前の皮を新しい呪文書の装丁に使うとしよう。」
+%E
+%Cp Bar 00064
+#"%d cannot protect you now.  Here, you die."
+「%dはお前を守ることなどできぬ。さあ、死ね。」
+%E
+%Cp Bar 00065
+#"Your %a nature makes you weak.  You cannot defeat me."
+「%aへの妄信がお前を弱くするのだ。お前にわしは倒せん。」
+%E
+%Cp Bar 00066
+#"Come, %c.  I shall kill you, then unleash the horde on your tribe."
+「来い、%c。お前を殺してやる。そして軍団をお前の部族へ放ってやろう。」
+%E
+%Cp Bar 00067
+#"Once you are dead, my horde shall finish off %l, and your tribe."
+「お前が死んだなら、わしの軍団が%lやお前の部族を一掃してくれる。」
+%E
+%Cp Bar 00068
+#"Fight, %c, or are you afraid of the mighty %n?"
+「戦え、%c！ それとも偉大な%nにおじけづいたか？」
+%E
+%Cp Bar 00069
+#"You have failed, %c.  Now, my victory is complete."
+「お前の負けだ、%c。今こそわしの勝利が完全なものとなる。」
+%E
+%Cc Bar 00070
+#As you pick up %o, you feel the power of it
+#flowing through your hands.  It seems to be in two or more places
+#at once, even though you are holding it.
+%oを拾い上げると、触れた手から力が流れ込んでくるのを感じた。
+確かに握っているはずなのに、まるでそれは同時に二つの場所、いや
+たくさんの場所に存在しているかのようだ。
+%E
+%Cc Bar 00080
+#%nC falls to the ground, and utters a last curse at you.  Then his
+#body fades slowly, seemingly dispersing into the air around you.  You
+#slowly become aware that the overpowering aura of magic in the air has
+#begun to fade.
+%nは地に伏し、あなたに向けて最後の呪いを口にした。彼の肉体はゆっくりと
+ぼやけはじめ、あたかも周りの空気に溶けていくかのようだった。あなたはふと、
+張り詰めた、圧倒するような魔力のオーラが消えていくのに気がついた。
+%E
+%Cc Bar 00081
+#When %l sees %o, he smiles, and says:
+#
+#    Well done, %p.  You have saved the world from certain doom.
+#    What, now, should be done with %o?
+#
+#    These people, brave as they are, cannot hope to guard it from
+#    other sorcerers who will detect it, as surely as %n did.
+#
+#    Take %o with you, %p.  It will guard you in
+#    your adventures, and you can best guard it.  You embark on a
+#    quest far greater than you realize.
+#
+#    Remember me, %p, and return when you have triumphed.  I
+#    will tell you then of what you must do.  You will understand when the
+#    time comes.
+%lは%oを見るとほほえみ、こう言った。
+
+  よくやった、%p。お前は世界を破滅の淵から救ったのだ。
+  さて、我々は%oをどう扱うべきだろうか？
+
+  この地の者たちは勇猛ではあるが、仮にまた新たな魔術師が
+  %oに気づき奪おうと ── %nがそうしたように ──
+  現れたならば、とても守り切ることはできないだろう。
+
+  %oを持ってゆくがよい、%pよ。%oは
+  道中お前を守ってくれるだろうし、またお前も%oの
+  最もよき守り手となるであろう。お前が気づいているよりも
+  はるかに偉大な使命に向け、今こそ船出するのだ。
+
+  私を忘れるな%pよ、そして勝利のあかつきには戻って来るのだ。
+  その時にまたお前が為すべきことを教えよう。
+  時が来れば、お前は私の言葉を理解するだろう。
+%E
+%Cc Bar 00082
+#%l gazes reverently at %o, then back at you.
+#
+#"You are its keeper now, and the time has come to resume your search
+#for the Amulet.  %Z await your return through the
+#magic portal which brought you here."
+%lは%oに驚嘆のまなざしを向けると、再びあなたに向き合った。
+
+「今やお前は%oの守護者だ。
+  そして、魔除けを探索する旅を再開するときが来た。
+  魔法の門の向こうで、%Zがお前の帰りを待っているぞ。」
+%E
+%Cp Bar 00090
+#"Tell us, %p, have you fared well on your great quest?"
+「%p、お前の偉大な探求の旅は順調に進んでいるかな？」
+%E
+%Cc Bar 00091
+#"This is wondrous, %p.  I feared that you could not possibly
+#succeed in your quest, but here you are in possession of the Amulet
+#of Yendor!
+#
+#"I have studied the texts of the magi constantly since you left.  In
+#the Book of Skelos, I found this:
+#
+#    %d will cause a child to be sent into the world.  This child is to
+#    be made strong by trial of battle and magic, for %d has willed it so.
+#    It is said that the child of %d will recover the Amulet of Yendor
+#    that was stolen from the Creator at the beginning of time.
+#
+#"As you now possess the amulet, %p, I suspect that the Book
+#speaks of you.
+#
+#    The child of %d will take the Amulet, and travel to the Astral
+#    Plane, where the Great Temple of %d is to be found.  The Amulet
+#    will be sacrificed to %d, there on His altar.  Then the child will
+#    stand by %d as champion of all %cP for eternity.
+#
+#"This is all I know, %p.  I hope it will help you."
+「見事だ、%p。お前が使命を全うできないのではないかと
+  恐れていたが、今ここにイェンダーの魔除けを手にして
+  立っているではないか！
+
+  私はお前が去ってから、賢者の文献の数々を調べていた。
+  そしてスケロスの書に次のような一節を見つけたのだ:
+
+    %d、一人の子を世に送らん。この子%dの意思により、
+    戦と魔術の試練によって強くならん。%dの子、
+    時の始まりに創造主より盗まれし魔除け、
+    かのイェンダーの魔除けを取り戻さん。
+
+  今お前が魔除けを持っているからには、%p、
+  この本はお前のことを語っているのであろう。
+
+    %dの子魔除けを手にし、天上界へと旅立ち、
+    %dの偉大なる神殿を見つけん。魔除けは
+    祭壇の上にて%dに捧げられん。
+    子はかくしてすべての%cの上に立つ英雄となり、
+    %dの傍にて永遠の力となろう。
+
+  これが私の知る全てだ、%pよ。この予言が
+  お前を導いてくれることを祈っている。」
+%E
+#
+#	Cave(wo)man
+#
+%Cc Cav 00001
+#You descend through a barely familiar stairwell that you remember
+#%l showing you when you embarked upon your vision quest.
+#
+#You arrive back at %H, but something seems
+#wrong here.  The usual smoke and glowing light of the fires of the
+#outer caves are absent, and an uneasy quiet fills the damp air.
+あなたはかすかに見覚えのある石段を降りていった。
+ここは、冒険に旅立つときに%lに導かれて通った石段だ。
+
+あなたは%Hに戻ってきた。しかし何かがおかしい。
+いつもは煙が立ち上り、かがり火の光が輝いている洞窟の口が、
+今やじめじめとした空気に包まれて不気味に静まりかえっていた。
+%E
+%Cp Cav 00002
+#Once again, you arrive back at %H.
+再び、あなたは%Hに戻ってきた。
+%E
+%Cp Cav 00003
+#For some reason, you think that this may be the last time you will
+#enter %H.
+なぜか、あなたは%Hに入るのはこれが最後かもしれないという予感がした。
+%E
+%Cp Cav 00005
+#"We have not been able to gather as much food since the Giants sealed
+#off our access to the outer world."
+「あの巨人どもが外への出入りを封鎖して以来、我らは十分な食料を
+  集めることができなくなってしまっている。」
+%E
+%Cp Cav 00006
+#"Since %n sent her minions, we have been constantly fighting."
+「%nが彼女の下僕を送ってきて以来、我らはずっと戦ってきた。」
+%E
+%Cp Cav 00007
+#"I have heard your vision quest was successful.  Is this so?"
+「お前の今の旅は順調だそうだが、本当かい？」
+%E
+%Cp Cav 00008
+#"So, tell me, %p, how have you fared?"
+「%p、うまくやっているかい。」
+%E
+%Cp Cav 00009
+#"%lC grows old.  We know not who will guide us after he ascends."
+「%lは年老いた。彼亡き後、誰が我らを導いてくれるというのか。」
+%E
+%Cp Cav 00010
+#"The rains have returned and the land grows lush again."
+「雨は戻り、大地は再び豊かになるだろう。」
+%E
+%Cp Cav 00011
+#"Peace has returned, give thanks to %d!"
+「平和が戻ってきた！ %dのおかげだ！」
+%E
+%Cp Cav 00012
+#"Welcome back!  Did you find %o?"
+「よく戻ってきた！ %oは見つかったかね？」
+%E
+%Cp Cav 00013
+#"So, %p, tell us the story of your fight with %n."
+「おぉ、%p、%nとの戦いの話をしておくれ。」
+%E
+%Cp Cav 00014
+#"%lC grows old.  Perhaps you will guide us after he ascends."
+「%lは老いた。彼が天に召されたら、お前が我々を導くのかもしれん。」
+%E
+%Cc Cav 00015
+#"You have returned from your vision quest, %p.  Thank %d.
+#
+#"We are in dire need of your help, my %S.
+#
+#"But first, I must see if you are yet capable of the quest I would
+#ask you to undertake."
+「旅から戻ってきたか、%p。%dに感謝を。
+
+  我が%Sよ。我らには今まさにお前の助けが必要だ。
+
+  だが、お前に使命を伝える前に、わしはお前がそれを成し遂げられるかを
+  見なければならぬ。」
+%E
+%Cp Cav 00016
+#"Again, you return to us, %p.  Let me see if you are ready now."
+「再び我らの元へ戻ったな、%p。準備が出来たかどうか見せてくれ。」
+%E
+%Cp Cav 00017
+#"Ah, %p.  Are you finally ready?"
+「おお、%p。準備はできたかな？」
+%E
+%Cc Cav 00018
+#"%pC!  You have sealed our fate.  You seem unable to reform yourself,
+#so I must select another to take your place.
+#
+#"Begone from %H!  You have betrayed us by choosing
+#the path of the %C over the true path of the %L.
+#
+#"You no longer live in our eyes."
+「%p！　お前は我らの運命を閉ざしてしまった。お前は自らを
+  改めることができぬと見える。わしはお前の代わりに別の者を
+  探さねばならぬ。
+
+  %Hから出てゆけ！　お前は我らを裏切り、
+  まことの%Lの道を捨てて%Cの道を選んだのだ。
+
+  もはや我らの中にお前が生きることはない。」
+%E
+%Cc Cav 00019
+#"Alas, %p, you are as yet too inexperienced to embark upon such
+#a difficult quest as that I propose to give you.
+#
+#"%rA could not possibly survive the rigors demanded to find
+#%i, never mind to confront %n herself.
+#
+#"Adventure some more, and you will learn the skills you will require.
+#%d decrees it."
+「あぁ、%p。お前はわしがさずける困難な任務に旅出つには
+  まだまだ未熟すぎると見える。
+
+  %rでは、%iを見つけだすための艱難を
+  とても生き抜けはしないだろう。
+  まして%nと立ち向かうことなどできぬ。
+
+  冒険を重ねよ。そして必要な技量を学んでくるがよい。
+  %dはそう告げている。」
+%E
+%Cc Cav 00020
+#"%pC!  You have deviated from my teachings.  You no longer follow
+#the path of the %a as you should.  I banish you from these caves, to
+#go forth and purify yourself.  Then, you might be able to accomplish this
+#quest."
+「%pよ！　我が教えにそむいておるな。お前は歩むべき%aの
+  道から外れている。わしはお前をこの洞窟から追放する。
+  行け、自らを清めてくるがいい。
+  それができれば、おまえはこの使命を果たせるかもしれぬ。」
+%E
+%Cc Cav 00021
+#"You are indeed ready now, %p.  I shall tell you a tale of
+#great suffering among your people:
+#
+#"Shortly after you left on your vision quest, the caves were invaded by
+#the creatures sent against us by %n.
+「お前は十分に力をつけたようだ、%p。お前の一族を襲っている
+  大いなる災厄について話そう:
+
+  お前が探求の旅へ出て間もなく、この洞窟は%nが
+  差し向けてきた怪物どもの侵略を受けた。
+
+#"She, herself, could not attack us due to her great size, but her minions
+#have harassed us ever since.  In the first attacks, many died, and the
+#minions of %n managed to steal %o.
+#They took it to %i and there, none of our
+#%g warriors have been able to go.
+  かの雌竜は、その巨体のため直に我らを襲ってはこないが、やつの下僕どもは
+  以来我らを苦しめ続けている。最初の襲撃で、多くが死に、そのうえ
+  %nの下僕どもに%oを盗み出されてしまったのだ。
+  やつらは%oを%iに持ち帰り、
+  我ら%gの戦士はまだ誰もそこまでたどりつけていない。
+
+#"You must find %i, and within it wrest
+#%o from %n.  She guards it as
+#jealously as she guards all treasures she attains.  But with it,
+#we can make our caves safe once more.
+#
+#"Please, %p, recover %o for us, and return it here."
+  お前は%iを見つけ、そこで%nから%oを
+  奪い返してこなければならぬ。やつは、今まで集めたすべての宝に
+  値するかのごとき執念で%oを守っている。
+  だがそれを取り返せれば、我らの洞窟は再び安全になる。
+
+  頼む、%p。我らのために%oを取り返し、ここへ戻してほしい。」
+%E
+%Cp Cav 00025
+#"%nC is immune to her own breath weapons.
+#You should use magic upon her that she does not use herself."
+「%nは、自分の吐ける炎や毒などを受けても倒れない。
+  お前はやつが吐けない種類の魔術を用いるべきだ。」
+%E
+%Cp Cav 00026
+#"When you encounter %n, call upon %d for assistance."
+「%nに相対したなら、%dの助けを請うのだ。」
+%E
+%Cp Cav 00027
+#"There will be nowhere to hide inside %ns inner sanctum."
+「%nの内なる聖域には隠れるところなどないだろう。」
+%E
+%Cp Cav 00028
+#"Your best chance with %n will be to keep moving."
+「%nに勝つ目は、動きを止めないことだ。」
+%E
+%Cp Cav 00029
+#"Do not be distracted by the great treasures in %ns lair.
+#Concentrate on %o."
+「%nの巣にある莫大な財宝に惑わされるな。
+  目指すは%oひとつだ。」
+%E
+%Cp Cav 00030
+#"%oC is the only object that %n truly fears."
+「%oこそ%nが真に恐れるただ一つの品だ。」
+%E
+%Cp Cav 00031
+#"Do not be fooled by %ns size.  She is fast, and it is
+#rumored that she uses magic."
+「%nの大きさにだまされるな。やつは素早く、また噂では
+  魔術を使うそうだ。」
+%E
+%Cp Cav 00032
+#"I would send a party of %gP with you, but we will need all
+#of our strength to defend ourselves."
+「%gの一団を送りたいのだが、我らの力ではここを守るだけで
+  精一杯なのだ。」
+%E
+%Cp Cav 00033
+#"Remember, be %a at all times.  This is your strength."
+「いつでも%aの道を忘れるな。それがお前の強さなのだ。」
+%E
+%Cp Cav 00034
+#"If only we had an amulet of reflection, this would not have happened."
+「反射の魔除けさえあれば、このようなことは起こらなかったであろう。」
+%E
+%Cc Cav 00035
+#You %x many large claw marks on the ground.  The tunnels ahead
+#of you are larger than most of those in any cave complex you have
+#ever been in before.
+#
+#Your nose detects the smell of carrion from within, and bones litter
+#the sides of the tunnels.
+あなたは、地面にたくさんの巨大な爪跡があるのを%xた。
+前方のそこかしこへ続く洞穴は、今までに見たことのある
+どんな洞窟群よりも大きい。
+
+洞穴の奥からは死肉の臭いが漂ってくる。壁際には骨が散らばっている。
+%E
+%Cp Cav 00036
+#Once again, you approach %i.
+もう一度、あなたは%iの近くへとやって来た。
+%E
+%Cc Cav 00040
+#You find yourself in a large cavern, with neatly polished walls, that
+#nevertheless show signs of being scorched by fire.
+#
+#Bones litter the floor, and there are objects scattered everywhere.
+#The air is close with the stench of sulphurous fumes.
+#
+#%nC is clearly visible, but she seems to be asleep.
+あなたは洞窟内の大きな広間にいる。広間の壁は丁寧に磨かれていたが、
+それでも炎で灼かれたとわかる跡が残っていた。
+
+骨が床に散乱しており、色々な品物がそこらじゅうに散らばっていた。
+よどんだ空気には鼻をつく硫黄の臭いが充満していた。
+
+%nの姿がはっきりと見える。しかし彼女は寝ているようだ。
+%E
+%Cp Cav 00041
+#Once again, you find yourself in the lair of %n.
+再び、あなたは%nの住みかにいる。
+%E
+%Cc Cav 00050
+#"So, follower of %l, you seek to invade the lair of %n.
+#Only my meals are allowed down here.  Prepare to be eaten!"
+「さて、%lの手下よ。%nの住処に侵入を企てたというわけか。
+  ここへ入るのを許されるのは私の食事のみ。食われる準備をするがよい！」
+%E
+%Cp Cav 00051
+#"So, again you face me, %c.  No one has ever before escaped me.
+#Now I shall kill you."
+「また来たのか、%c。わらわから逃げおおせた者は誰一人おらぬ。
+  今こそ殺してしんぜよう。」
+%E
+%Cp Cav 00052
+#"You are getting annoying, %c.  Prepare to die."
+「うっとうしい%cめ。死ぬ準備をするがいい。」
+%E
+%Cp Cav 00053
+#"I'll have %o from you, %c.  You shall die."
+「お前から%oを奪ってやる、%c。死ぬがいいわ。」
+%E
+%Cp Cav 00060
+#"You are weak, %c.  No challenge for the Mother of all Dragons."
+「お前は弱い、%c。全てのドラゴンの大母にとって何の脅威でもないわ。」
+%E
+%Cp Cav 00061
+#"I grow hungry, %r.  You look like a nice appetizer!"
+「腹が空いたわ、%r。お前は丁度よい前菜のようだな！」
+%E
+%Cp Cav 00062
+#"Join me for lunch?  You're the main course, %c."
+「一緒に昼食はどうかえ？ メインディッシュはお前だよ、%c。」
+%E
+%Cp Cav 00063
+#"With %o, I am invincible!  You cannot succeed."
+「%oある限り、わらわは無敵じゃ！ お前に望みはない。」
+%E
+%Cp Cav 00064
+#"Your mentor, %l has failed.  You are nothing to fear."
+「お前の師、%lは既に敗北した。お前など恐るるに足らぬ。」
+%E
+%Cp Cav 00065
+#"You shall die here, %c.  %rA cannot hope to defeat me."
+「ここで死ぬがよい、%c。%rごときではわらわを倒すこと能わぬ。」
+%E
+%Cp Cav 00066
+#"You, a mere %r challenge the might of %n?  Hah!"
+「お前が、ただの%rが、%nの力に挑むとな？ はっ！」
+%E
+%Cp Cav 00067
+#"I am the Mother of all Dragons!  You cannot hope to defeat me."
+「わらわは全てのドラゴンの大母なり！ お前ごときが倒せはせぬ。」
+%E
+%Cp Cav 00068
+#"My claws are sharp now.  I shall rip you to shreds!"
+「わらわの爪は鋭いぞ。ずたずたに裂いてしんぜよう！」
+%E
+%Cp Cav 00069
+#"%d has deserted you, %c.  This is my domain."
+「%dはお前を見捨てたぞ、%c。ここはわらわの支配する世界じゃ。」
+%E
+%Cc Cav 00070
+#As you pick up %o it seems heavy at first, but as you
+#hold it strength flows into your arms.
+#
+#You suddenly feel full of power, as if nothing could possibly stand
+#in your path.
+あなたは%oを拾い上げた。初めはずっしりと重かったが、
+%oを握る腕に次第に力が流れ込んできた。
+
+不意にあなたは力がみなぎるのを感じた。何者もあなたの行く手を阻むことが
+できないとすら思える。
+%E
+%Cp Cav 00080
+#%nC sinks to the ground, her heads flailing about.
+#As she dies, a cloud of noxious fumes billows about her.
+%nは崩れ伏し、すべての首が地面にのたうった。
+彼女の命が消えるにつれ、毒々しい瘴気がその身体からたちこめた。
+%E
+%Cc Cav 00081
+#%lC glimpses %o in your possession.
+#He smiles and says:
+#
+#    You have done it!  We are saved.  But I fear that %o
+#    will always be a target for %C forces who will want it for their
+#    own.
+#
+#    To prevent further trouble, I would like you, %p,
+#    to take %o away with you.  It will help you as you
+#    quest for the Amulet of Yendor.
+%lはあなたが%oを携えているのを認めると、
+笑顔になり、こう言った:
+
+    よくやった！　我らは助われた。だが、わしは%oが
+    それを我が物にせんとする%cの勢力に、これからも
+    常に狙われ続けるのではないかと恐れている。
+
+    これ以上の災いをこうむらぬため、%p、
+    お前が%oとともに行ってくれぬか。
+    %oはお前がイェンダーの魔除けを探す使命の
+    助けとなるだろう。
+%E
+%Cc Cav 00082
+#%l grasps %o proudly for a moment, then looks at you.
+#
+#"You are its keeper now, and the time has come to resume your search
+#for the Amulet.  %Z await your return through the
+#magic portal which brought you here."
+%lは%oをしばし誇らしげに構えると、あなたに向き直った。
+
+「今や、お前は%oの守護者だ。そして、
+  魔除けを探しに戻る時が来た。魔法の門の向こうで、
+  %Zがお前を待っているぞ。」
+%E
+%Cp Cav 00090
+#"%pC!  Welcome back.
+#How goes your quest to recover the Amulet for %d?"
+「%p！　よくぞ戻ってきた。
+  %dの魔除けを取り戻す旅の具合はどうかね？」
+%E
+%Cc Cav 00091
+#"You have been successful, I see, %p.
+#
+#"Now that the Amulet of Yendor is yours, here is what you must do:
+#
+#"Journey upwards to the open air.  The Amulet you carry will then
+#take you into the Astral Planes, where the Great Temple of %d
+#casts its influence throughout our world.
+#
+#"Sacrifice the Amulet on the altar.  Thus shall %d become supreme!"
+「お前の旅は実りあるものだったようだな、%p。
+
+  いまや、イェンダーの魔除けはお前の手にある。そこでお前は、
+  これから言うことをなさねばならぬ:
+
+  上へと旅を続け、地上へ出よ。お前の持つ魔除けが、お前を
+  天上界へと導いてくれるはずだ。そこには世界にあまねく力を及ぼす
+  %dの大いなる神殿がある。
+
+  神殿の祭壇にて、魔除けを献上せよ。
+  さすれば%dは並ぶものなき力を得るであろう！」
+%E
+#
+#	Healer
+#
+%Cc Hea 00001
+#What sorcery has brought you back to %H?  The smell
+#of fresh funeral pyres tells you that something is amiss with the healing
+#powers that used to practice here.
+#
+#No rhizotomists are tending the materia medica gardens, and where are the
+#common folk who used to come for the cures?
+#
+#You know that you must quickly make your way to the collegium, and
+#%ls iatreion, and find out what has happened in your
+#absence.
+いかなる魔法があなたを%Hに連れ戻したのか？　ごく最近燃やされたと
+おぼしき火葬の薪のにおいが、かつてここで学んだ癒しの力に何かおかしなことが
+起きているとあなたに告げた。
+
+薬草園を手入れする薬師の姿もない。それに、治療を求めて訪れていた人々は
+どこへ行ってしまったのだ？
+
+あなたは、自分のいない間に何が起きたのかを知るため、すぐに評議会と
+%lの治療院に向かわねばならないと決断した。
+%E
+%Cp Hea 00002
+#After your last experience you expected to be here, but you certainly
+#did not expect to see things so much worse.  This time you must
+#succeed.
+故郷の惨状を一度は見ていても、しかしこれほどまでに
+事態がますます酷くなろうとは思いもしなかった。
+今度こそ、あなたは必ず使命を果たさねばならない。
+%E
+%Cp Hea 00003
+#Again, you %x %H in the distance.
+#
+#The smell of death and disease permeates the air.  You do not have
+#to be %Ra to know that %n is on the verge of victory.
+ふたたび、あなたは遠くに%Hを%xた。
+
+死と病の臭いがあたりに立ちこめている。%Raならずとも、
+%nがまさに勝利を収めんとしていることが分かるだろう。
+%E
+%Cp Hea 00005
+#"Did you read that new treatise on the therapeutic use of leeches?"
+「ヒルの治療学的使用法に関する新しい論文は読んだか？」
+%E
+%Cp Hea 00006
+#"Paint a red caduceus on your shield and monsters won't hit you."
+「赤い蛇杖を盾に描いておけば、怪物も攻撃してこないだろう。」
+%E
+%Cp Hea 00007
+#"I passed handwriting so they are demoting me a rank."
+「レポートを出さなかったから、落第させられてしまうよ。」
+%E
+%Cp Hea 00008
+#"I've heard that even %l has not been able to cure Chiron."
+#※Chironはアスクレピオスに医術を授けたケンタウロスの賢人。射手座になった。
+「%lですら、ケイローンを癒すことは出来ぬと聞いたぞ。」
+%E
+%Cp Hea 00009
+#"We think %n has used his alchemists, and %o,
+#to unleash a new disease we call 'the cold' on Gehennom."
+「我らは%nが錬金術師と%oを用い、ゲヘナにおいて
+『風邪』と呼ばれる新たな病を解き放ったと考えている。」
+%E
+%Cp Hea 00010
+#"Did you read that new treatise on the therapeutic use of leeches?"
+「ヒルの治療学的使用法に関する新しい論文は読んだか？」
+%E
+%Cp Hea 00011
+#"Paint a red caduceus on your shield and monsters won't hit you."
+「赤い蛇杖を盾に描いておけば、怪物も攻撃してこないだろう。」
+%E
+%Cp Hea 00012
+#"How are you feeling?  Perhaps a good bleeding will improve your sprits."
+「気分はいかがですか？ 悪い血を出せばあなたの魂は良くなりますよ。」
+%E
+%Cp Hea 00013
+#"Have you heard the absurd new theory that diseases are caused by
+#microscopic organisms, and not ill humors?"
+「疾病が、悪い血ではなく微生物によって引き起こされるという
+ばかげた新説を聞いたかい？」
+%E
+%Cp Hea 00014
+#"I see that you bring %o, now you can cure this plague!"
+「あなたが%oを持ち帰った今、この災禍は癒されるでしょう！」
+%E
+%Cc Hea 00015
+#Feebly, %l raises his head to look at you.
+#
+#"It is good to see you again, %p.  I see the concern in your
+#eyes, but do not worry for me.  I am not ready for Hades yet.  We have
+#exhausted much of our healing powers holding off %n.
+#I need your fresh strength to carry on our work.
+#
+#"Come closer and let me lay hands on you, and determine if you have
+#the skills necessary to accomplish this mission."
+力なく、%lはあなたに顔を向けた。
+
+「再び会えて良かった、%p。心配そうな目だな、だが案ずることはない。
+  まだハデスの世話にはならん。我らは%nを抑えるために、
+  癒しの力をほとんど使い尽くしてしまった。この仕事を続けるには
+  お前の若い力が必要なのだ。
+
+  近くに寄って、手を触れさせてくれ。お前にこの任務を成し遂げるだけの
+  技量があるか見せてほしい。」
+%E
+%Cc Hea 00016
+#"Again you return to me, %p.  I sense that each trip back
+#the pleurisy and maladies of our land begin to infect you.  Let us
+#hope and pray to %d that you become ready for your task before
+#you fall victim to the bad humors."
+「また帰ってきたな、%p。お前がここへ戻るごとに、我らの大地を覆う
+  数多の疾病がお前を蝕んでゆくのが感じられる。
+  お前が悪しき気の倒れ伏す前に、使命を果たす準備を整えられるよう、
+  %dに祈ろう。」
+%E
+%Cc Hea 00017
+#"Chiron has fallen, Hermes has fallen, what else must I tell you to
+#impress upon you the importance of your mission!  I hope that you
+#have come prepared this time."
+「ケイローンが死に、ヘルメスが死に、他に何をもってお前にこの使命が
+  いかに重要かを理解させればよいのだ！　今度こそ用意ができているの
+  だろうな。」
+%E
+%Cc Hea 00018
+#"You have failed us, %p.  You are a quack!  A charlatan!
+#
+#"Hades will be happy to hear that you are once again practicing your
+#arts on the unsuspecting."
+「お前には失望した、%p。お前など医者ではない！　詐欺師め！
+
+  お前が再び罪なき人々を手にかけていると聞いたら、
+  ハデスはさぞ喜ぶだろうよ。」
+%E
+%Cc Hea 00019
+#"Alas, %p, you are yet too inexperienced to deal with the rigors
+#of such a task.  You must be able to draw on the knowledge of botany,
+#vetenary, and alchemy before I can send you on this quest with good
+#conscience.
+#
+#"Return when you wear %Ra's caduceus."
+「ああ、%p！　これほどの困難な使命を果たすには、お前はまだ
+  あまりにも未熟だ。安心してこの任務に送り出すためには、植物学、
+  獣医学、錬金術の知識を身につけねばならぬ。
+
+  %Rの蛇杖を身につけたら、再びここへ戻れ。」
+%E
+%Cc Hea 00020
+#"You have learned much of the remedies that benefit, but you must also
+#know which physic for which ail.  That is why %ds teachings are a
+#part of your training.
+#
+#"Return to us when you have healed thyself."
+「そなたは数多くの有益な治療法を学んだ。だがどの薬がどの病に
+  効くかも学ばねばならぬ。%dの教えがそなたの訓練の一部と
+  なっているのはそのためだ。
+
+  己自身を癒し終えたら、我々の元へ戻れ。」
+%E
+%Cc Hea 00021
+#For the first time, you sense a smile on %ls face.
+#
+#    You have indeed learned as much as we can teach you in preparation
+#    for this task.  Let me tell you what I know of the symptoms and hope
+#    that you can provide a cure.
+#
+#    A short while ago, the dreaded %nt was fooled by the gods
+#    into thinking that he could use %o to find a
+#    cure for old age.  Think of it, eternal youth!  But his good
+#    health is accomplished by drawing the health from those around him.
+#
+#    He has exhausted his own supply of healthy people and now he seeks to
+#    extend his influence into our world.  You must recover from him
+#    %o and break the spell.
+#
+#    You must travel into the swamps to %i, and from there
+#    follow the trail to %ns island lair.  Be careful.
+初めて、あなたは%lのが微笑むのを見た。
+
+    お前は、この使命に備えて我々が教えうるすべてのことを
+    すでに学んでいる。この世界の病状を私の知るかぎり話し、
+    お前がこの災禍を癒してくれることを祈ろう。
+
+    少し前、恐るべき%nは神々に騙され、
+    %oを用いれば老いを癒すことができると思い込んだ。
+    永遠の若さとな！　しかしやつの命は、まわりの生命を吸い取る
+    ことで保たれているのだ。
+
+    やつは健康な人々の備えを使い尽くし、今やその影響を
+    我らの世界にまで広げようとしている。そなたは%oを
+    やつから取り戻し、呪いを打ち破らねばならない。
+
+    沼地を通って%iへ赴き、そこから%nの
+    隠れ家となっている島への手がかりを追うのだ。気をつけて行け。
+%E
+%Cp Hea 00025
+#"Remember, %p, to always wash your hands before operating."
+「忘れるな、%p。手術の前には必ず手を洗うのだ。」
+%E
+%Cp Hea 00026
+#"%nC has no real magic of his own.  To this he is vulnerable."
+「%nは自らの魔法を持たぬ。そこがやつの弱味だ。」
+%E
+%Cp Hea 00027
+#"If you have been true to %d, you can draw on the power of
+#%o."
+「真に%dの道を歩んでいたなら、%oの力を引き出せるだろう。」
+%E
+%Cp Hea 00028
+#"Bring with you antidotes for poisons."
+「解毒剤を持ってゆきなさい。」
+%E
+%Cp Hea 00029
+#"Remember this, %n can twist the powers of %o
+#to hurt instead of heal."
+「覚えておけ、%nは%oの癒しの力を捻じ曲げ、
+傷つけるために使うことが出来る。」
+%E
+%Cp Hea 00030
+#"I have sent for Chiron, but I am afraid he will come too late."
+「ケイローンには使いを出した。しかし彼が来る頃にはもう手遅れかもしれぬ。」
+%E
+%Cp Hea 00031
+#"Maybe when you return the snakes will once again begin to shed."
+「お前が戻ってきたとき、蛇は再び脱皮するかもしれぬ。」
+%E
+%Cp Hea 00032
+#"The plague grows worse as we speak.  Hurry, %p!"
+「こうして話す間にも疫病は刻一刻と悪化している。急げ、%p！」
+%E
+%Cp Hea 00033
+#"Many times %n has caused trouble in these lands.  It is
+#time that he was eradicated like the diseases he has caused."
+「%nは何度もこの地に災いを引き起こした。やつがもたらした病と
+  同じく、今こそやつが滅ぼされるときだ。」
+%E
+%Cp Hea 00034
+#"With but one eye, %n should be easy to blind.  Remember this."
+「片目しかないがゆえに、%nは盲目になりやすい。覚えておけ。」
+%E
+%Cc Hea 00035
+#You stand before the entrance to %i.  Strange
+#scratching noises come from within the building.
+#
+#The swampy ground around you seems to stink with disease.
+あなたは%iの入口の前に立った。
+何かを引っかくような奇妙な物音が建物の中から聞こえてくる。
+
+まわりの地面は沼だらけで、まるで病毒の瘴気を放っているようだ。
+%E
+%Cp Hea 00036
+#Once again you stand at the entrance to %i.
+ふたたびあなたは%iの入口に立った。
+%E
+%Cc Hea 00040
+#You stand within sight of the infamous Isle of %n.  Even
+#the words of %l had not prepared you for this.
+#
+#Steeling yourself against the wails of the ill that pierce your ears,
+#you hurry on your task.  Maybe with %o you can
+#heal them on your return, but not now.
+あなたは悪名高き%nの島が見えるところに来た。
+%lに聞いた話も、これほどの事態を覚悟させるものではなかった。
+
+耳を貫く病人たちのうめき声に心を閉ざし、あなたは使命に急いだ。
+%oの力があれば帰りぎわに彼らを癒してあげられるかもしれない。
+だが今はだめだ。
+%E
+%Cp Hea 00041
+#Once again, you %x the Isle of %n in the distance.
+もう一度、あなたは遠くに%nの島を%xた。
+%E
+%Cc Hea 00050
+#"They have made a mistake in sending you, %p.
+#
+#"When I add your youth to mine, it will just make it easier for me
+#to defeat %l."
+「やつらがお前を送り込んだのは間違いだったようだな、%p。
+
+  お前の若さを手に入れれば、%lを滅ぼすのは更にたやすくなるだろう。」
+%E
+%Cp Hea 00051
+#"Unlike your patients, you seem to keep coming back, %p!"
+「お前の患者とは違って、なかなか死なないようだな、%pよ！」
+%E
+%Cp Hea 00052
+#"Which would you like, %p?  Boils, pleurisy, convulsions?"
+「どれが好みだ、%p？ 腫れ物、肺炎、それとも痙攣か？」
+%E
+%Cp Hea 00053
+#"I'll have %o back from you, %r.  You are
+#not going to live to escape this place."
+「%oを返せ、%rめ。生きてはここから返さんぞ。」
+%E
+%Cp Hea 00060
+#"They might as well give scalpels to wizards as to let you try to
+#use %o!"
+「お前に%oを使わせるなど、魔法使いにメスをやるようなものだ！」
+%E
+%Cp Hea 00061
+#"If I could strike %l, surrounded by his %gP, imagine what I
+#can do to you here by yourself."
+「%gの一団に守られた%lをも打ち倒せる俺が、
+  ここでたった一人のお前をどうできるか、想像してみろ。」
+%E
+%Cp Hea 00062
+#"I will put my %Rp to work making a physic out of your ashes."
+「%Rどもにお前の灰を手術させてやるとするか。」
+%E
+%Cp Hea 00063
+#"As we speak, Hades gathers your patients to join you."
+「言ったように、ハデスがお前の患者どもを集めてお前の後を追わせてくれるぞ。」
+%E
+%Cp Hea 00064
+#"After I'm done with you, I'll destroy %l as well."
+「お前が済んだら、%lも同じように滅ぼしてくれるわ。」
+%E
+%Cp Hea 00065
+#"You will have to kill me if you ever hope to leave this place."
+「俺を殺さない限り、この地から出ることもかなわんぞ。」
+%E
+%Cp Hea 00066
+#"I will impale your head on my caduceus for all to see."
+「皆に見えるよう、お前の頭を俺の蛇杖に突き刺してやろう。」
+%E
+%Cp Hea 00067
+#"There is no materia medica in your sack which will cure you of me!"
+「袋の中に、お前を直してくれるような薬品はない。」
+%E
+%Cp Hea 00068
+#"Do not fight too hard, I want your soul strong, not weakened!"
+「あまり激しく戦うな。お前の魂が弱る前に奪い取りたいからな！」
+%E
+%Cp Hea 00069
+#"You should have stopped studying at vetenary."
+「獣医学を勉強するのをやめるべきだ。」
+%E
+%Cc Hea 00070
+#As you pick up %o, you feel its healing begin to
+#warm your soul.  You curse Zeus for taking it from its rightful owner,
+#but at least you hope that %l can put it to good use once
+#again.
+%oを拾い上げると、癒しの力があなたの魂を温め始めるのが
+感じられた。あなたはこれを正しい持ち主から奪ったゼウスを
+呪ったが、少なくとも%lならもう一度これを
+あるべき形で使ってくれることだろう。
+%E
+%Cc Hea 00080
+#The battered body of %n slumps to the ground and gasps
+#out one last curse:
+#
+#    You have defeated me, %p, but I shall have my revenge.
+#    How, I shall not say, but this curse shall be like a
+#    cancer on you.
+#
+#With that %n dies.
+満身創痍の%nは地面へと崩れ落ち、喘ぎながら最後の呪いを吐いた。
+
+    お前の勝ちだ、%p。だがきっと復讐してやる。
+    その方法は言わぬが、この呪いは癌のようにお前を蝕むだろう。
+
+かくして%nは死んだ。
+%E
+%Cc Hea 00081
+#As soon as %l sees %o he summons his %gP.
+#
+#Gently, %l reaches out and touches %o.
+#He instructs each of the assembled to do the same.  When everyone
+#has finished he speaks to you.
+#
+#    Now that we have been replenished we can defeat this plague.  You must
+#    take %o with you and replenish the worlds you have
+#    been called upon to travel next.  I wish you could ride Chiron to the
+#    end of your journey, but I need him to help me spread the cure.  Go
+#    now and continue your journey.
+%lは%oを見るなり、彼の%gPを呼び集めた。
+
+静かに、%lは手を伸ばして%oに触れた。
+彼は集まった各々に同じことをするように言った。皆が触れ終えると、
+彼はあなたに話しかけた。
+
+    今こそ我らは満たされ、この疫病を打ち破ることができる。
+    そなたは%oを携えて、次に旅するよう求められている世界を
+    満たさねばならぬ。ケイローンに乗って行かせてやりたいが、
+    彼は癒しの力を広めるのに必要なのだ。行け、お前の旅を
+    続けるがよい。
+%E
+%Cc Hea 00082
+#%l cautiously handles %o while watching you.
+#
+#"You are its keeper now, and the time has come to resume your search
+#for the Amulet.  %Z await your return through the
+#magic portal which brought you here."
+%lはあなたを見ながら、慎重に%oを調べた。
+
+「今や、そなたは%oの守護者だ。そして、
+  魔除けの探索を再開する時が来た。
+  お前をここへ連れて来た魔法の門の向こうで、
+  %Zがそなたを待っているぞ。
+%E
+%Cp Hea 00090
+#"You have again returned to us, %p.  We have done well in your
+#absence, yes?  How fare you upon your quest for the Amulet?"
+「再び戻って来たな、%pよ。お前の留守中、我々だけではあるが
+  なかなかうまくやっているだろう。魔除けの探索はどうだね？」
+%E
+%Cc Hea 00091
+#"Ah, you have recovered the Amulet, %p.  Well done!
+#
+#"Now, you should know that you must travel through the elemental planes
+#to the astral, and there return the Amulet to %d.  Go forth and
+#may our prayers be as a wind upon your back."
+「おお、魔除けを取り戻したのだな、%p。よくやった！
+
+  さあ、お前のなすべきことは、精霊の世界を通り、
+  天上界へと旅することだ。そこで%dに
+  魔除けを返すのだ。行け、そして我らの祈りが
+  お前の追い風とならんことを。」
+%E
+#
+#	Knight
+#
+%Cc Kni 00001
+#You materialize in the shadows of %H.  Immediately, you notice
+#that something is wrong.  The fields around the castle are trampled and
+#withered, as if some great battle has been recently fought.
+#
+#Looking closer, you %x long gouges in the walls of %H.
+#You know of only one creature that makes those kinds of marks...
+あなたは%Hの影の中に転送された。すぐにあなたは何かがおかしいことに
+気がついた。城のまわりの田園は踏みにじられ、穀物は萎れている。
+まるで、つい最近大きな戦争があったかのようだ。
+
+間近をみると、%Hの壁に長くえぐられた跡があった。
+このような傷をつけ得るのは唯一あの怪物だけであると、
+あなたは知っていた…。
+%E
+%Cp Kni 00002
+#Once again you stand in the shadows of %H.
+あなたは%Hの影の中に再び現れた。
+%E
+%Cp Kni 00003
+#Again, you stand before %H.  You vaguely sense that this
+#may be the last time you stand before %l.
+あなたは再び%Hの前に立った。あなたは心のどこかで、
+%lにまみえるのはこれが最後となるだろうと感じていた。
+%E
+%Cp Kni 00005
+#"Hail, %p!  Verily, thou lookest well."
+「ようこそ%p！ 貴公は実に元気そうですな。」
+%E
+%Cp Kni 00006
+#"There is word, %p, that %n hath been sighted in the fens
+#near %i."
+「%p、噂によれば、%nが%i近くの沼地で目撃されたそうだ。」
+%E
+%Cp Kni 00007
+#"Thou art our only hope now, %p."
+「%pよ、貴公は我らが最後の希望だ。」
+%E
+%Cp Kni 00008
+#"Verily, %l could have no better champion, %p."
+「まさに、%lは貴公ほどの強者は見つけられまい。」
+%E
+%Cp Kni 00009
+#"Many brave %cP died when %n attacked."
+「%nの攻撃で、多くの勇敢な%cPが死んだ。」
+%E
+%Cp Kni 00010
+#"Hail, %p!  Verily, thou lookest well."
+「ようこそ%p！ 貴公は実に元気そうですな。」
+%E
+%Cp Kni 00011
+#"So, %p, didst thou find %n in the fens
+#near %i?"
+「では、%p、%nは%i近くの沼地にいたのかな？」
+%E
+%Cp Kni 00012
+#"Worthy %p, hast thou proven thy right purpose on the body of %n?"
+「%p殿、貴公は%nの屍に己が正当な理由を示したか？」
+%E
+%Cp Kni 00013
+#"Verily, %l could have no better champion, %p."
+「まさに、%lは貴公ほどの強者は見つけられまい。」
+%E
+%Cp Kni 00014
+#"Hast thou indeed recovered %o?"
+「貴公が%oを取り戻したとはまことか？」
+%E
+%Cc Kni 00015
+#"Ah, %p.  We see thou hast received Our summons.
+#We are in dire need of thy prowess.  But first, We must needs
+#decide if thou art ready for this great undertaking."
+「おお、%pよ。我らが召喚に応じてくれたのだな。
+  我々には貴公の武勇が必要なのだ。だがまずは、貴公がこの
+  偉大な使命を果たし得るかどうか、見極めねばならない。」
+%E
+%Cp Kni 00016
+#"Welcome again, %p.  We hope thou art ready now."
+「よくぞ戻った、%p。貴公の準備が整っていることを期待する。」
+%E
+%Cp Kni 00017
+#"Once again, thou standest before Us, %p.  Art thou ready now?"
+「再び、貴公は我らがもとに来た、%pよ。今こそ準備はよいか？」
+%E
+%Cp Kni 00018
+#"Thou disgracest this noble court with thine impure presence.  We have been
+#lenient with thee, but no more.  Thy name shall be spoken no more.  We
+#hereby strip thee of thy title, thy lands, and thy standing as %ca.
+#Begone from Our sight!"
+「お前はこの高貴なる宮廷を、その汚らわしい存在で辱めたのだ。
+  我々はお前に対し常に寛大であったが、それもこれまでだ。
+  お前の名は二度と口にされぬ。ここに我らはお前の称号、土地、
+  そして%cの地位を剥奪する。我らの前から消えるがよい！」
+%E
+%Cc Kni 00019
+#"Verily, %p, thou hast done well.  That thou hast survived thus
+#far is a credit to thy valor, but thou art yet unprepared for
+#the demands required as Our Champion.  %rA, no matter how
+#pure, could never hope to defeat the foul %n.
+#
+#"Journey forth from this place, and hone thy skills.  Return to
+#Our presence when thou hast attained the noble title of %R."
+「%p、貴公は実によくやっている。貴公がここまで勝ち抜いて来たことは、
+  まさに己が武勇を示すものだ。だが、我らが随一の強者として
+  成さねばならない使命に対しては、貴公はまだ用意ができておらぬ。
+  %rでは、たとえどれほど高潔であれ、忌まわしき%nを
+  打ち倒すことは望めぬ。
+
+  この地より旅立ち、そして貴公の技を磨くのだ。そして、
+  高貴なる%Rの位を勝ち得た時、我らがもとへ戻ってきてくれ。」
+
+%E
+%Cp Kni 00020
+#"Thou dishonourest Us, %p!  Thou hast strayed from the path of
+#chivalry! Go from Our presence and do penance.  Only when thou art again
+#pure mayst thou return hence."
+「%p、お前は我らが名誉を汚した！　汝は騎士道を踏み外したのだ！
+  我らがもとより立ち去り、罪を贖うがいい。お前が再び高潔さを取り戻すまで、
+  この地に戻ることは許さぬ。」
+%E
+%Cc Kni 00021
+#"Ah, %p.  Thou art truly ready, as no %c before thee hath
+#been.  Hear now Our words:
+#
+#"As thou noticed as thou approached %H, a great battle hath
+#been fought recently in these fields.  Know thou that Merlin himself
+#came to aid Us here as We battled the foul %n.  In the midst of that
+#battle, %n struck Merlin a great blow, felling him.  Then, as Our
+#forces were pressed back, %n stole %o.
+#
+#"We eventually turned the tide, but lost many %cP in doing so.
+#Merlin was taken off by his apprentice, but hath not recovered.  We have
+#been told that so long as %n possesseth %o,
+#Merlin will not regain his health.
+#
+#"We hereby charge thee with this most important of duties:
+#
+#"Go forth from this place, to the fens, and there thou wilt find
+#%i.  From there, thou must track down %n.  Destroy the
+#beast, and return to Us %o.  Only then can
+#We restore Merlin to health."
+「おお、%p。貴公はまさに、これまでの%cたちの及ばぬほどに
+  準備万端とみえる。今こそ我らが命を聞け:
+
+  貴公%Hに戻ってすぐに気付いたとおり、つい先日この地で
+  大きな戦いがあった。知ってのとおり、卑しき%nとの
+  戦いに、マーリン自らが加勢に来てくれた。その戦いの中で、
+  %nの強力な一撃にマーリンは倒れてしまった。
+  そして我らが軍勢は撤退を余儀なくされ、%nに
+  %oを奪われたのだ。
+
+  我らはかろうじて敵勢を押し止めたが、そのために多くの
+  %cを失ってしまった。
+  マーリンはその弟子に連れていかれたが、まだ回復していない。
+  %nが%oを所有している限り、マーリンはその力を
+  取り戻せないと聞いている。
+
+  そこで、我々は貴公に次の極めて重大な任務を課す:
+
+  この地から沼に向かい、そこで%iを探せ。
+  そして、そこから%nの足跡を追わねばならぬ。かの獣を滅ぼし、
+  %oを我らの手に取り戻せ。そうしなければ、
+  マーリンを回復させることはできぬのだ。」
+%E
+%Cp Kni 00025
+#"Remember, %p, follow always the path of %d."
+「%pよ、常に%dの道に従うことを忘れるでない。」
+%E
+%Cp Kni 00026
+#"Though %n is verily a mighty foe, We have confidence in thy victory."
+「%nは実に強力な敵だが、我々は貴公の勝利を確信している。」
+%E
+%Cp Kni 00027
+#"Beware, for %n hath surrounded himself with hordes of foul creatures."
+「%nはそのまわりをおぞましい怪物の群に守らせている。油断するな。」
+%E
+%Cp Kni 00028
+#"Great treasure, 'tis said, is hoarded in the lair of %n."
+「%nの巣には、莫大な財宝が貯えられているという。」
+%E
+%Cp Kni 00029
+#"If thou possessest %o, %p, %ns magic
+#shall therewith be thwarted."
+「%p、もし貴公が%oを手にできれば、
+  それによって%nの魔法をくじくことができよう。」
+%E
+%Cp Kni 00030
+#"The gates of %i are guarded by forces unseen, %p.
+#Go carefully."
+「%p、%iの門は不可視の力で守られている。気を付けて行け。」
+%E
+%Cp Kni 00031
+#"Return %o to Us quickly, %p."
+「%oを直ちに我らが手に取り返すのだ、%p。」
+%E
+%Cp Kni 00032
+#"Destroy %n, %p, else %H shall surely fall."
+「%nを倒せ、%p。さもなくば%Hは確実に落ちよう。」
+%E
+%Cp Kni 00033
+#"Call upon %d when thou art in need."
+「真に必要であれば、%dに助力を求めよ。」
+%E
+%Cp Kni 00034
+#"To find %i, thou must keep thy heart pure."
+「%iを見い出すには、心を高潔に保たねばならない。」
+%E
+%Cc Kni 00035
+#You stand at the foot of %i.  Atop, you can %x a shrine.
+#Strange energies seem to be focused here, and the hair on the back
+#of your neck stands on end.
+あなたは%iの裾野に立っている。その頂上にはほこらが見えた。
+怪しげな力がそこに集中しているように感じ、あなたの後ろ髪が
+逆立った。
+%E
+%Cp Kni 00036
+#Again, you stand at the foot of %i.
+再び、あなたは%iの裾野にいる。
+%E
+%Cc Kni 00040
+#As you exit the swamps, you %x before you a huge, gaping hole in the
+#side of a hill.  From within, you smell the foul stench of carrion.
+#
+#The pools on either side of the entrance are fouled with blood, and
+#pieces of rusted metal and broken weapons show above the surface.
+あなたが沼を後にすると、目前の丘の側面に巨大な穴がぱっくりと
+開いているのが見えた。中からは屍肉の腐臭がただよってくる。
+
+入口の周囲の水たまりは血で汚れ、その表面には錆びた金属や壊れた
+武器が見える。
+%E
+%Cp Kni 00041
+#Again, you stand at the entrance to %ns lair.
+再び、あなたは%nの巣の入り口に立った。
+%E
+%Cc Kni 00050
+#"Hah!  Another puny %c seeks death.  I shall dine well tonight,
+#then tomorrow, %H shall fall!"
+「ハッ！ またしても弱っちい%cが死にに来たか。今夜は御馳走と
+  しようぞ。そして明日には%Hが落ちるのだ！」
+%E
+%Cp Kni 00051
+#"Again, thou challengest me, %r?  So be it.  Thou wilt die here."
+「また挑みに来たのか、%r？ 好きにしろ。貴様はここで死ぬのだ。」
+%E
+%Cp Kni 00052
+#"Thou art truly foolish, %r.  I shall dispatch thee anon."
+「貴様はなんたる愚か者だ、%r。即刻始末してくれよう。」
+%E
+%Cp Kni 00053
+#"So, thou darest touch MY property!  I shall have that bauble back,
+#puny %r.  Thou wilt die in agony!"
+「ずうずうしくも我が財宝に触れようとは！ その光り物を返してもらおう、
+  貧弱な%rめ。貴様は苦しみに悶えて死ぬことになろう！」
+%E
+%Cp Kni 00060
+#"A mere %r can never withstand me!"
+「%rふぜいが我が力を押し止められるか！」
+%E
+%Cp Kni 00061
+#"I shall kill thee now, and feast!"
+「貴様をここで殺して、貪ってくれよう！」
+%E
+%Cp Kni 00062
+#"Puny %c.  What manner of death dost thou wish?"
+「ちっぽけな%cよ。どのような死に方が望みか？」
+%E
+%Cp Kni 00063
+#"First thee, %p, then I shall feast upon %l."
+「最初は貴様だ、%p。それから%lを食ってやろう。」
+%E
+%Cp Kni 00064
+#"Hah!  Thou hast failed, %r.  Now thou shalt die."
+「ハッ！ 貴様は敗北したのだ、%r。さあ、死ぬがよい。」
+%E
+%Cp Kni 00065
+#"Die, %c.  Thou art as nothing against my might."
+「死ね、%c。貴様では我が力に抗することなどできぬ。」
+%E
+%Cp Kni 00066
+#"I shall suck the marrow from thy bones, %c."
+「貴様の骨を断ち割って髄を啜ってやろう、%c。」
+%E
+%Cp Kni 00067
+#"Let's see...  Broiled?  No.  Fried?  Nay.  Baked?  Yea verily,
+#that is the way I like my %c for dinner."
+「そうだな、炒めるか？ 違う。揚げるか？ 否、焼く方がいいか？
+  しかり、これこそディナーにふさわしい%cの料理法なのだ。」
+%E
+%Cp Kni 00068
+#"Thy strength waneth, %p.  The time of thy death draweth near."
+「力が弱まっているな、%p。貴様の死の時刻が近づいているぞ。」
+%E
+%Cp Kni 00069
+#"Call upon thy precious %d, %p.  It shall not avail thee."
+「偉大なる%d様に助けを請えよ、%p。貴様に目などかけんだろうがな。」
+%E
+%Cc Kni 00070
+#As you pick up %o, you feel its protective fields
+#form around your body.  You also feel a faint stirring in your mind,
+#as if you are in two places at once, and in the second, you are waking
+#from a long sleep.
+あなたが%oを取り上げると、体のまわりを守りの力が包むのを感じた。
+また、まるで同時に二ヶ所にいるような、そしてたちまち長い眠りから
+覚めたような、そんなかすかな感動を覚えた。
+%E
+%Cc Kni 00080
+#As %n sinks to the ground, blood gushing from his open mouth, he
+#defiantly curses you and %l:
+#
+#    Thou hast not won yet, %r.  By the gods, I shall return and dog
+#    thy steps to the grave!
+#
+#His tail flailing madly, %n tries to crawl towards you, but slumps
+#to the ground and dies in a pool of his own blood.
+%nはその開いた口から血を吹き出し、地に崩れ落ちながらも、
+挑戦的にあなたと%lを呪って言った:
+
+    貴様はまだ勝ったわけではないぞ、%rよ。神々にかけて、必ずや舞い戻り
+    貴様を地獄に引きずり込んでくれる！
+
+狂ったように尻尾を振り回し、%nはあなたに近づこうともがいたが、
+地面に伏して自らの血の海の中で死んだ。
+%E
+%Cc Kni 00081
+#As you approach %l, he beams at you and says:
+#
+#    Well done!  Thou art truly the Champion of %H.  We
+#    have received word that Merlin is recovering, and shall soon
+#    rejoin Us.
+#
+#    He hath instructed Us that thou art now to be the guardian of
+#    %o.  He feeleth that thou mayst have need of
+#    its powers in thine adventures.  It is Our wish that thou keepest
+#    %o with thee as thou searchest for the fabled
+#    Amulet of Yendor.
+%lに近づくと、彼はあなたに微笑んで言った:
+
+    よくやった！ 汝は%Hの真の勇者となった。マーリンは
+    回復しはじめ、じきに我らに合流すると言伝を受けている。
+
+    マーリンは、今や貴公が%oの守り手となるべきだと
+    我らに伝えた。彼は貴公の冒険において、その力が必要と
+    なるであろうと感じているのだ。伝説に聞くイェンダーの
+    魔除けを探求する旅に、貴公が%oとともに
+    行かれんことが我らの望みだ。
+%E
+%Cc Kni 00082
+#"Careful, %p!  %oC might break, and that would
+#be a tragic loss.  Thou art its keeper now, and the time hath come
+#to resume thy search for the Amulet.  %Z await thy
+#return through the magic portal that brought thee here."
+「気をつけろ、%p！ %oが壊れてしまう。
+  そうなったら大きな痛手だ。貴公は今や%oの守り手だ。
+  そして、魔除けの探索を再開するときが来た。魔法の門の向こうで、
+  %Zが貴公を待っているぞ。」
+%E
+%Cp Kni 00090
+#"Well met, %p.  How goeth thy search for the Amulet of Yendor?"
+「よくぞ来た、%p。イェンダーの魔除けの探索はどうなっている？」
+%E
+%Cc Kni 00091
+#"Thou hast succeeded, We see, %p!  Now thou art commanded to take
+#the Amulet to be sacrificed to %d in the plane of the astral.
+#
+#"Merlin hath counseled Us that thou must travel always upwards through
+#the planes of the elements, to achieve this goal.
+#
+#"Go with %d, %p."
+「貴公は成功したようだな、%p！ 今こそ、貴公は魔除けを天上界へと
+  運び、%dへと捧げなければならぬ。
+
+  マーリンの予言によれば、貴公はそこへ至るため、常に上方を
+  目指して進み、精霊たちの諸世界を通り抜けねばならぬ。
+
+  %pに%dの加護のあらんことを。」
+%E
+#
+#	Monk
+#
+%Cc Mon 00001
+#You find yourself standing in sight of %H.  Something
+#is obviously wrong here. Strange shapes lumber around
+#outside %H!
+#
+#You realize that the %l needs your assistance!
+気がつくと、あなたは%Hが見える場所に立っていた。
+だが、何かがおかしい。奇怪な姿が%Hを取り囲んで
+歩き回っている！
+
+あなたは%lが助けを必要としていることに気付いた！
+%E
+%Cp Mon 00002
+#Once again, you stand before %H.
+もう一度、あなたは%Hの前に立っていた。
+%E
+%Cp Mon 00003
+#Again you face %H.  Your intuition hints that this may be
+#the final time you come here.
+あなたは再び%Hの前に立っていた。虫の知らせか、
+あなたはここに来るのはこれで最後になるかもしれないと感じた。
+%E
+%Cp Mon 00005
+#"Greetings, honorable %r.  It is good to see you."
+「ようこそ、誉れ高き%r殿。そなたに会えて光栄です。」
+%E
+%Cp Mon 00006
+#"Ah, %p!  Surely you can help us in our hour of need."
+「ああ、%p！ そなたならこの試練の時に我らの助けとなろう。」
+%E
+%Cp Mon 00007
+#"Greetings, %s.  %lC has great need of your help."
+「ようこそ、我が%sよ。%lがあなたに助力を求めておられる。」
+%E
+%Cp Mon 00008
+#"Alas, it seems as if even %d has deserted us."
+「ああ、我々は%dにも見放されてしまったのか。」
+%E
+%Cp Mon 00009
+#"May %d be with you, %s."
+「%dがあなたとともにあらんことを。」
+%E
+%Cp Mon 00010
+#"Greetings, honorable %r.  It is good to see you again."
+「ようこそ、誉れ高き%r殿。そなたと再び会えて光栄です。」
+%E
+%Cp Mon 00011
+#"Ah, %p!  Our deepest gratitude for all of your help."
+「ああ、%p！ あなたの助けには深い感謝の念が絶えません。」
+%E
+%Cp Mon 00012
+#"Greetings, %s.  Perhaps you will take some time to meditate with us?"
+「ようこそ、我が%sよ。よろしければ、しばし瞑想をご一緒して頂けませぬか？」
+%E
+%Cp Mon 00013
+#"With this test behind you, may %d bring you enlightenment."
+「この試練で、%dはあなたに悟りをもたらすだろう。」
+%E
+%Cp Mon 00014
+#"May %d be with you, %s."
+「%dがあなたとともにあらんことを。」
+%E
+%Cc Mon 00015
+#"Ah, %p, my %S.  You have returned to us at last.
+#A great blow has befallen our order; perhaps you can help us.
+#First, however, I must determine if you are prepared for this
+#great challenge."
+「ああ、%p、我が%Sよ。そなたはついに我々のもとへ戻ってきてくれた。
+  我らが道場はいま、重大な危機に頻しておる。そなたの助けがほしい。
+  しかしまずは、そなたがこの大いなる挑戦に対する心構えが出来て
+  いるかどうか、見極めねばならぬ。」
+%E
+%Cp Mon 00016
+#"Again, my %S, you stand before me.  Are you ready now to help us?"
+「我が%Sよ、そなたは再び私の前に現れた。我々の手助けをする
+  心構えは出来たか？」
+%E
+%Cp Mon 00017
+#"Once more, %p, you stand within the sanctum.  Are you ready now?"
+「%p、そなたは再び聖域の内に現れた。準備は出来たか？」
+%E
+%Cc Mon 00018
+#"You are a heretic, %p!  How can you, %ra, deviate so from the
+#teachings of %d?  Begone from this temple.  You are no longer
+#%sa to this order.  We will pray to %d for other assistance,
+#as you have failed us utterly."
+「%p、この異端者が！ どうしたら、%rともあろう者が、
+  %dの教えからそれることが出来るのだ？ この道場から出てゆけ。
+  そなたはもうこの道場の%sではない。 そなたが我々をひどく
+  裏切った以上、%dが他の助力をくだされるよう祈るしかあるまい。」
+%E
+%Cc Mon 00019
+#"Alas, %p, it is not yet to be.  A mere %r could never
+#withstand the might of %n.  Go forth, again into the world, and return
+#when you have attained the post of %R."
+「%p、残念ながら、そなたはまだ時が来ておらぬようだ。
+  %rでは%nに到底太刀打ちできぬ。行け、再び世界へ出て、
+  %Rの位をおさめることが出来たのち、戻ってくるがよい。」
+%E
+%Cc Mon 00020
+#"This is terrible, %p.  You have deviated from the true path!
+#You know that %d requires the most strident devotion of this
+#order.  The %shood must stand for utmost piety.
+#
+#"Go from here, atone for your sins against %d.  Return only when
+#you have purified yourself."
+「これはなんとひどいことだ、%p。そなたは正道を踏み外している。
+  そなたも存じておろう、%dは厳しい節制をこの道場に
+  求めていることを。我らは完璧な信心に拠らねばならぬ。
+
+  ここを去り、%dへ働いた罪を懺悔するのだ。
+  己を浄めるまで、ここへ戻ることはあたわぬ。」
+%E
+%Cc Mon 00021
+#"Yes, %p.  You are truly ready now.  Attend to me and I shall
+#tell you of what has transpired:
+#
+#"During one of the Great Meditations a short time ago, %n and
+#a legion of elementals invaded %H.  Many %gP were
+#killed, including the one bearing %o.
+#
+#Now, there are barely enough %gP left to keep the
+#elementals at bay.
+#
+#"We need you to find %i, then, from there, travel
+#to %ns lair.  If you can manage to defeat %n
+#and return %o here, we can then drive off the
+#legions of elementals that slay our students.
+#
+#"Go with %d as your guide, %p."
+「%pよ。そなたは真に心構えが出来ておるようだ。
+  私のいうことに耳を傾けてくれ。一体何が起こったのかを話そう。
+
+  先日の《大いなる瞑想》のさなか、%nと精霊の軍団が
+  %Hに攻め入った。多くの%gが殺され、
+  その中に%oを運んでいた者もいた。
+
+  今や、我々のもとには、かろうじて%Hから
+  精霊を追い払えるだけの%gしかいないのだ。
+
+  そなたはまず、%iを探さねばならぬ。
+  そして、そこから%nのアジトへと
+  向かうのだ。もしそなたが%nを倒し、
+  %oを持ち帰ることが出来たならば、
+  我々は生徒たちを殺した精霊どもを駆逐できるだろう。
+
+  さあ、%dの加護のもと、行くのだ、%pよ。」
+%E
+%Cp Mon 00025
+#"You can prevail, if you rely on %d."
+「%dを信ずれば、そなたは勝てる。」
+%E
+%Cp Mon 00026
+#"Remember that %n has great magic at his command."
+「%nはすさまじい魔術を意のままに操ることを肝に命じておけ。」
+%E
+%Cp Mon 00027
+#"Be pure, my %S."
+「清くあれ、我が%Sよ。」
+%E
+%Cp Mon 00028
+#"Beware, %i is surrounded by hordes of earth elementals."
+「%iは土の精霊の集団に囲まれておる、気をつけよ。」
+%E
+%Cp Mon 00029
+#"Remember your studies, and you will prevail!"
+「学んだことを忘れるな。さすれば勝てよう！」
+%E
+%Cp Mon 00030
+#"Acquire and wear %o if you can.  They will aid you
+#against %n."
+「できるならば%oを手にいれ、身につけよ。%nに立ち向かう手助けとなろう。」
+%E
+%Cp Mon 00031
+#"Call upon %d when your need is greatest.  You will be answered."
+「真に必要に迫られたならば、%dに助けを求めよ。
+  そなたの願いは聞き届けられよう。」
+%E
+%Cp Mon 00032
+#"Remember to use the elementals' strength against them!"
+「自然の力でやつに立ち向かうことを忘れるな！」
+%E
+%Cp Mon 00033
+#"Do not loose faith, %p.  If you do so, %n will grow stronger."
+「%pよ、信仰を欠くな。そうなれば、%nはより強くなるだろう。」
+%E
+%Cp Mon 00034
+#"Wear %o.  They will assist you in your efforts."
+「%oを装着せよ。そなたの力となってくれよう。」
+%E
+%Cc Mon 00035
+#You remember the descriptions of %i, given to you
+#by the %l.  It is ahead that you will find %n's trail.
+あなたは%lに教えられた%iの様子を思い出していた。
+前方で%nの足跡を見つけることができるだろう。
+%E
+%Cp Mon 00036
+#Again, you stand before %i.
+あなたは再び%iの前に立った。
+%E
+%Cc Mon 00040
+#The stench of brimstone is all about you, and the elementals close in
+#from all sides!
+#
+#Ahead, there is a small clearing amidst the bubbling pits of lava...
+硫黄の臭いがあたりじゅうに立ちこめ、精霊どもがすべての方角から迫ってくる！
+
+前方の、ぐつぐつと煮えたぎる溶岩の狭間に、小さな空き地がある。
+%E
+%Cp Mon 00041
+#Again, you have invaded %ns domain.
+あなたは再び%nの領域に乗り込んだ。
+%E
+%Cc Mon 00050
+#"Ah, so %l has sent another %g to retrieve
+#%o.
+#
+#"No, I see you are no %g.  Perhaps I shall have some fun today
+#after all.  Prepare to die, %r!  You shall never regain
+#%o."
+「ほう、%lがまたもや%gをよこしたのか、
+  %oの奪回のために。
+
+  いや、待て。貴様は、ただの%gではないらしいな。もしかしたら、
+  今日は少し楽しめるかもしれない。死ぬ準備でもするのだな、%r！
+  貴様が%oを取り返すことなど不可能なのだからな。」
+%E
+%Cp Mon 00051
+#"So, %r.  Again you challenge me."
+「ほう、%r。貴様はまたわしに挑戦するのか。」
+%E
+%Cp Mon 00052
+#"Die now, %r.  %d has no power here to aid you."
+「死ねい、%r。ここでは%dが貴様を助けることはできぬ。」
+%E
+%Cp Mon 00053
+#"You shall die, %r, and I will have %o back."
+「死ね、%r、%oはわしが取り返す。」
+%E
+%Cp Mon 00060
+#"Submit to my will, %c, and I shall spare you."
+「%cよ、わしに従うならば、生かしてやってもよいぞ。」
+%E
+%Cp Mon 00061
+#"Your puny powers are no match for me, %c."
+「%cよ、貴様のごとき猪小才がわしに到底及ぶものか。」
+%E
+%Cp Mon 00062
+#"I shall have you turned into a zombie for my pleasure!"
+「戯れに、貴様を屍人にでも変えてやろう！」
+%E
+%Cp Mon 00063
+#"Despair now, %r.  %d cannot help you."
+「絶望だな、%r。%dは貴様を助けることはできぬ。」
+%E
+%Cp Mon 00064
+#"I shall feast upon your soul for many days, %c."
+「貴様の魂を何日にも渡って喰らいつづけてやろうぞ、%c。」
+%E
+%Cp Mon 00065
+#"Your death will be slow and painful.  That I promise!"
+「貴様の死はじわじわと苦痛に苛まれるものとなる。約束しよう！」
+%E
+%Cp Mon 00066
+#"You cannot defeat %n, you fool.  I shall kill you now."
+「愚か者め、貴様は%nに勝てぬ。今こそ殺してくれよう。」
+%E
+%Cp Mon 00067
+#"Your precious %lt will be my next victim."
+「貴様の大事な%lがわしの次の餌食だ。」
+%E
+%Cp Mon 00068
+#"I feel your powers failing you, %r.  You shall die now."
+「貴様の力が失われてゆくのがわかるぞ、%r。死ぬがよい。」
+%E
+%Cp Mon 00069
+#"With %o, nothing can stand in my way."
+「%oある限り、わしに恐るるものなど何もない。」
+%E
+%Cc Mon 00070
+#As you pick up %o, you feel the essence of
+#%d fill your soul.  You know now why %n stole them from
+#%H, for with them, %ca of %d could
+#easily defeat his plans.
+#
+#You sense a message from %d.  Though not verbal, you
+#get the impression that you must return to %l as soon
+#as possible.
+%oを拾うと、魂が%dの精髄に満たされるのを感じた。
+今、あなたはなぜ%nが%Hより%oを
+盗んだのかを理解した。これがあれば、%dの%cは
+易々と%nの野望を打ち破ることができるだろう。
+
+あなたは%dの意思を感じ取った。それは言葉による
+ものではなかったが、あなたはすぐ%lのもとへ
+戻らねばならないと分かった。
+%E
+%Cc Mon 00080
+#%nC gasps:
+#
+#    "You have only defeated this mortal body.  Know this: my spirit
+#    is strong.  I shall return and reclaim what is mine!"
+#
+#With that, %n expires.
+%nはあえいだ。
+
+  貴様はわが定命の肉体を退けたにすぎぬ。覚えておくがよい。
+  我が魂は強大だ。わしは必ず戻り、我が物を取り戻す！
+
+そして、%nは死んだ。
+%E
+%Cc Mon 00081
+#"You have returned, %p.  And with %o, I see.
+#Congratulations.
+#
+#"I have been in meditation, and have received direction from
+#a minion of %d.  %d commands that you retain
+#%o.  With it, you must recover the Amulet
+#of Yendor.
+#
+#"Go forth, and let %d guide your steps."
+%p、戻ったか。しかも、%oを手に。
+おめでとう。
+
+私は瞑想を続けていたところ、%dの使者より命令を承った。
+%dは、そなたに%oを持ち続けるように、と命じた。そして、
+それをもって、イェンダーの魔除けを取り戻すのだ。
+%E
+%Cc Mon 00082
+#%lC studies %o for a moment,
+#then returns his gaze to you.
+#
+#"%oC must remain with you.  Use them
+#as you resume your search for the Amulet.
+#%Z await your return through the magic portal
+#that brought you here."
+%lはしばらく%oを検分すると、
+視線をあなたに戻した。
+
+「%oはそなたと共にあらねばならぬ。
+  それを使い、魔除けの探索を再開せよ。
+  そなたをここへ導いた魔法の門の向こうで、
+  %Zがそなたを待っているぞ。
+%E
+%Cp Mon 00090
+#"Welcome back, %p.  How is your quest for the Amulet going?"
+「よくぞ戻った、%p。魔除けの探索はどうかね？」
+%E
+%Cc Mon 00091
+#"You have prevailed, %p!  %d is surely with you.  Now,
+#you must take the amulet, and sacrifice it on %ds altar on
+#the Astral plane.  I suspect that I shall never see you again in this
+#life, but I hope to at %ds feet."
+「%pよ、そちは打ち勝ったのだ！　真に、%dはそちとともに在る。
+  さあ、そなたは天上界にある%dの祭壇まで魔除けをもたらし、
+  これを捧げなければならぬ。
+  今生でそなたに再び見えることはないだろう。だが、
+  %dの御元でそなたに会うことを楽しみにしているぞ。」
+%E
+#
+#	Priest
+#
+%Cc Pri 00001
+#You find yourself standing in sight of %H.  Something
+#is obviously wrong here.  The doors to %H, which usually
+#stand open, are closed.  Strange human shapes shamble around
+#outside.
+#
+#You realize that %l needs your assistance!
+気がつくと、あなたは%Hを見渡せる場所にいた。
+しかし明らかに何かがおかしい。
+普段は開かれている%Hの門戸は完全に閉ざされており、
+人間の形をした奇怪なものが外をよろよろと歩いている。
+
+あなたは%lが助力を求めていることに気付いた。
+%E
+%Cp Pri 00002
+#Once again, you stand before %H.
+再び、あなたは%Hに戻ってきた。
+%E
+%Cp Pri 00003
+#Again you face %H.  Your intuition hints that this may be
+#the final time you come here.
+あなたは再び%Hと向き合った。あなたの直感が、
+ここに来るのはこれが最後になると告げている。
+%E
+%Cp Pri 00005
+#"Greetings, honored %r.  It is good to see you."
+「よくぞ参られた、高名な%rよ。そなたに会えて光栄だ。」
+%E
+%Cp Pri 00006
+#"Ah, %p!  Surely you can help us in our hour of need."
+「ああ、%p！ そなたならこの危急の時にある我らを必ずや助けてくれる。」
+%E
+%Cp Pri 00007
+#"Greetings, %s.  %lC has great need of your help."
+「ようこそ、我%sよ。%lがそなたの助けを必要としている。」
+%E
+%Cp Pri 00008
+#"Alas, it seems as if even %d has deserted us."
+「ああ、%dさえも我らを見放したのではなかろうか。」
+%E
+%Cp Pri 00009
+#"May %d be with you, %s."
+「%dがあなたとともにあらんことを。」
+%E
+%Cp Pri 00010
+"Greetings, %r.  It is good to see you again."
+「よくぞ参られた、%r。再び会えてとてもうれしく思う。」
+%E
+%Cp Pri 00011
+"Ah, %p!  Our deepest gratitude for all of your help."
+「ああ、%p！ あなたの助けには深い感謝の念が絶えませぬ。」
+%E
+%Cp Pri 00012
+#"Welcome back, %s!  With %o, no undead can stand against us."
+「%sよ、よくぞ戻られた！ %oある限り、死人は我らに立ち向かえまい。」
+%E
+%Cp Pri 00013
+#"Praise be to %d, for delivering us from %n."
+「%nから我らを救いたもうた%dに感謝を。」
+%E
+%Cp Pri 00014
+#"May %d be with you, %s."
+「%dがあなたとともにあらんことを。」
+%E
+%Cc Pri 00015
+#"Ah, %p, my %S.  You have returned to us at last.
+#A great blow has befallen our order; perhaps you can help us.
+#First, however, I must determine if you are prepared for this
+#great challenge."
+「おお%p、我が%Sよ。そなたはついに我らがもとへ戻ってきた。
+  我らの教団は現在重大な危機に頻しておる。そなたの助けが必要だ。
+  だが、まずは、私はそなたがこの大いなる難関に相対する力が
+  あるかどうか、見極めねばならぬ。」
+%E
+%Cp Pri 00016
+#"Again, my %S, you stand before me.  Are you ready now to help us?"
+「我が%Sよ、そなたは再び我が前に現れた。我々の助力となる
+  用意はできたか？」
+%E
+%Cp Pri 00017
+#"Once more, %p, you stand within the sanctum.  Are you ready now?"
+「%p、そなたは再びこの聖地に戻った。準備はよいか？」
+%E
+%Cc Pri 00018
+#"You are a heretic, %p!  How can you, %ra, deviate so from the
+#teachings of %d?  Begone from this temple.  You are no longer
+#%sa to this order.  We will pray to %d for other assistance,
+#as you have failed us utterly."
+「お前は異端者だ、%p！ いったいどうして%rともあろう者が
+  %dの教えからこうも外れられるのだ？ この寺院から去れ。
+  お前はもうこの教団の%sではない。お前が我らを手ひどく
+  裏切った以上、我らは%dに別の助力を祈るとしよう。」
+%E
+%Cc Pri 00019
+#"Alas, %p, it is not yet to be.  A mere %r could never
+#withstand the might of %n.  Go forth, again into the world, and return
+#when you have attained the post of %R."
+「ああ、%p、まだその時ではないようだ。
+  ただの%rでは、%nの力には全く太刀打ちするできぬ。
+  行くのだ。再び世界を旅し、%Rとなったのち、
+  ここへ戻ってくるがよい。」
+%E
+%Cc Pri 00020
+#"This is terrible, %p.  You have deviated from the true path!
+#You know that %d requires the most strident devotion of this
+#order.  The %shood must stand for utmost piety.
+#
+#"Go from here, atone for your sins against %d.  Return only when
+#you have purified yourself."
+「これはひどい、%p。そなたは真実の道を踏み外している！
+  そなたも知るとおり、%dは厳格な信仰をこの教団に求めている。
+  我らは完璧な信心に拠らねばならぬ。
+
+  ここを去り、%dへ働いた罪を懺悔するのだ。
+  己を浄めるまで、ここへ戻ることはあたわぬ。」
+%E
+%Cc Pri 00021
+#"Yes, %p.  You are truly ready now.  Attend to me and I shall
+#tell you of what has transpired:
+#
+#"At one of the Great Festivals a short time ago, %n and a legion
+#of undead invaded %H.  Many %gP were killed, including
+#the one carrying %o.
+#
+#"As a final act of vengefulness, %n desecrated the altar here.
+#Without it, we could not mount a counter-attack.  Now, there are
+#barely enough %gP left to keep the undead at bay.
+#
+#"We need you to find %i, then, from there, travel
+#to %ns lair.  If you can manage to defeat %n and return
+#%o here, we can then drive off the legions of
+#undead that befoul the land.
+#
+#"Go with %d as your guide, %p."
+「%p、そなたは真に用意ができているようだ。
+  我らに何が起きたのかを話そう。心して聞いてくれ。
+
+  少し前の大祭に、%nと、%nに率いられた死人の軍団が
+  %Hに攻め入った。%oを運んでいた者を含め、
+  多くの%gが殺されてしまった。
+
+  暴虐の仕上げに、%nはここの祭壇を汚した。
+  祭壇なしでは、我々は反撃に出ることができない。
+  そして現在、我々のもとにはかろうじて%Hから
+  死人を押しとどめられるだけの%gしかいないのだ。
+
+  そこでそなたには、%iを見つけ出してもらいたい。
+  そして、そこから%nのアジトへと向かうのだ。
+  もしそなたが%nを倒し、%oを奪回できたならば、
+  我らはこの土地を汚す死人どもを駆逐できるだろう。
+
+  さあ、%dの加護のもと、行くのだ、%p。」
+%E
+%Cp Pri 00025
+#"You can prevail, if you rely on %d."
+「%dを信ずれば、そなたは勝てる。」
+%E
+%Cp Pri 00026
+#"Remember that %n has great magic at his command."
+「覚えておけ、%nは恐るべき魔術を意のままに操る。」
+%E
+%Cp Pri 00027
+#"Be pure, my %S."
+「清くあれ、我が%Sよ。」
+%E
+%Cp Pri 00028
+#"Beware, %i is surrounded by a great graveyard."
+「%iは巨大な墓地に囲まれておる、注意せよ。」
+%E
+%Cp Pri 00029
+#"You may be able to affect %n with magical cold."
+「魔法の冷気ならば、%nに効くかもしれぬ。」
+%E
+%Cp Pri 00030
+#"Acquire and wear %o if you can.  It will aid you
+#against %n."
+「可能なら%oを手に入れ、装備せよ。%nに対する助けとなろう。」
+%E
+%Cp Pri 00031
+#"Call upon %d when your need is greatest.  You will be answered."
+「真に必要に迫られたならば、%dに助けを求めよ。
+  そなたの願いは聞き届けられよう。」
+%E
+%Cp Pri 00032
+#"The undead legions are weakest during the daylight hours."
+「死人の軍団の力は、太陽の光のある間に最も弱まる。」
+%E
+%Cp Pri 00033
+#"Do not lose faith, %p.  If you do so, %n will grow stronger."
+「信仰を失うな、%p。もしそうなれば、%nはより強くなる。」
+%E
+%Cp Pri 00034
+#"Wear %o.  It will assist you against the undead."
+「%oを装備せよ。死人に立ち向かう助けとなろう。」
+%E
+%Cc Pri 00035
+#You stand facing a large graveyard.  The sky above is filled with clouds
+#that seem to get thicker closer to the center.  You sense the presence of
+#undead in larger numbers than you have ever encountered before.
+#
+#You remember the descriptions of %i, given to you by
+#%lC.  It is ahead that you will find %ns trail.
+あなたは大きな墓地の前に立っている。頭上の空はどんよりとした雲におおわれ、
+その雲は中心に向かって濃密さを増しているように見える。
+墓地からは、あなたが今までに遭遇したことのないほど多数の
+死人の存在が感じられる。
+
+あなたは、%lから教えられた%iの描写を思い出した。
+%nの足跡を追うならば、前方の寺院を通らねばならない。
+%E
+%Cp Pri 00036
+#Again, you stand before %i.
+あなたは再び%iの前に立った。
+%E
+%Cc Pri 00040
+#The stench of brimstone is all about you, and the shrieks and moans
+#of tortured souls assault your psyche.
+#
+#Ahead, there is a small clearing amidst the bubbling pits of lava...
+硫黄の臭いがまわりじゅうに立ちこめ、拷問に歪められた魂の悲鳴やうめきが
+あなたの精神を引き裂いた。
+
+前方の、ぐつぐつと煮えたぎる溶岩の狭間に、小さな広間がある。
+%E
+%Cp Pri 00041
+#Again, you have invaded %ns domain.
+あなたは再び%nの領域に侵攻した。
+%E
+%Cc Pri 00050
+#"Ah, so %lC has sent another %g to retrieve
+#%o.
+#
+#"No, I see you are no %g.  Perhaps I shall have some fun today
+#after all.  Prepare to die, %r!  You shall never regain
+#%o."
+「ほう、%lはまた%oを取り返そうと%gをよこしたのか。
+
+  いや待て、貴様はただの%gではないな。もしかしたら、
+  今日は少しは楽しませてもらえるのかもしれんな。
+  死ぬ準備はいいか、%r！ 貴様に%oは取り戻せんわ。」
+%E
+%Cp Pri 00051
+#"So, %r.  Again you challenge me."
+「%rめ、また俺に挑戦するってわけか。」
+%E
+%Cp Pri 00052
+#"Die now, %r.  %d has no power here to aid you."
+「死ね、%r。助けを請おうが、ここでは%dは無力だ。」
+%E
+%Cp Pri 00053
+#"You shall die, %r, and I will have %o back."
+「死ぬがいい、%r、%oを取り戻してやる。」
+%E
+%Cp Pri 00060
+#"Submit to my will, %c, and I shall spare you."
+「%cよ、俺に服従すれば、生かしてやってもよいぞ。」
+%E
+%Cp Pri 00061
+#"Your puny powers are no match for me, %c."
+「貴様のチンケな力では俺には到底及ばんな、%c。」
+%E
+%Cp Pri 00062
+#"I shall have you turned into a zombie for my pleasure!"
+「慰みに、貴様をゾンビにでもしてやろう！」
+%E
+%Cp Pri 00063
+#"Despair now, %r.  %d cannot help you."
+「絶望だな、%r。%dは貴様を助けることはできん。」
+%E
+%Cp Pri 00064
+#"I shall feast upon your soul for many days, %c."
+「貴様の魂を何日もかけて喰らい尽くしてやる、%c。」
+%E
+%Cp Pri 00065
+#"Your death will be slow and painful.  That I promise!"
+「貴様はじわじわと苦しめて殺すと約束しよう！」
+%E
+%Cp Pri 00066
+#"You cannot defeat %n, you fool.  I shall kill you now."
+「馬鹿め、貴様は%nに勝つことなどできん。死ぬがよい。」
+%E
+%Cp Pri 00067
+#"Your precious %lt will be my next victim."
+「貴様の大事な%lを、次の餌食としてくれよう。」
+%E
+%Cp Pri 00068
+#"I feel your powers failing you, %r.  You shall die now."
+「貴様の力が失われていくのが判るぞ、%r。今こそ死ね。」
+%E
+%Cp Pri 00069
+#"With %o, nothing can stand in my way."
+「%oある限り、我が道を阻むものはない。」
+%E
+%Cc Pri 00070
+#As you pick up %o, you feel the essence of
+#%d fill your soul.  You know now why %n stole it from
+#%H, for with it, %ca of %d could
+#easily defeat his plans.
+#
+#You sense a message from %d.  Though not verbal, you
+#get the impression that you must return to %lC as soon
+#as possible.
+%oを拾うと、%dの精髄があなたの魂を満たしていくのが感じられた。
+そして今、あなたはなぜ%nがこれを%Hから盗み出したのかを知った。
+これがあれば、%dの%cは易々と%nの野望を打ち破れるだろう。
+
+あなたは%dからのメッセージを感じ取った。それは言葉による
+ものではないが、一刻も早く%lのもとへ戻らねばならないことが
+強く感じられた。
+%E
+%Cc Pri 00080
+#You feel a wrenching shift in the ether as %ns body dissolves
+#into a cloud of noxious gas.
+#
+#Suddenly, a voice booms out:
+#
+#    Thou hast defeated the least of my minions, %r.
+#    Know now that Moloch is aware of thy presence.
+#    As for thee, %n, I shall deal with thy failure
+#    at my leisure.
+#
+#You then hear the voice of %n, screaming in terror...
+%nの肉体が瘴気の雲を撒き散らしながら融けてゆく。
+同時に、あなたは周囲のエーテルが捻られるように変化して
+いるのに気づいた。
+
+突然、声が轟きわたった:
+
+  %rよ、汝は我が最も汚わらしき下僕を倒したにすぎぬ。
+  モーロックは汝を見ているぞ。肝に命じよ。
+  %n、汝の不首尾は余が直々に裁くとしよう。
+
+そして、%nの恐怖の叫びが聞こえた…。
+%E
+%Cc Pri 00081
+#"You have returned, %p.  And with %o, I see.
+#Congratulations.
+#
+#"I have been in meditation, and have received direction from
+#a minion of %d.  %d commands that you retain
+#%o.  With it, you must recover the Amulet
+#of Yendor.
+#
+#"Go forth, and let %d guide your steps."
+「%p、帰ってきたか。しかも、%oを手にして。
+  おめでとう。
+
+  私は瞑想中、%dの使者より命令を承った。
+  %dは、そなたに%oを持つように、と命じた。
+  そなたは%oとともに、イェンダーの魔除けを
+  取り戻さねばならぬ。」
+%E
+%Cp Pri 00090
+#"Welcome back, %p.  How is your quest for the Amulet going?"
+「よくぞ帰ってきた、%p。魔除けの探索はどうかね？」
+%E
+%Cc Pri 00091
+#"You have prevailed, %p!  %d is surely with you.  Now,
+#you must take the amulet, and sacrifice it on %ds altar on
+#the Astral plane.  I suspect that I shall never see you again in this
+#life, but I hope to at %ds feet."
+「%p、そなたは打ち勝ったのだ！ 真に、%dはそなたとともに在る。
+  さあ、そなたは天上界にある%dの祭壇まで魔除けをもたらし、
+  捧げねばならぬ。今生で再びそなたに見えることはないだろう、
+  しかし、%dの御元でそなたに会えることを楽しみにしているぞ。」
+%E
+#
+#	Ranger
+#
+%Cc Ran 00001
+#You arrive in familiar surroundings.  In the distance, you %x the
+#ancient forest grove, the place of worship to %d.
+#
+#Something is wrong, though.  Surrounding the grove are centaurs!
+#And they've noticed you!
+あなたは見なれた場所にたどりついた。
+遠方には、%dに祈りを捧げる地、古森の木立が見える。
+
+しかし、何かがおかしい。森を囲んでいるのはケンタウロスだ！
+そして、彼らはあなたに気づいている！
+%E
+%Cp Ran 00002
+#Once again, you stand before %H.
+再び、あなたは%Hの前に立った。
+%E
+%Cp Ran 00003
+#You have the oddest feeling that this may be the last time you
+#are to enter %H.
+あなたは不思議と、%Hに入るのはこれが最後かもしれないと感じた。
+%E
+%Cp Ran 00005
+#"%pC!  I have not seen you in many moons.  How do you fare?"
+「%p！ 幾月も会わなかったが、元気にやっているかね？」
+%E
+%Cp Ran 00006
+#"%nC continues to threaten the grove.  But we hold fast."
+「%nは森を脅かし続けているが、我々がしっかり守っている。」
+%E
+%Cp Ran 00007
+#"%lC is growing weak.  The magic required to defend the grove drains us."
+「%lは弱ってきている。
+  森を守るために必要な魔力が我々を消耗させるのだ。」
+%E
+%Cp Ran 00008
+#"Remember %i is hard to enter.  Beware the
+#distraction of leatherwings."
+#*** leatherwings = こうもり？
+「%iに潜入するのは難しいぞ。皮の翼どもに惑わされぬように。」
+%E
+%Cp Ran 00009
+#"We must regain %o.  Without it we will be overrun."
+「%oを取り戻さねば、我々は蹂躙されるだろう。」
+%E
+%Cp Ran 00010
+#"%pC!  I have not seen you in many moons.  How do you fare?"
+「%p！ 幾月も会わなかったが、元気にやっているかね？」
+%E
+%Cp Ran 00011
+#"Birdsong has returned to the grove, surely this means you have defeated %n."
+「鳥の歌が森に戻りました。あなたが%nを打ち破ったのですね。」
+%E
+%Cp Ran 00012
+#"%lC seems to have regained some of his strength."
+「%lはその力のいくばくかを取り戻したようです。」
+%E
+%Cp Ran 00013
+#"So, tell us how you entered %i, in case some new evil arises there."
+「新たな邪悪が現れたときのため、%iに入る方法を教えてくれ。」
+%E
+%Cp Ran 00014
+#"Is that truely %o that I see you carrying?"
+「あなたの持っているそれが本物の%oか？」
+%E
+%Cc Ran 00015
+#"%pC!  You have returned!  Thank %d.
+#
+#"We have great need of you.  But first, I must see if you have the
+#required abilities to take on this responsibility."
+「%pよ！ よく戻って来てくれた！ %dに感謝を。
+
+  我々にはお前が必要だ。しかしまず、この重要な役目を果たすのに
+  十分な能力をお前が持っているか、確かめさせてくれ。」
+%E
+%Cp Ran 00016
+#"Once again, %p, you stand in our midst.  Are you ready now?"
+「%p、再びお前は我々のもとへ戻って来た。準備はできているか？」
+%E
+%Cp Ran 00017
+#"Ah, you are here again, %p.  Allow me to determine your readiness..."
+「おお、また来たな%pよ。お前の準備ができているか調べさせてくれ…」
+%E
+%Cc Ran 00018
+#"%pC!  You have doomed us all.  You fairly radiate %L influences
+#and weaken the power we have raised in this grove as a result!
+#
+#"Begone!  We renounce your %shood with us!  You are an outcast now!"
+「%p！ お前は我々すべてを破滅させた！
+  お前が%Lの影響力をまき散らし、
+  森を守る我々の力を弱めてしまった！
+
+  立ち去れ！ 我々とお前とはもはや仲間ではない。お前は追放だ！」
+%E
+%Cc Ran 00019
+#"%p, you are yet too inexperienced to withstand the demands of that
+#which we need you to do.  %RA might just be able to do this thing.
+#
+#"Return to us when you have learned more, my %S."
+「%p、お前はまだ経験不足で、我々がお前に課す任務には
+  とても耐えられない。
+  %Rなら、なんとか使命を果たせるだろう。
+
+  より経験を積み、我々の元に戻ってくるがよい。わが%Sよ。」
+%E
+%Cc Ran 00020
+#"You have strayed, %p!  You know that %d requires that
+#we maintain a pure devotion to things %a!
+#
+#"You must go from us.  Return when you have purified yourself."
+「正しい道からそれているようだな、%p！ お前も知っているように、
+  %dは我々に%aに対する純粋な信心を持つことを求めている。
+
+  我々の前から立ち去れ。そして穢れを浄めてから戻ってくるのだ。」
+%E
+%Cc Ran 00021
+#"You are indeed ready, %p.  I shall tell you what has transpired,
+#and why we so desperately need your help:
+#
+#"A short time ago, the mountain centaurs to the east invaded
+#and enslaved the plains centaurs in this area.  The local
+#leader is now only a figurehead, and serves %n.
+#
+#"During our last gathering of worship here, we were beset by hordes of
+#hostile centaurs, as you witnessed.  In the first onslaught a group,
+#headed by %n himself, managed to breach the grove and
+#steal %o.
+#
+#"Since then, we have been besieged.  We do not know how much longer
+#we will be able to maintain our magical barriers.
+#
+#"If we are to survive, you, %p, must infiltrate
+#%i.  There, you will find a pathway down, to the
+#underground cavern of %n.  He has always coveted
+#%o, and will surely keep it.
+#
+#"Recover %o for us, %p!  Only then will %d be safe."
+「%pよ、準備は良いようだな。まずは何が起こったのか、そして、
+  なぜ我々がこうも火急にお前の助けを必要としているのかを話そう。
+
+  つい最近のことだ、あの東方の山ケンタウロス共が押し寄せてきて、
+  この地方の草原ケンタウロスを奴隷にした。この地方の首領は
+  今やただの傀儡で、奴は%nに仕えている。
+
+  先の礼拝のために我々がここへ集合した際に、お前が目撃したとおり、
+  我々は敵対的なケンタウロスの一軍に包囲されてしまった。そして
+  最初の猛攻撃の時に、%n直々に率いられた一団が、
+  木立を突破して%oを盗み出してしまったのだ。
+
+  それ以来、我々はずっと包囲されている。
+  我々が後どれくらい魔法の防壁を維持できるかわからん。
+
+  我々が生き延びるためには、%p、お前は%iに
+  潜入しなければならない。そこに、%nの地下洞窟へと降りる
+  道があるはずだ。奴は常々%oを渇望していたから、
+  必ず自分で持っているだろう。
+
+  我々のために%oを取り戻してくれ、%p！
+  そうして初めて、%dは安全になるだろう。」
+%E
+%Cp Ran 00025
+#"It is rumored that the Forest and Mountain Centaurs have resolved
+#their ancient feud and now band together against us."
+「噂によると、森と山のケンタウロスは古の確執を解き、
+我々に対する同盟を結んだらしい。」
+%E
+%Cp Ran 00026
+#"%nC is strong, and very smart."
+「%nは強く、とても頭が切れる。」
+%E
+%Cp Ran 00027
+#"Use %o, when you find it.  It will help you survive
+#to reach us."
+「%oを手に入れたら、使うのだ。生きて戻るための助けとなるだろう。」
+%E
+%Cp Ran 00028
+#"Remember, let %d be your guide."
+「忘れるな、%dの導きに従うのだ。」
+%E
+%Cp Ran 00029
+#"Call upon %d when you face %n.
+#The very act of doing so will infuriate him, and give you advantage."
+「%nに相対したら、%dに助力を求めよ。
+その行動が奴を激怒させて、お前を有利にするだろう。」
+%E
+%Cp Ran 00030
+#"%n and his kind have always hated us."
+「%nと奴の眷属は、いつも我々を憎んできた。」
+%E
+%Cp Ran 00031
+#"We cannot hold the grove much longer, %p.  Hurry!"
+「我々はこれ以上森を守れそうにない。%p、急いでくれ！」
+%E
+%Cp Ran 00032
+#"To infiltrate %i, you must be very stealthy."
+「%iに潜入するには、人目を盗む能力が必要だ。」
+%E
+%Cp Ran 00033
+#"Remember that %n is a braggart.  Trust not what he says."
+「%nが嘘つきであることを覚えておけ。奴の言葉を信用するな。」
+%E
+%Cp Ran 00034
+#"You can triumph, %p, if you trust in %d."
+「%p、お前が%dを信じるならば、勝利を得ることができるだろう。」
+%E
+%Cc Ran 00035
+#This must be %i.
+#
+#You are in a cave built of many different rooms, all interconnected
+#by tunnels.  Your quest is to find and shoot the evil wumpus that
+#resides elsewhere in the cave without running into any bottomless
+#pits or using up your limited supply of arrows.  Good luck.
+#
+#You are in room 9 of the cave.  There are tunnels to rooms
+#5, 8, and 10.
+#*rustle* *rustle* (must be bats nearby)
+#*sniff* (I can smell the evil wumpus nearby!)
+ここは%iに違いない。
+
+多くの部屋がトンネルで相互接続された洞窟の中にあなたはいる。
+あなたの目的は、底なしの落し穴を避けつつ、限られた数の矢で、
+洞窟中のどこかにいる邪悪なワンパスを見つけて射殺すことだ。 
+幸運を祈る。
+
+あなたは洞窟の9番目の部屋に居る。
+ここには、5、8、10の部屋へと続くトンネルがある。
+カサカサ、カサカサ(近くにこうもりが居るに違いない)
+クンクン（近くで邪悪なワンパスの臭いがする！）
+%E
+%Cc Ran 00036
+#Once again, you descend into %i.
+#
+#*whoosh* (I feel a draft from some pits).
+#*rustle* *rustle* (must be bats nearby)
+#***
+再びあなたは%iに降り立った。
+
+シューッ（いくつかの孔から隙間風を感じる）
+カサカサ、カサカサ(近くにこうもりが居るに違いない)
+%E
+%Cc Ran 00040
+#You descend into a weird place, in which roughly cut cave-like walls
+#join with smooth, finished ones, as if someone was in the midst of
+#finishing off the construction of a subterranean complex.
+#
+#Off in the distance, you hear a sound like the clattering of many
+#hooves on rock.
+あなたは気味の悪い場所に降り立った。
+荒く切断した洞窟のような壁が、完成されたなめらかな壁とつながっている。
+まるで誰かが地下迷宮の建築を仕上げている最中のようである。
+
+遠くで、たくさんの蹄が岩に打ちつけられるような音がしている。
+%E
+%Cp Ran 00041
+#Once again, you enter the distorted castle of %n.
+再びあなたは%nのねじ曲がった城に侵入した。
+%E
+%Cc Ran 00050
+#"So, %c.  %lC has sent you to recover %o.
+#
+#"Well, I shall keep that bauble.  It pleases me.  You, %c, shall die."
+「ほう、%cか。%lが%oを取り戻すために
+  お前を送り込んだんだな。
+
+  だが俺はこいつを手放す気はないぞ。これは俺を満足させてくれる。
+  %cよ、お前は死ぬのだ。」
+%E
+%Cp Ran 00051
+#"Back again, eh?  Well, a mere %r is no threat to me!  Die, %c!"
+「また来たのか、ええ？ たかが%rが俺に敵うものか！ 死ね、%c！」
+%E
+%Cp Ran 00052
+#"You haven't learned your lesson, %c.  You can't kill me!  You shall die now."
+「学習能力が無いな、%c。お前に俺は殺せん！ 今ここで死ね。」
+%E
+%Cp Ran 00053
+#"I shall have %o from you, %r.  Then I shall
+#kill you."
+「お前から%oを奪ってやる、%r。そしてお前を殺す。」
+%E
+%Cp Ran 00060
+#"Your %d is nothing, %c.  You are mine now!"
+「お前の%dなど無力だ、%c。お前は今から俺のものだ！」
+%E
+%Cp Ran 00061
+#"Run away little %c!  You can never hope to defeat %n!"
+「逃げ回れ、ちっぽけな%c！ お前に%nを倒せる望みなどない！」
+%E
+%Cp Ran 00062
+#"My servants will rip you to shreds!"
+「我が下僕どもがお前をずたずたに引き裂くだろう！」
+%E
+%Cp Ran 00063
+#"I shall display your head as a trophy.  What do you think about that wall?"
+「お前の首をトロフィーとして飾ってやろう。あの壁でどうかな？」
+%E
+%Cp Ran 00064
+#"I shall break your %ls grove, and destroy all the %gP!"
+「%lの森を破壊し、%gどもを皆殺しにしてやる！」
+%E
+%Cp Ran 00065
+#"%d has abandoned you, %c.  You are doomed."
+「%cよ、%dはお前を見捨てたぞ。お前は破滅したのだ。」
+%E
+%Cp Ran 00066
+#"%rA?  %lC sends a mere %r against me?  Hah!"
+「%r？ %lは俺に対してたかが%rごときをよこしたのか？ ハッ！」
+%E
+%Cp Ran 00067
+#"%lC has failed, %c.  %oC will never leave here."
+「%lの負けだ、%cよ。%oがここを離れることは無い。」
+%E
+%Cp Ran 00068
+#"You really think you can defeat me, eh %c?  You are wrong!"
+「%cよ、お前は本当にこの俺を倒せると思っているのか、ええ？
+大きな間違いだぞ！」
+%E
+%Cp Ran 00069
+#"You weaken, %c.  I shall kill you now."
+「弱っているな、%c。今すぐ殺してやる。」
+%E
+%Cc Ran 00070
+#As you pick up %o, it seems to glow, and a warmth
+#fills you completely.  You realize that its power is what has protected
+#your %sp against their enemies for so long.
+#
+#You must now return it to %l without delay -- their lives depend
+#on your speed.
+あなたが%oを拾うと、それは光ったように見えて、そしてあなたを
+暖かさで満たした。あなたはこの力が敵と戦う%s達を長い間守って
+きたものであることを悟った。
+
+あなたは一刻も早くこれを%lの元に届けなければならない―
+彼らの命はあなたの迅速さにかかっている。
+%E
+%Cc Ran 00080
+#%nC collapses to the ground, cursing you and %l, then says:
+#
+#    You have defeated me, %r!  But I curse you one final time, with my
+#    dying breath!  You shall die before you leave my castle!
+%nは地に崩れ落ち、あなたと%lを呪いながら言った:
+
+    お前の勝ちだ、%r！ だが、俺は最期の息をもって
+    お前を呪ってやる！ お前は俺の城を出ることなく死ぬのだ！
+%E
+%Cc Ran 00081
+#"%Cp!  You have succeeded!  I feared it was not possible!
+#
+#"You have returned with %o!
+#
+#"I fear, now, that the Centaurs will regroup and plot yet another raid.
+#This will take some time, but if you can recover the Amulet of Yendor
+#for %d before that happens, we will be eternally safe.
+#
+#"Take %o with you.  It will aid in your quest for
+#the Amulet."
+「%pよ！ よくやった！ 私は不可能ではないかと恐れていたのだ！
+
+  よく%oを持って戻ってきてくれた！
+
+  私は今、あのケンタウロスどもが軍を再編し、新たな襲撃を企むのでは
+  ないかと危惧している。それにはしばらく時間がかかるだろう。
+  だが、もしお前がその前にイェンダーの魔除けを奪回することが
+  できたならば、我々は永遠に安泰だ。
+
+  %oを持って行け。魔除けの探索の助けとなるだろう。」
+%E
+# assumes The Longbow of Diana
+%Cc Ran 00082
+#%l flexs %o reverently.
+#
+#"With this wondrous bow, one need never run out of arrows.
+#You are its keeper now, and the time has come to resume your
+#search for the Amulet.  %Z await your return
+#through the magic portal that brought you here."
+%lはうやうやしく%oをしならせた。
+
+「この不思議な弓を使っていると、決して矢が尽きない。
+  今や、お前は%oの守護者だ。そして魔除け探索の旅を
+  再開する時が来た。お前をここへ連れてきた魔法の門の向こうで、
+  %Zがお前を待っている。」
+%E
+%Cp Ran 00090
+#"Welcome, %p.  How have you fared on your quest for the Amulet
+#of Yendor?"
+「良く来た、%pよ。イェンダーの魔除けの探索は順調か？」
+%E
+%Cc Ran 00091
+#"You have it!  You have recovered the Amulet of Yendor!
+#Now attend to me, %p, and I will tell you what must be done:
+#
+#"The Amulet has within it magic, the capability to transport you to
+#the Astral Plane, where the primary circle of %d resides.
+#
+#"To activate this magic, you must travel upwards as far as you can.
+#When you reach the temple, sacrifice the Amulet to %d.
+#
+#"Thus will you fulfill your destiny."
+「よくやった！ イェンダーの魔除けを取り戻したのか！
+  聞け、%p。お前が何をなさねばならないかを教えよう:
+
+  この魔除けは魔力を内に秘めている。お前を天上界に転送する力だ。
+  天上界には、%dの第一のサークルが存在する。
+
+  この魔力を働かせるには、お前は可能な限り上方を目指して
+  進まねばならない。
+  寺院にたどり着いたら、魔除けを%dに捧げるのだ。
+
+  そうすればお前は宿命を果たすことができるだろう。」
+%E
+#
+#	Rogue (with apologies to all Norsk speakers -dean)
+#	(訳注)すんげー意訳。意味よくわからん。^_^;
+#
+%Cc Rog 00001
+#Unexpectedly, you find yourself back in Ransmannsby, where you trained to
+#be a thief.  Quickly you make the guild sign, hoping that you AND word
+#of your arrival reach %ls den.
+唐突に、あなたは自分がかつて盗賊になるために修業した街、ランスマンスベイに
+戻っているのに気がついた。あなたは素早くギルドの印を作り、自分と、自分の
+到着の知らせが〈ともに〉%lのアジトに届くことを祈った。
+%E
+%Cp Rog 00002
+#Once again, you find yourself back in Ransmannsby.  Fond memories are
+#replaced by fear, knowing that %l is waiting for you.
+再び、あなたはランスマンスベイに戻っていた。
+%lがあなたを待ち受けていることを思うと、
+懐かしい思い出はしだいに恐怖に取って代わられた。
+%E
+%Cp Rog 00003
+#You rub your hands through your hair, hoping that the little ones on
+#the back of your neck stay down, and prepare yourself for your meeting
+#with %l.
+あなたは恐怖で首の後ろの毛が逆立つのを抑えようと、
+両手で髪をかきまわした。そして、%lに会う覚悟を決めた。
+%E
+%Cp Rog 00005
+#"I hear that Lady Tyvefelle's household is lightly guarded."
+「レディ・タイヴェフェルの家の警備は手薄だそうだ。」
+%E
+%Cp Rog 00006
+#"You're back?  Even the Twain don't come back anymore."
+「お前が戻っただと？ トウェインですら戻らんのに。」
+%E
+%Cp Rog 00007
+#"Can you spare an old cutpurse a zorkmid for some grog?"
+「この老いたスリに安酒を恵んでくれんかね？」
+%E
+%Cp Rog 00008
+#"Fritz tried to join the other side, and now he's hell-hound chow."
+「フリッツは裏切ろうとしたぜ。地獄犬のエサにされたがな。」
+%E
+%Cp Rog 00009
+#"Be careful what you steal, I hear the boss has perfected turning
+#rocks into worthless pieces of glass."
+「何でも盗めばいいってもんじゃない、ボスは石ころを色ガラスのかけらに
+変えられるそうだ。」
+%E
+%Cp Rog 00010
+#"I was sure wrong about Lady Tyvefelle's house; I barely got away with my
+#life and lost my lock pick in the process."
+「レディ・タイヴェフェルの家は確実にヤバイぜ。
+俺は錠破りと引き換えに命からがら逃げ出せた。」
+%E
+%Cp Rog 00011
+#"You're back?  Even the Twain don't come back anymore."
+「お前が戻っただと？ トウェインですら戻らんのに。」
+%E
+%Cp Rog 00012
+#"Can you spare an old cutpurse a zorkmid for some grog?"
+「この老いたスリに安酒を恵んでくれんかね？」
+%E
+%Cp Rog 00013
+#"Fritz tried to join the other side, and now he's hell-hound chow."
+「フリッツは裏切ろうとしたぜ。地獄犬のエサにされたがな。」
+%E
+%Cp Rog 00014
+#"Be careful what you steal, I hear the boss has perfected turning
+#rocks into worthless pieces of glass."
+「何でも盗めばいいってもんじゃない、ボスは石ころを色ガラスのかけらに
+変えられるそうだ。」
+%E
+%Cc Rog 00015
+#"Well, look who it is boys -- %p has come home.  You seem to have
+#fallen behind in your dues.  I should kill you as an example to these
+#other worthless cutpurses, but I have a better plan.  If you are ready
+#maybe you could work off your back dues by performing a little job for
+#me.  Let us just see if you are ready..."
+「よし、誰か来たのか見てやろう ── %pのお出ましだ。
+  お前はギルドへの支払いを滞納しているようだな。俺はお前を
+  こいつら能無し盗人どもへの見せしめに殺してもいいが、
+  もっといい計画がある。俺のためにちょいと仕事をしてくれるなら、
+  滞納金を免除にしてやってもいいぞ。
+  お前にその能力があるか、見せてもらおう…。」
+%E
+%Cp Rog 00016
+#"Well, I didn't expect to see you back.  It shows that you are either stupid,
+#or you are finally ready to accept my offer.  Let us hope for your sake it
+#isn't stupidity that brings you back."
+「ほう、戻ってくるとは思わなかったぜ。お前は馬鹿なのか、あるいは
+  俺の任務を請け負うだけの技量をつけて来たのか。せいぜい馬鹿のほうで
+  なけりゃいいがな。」
+%E
+%Cp Rog 00017
+#"Did you perhaps mistake me for some other %lt?  You must
+#think me as stupid as your behavior.  I warn you not to try my patience."
+「俺をそこらの%l程度に見誤るなよ？ お前は自分と同じくらいに
+  俺を馬鹿だと考えていると見える。俺の忍耐力を試すような真似は
+  するなと警告しておくぜ。」
+%E
+%Cc Rog 00018
+#"Well %gp, it looks like our friend has forgotten who is the boss
+#around here.  Our friend seems to think that %rp have been put in
+#charge.  Wrong.  DEAD WRONG!"
+#
+#Your sudden shift in surroundings prevents you from hearing the end
+#of %ls curse.
+「よーし、%gども。我らが友は誰がここ一帯のボスだかすっかり
+  忘れちまったようだ。我らが友は、%rともなればやりたい放題だと
+  お考えだ。間違いだ。死すべき間違いだ！」
+
+まわりの景色が突然変わり、%lの呪いの言葉は遠のいた。
+%E
+%Cc Rog 00019
+#"In the time that you've been gone you've only been able to master the
+#arts of %ra?  I've trained ten times again as many %Rp
+#in that time.  Maybe I should send one of them, no?  Where would that
+#leave you, %p?  Oh yeah, I remember, I was going to kill you!"
+「お前が外に出ていた間に、たった%r程度の技しかものにできなかっただと？
+  俺はその間に10人もの%Rどもを鍛え上げたぞ。そいつらの誰かに代わりを
+  やらせてもいいんだぜ、え？ そうなりゃお前はどうなる、%p？
+  ああ、思い出した、お前は見せしめに死ぬんだったな！」
+%E
+%Cc Rog 00020
+#"Maybe I should chain you to my perch here for a while.  Perhaps watching
+#real %a men at work will bring some sense back to you.  I don't
+#think I could stand the sight of you for that long though.  Come back
+#when you can be trusted to act properly."
+「どうやら、お前をしばらく止まり木にでも繋いでおくべきだったようだ。
+  おおかた働く%aの人間を見てつまらん感情でも抱いたんだろう。
+  お前のツラを長いこと我慢していられるとは思えねえ。
+  信用できる行動を取れるようになったら、戻ってこい。」
+%E
+%Cc Rog 00021
+#"Will everyone not going to retrieve %o from that
+#jerk, %n, take one step backwards.  Good choice,
+#%p, because I was going to send you anyway.  My other %gp
+#are too valuable to me.
+#
+#"Here's the deal.  I want %o, %n
+#has %o.  You are going to get %o
+#and bring it back to me.  So simple an assignment even you can understand
+#it."
+「どいつもこいつもビビっちまって、%oを
+  あのむかつく%nから取り返しそうとしやがらねぇ。
+  だが%pはいい選択だ、俺はお前を送り込むとしよう。
+  他の%gどもはお前とは比べ物にならんほど惜しいんでな。
+
+  取り引きといこうじゃないか。俺は%oが欲しい。
+  %nが%oを持っている。お前は
+  %oを取りに行き、俺のところへ持ってくる。
+  簡単なこった。お前の頭でも十分理解できるな。」
+%E
+%Cp Rog 00025
+#"You don't seem to understand,
+#%o isn't here so neither should you be!"
+「理解できなかったようだな。%oはここにはねぇ、だから
+お前の居るべき場所もここじゃねえ！」
+%E
+%Cp Rog 00026
+#"May %d curse you with lead fingers.  Get going!"
+「%dの呪いがあらんことを。行け！」
+%E
+%Cp Rog 00027
+#"We don't have all year.  GET GOING!"
+「俺らには暇がねぇんだ。行かんか！」
+%E
+%Cp Rog 00028
+#"How would you like a scar necklace?  I'm just the jeweler to do it!"
+「傷痕のネックレスは好きか？ 俺はそいつを得意とする宝石師だぜ！」
+%E
+%Cp Rog 00029
+#"Lazy S.O.B.  Maybe I should call up someone else..."
+「この愚鈍なクソ野郎が！ 誰か他の奴に任せるぞ…。」
+%E
+%Cp Rog 00030
+#"Maybe I should open your skull and see if my instructions are inside?"
+「てめぇの頭蓋を開いて俺の命令が本当に入ってるか見なきゃならんのか？」
+%E
+%Cp Rog 00031
+#"This is not a task you can complete in the afterlife, you know."
+「これは老後のんびり片付けりゃいい仕事じゃねえんだぜ、判ってんのか？」
+%E
+%Cp Rog 00032
+#"Inside every living person is a dead person trying to get out,
+#and I have your key!"
+「全ての生きた人間の中から、死んだ人間が外に出ようとしている。
+そしてお前の鍵を握っているのは俺だ！」
+%E
+%Cp Rog 00033
+#"We're almost out of hell-hound chow, so why don't you just get moving!"
+「俺らは窮地を脱した。だからさっさと行かねえか！」
+%E
+%Cp Rog 00034
+#"You know, %o isn't going to come when you
+#whistle.  You must get it yourself."
+「%oは笛を吹いたって来ねえぞ。自分で取って来い。」
+%E
+%Cc Rog 00035
+#Those damn little hairs tell you that you are nearer to
+#%o.
+くそったれの鳥肌が、%oに近づいたことを知らせた。
+%E
+%Cp Rog 00036
+#Not wanting to face %l without having stolen
+#%o, you continue.
+%oを盗み出さずに%lと会うのが嫌で、あなたは歩を進めた。
+%E
+%Cc Rog 00040
+#You feel a great swelling up of courage, sensing the presence of
+#%o.  Or is it fear?
+あなたは勇気がわき上がってくるのに気づいた。%oが近いに違いない。
+それともこれは恐怖だろうか？
+%E
+%Cp Rog 00041
+#The hairs on the back of your neck whisper -- it's fear.
+あなたの逆立つ毛がささやいた ── お前は恐れている。
+%E
+%Cc Rog 00050
+#"Ah!  You must be %ls ... er, `hero'.  A pleasure
+#to meet you."
+「お前が%lの…ああ、『英雄』か。お前に会えて嬉しいぞ。」
+%E
+%Cp Rog 00051
+#"We meet again.  Please reconsider your actions."
+「また会ったな。どうか考え直してくれないか。」
+%E
+%Cp Rog 00052
+#"Surely, %p, you have learned that you cannot trust any bargains
+#that %l has made.  I can show you how to continue on
+#your quest without having to run into him again."
+「%p、お前は%lとの取り引きが信用できないことを
+  よく知っているはずだ。二度と奴に相対する必要なしに、
+  どうすればお前の探索行を続けることができるか、
+  俺なら教えてやれる。」
+%E
+%Cp Rog 00053
+#"Please, think for a moment about what you are doing.  Do you truly
+#believe that %d would want %l to have
+#%o?"
+「頼む、お前がいったい何をしているのか、一瞬でも考えてみろ。
+  お前は本当に、%oが%lのものになることを
+  %dが望むと信じているのか？」
+%E
+%Cp Rog 00060
+#"May I suggest a compromise.  Are you interested in gold or gems?"
+「和解を提案しよう。金貨か宝石ではどうだ？」
+%E
+%Cp Rog 00061
+#"Please don't force me to kill you."
+「俺にお前を殺させないでくれ。」
+%E
+%Cp Rog 00062
+#"Grim times are upon us all.  Will you not see reason?"
+「暗い時代が我々を覆っている。理由がわからないか？」
+%E
+%Cp Rog 00063
+#"I knew %l, and you're no %lt, thankfully."
+「俺は%lを知っている。お前は%lではない。有難いことにな。」
+%E
+%Cp Rog 00064
+#"It is a shame that we are not meeting under more pleasant circumstances."
+「俺たちがもっと喜ばしい状況で会えなかったのは残念だ。」
+%E
+%Cp Rog 00065
+#"I was once like you are now, %p.  Believe in me -- our way
+#is better."
+「俺はかつて今のお前のような立場だった、%p。俺を信じてくれ ──
+俺たちの道のほうがましだ。」
+%E
+%Cp Rog 00066
+#"Stay with me, and I will make you %os guardian."
+「俺とともに来い、そうすればお前を%oの守護者としよう。」
+%E
+%Cp Rog 00067
+#"When you return, with or without %o,
+#%l will have you killed."
+「戻れば、%oを持とうが持つまいが、
+%lはお前を殺すぞ。」
+%E
+%Cp Rog 00068
+#"Do not be fooled; I am prepared to kill to defend %o."
+「騙されるな。俺は%oを守るためなら殺しも厭わない。」
+%E
+%Cp Rog 00069
+#"I can reunite you with the Twain.  Oh, the stories you can swap."
+「お前をトウェインに会わせてやれるぞ。彼は理解してくれた。」
+%E
+%Cc Rog 00070
+#As you pick up %o, the hairs on the back of your
+#neck fall out.  At once you realize why %n was
+#willing to die to keep it out of %ls hands.  Somehow
+#you know that you must do likewise.
+あなたが%oを拾い上げると、逆立っていた髪がはらりと落ちた。
+すぐにあなたは、なぜ%nがそれを%lの手に渡さないために
+死をも辞さなかったのかを悟った。
+不思議と、あなたは自らも同じことをしなければならないと知った。
+%E
+%Cc Rog 00080
+#"I know what you are thinking, %p.  It is not too late for you
+#to use %o wisely.  For the sake of your guild
+#%sp, do what is right."
+#
+#You sit and wait for death to come for %n, and then you
+#brace yourself for your next meeting with %l!
+「%p、お前が何を考えているかは分かる。お前が%oを
+  正しく使おうとするなら、まだ間に合う。
+  お前のギルドのメンバーのためにも、なすべきことをしろ。」
+
+あなたは座り、死が%nを覆うの待った。そして来たるべき%lとの
+会合に対し、自らを引き締めた！
+%E
+%Cc Rog 00081
+#"Well, I'll be damned.  You got it.  I am proud of you, a fine %r
+#you've turned out to be.
+#
+#"While you were gone I got to thinking, you and %o
+#together could bring me more treasure than either of you apart, so why don't
+#you take it with you.  All I ask is a cut of whatever loot you come by.
+#That is a better deal than I offered %n.
+#
+#"But, you see what happened to %n when he refused.
+#Don't make me find another to send after you this time."
+「ほう、こいつは驚きだ。やりおおせたってわけだ。
+  お前を誇りに思うぜ、お前は自分を腕利きの%rだと証明した。
+
+  お前の留守中、一つ考えたんだが、お前に%oを
+  持たせておいたほうが、より多くの財宝を俺にもたらしてくれるんじゃ
+  ないかってことだ。お前は略奪品の分け前をよこしてくれるだけでいい。
+  こいつは%nに持ちかけたのよりずっといい条件だぜ。
+
+  だが、俺の申し出を断った%nがどうなったか、お前は見ただろう。
+  俺に別の奴を差し向けさせないよう、重々承知しろよ。」
+%E
+%Cc Rog 00082
+## assumes Master Key of Thievery (small object)
+#%l seems tempted to swap %o for
+#the mundane one you detect in his pocket, but noticing your alertness,
+#evidently chickens out.
+#
+#"Go filch the Amulet before someone else beats you to it.
+#%Z are back the way you came, through the magic portal."
+%lは%oと彼のポケットにあるただの鍵とを
+すり替えたいという欲にかられたが、あなたの油断ない気配を察知し、
+明らかに怖気づいたようだ。
+
+「誰か他の奴に出し抜かれる前に、さっさと魔除けをくすねて来い。
+  %Zはお前の来た道を戻った、魔法の門の向こうだ。」
+%E
+%Cc Rog 00090
+#"Quite the little thief, aren't we, %p.  Can I interest you in a
+#swap for %o.  Look around, anything in the keep
+#is yours for the asking."
+「俺たちはなんとチンケな盗賊じゃないか、%p。
+  %oと何かを交換する気はないか？ 見てみろ、
+  ここにある物なら何でもいいぜ。」
+%E
+%Cc Rog 00091
+#"I see that with your abilities, and my brains, we could rule this world.
+#
+#"All that we would need to be all-powerful is for you to take that little
+#trinket you've got there up to the Astral plane.  From there, %d will
+#show you what to do with it.  Once that's done, we will be invincible!"
+「お前の能力と俺の頭脳があれば、俺らは世界を支配できるぜ。
+
+  万能の力を手に入れるためにお前がしなけりゃならんことは、
+  そのチンケなアクセサリーを天上界まで持って行くことだ。
+  そこで%dが何をすりゃいいのか教えてくれる。これができりゃ、
+  俺らは無敵だ！」
+%E
+#
+#	Samurai
+#
+%Cc Sam 00001
+#Even before your senses adjust, you recognize the kami of
+#%H.
+#
+#You %x the standard of your teki, %n, flying above
+#the town.  How could such a thing have happened?  Why are ninja
+#wandering freely; where are the samurai of your daimyo, %l?
+#
+#You quickly say a prayer to Izanagi and Izanami and walk towards
+#town.
+感覚が完全に戻る前から、あなたは自分が%Hの城下にいることがわかった。
+
+あなたは、宿敵である%nが都の上空を飛んでいるのを認めた。
+なぜこんなことが起きているのだ？
+なぜ忍者があちこちを大っぴらにうろついている？
+あなたの主君である%l麾下の侍はどこにいるのだ？
+
+あなたは急いで伊邪那岐と伊邪那美に祈りをささげ、町へ向かって
+歩いていった。
+%E
+%Cp Sam 00002
+もう一度、あなたは%Hに戻った。
+%E
+%Cp Sam 00003
+#You are back at %H.
+#
+#Instantly you sense a subtle change in your karma.  You seem to know that
+#if you do not succeed in your quest, %n will have destroyed
+#the kami of %H before you return again.
+あなたは%Hに戻った。
+
+即座に、あなたはカルマのかすかな違いを感じとった。あなたは、もし自らの
+任務に失敗すれば、次に戻った時には%Hの都は%nに破壊し尽くされて
+いるだろうと予感した。
+%E
+%Cp Sam 00005
+#"To succeed, you must walk like a butterfly on the wind."
+「大成するには、風に舞う蝶のように歩かねばならない。」
+%E
+%Cp Sam 00006
+#"Ikaga desu ka?"
+「いかがですか？」
+%E
+%Cp Sam 00007
+#"I fear for The Land of The Gods." ※出雲？
+「それがしは神々の国のことが心配だ。」
+%E
+%Cp Sam 00008
+#"%nC has hired the Ninja -- be careful."
+「%nは忍者を雇い入れた。気をつけよ。」
+%E
+%Cp Sam 00009
+#"If %o is not returned, we will all be ronin."
+「もし%oが戻らなければ、我らはみな浪人となろう。」
+%E
+%Cp Sam 00010
+#"Come, join us in celebrating with some sake."
+「来い。祝杯を上げようではないか。」
+%E
+%Cp Sam 00011
+#"Ikaga desu ka?"
+「いかがですか？」
+%E
+%Cp Sam 00012
+#"You have brought our clan and %l much honor."
+「貴殿は我らが氏族と%lに大いなる名誉をもたらしてくれた。」
+%E
+%Cp Sam 00013
+#"Please %r, sit for a while and tell us how you overcame the Ninja."
+「%r殿、我らに、忍者をいかに成敗したか話してくださらんか。」
+%E
+%Cp Sam 00014
+#"%lC still lives!  You have saved us from becoming ronin."
+「%lは安泰じゃ！ 貴殿のおかげで我らは浪人にならずに済み申した。」
+%E
+%Cc Sam 00015
+#"Ah, %p-san, it is good to see you again.  I need someone who can
+#lead my samurai against %n.  If you are ready, you will be
+#that person."
+「おお、%p、おぬしと再びまみえることができ、まこと喜ばしき限り。
+  わしは今、我が侍たちを率いて%nに立ち向かえる者を必要としている。
+  もし、おぬしが万端整っているならば、おぬしにその役申し付けよう。」
+%E
+%Cp Sam 00016
+#"Once again, %p-san, you kneel before me.  Are you yet capable of
+#being my vassal?"
+「再び我が前に参じたな、%p。おぬしがこの大役為し遂げられるか、
+  見定めさせてくれ。」
+%E
+%Cp Sam 00017
+#"You begin to test my matsu, %p-san.
+#If you cannot determine what I want in a samurai, how can I rely on you
+#to figure out what I need from a samurai?"
+「おぬしはわしが耐え忍ぶのを試しているのか、%p。
+  おぬしが侍の道を見極められぬというのに、
+  まことの侍でなければ果たせぬ大役をどうして任せられよう？」
+%E
+%Cc Sam 00018
+#"You are no longer my samurai, %p.
+#
+#"Hara-kiri is denied.  You are ordered to shave your head and then to
+#become a monk.  Your fief and family are forfeit.  Wakarimasu?"
+「おぬしはもはや我が家臣ではない、%pよ。
+
+  切腹は許さぬ。頭を剃り、出家せよ。
+  おぬしの家は取り潰しとする。わかったか？」
+%E
+%Cp Sam 00019
+#"%p-san, you have learned well and honored your family.
+#I require the skills of %Ra in order to defeat %n.
+#Go and seek out teachers.  Learn what they have learned.  When you
+#are ready, return to me."
+「%p、おぬしはよく学び、家の誉である。おまえが
+  だが%nを討つには、%Rの技量が必要だ。
+  行け、そして師を求めよ。先達の技を学べ。
+  おぬしの用意が万端整い次第、わがもとへ戻るのだ。」
+%E
+%Cc Sam 00020
+#"%p-san, you would do better to join the kyokaku.
+#
+#"You have skills, but until you can call upon the bushido to know when and
+#how to use them you are not samurai.  When you can think %a and
+#act %A then return."
+「%pよ。侠客にでもなるほうがよいのではないか。
+
+  おぬしは腕が立つが、武士道を知り、その腕をいつどのように
+  使うべきかを知らねば、おぬしは侍ではない。
+  %aについて考え、%Aを為せるようになった後、戻るがよい。」
+%E
+%Cc Sam 00021
+#"Domo %p-san, indeed you are ready.  I can now tell you what
+#it is that I require of you.
+#
+#"The daimyo, %n, has betrayed us.  He has stolen from us
+#%o and taken it to his donjon deep within
+#%i.
+#
+#"If I cannot show the emperor %o when he comes
+#for the festival he will know that I have failed in my duty, and
+#request that I commit seppuku.
+#
+#"You must gain entrance to %i and retrieve the
+#emperor's property.  Be quick!  The emperor will be here for the
+#cha-no-you in 5 sticks.
+#
+#"Wakarimasu?"
+「%p、おぬしはまことに準備万端だ。おぬしが果たすべき役目を
+  今こそ伝えるとしよう。
+
+  大名%nが我らを裏切った。奴は我々から%oを盗み、
+  %iの地下牢深くに持ち去ったのだ。
+
+  祭りの日に、帝が%oをご覧じられぬとあらば、
+  帝はわしがお役目を果たせなんだと知り、切腹申し付けるであろう。
+
+  おぬしは%iに入り、帝の宝物を取り戻さねばならぬ。急げ！
+  帝は五日後の茶の湯にお越しになる。
+
+  わかったか？」
+%E
+%Cp Sam 00025
+#"To defeat %n you must overcome the seven emotions:
+#hate, adoration, joy, anxiety, anger, grief, and fear."
+「%nを倒すには、おぬしは七つの感情を打ち破らねばならぬ:
+  憎しみ、愛慕、楽しみ、不安、怒り、悲しみ、そして恐れだ。」
+%E
+%Cp Sam 00026
+#"Remember your honor is my honor, you perform in my name."
+「おぬしの名誉は我が名誉であることを忘れるな、我が名のもとに行け。」
+%E
+%Cp Sam 00027
+#"I will go to the temple and burn incense for your safe return."
+「わしは寺へ行き、おぬしの無事を祈願する香を焚くつもりだ。」
+%E
+%Cp Sam 00028
+#"Sayonara."
+「さらばだ。」
+%E
+%Cp Sam 00029
+#"There can be honor in defeat, but no gain."
+「討ち死にすれば名誉こそあれ、何にもならん。」
+%E
+%Cp Sam 00030
+#"Your kami must be strong in order to succeed."
+「成功するには、おぬしの魂は強くあらねばならならぬ。」
+%E
+%Cp Sam 00031
+#"You are indeed a worthy %R, but now you must be a worthy samurai."
+「おぬしは実に見事な%Rだ。だが今は、見事な侍とならねばならぬ。」
+%E
+%Cp Sam 00032
+#"If you fail, %n will be like a tai-fun on the land."
+「万一おぬしが仕損じれば、%nはこの国を台風の如く蹂躙しよう。」
+%E
+%Cp Sam 00033
+#"If you are truly %A, %d will listen."
+「おぬしが真に%aであれば、%dに言葉が届こう。」
+%E
+%Cp Sam 00034
+#"Sharpen your swords and your wits for the task before you."
+「任務に備え、剣を研ぎ、知恵を鍛えよ。」
+%E
+%Cc Sam 00035
+#You instinctively reach for your swords.  You do not recognize the
+#lay of this land, but you know that your teki are everywhere.
+あなたは本能的に刀に手を伸ばした。この地のありさまは判らないが、
+敵がそこら中にいるのは判った。
+%E
+%Cp Sam 00036
+#Thankful that your %sp at %H cannot see
+#your fear, you prepare again to advance.
+自らの恐れを%Hの%sたちに見せずに済むのは幸いだった。
+あなたは再び、前に進む覚悟を決めた。
+%E
+%Cc Sam 00040
+#In your mind, you hear the taunts of %n.
+#
+#You become like the rice plant and bend to the ground, offering a
+#prayer to %d.  But when the wind has passed, you stand
+#proudly again.  Putting your kami in the hands of fate, you advance.
+心の中に、%nの嘲笑が響く。
+
+あなたは稲穂のように首を垂れ、地に伏し、%dに祈りを捧げた。
+一陣の風が吹きすぎると、あなたは再び誇らしげに立ち上がった。
+運命の手に自らの魂を委ね、あなたは歩を進めた。
+%E
+%Cp Sam 00041
+#As you arrive once again at the home of %n, your thoughts
+#turn only to %o.
+再び%nの根城へと戻るにつれ、あなたの思考は%oのみに集中した。
+%E
+%Cc Sam 00050
+#"Ah, so it is to be you, %p-san.  I offer you seppuku.
+#I will be your second if you wish."
+「ああ、おぬしが来たというわけか、%p。おぬしには切腹を申し付けよう。
+望みとあらば、介錯をしてやってもよいぞ。」
+%E
+%Cp Sam 00051
+#"I have offered you the honorable exit.  Now I will have your
+#head to send unwashed to %l."
+「名誉ある死を勧めよう。さすれば、%lにお前の生首を
+届けてやれるのでな。」
+%E
+%Cp Sam 00052
+#"After I have dispatched you, I will curse your kami."
+「おぬしを処刑したのち、おぬしの魂を呪ってやろうぞ。」
+%E
+%Cp Sam 00053
+#"You have fought my samurai; surely you must know that you
+#will not be able to take %o back to
+#%H."
+「わしの侍と戦って、%Hに%oを持ち帰るなど不可能であると
+痛いほど知ったであろう。」
+%E
+%Cp Sam 00060
+#"Ahh, I finally meet the daimyo of the kyokaku!"
+「おお、私はとうとう侠客の大名に会った！」
+%E
+%Cp Sam 00061
+#"There is no honor for me in your death."
+「お前の死など、わしにとって何の名誉にもならぬ。」
+%E
+%Cp Sam 00062
+#"You know that I cannot resash my swords until they have killed."
+「我が刀は敵を殺すまで鞘に納まらぬと知っておろう。」
+%E
+%Cp Sam 00063
+#"Your presence only compounds the dishonor of %l in not coming himself."
+「おぬしがここにおっても、%lその人が参らぬ恥を上塗りするだけだ。」
+%E
+%Cp Sam 00064
+#"I will make tea with your hair and serve it to %l."
+「おぬしの髪を茶にして、%lにさし出そうぞ。」
+%E
+%Cp Sam 00065
+#"Your fear shows in your eyes, coward!"
+「目が恐怖に怯えているぞ、憶病者め！」
+%E
+%Cp Sam 00066
+#"I have not heard of you, %p-san; has your life been that unworthy?"
+「%p？ 聞いたこともないな。何の勲功もなく生きてきたのか？」
+%E
+%Cp Sam 00067
+#"If you will not obey me, you will die."
+「従わぬなら、死あるのみ。」
+%E
+%Cp Sam 00068
+#"Kneel now and make the two cuts of honor.  I will tell your %sp
+#of your honorable death."
+「ひざまずけ、自害せよ。さすればおぬしの%sに名誉の死を伝えてやろう。」
+%E
+%Cp Sam 00069
+#"Your master was a poor teacher.  You will pay for his mistakes in
+#your teaching."
+「おぬしの師は無能じゃな。誤った指導の報いを受けるがよい。」
+%E
+%Cc Sam 00070
+#As you pick up %o, you feel the strength of its karma.
+#You realize at once why so many good samurai had to die to defend it.
+#You are humbled knowing that you hold one of the artifacts of the
+#sun goddess.
+%oを拾うと、その業の強さを感じた。
+あなたは直ちに、なぜ多くの良き侍が命を賭してそれを守り、
+死なねばならなかったのかを悟った。
+あなたは太陽の女神の聖剣のひとつを手にしたことを知り、
+つつましい心持ちになった。
+%E
+%Cc Sam 00080
+#Your healing skills tell you that %ns wounds are mortal.
+#
+#You know that the bushido tells you to finish him and let his kami
+#die with honor, but the thought of so many samurai dead due to this
+#man's dishonor prevents you from giving the final blow.
+#
+#You order that his unwashed head be given to the crows and his body
+#thrown into the sea.
+自らの癒しの心得が、%nの傷は致命傷であると告げていた。
+
+武士道に従うならば、止めを刺し、名誉のうちに死なせるべきであったが、
+数多くの侍がこの男の非道によって殺されたことを思うと、
+あなたは最後の一撃を与えるのをやめた。
+
+あなたは彼の首がカラスにつつかれ、死体が海へと流されるに任せた。
+%E
+%Cc Sam 00081
+#As you bow before %l, he welcomes you:
+#
+#    You have brought your family great honor, %p-sama.
+#
+#    While you have been gone the emperor's advisors have discovered in
+#    the ancient texts that the karma of the samurai who seeks to recover
+#    the amulet and the karma of %o are joined
+#    as the seasons join to make a year.
+#
+#    Because you have shown such fidelity, the emperor requests
+#    that you take leave of other obligations and continue on the
+#    road that fate has set your feet upon.  I would consider it
+#    an honor if you would allow me to watch your household until
+#    you return with the amulet.
+#
+#With that, %l bows, and places his sword atop
+#%o.
+%lのにひざまずくと、彼はあなたを迎えた:
+
+    おぬしは己の一族に大いなる名誉をもたらした、%p。
+
+    おぬしの留守中、帝の摂政が古の文書にこのような一節を見つけた。
+    魔除けを奪回すべく歩む侍のカルマと、%oのカルマは、
+    あたかも四季が一つの年を紡ぐが如く、結びつくというのだ。
+
+    おぬしの忠節にうたれ、帝はおぬしが他の務めを許され、
+    おぬしが進むべき定めの道を再び行くことをご命じになられた。
+    魔除けとともにおぬしが戻るまで、おぬしの一族の面倒を
+    わしに任せてもらえるなら、名誉なことと存ずる。
+
+そう言うと%lは一礼し、彼の刀を%oに重ねた。
+%E
+%Cc Sam 00082
+#%l holds %o tightly for a moment, then returns
+#his gaze to you.
+#
+#"The time is ripe to recover the Amulet.  Return to %Z
+#through the magic portal that transported you here so that you may
+#achieve the destiny which awaits you."
+%lは一時%oをしっかと構えると、再びあなたを見た。
+
+「魔除け奪回への時は満ちた。
+  おぬしをここへと導いた魔法の門を通り、%Zへと戻るのだ。
+  そこでおぬしは己の定めを成就することとなろう。」
+%E
+%Cp Sam 00090
+#%lC bows.  "%p-sama, tell us of your search for the Amulet."
+%lは一礼した。「%p殿、魔除け探索の話を聞かせてくれぬか。」
+%E
+%Cc Sam 00091
+#"Ah, %p-sama.  You have wasted your efforts returning home.
+#Now that you are in possession of the Amulet, you are honor-bound to
+#finish the quest you have undertaken.  There will be plenty of time
+#for saki and stories when you have finished.
+#
+#"Go now, and may our prayers be a wind at your back."
+「おお%p殿、おぬしは故郷に帰るなどして苦節を無駄にしてはならぬ。
+  今やおぬしは魔除けを手にし、務めを果たす名誉に身をささげているのだ。
+  おぬしが見事成し遂げた暁には、話に花を咲かせる時間は
+  十分にあろうぞ。
+
+  行くがよい、我らが祈りがおぬしの背に吹く風とならんことを。」
+%E
+#
+#	Tourist
+#
+%Cc Tou 00001
+#You breathe a sigh of relief as you find yourself back in the familiar
+#surroundings of %H.
+#
+#You quickly notice that things do not appear the way they did when you
+#left.  The town is dark and quiet.  There are no sounds coming from
+#behind the town walls, and no campfires burning in the fields.  As a
+#matter of fact, you do not %x any movement in the fields at all, and
+#the crops look as though they have been untended for many weeks.
+#
+あなたは自分が%Hの見慣れた景色の中にいることを知ると、
+安堵のため息をついた。
+
+だがすぐに、さまざまな物事がここを離れた時と違っているのに気づいた。
+街は暗く、静まり返っている。街の壁の向こう側からは何の音も聞こえず、
+田園には野焼きのひとつも見当たらない。本当のところ、田園にはまったく
+なんの動きも認められず、作物は何週間も手入れされていないようだ。
+%E
+%Cp Tou 00002
+#Once again, you are back at %H.
+#
+あなたは再び%Hへ戻ってきた。
+%E
+%Cp Tou 00003
+#You are back at %H.
+#Things appear to have become so bad that you fear that soon
+#%H will not be here to return to.
+#
+あなたは%Hへと戻ってきた。
+
+状況があまりにもひどいので、帰るべき%Hは
+すぐに存在しなくなってしまうのではないかと危惧した。
+%E
+%Cp Tou 00005
+#"Gehennom on 5 zorkmids a day -- more like 500 a day if you ask me."
+#
+「ゲヘナ一日5 zorkmid ─ 私なら500はいただきますが。」
+%E
+%Cp Tou 00006
+#"Do you know where I could find some nice postcards of The Gnomish Mines?"
+#
+「ノームの鉱道のきれいな絵はがきを売ってるところ知りません？」
+%E
+%Cp Tou 00007
+#"Have you tried the weird toilets?"
+#
+「変なトイレを使ったことあります？」
+%E
+%Cp Tou 00008
+#"Don't stay at the Inn, I hear the food is terrible and it has rats."
+#
+「あの宿には泊まらない方がいいよ。食事はひどいし、鼠も出るんだってさ。」
+%E
+%Cp Tou 00009
+#"They told me that this was the off season!"
+#
+「今はオフシーズンだって聞いてたのに！」
+%E
+%Cp Tou 00010
+#"Gehennom on 5 zorkmids a day -- more like 500 a day if you ask me."
+「ゲヘナ一日5 zorkmid ─ 私なら500はいただきますが。」
+%E
+%Cp Tou 00011
+#"Do you know where I could find some nice postcards of The Gnomish Mines?"
+「ノームの鉱道のきれいな絵はがきを売ってるところ知りません？」
+%E
+%Cp Tou 00012
+#"Have you tried the weird toilets?"
+「変なトイレを使ったことあります？」
+%E
+%Cp Tou 00013
+#"If you stick around, I'll show you the pictures from my latest trip."
+「ちょっと待ってくれれば、こないだ行った旅行の写真を見せてあげるよ。」
+%E
+%Cp Tou 00014
+#"Did you bring me back any souvenirs?"
+「私に何かお土産は？」
+%E
+%Cc Tou 00015
+#"Is it really you, %p!  I had given up hope for your return.
+#As you can %x, we are desperately in need of your talents.  Someone must
+#defeat %n if our town is become what it once was.
+#
+#"Let me see if you are ready to be that someone."
+#
+「ほんとに君なのかい、%p！ もう戻ってはくれないと諦めてたところさ。
+  ご覧の通り、我々は君の手腕を心底必要としているんだ。
+　誰かが%nを倒さない限り、街はかつてのようには戻らないんだ。
+
+  君がその誰かになれるか、確かめさせてくれ。」
+%E
+%Cp Tou 00016
+#"Things are getting worse, %p.
+#I hope that this time you are ready."
+#
+「状況はどんどん悪くなってるんだ、%p。今回は大丈夫だろうね。」
+%E
+%Cp Tou 00017
+#"I hope that for the sake of %H you have prepared
+#yourself this time."
+#
+「%Hのためにも、今度こそ準備できているといいけど。」
+%E
+%Cc Tou 00018
+#"It is too late, %p.  You are not even worthy to die amongst us.
+#Leave %H and never return."
+#
+「もう手遅れだ、%p。君は我々の仲間として死ぬに値しない。
+　%Hを離れて、二度と帰ってくるな。」
+%E
+%Cc Tou 00019
+#"There is still too much that you have to learn before you can undertake
+#the next step.  Return to us as a proven %R, and perhaps then
+#you will be ready.
+#
+#"Go back now, and may the teachings of %d serve you well."
+#
+「君には次の段階を引き受ける前に、まだまだ学ばなければいけないことが
+  たくさんある。%Rの実績をもって我々の前に戻ってくるんだ。
+  それなら多分大丈夫だろう。
+
+  行きなさい、%dの教えが君の役に立ちますように。」
+%E
+%Cc Tou 00020
+#"It would be an affront to %d to have one not true to the
+#%a path undertake her bidding.
+#
+#"You must not return to us until you have purified yourself of these
+#bad influences on your actions.  Remember, only by following the %a
+#path can you hope to overcome the obstacles you will face."
+#
+「正しく%aの道を歩んでいない者に%dの使命を任せたら、
+  彼女を侮辱することになる。
+
+  君は、自分の行動にしみついた悪い影響から自分を清めるまで、
+  ここに戻ってきてはいけない。よく覚えておくんだ、
+  %aの道を進むことだけが、君が直面する障害を乗り越えることが
+  できる唯一の希望なんだ。」
+%E
+%Cc Tou 00021
+#"You have indeed proven yourself a worthy %c, %p.
+#
+#"But now your kinfolk and I must ask you to put aside your travels and
+#help us in our time of need.  After you left us we elected a new mayor,
+#%n.  He proved to be a most heinous and vile creature.
+#
+#"Soon after taking office he absconded with %o
+#and fled town, leaving behind his henchmen to rule over us.  In order
+#for us to regain control of our town, you must enter %i
+#and recover %o.
+#
+#"Do not be distracted on your quest.  If you do not return quickly I fear
+#that all will be lost.  Let us both pray now that %d will guide you
+#and keep you safe."
+#
+「君は本当に素晴らしい%cだ、%p。
+
+  しかし今、君の親族一同と私は、君が旅行を一時中止して
+  窮地にある我々を助けてくれるようにお願いしなければならない。
+  君が発った後、新しい市長%nが選挙で選ばれた。
+  ところが奴は極悪非道な犯罪者だとわかったんだ。
+
+  市長のオフィスに入ってすぐ、奴は
+  %oを持って
+  姿をくらまし、今は手下を使って我々を支配している。
+  我々が街を自分たちの手に取り戻すには、君が%iに入り、
+  %oを奪回しなければならない。
+
+  道草を食ったりはしないでくれ。もし君が素早く戻って
+  これなければ、我々は全てを失ってしまうかもしれないんだ。
+  %dが君を導き、安全に守ってくれることを祈ろう。」
+
+%E
+%Cp Tou 00025
+#"Do not be fooled by the false promises of %n."
+#
+「%nの口車にのるな。奴は信用ならない。」
+%E
+%Cp Tou 00026
+#"To enter %i you must pass many traps."
+#
+「%iに入るには、たくさんの罠をくぐり抜けなければならないだろう。」 
+%E
+%Cp Tou 00027
+#"If you do not return with %o, your quest
+#will be in vain."
+#
+「もし%oを持ち帰れなければ、
+君の努力はまったくの無駄になってしまう。」
+%E
+%Cp Tou 00028
+#"Do not be afraid to call upon %d if you truly need help."
+#
+「どうしても助けが必要なときは、ためらわず%dに祈るんだ。」
+%E
+%Cp Tou 00029
+#"If you do not destroy %n, he will follow you back here!"
+#
+「%nを倒さなければ、奴は君をここまで追って来るぞ！」
+%E
+%Cp Tou 00030
+#"Take %o from %n
+#and you may be able to defeat him."
+#
+「%nから%oを奪えれば、
+奴を倒すことができるかもしれない。」
+%E
+%Cp Tou 00031
+#"You must hurry, %p!"
+#
+「%p、急がないと！」
+%E
+%Cp Tou 00032
+#"You are like %Sa to me, %p.  Do not let me down."
+#
+「%p、私にとって君は%Sのようなものだ。期待を裏切らないでくれ。」
+%E
+%Cp Tou 00033
+#"If you are %a at all times you may succeed, %p."
+#
+「常に%aであれば成功できるさ、%p。」
+%E
+%Cp Tou 00034
+#"Let all who meet you on your journey know that you are on an quest for
+#%l and grant safe passage."
+#
+「道中会う人々には%lの任務だと伝えれば、無事通してくれるだろう。」
+%E
+%Cc Tou 00035
+#Only your faith in %d keeps you from trembling.  You %x
+#the handiwork of %ns henchlings everywhere.
+#
+%dに対する信心だけがあなたを恐怖から遠ざけているようだ。
+%nの三下どもの狼藉の跡がそこらじゅうに見られる。
+%E
+%Cp Tou 00036
+#You know that this time you must find and destroy %n.
+#
+今度こそあなたは%nを探して倒さなければならない、と感じた。
+%E
+%Cc Tou 00040
+#You sense the presence of %o.
+#
+あなたは%oの存在を感じ取った。
+%E
+%Cp Tou 00041
+#You gain confidence, knowing that you may soon be united with
+#%o.
+#
+もうじき%oと一つになれる、との思いが
+あなたに自信を取り戻させた。
+%E
+%Cc Tou 00050
+#"So, %p, %l thinks that you can wrest
+#%o from me!
+#
+#"It only proves how desperate he has become that he sends %ra to
+#try and defeat me.  When this day is over, I will have you enslaved
+#in the mines where you will rue the day that you ever entered
+#%i."
+#
+「ほほう、%p、%lはお前ごときが
+  %oを奪回できると
+  思っているのか！
+
+  %r程度の者を俺のもとに送りつけるとは、
+  奴も相当ヤキが回ったらしいな。
+  今日この日が終わったら、お前を鉱山送りとし、
+  %iに足を踏み入れたことを後悔させてやろう。」
+%E
+%Cp Tou 00051
+#"I let you live the last time because it gave me pleasure.
+#This time I will destroy you, %p."
+「この前俺がお前を生かしてやったのは、楽しませてもらったからだ。
+しかし今回は%p、お前を殺す。」
+%E
+%Cc Tou 00052
+#"These meetings come to bore me.  You disturb my workings with
+#%o.
+#
+#"If you do not run away now, I will inflict so much suffering on you that
+#%l will feel guilty for ever having sent his %S to me!"
+#
+「この会合にも飽き飽きしてきた。お前は俺の
+  %oを使った仕事の邪魔だ。
+
+  今すぐ逃げ帰らないのなら、%lが奴の
+  %Sを送り込むのではなかったと後悔するほどの
+  責め苦を、お前に味あわせてくれよう！」
+%E
+%Cc Tou 00053
+#"You fool.  You do not know how to call upon the powers of%o.
+#
+#
+#"Return it to me and I will teach you how to use it, and together we
+#will rule %H.  But do so now, as my patience
+#grows thin."
+「愚か者め。%oの力を
+  どう使うかも知らぬくせに。
+
+  それを返せば、それの使い方を教えてやる。
+  二人で%Hを支配しよう。今すぐにだ。
+  俺を怒らせないうちにな。」
+%E
+%Cp Tou 00060
+#"I defeated %l and I will defeat you, %p."
+#
+「俺は%lを倒した。そして今度はお前だ、%p。」
+%E
+%Cp Tou 00061
+#"Where is %d now!  You must realize no one can help you here."
+#
+「%dはどこにおいでかい！ ここでお前を助けられるものなどいない。」
+
+%E
+%Cp Tou 00062
+#"Beg for mercy now and I may be lenient on you."
+#
+「命乞いをしろ。そうすれば助けてやらないこともない。」
+%E
+%Cp Tou 00063
+#"If you were not so %a, you might have stood a chance."
+#
+「そう頑迷な%aでなければ、勝ち目もあったかもな。」
+%E
+%Cp Tou 00064
+#"Vengeance is mine at last, %p."
+#
+「『復讐するは我にあり』だぜ、%p。」
+%E
+%Cp Tou 00065
+#"I only wish that %l had a more worthy %r to send against me."
+#
+「%lはもっとマシな%rを寄こしてほしいぜ。」
+%E
+%Cp Tou 00066
+#"With %o in my possession you cannot
+#hope to defeat me."
+#
+「%oが俺の手元にある以上、
+お前に勝ち目はない。」
+%E
+%Cp Tou 00067
+#"%nC has never been defeated, NEVER!"
+#
+「%nは一度たりとも負けたことはないのだ。一度もな！」
+%E
+%Cp Tou 00068
+#"Are you truly the best %H has to send against me?
+#I pity %l."
+#
+「本当にお前が%Hで一番マシな刺客なのか？
+%lに同情するぜ。」
+%E
+%Cp Tou 00069
+#"How do you spell %p?  I want to ensure the marker on your grave is
+#correct as a warning to your %sp."
+#
+「“%p”はどう綴るんだ？ 墓碑銘を正しく書いておかんと、
+お前の%sどもへの見せしめにならないからな。」
+%E
+%Cc Tou 00070
+#As you pick up %o, you feel a great
+#weight has been lifted from your shoulders.  Your only thoughts are
+#to quickly return to %H and find %l.
+#
+%oを拾うと、
+まるで肩から非常な重荷が下りたような気分になった。
+今思うことはただ一つ、一刻も早く%Hへ戻り、
+%lに会うことだ。
+%E
+%Cc Tou 00080
+#You turn in the direction of %n.  As his earthly body begins
+#to vanish before your eyes, you hear him curse:
+#
+#    You shall never be rid of me, %p!
+#    I will find you where ever you go and regain what is rightly mine.
+#
+あなたは%nに向き直った。彼の身体はあなたの目の前で
+消滅してゆき、%nは呪いの言葉を吐いた。
+
+「%p、お前にずっとつきまとってやる！
+  お前がどこへ行こうと必ず探し出し、
+  俺の手にあるべきものを奪い返すぞ。」
+%E
+%Cc Tou 00081
+#As %l detects the presence of %o,
+#he almost smiles for the first time in many a full moon.
+#
+#As he looks up from %o he says:
+#
+#    You have recovered %o.  You are its
+#    owner now, but not its master.  Let it work with you as you continue
+#    your journey.  With its help, and %d to guide you on the
+#    %a path, you may yet recover the Amulet of Yendor.
+#
+%lは%oの
+存在に気づくと、長く見せなかった笑顔になった。
+
+彼は%oから目を上げ、言った:
+
+「君は%oを取り戻してくれた。
+  今や君がこれの持ち主だ。だが、これの主人になったわけじゃない。
+  こいつと一緒に旅を続け、協力させてやってほしい。
+  これの助けがあれば、それから%aの道を%dが導いてくだされば、
+  君はもしかしたらイェンダーの魔除けをも取り返すことが
+  できるかもしれない。」
+%E
+%Cc Tou 00082
+#"%oC is yours now.  %Z await your
+#return through the magic portal that brought you here."
+「今や、%oは君のものだ。
+  君をここへ呼んだ魔法の門の向こうで、
+  %Zがの帰りを待っているよ。
+%E
+%Cp Tou 00090
+#"I could not be more proud than if you were my own %S, %p!
+#Tell me of your adventures in quest of the Amulet of Yendor."
+#
+「君が私の本当の%Sであればよかったのに、%p！
+君のイェンダーの魔除け探索の冒険談をぜひ聞かせてくれ。」
+%E
+%Cc Tou 00091
+#"Stand back and let me look at you, %p.
+#Now that you have recovered the Amulet of Yendor, I'm afraid living
+#out your days in %H would seem pretty tame.
+#
+#"You have come too far to stop now, for there are still more tasks that
+#our oral history foretells for you.  Forever more, though, your name shall
+#be spoken by the %gP with awe.  You are truly an inspiration to your
+#%sp!"
+「もう少し下がって君の姿を見せてくれ、%p。
+  イェンダーの魔除けを取り戻した以上、これからずっと
+  %Hで生きていくというのは少々つまらないんじゃないかと
+  心配しているんだ。
+
+  君はもう立ち止まれないところまで来てしまった。言い伝えでは、
+  まだ君のやらなければならない使命が予言されている。
+  そして、%pの名は%gたちに伝説として語り継がれるだろう。
+  君は%sたちにとって本当に偉大な手本となったんだ！」
+
+%E
+#
+#	Valkyrie
+#
+%Cc Val 00001
+#You materialize at the base of a snowy hill.  Atop the hill sits
+#a place you know well, %H.  You immediately realize
+#that something here is very wrong!
+#
+#In places, the snow and ice have been melted into steaming pools of
+#water.  Fumaroles and pools of bubbling lava surround the hill.
+#The stench of sulphur is carried through the air, and you %x creatures
+#that should not be able to live in this environment moving towards you.
+あなたは雪の降る丘に現出した。丘の頂上には、あなたの良く知る場所、
+%Hが座している。あなたは即座に、何かが全くおかしいことに気がついた！
+
+方々で雪と氷が溶け、湯気を噴き上げる熱泉に流れ込んでいる。
+丘は噴気孔や、煮え立つ溶岩の池に取り囲まれている。
+鼻を突く硫黄の臭いが風に漂い、ここの寒冷な環境では生息できないはずの
+怪物どもがあなたに向かってきた。
+%E
+%Cp Val 00002
+#Once again, you are near the abode of %l.
+再び、あなたは%lの住処の近くにいる。
+%E
+%Cp Val 00003
+#Again you materialize near %ls abode.  You have a nagging feeling
+#that this may be the last time you come here.
+再び、あなたは%lの住処の近くに現れた。
+あなたは、ここに来るのはこれで最後になるという予感に
+心を締め付けられた。
+%E
+%Cp Val 00005
+#"Hail, and well met, brave %c."
+「ようこそ、勇敢なる%c。」
+%E
+%Cp Val 00006
+#"May %d guide your steps, %p."
+「そなたの道に%dのお導きあれ、%p。」
+%E
+%Cp Val 00007
+#"%lC weakens.  Without %o, her foresight is dim."
+「%lは弱っています。%oなしでは、彼女の予知の力は
+霞んでしまうのです。」
+%E
+%Cp Val 00008
+#"You must hurry, %p, else Ragnarok may well come."
+「お急ぎを、%p。さもなければラグナロクが来るかもしれません。」
+%E
+%Cp Val 00009
+#"I would deal with this foul %n myself, but %d forbids it."
+「卑劣な%nを我が手で仕留めたいが、%dが
+それをお認めになりません。」
+%E
+%Cp Val 00010
+#"Hail, and well met, brave %c."
+「ようこそ、勇敢なる%c。」
+%E
+%Cp Val 00011
+#"May %d guide your steps, %p."
+「そなたの道に%dのお導きあれ、%p。」
+%E
+%Cp Val 00012
+#"%lC told us you had succeeded!"
+「%lがあなたの成功を話してくださいました！」
+%E
+%Cp Val 00013
+#"You recovered %o just in time, %p."
+「%pが%oを取り戻してくれなければ、危ういところでした。」
+%E
+%Cp Val 00014
+#"Hail %d, for delivering %o back to us."
+「%oを我々のもとへ返したもうた%dに感謝を。」
+%E
+%Cc Val 00015
+#"Ah, %p, my %S.  You have returned to %H
+#at last.  We are in dire need of your aid, but I must determine if you
+#are yet ready for such an undertaking.
+#
+#"Let me read your fate..."
+「ああ、%p、私の%Sよ。%Hに戻ってきてくれたのですね。
+  我々はあなたの助けを危急に必要としています。
+  しかし、まずは今のあなたにその重責を負うだけの力があるかを
+  見極めなければなりません。
+
+  あなたの運命を読んでみましょう…」
+%E
+%Cp Val 00016
+#"Let me read the future for you now, %p, perhaps you have managed to
+#change it enough..."
+「%p、あなたの未来を読んでみましょう。
+  おそらく、あなたは未来を変えるだけの力をつけてきたことでしょう…。」
+%E
+%Cp Val 00017
+#"Again, I shall read your fate, my %S.  Let us both hope that you have
+#made changes to become ready for this task..."
+「再び、あなたの運命を読んでみましょう、私の%Sよ。
+  あなたがこの任務を果たせるように成長してきたことを望みます。」
+%E
+%Cc Val 00018
+#"No, %p.  Your fate is sealed.  I must cast about for another
+#champion.  Begone from my presence, and never return.  Know this, that
+#you shall never succeed in this life, and Valhalla is denied to you."
+「いけません、%p。あなたの運命は閉ざされています。
+  私は別の勇者を頼らねばなりません。
+  我が前から去りなさい。二度と戻ることは許しません。
+  覚えておきなさい。あなたは今生を道半ばで斃れ、
+  ヴァルハラへ入ることは許されません。」
+%E
+%Cc Val 00019
+#"I see you and %n fighting, %p.  But you are not prepared and
+#shall die at %ns hand if you proceed.  No.  This will not do.
+#Go back out into the world, and grow more experienced at the ways of
+#war.  Only when you have returned %Ra will you be able to defeat
+#%n."
+「あなたと%nが戦うのが見えます、%p。しかし、あなたはまだ未熟で、
+  今のままでは%nの手にかかって死ぬことになります。
+  いいえ、それはなりません。
+  広い世界へと戻り、戦いの技に磨きをかけなさい。
+  %Rとなって戻ってこそ、%nを倒すことができるでしょう。」
+%E
+%Cc Val 00020
+#"NO!  This is terrible.  I see you becoming an ally of %n, and
+#leading his armies in the final great battles.  This must not come to
+#pass!  You have strayed from the %a path.  You must purge yourself,
+#and return here only when you have regained a state of purity."
+「なんということ！ あなたが%nと同盟を結び、最後の大戦で
+  彼の軍隊を指揮する姿が見えます。こんなことを現実にしてはならない！
+  あなたは%aの道を踏み外してしまった。あなたは自らここを去り、
+  純粋さを取り戻すまで戻ることはなりません。」
+%E
+%Cc Val 00021
+#"It is not clear, %p, for my sight is limited without
+#%o.  But it is now likely that you can defeat %n,
+#and recover %o.
+#
+#"A short time ago, %n and his minions attacked this place.  They
+#opened the huge volcanic vents you %x about the hill, and attacked.
+#I knew that this was to come to pass, and had asked %d for a group
+#of %gP to help defend this place.  The few you %x here are the
+#mightiest of Valhalla's own, and are all that are left of one hundred
+#%d sent.
+#
+#"Despite the great and glorious battle we fought, %n managed at last
+#to steal %o.  This has upset the balance of the universe, and
+#unless %o is returned into my care, %n may start Ragnarok.
+#
+#"You must find the entrance to %i.  Travel downward
+#from there and you will find %ns lair.  Defeat him and
+#return %o to me."
+「はっきりとは見えません、%p。私の予見は%oなくしては
+  とても限られてしまうのです。しかし、今のあなたなら
+  %nを倒し、%oを取り戻すことができるでしょう。
+
+  少し前、%nと彼の手下がこの地に攻め入りました。
+  彼らは丘のそこかしこに ── あなたも見たでしょう ── 巨大な
+  火山の噴火口を開き、攻撃をかけたのです。
+  私はこの事態を予見し、この地を守る%gの一隊を遣わしてくださるよう
+  %dに祈願しました。あなたが見た数少ない者たちこそ、
+  ヴァルハラからの精鋭で、%dの遣わした百名のうちの
+  わずかな生き残りなのです。
+
+  我々は奮戦し、勇敢に戦いましたが、%nはとうとう
+  %oを盗み出すことに成功してしまいました。そのために
+  世界の均衡は崩れ、もし%oが私の手元に戻らなければ、
+  %nはラグナロクを始めてしまうでしょう。
+
+  あなたは、%iの入口を見い出さねばなりません。
+  ここから地下へと旅を進めれば、%nの隠れ家に着くでしょう。
+  彼を倒し、%oを私の元へと戻すのです。」
+%E
+%Cp Val 00025
+#"Go with the blessings of %d."
+「%dの祝福のあらんことを。」
+%E
+%Cp Val 00026
+#"Call upon %d when you are in need."
+「必要な時には、%dに助けを請いなさい。」
+%E
+%Cp Val 00027
+#"Use %o if you can.  It will protect you."
+「可能なら%oを使いなさい。あなたを守ってくれるでしょう。」
+%E
+%Cp Val 00028
+#"Magical cold is very effective against %n."
+「%nには魔法の冷気が効果的です。」
+%E
+%Cp Val 00029
+#"To face %n, you will need to be immune to fire."
+「%nと相対するには、己を炎から守らねばなりません。」
+%E
+%Cp Val 00030
+#"May %d strengthen your sword-arm."
+「剣を振るうあなたの腕に、%dが力を与えてくださらんことを。」
+%E
+%Cp Val 00031
+#"Trust in %d.  He will not desert you."
+「%dを信じなさい。彼はあなたを見捨てません。」
+%E
+%Cp Val 00032
+#"It becomes more likely that Ragnarok will come with every passing moment.
+#You must hurry, %p."
+「こうしているうちにもラグナロクは刻々と迫っています。急ぐのです、%p。」
+%E
+%Cp Val 00033
+#"If %n can master %o, he will be powerful enough to
+#face %d far earlier than is fated.  This must not be!"
+「もし%nが%oを支配すれば、定められた時よりもはるかに早く彼は
+%dに匹敵するほどの力を得ます。そんなことはなりません！」
+%E
+%Cp Val 00034
+#"Remember your training, %p.  You can succeed."
+「自分の力を信じなさい、%p。あなたならできます。」
+%E
+%Cc Val 00035
+#The ice and snow gives way to a valley floor.  You %x ahead of you
+#a huge round hill surrounded by pools of lava.  This then is the entrance
+#to %i.  It looks like you're not going to get in without
+#a fight though.
+雪と氷は消え、谷底があらわになっていた。
+目前には溶岩の池に囲まれた大きな丸い丘がある。
+すると、これが%iへの入口だ。
+中に入るためには、戦いは避けられないようだ。
+%E
+%Cp Val 00036
+#Once again, you stand before the entrance to %i.
+再び、あなたは%iの入口の前に立っている。
+%E
+%Cc Val 00040
+#Through clouds of sulphurous gasses, you %x a rock palisade
+#surrounded with a moat of bubbling lava.  You remember the description
+#from something that %l said.  This is the lair of %n.
+硫黄の煙の雲間から、沸き立つ溶岩の堀に囲まれた石の城砦が見える。
+あなたは%lの話したことを思い出した。ここが%nの住処だ。
+%E
+%Cp Val 00041
+#Once again, you stand in sight of %ns lair.
+再び、あなたは%nの住処を望む地に立っている。
+%E
+%Cc Val 00050
+#"So!  %lC has finally sent %ca to challenge me!
+#
+#"I thought that mastering %o would enable me to challenge %d,
+#but it has shown me that first I must kill you!
+#So come, little %s.  Once I defeat you, I can at last begin
+#the final battle with %d."
+「ほう。%lはついに、私に挑むべく%cを送ったか！
+
+  %oを支配すれば、私は%dをも倒しうると考えた。が、
+  オーブの予見によれば、まずは貴様を殺さねばならぬらしい！
+  さあ来い、哀れな%sよ。貴様を殺せば、私はついに
+  %dに対する最後の戦いを始められるのだ。」
+%E
+%Cp Val 00051
+#"Again you challenge me, %r.  Good.  I will kill you now."
+「再び私に挑むか、%r。よろしい。今こそ貴様を殺すとしよう。」
+%E
+%Cp Val 00052
+#"Have you not learned yet?  You cannot defeat %n!"
+「まだわからんのか？ 貴様に%nは倒せない！」
+%E
+%Cp Val 00053
+#"I will kill you, %c, and wrest %o from your mangled hands."
+「死ね、%c。貴様の腕ごと、%oを奪ってやる。」
+%E
+%Cp Val 00060
+#"I am your death, %c."
+「私が貴様の死だ、%c。」
+%E
+%Cp Val 00061
+#"You cannot prevail, %r.  I have foreseen your every move."
+「貴様は勝てぬ、%r。貴様の一挙手一投足、すでに読めている。」
+%E
+%Cp Val 00062
+#"With you out of the way, Valhalla will be mine for the taking."
+「貴様を始末すれば、ヴァルハラは我がものだ。」
+%E
+%Cp Val 00063
+#"I killed scores of %ds best when I took %o.
+#Do you really think that one %c can stand against me?"
+「%oを得た時には、%dの精鋭どもを数え切れぬほど殺した。
+ただ一人の%cが私に抗し得ると本当に思うのか？」
+%E
+%Cp Val 00064
+#"Who bears the souls of %cP to Valhalla, %r?"
+「%cの魂は誰がヴァルハラに届けるんだ、%r？」
+%E
+%Cp Val 00065
+#"No, %d cannot help you here."
+「残念だな、ここに%dの助けは届かぬ。」
+%E
+%Cp Val 00066
+#"Some instrument of %d you are, %p.  You are a weakling!"
+「貴様は%dの道具だ、%p。力なき者めが！」
+%E
+%Cp Val 00067
+#"Never have I seen %ca so clumsy in battle."
+「これほど戦の拙い%cなど見たことがない。」
+%E
+%Cp Val 00068
+#"You die now, little %s."
+「ここで死ね、哀れな%sよ。」
+%E
+%Cp Val 00069
+#"Your body I destroy now, your soul when my hordes overrun Valhalla!"
+「貴様の肉体を今破滅させ、魂は我が軍がヴァルハラで蹂躙してくれよう！」
+%E
+%Cc Val 00070
+#As you pick up %o, your mind is suddenly filled with images,
+#and you perceive all of the possibilities of each potential choice you
+#could make.  As you begin to control and channel your thoughts, you
+#realize that you must return %o to %lC immediately.
+%oを手にすると、あなたの心に突然あまたの光景が流れ込み、
+自分が選び取ることのできる数々の未来の可能性すべてが知覚された。
+思考を制御し、心を一つの方向へ向けられるようになると、
+あなたは今すぐ%oを%lに返さなければならないと気がついた。
+%E
+%Cc Val 00080
+#A look of surprise and horror appears on %ns face.
+#
+#    No!!!  %o has lied to me!  I have been misled!
+#
+#Suddenly, %n grasps his head and screams in agony, then dies.
+驚きと恐怖が%nの顔に現われた。
+
+     馬鹿な!!! %oは私を騙したのか！ 私は欺かれた！
+
+突然、%nは頭を抱え、苦痛の叫びを上げると、死んだ。
+%E
+%Cc Val 00081
+#As you approach, %lC rises and touches %o.
+#
+#"You may take %o with you, %p.  I have removed from
+#it the power to foretell the future, for that power no mortal should
+#have.  Its other abilities, however, you have at your disposal.
+#
+#"You must now begin in %ds name to search for the Amulet of Yendor.
+#May your steps be guided by %d, my %S."
+あなたが近づくと、%lは立ちあがり、%oに触れた。
+
+「%p、%oはあなたが持っていてかまいません。
+  私はオーブから未来を予見する力を取り去りました。それは、
+  定命の者が持つべきものではないのです。
+  しかしながら、%oの他の力は、あなたのものです。
+
+  あなたは今、%dの名の下にイェンダーの魔除けを探さねばなりません。
+  我が%Sよ、あなたの進む道に%dのお導きがありますように。」
+%E
+%Cc Val 00082
+#"Careful, %p!  %oC might break, and that would be
+#a tragic loss.  You are its keeper now, and the time has come to
+#resume your search for the Amulet.  %Z await your
+#return through the magic portal that brought you here."
+「気をつけなさい、%p！ もし%oが壊れてしまえば、
+  我々にとって計り知れない損失となるでしょう。
+  今や、あなたが%oの所持者です。そして魔除けの探索を
+  再開するときが来ました。あなたをここへ導いた魔法の門の向こうで、
+  %Zがあなたを待っています。」
+%E
+%Cp Val 00090
+#"Greetings, %p.  I have not been able to pay as much attention to
+#your search for the Amulet as I have wished.  How do you fare?"
+「%p、ようこそ。あなたの魔除け探索の旅について話を聞きたいのに、
+今までほとんど聞くことができませんでした。旅はいかがですか？」
+%E
+%Cc Val 00091
+#"Excellent, %p.  I see you have recovered the Amulet!
+#
+#"You must take the Amulet to the Great Temple of %d, on the Astral
+#plane.  There you must offer the Amulet to %d.
+#
+#"Go now, my %S.  I cannot tell you your fate, as the power of the
+#Amulet interferes with mine.  I hope for your success."
+「よくやりました、%p。あなたが魔除けを取り戻すのを
+  この目で見られるなんて！
+
+  あなたは、魔除けを天上界にある%dの大聖堂にもたらさねば
+  なりません。そこで%dに魔除けを捧げるのです。
+
+  行きなさい、我が%S。魔除けが力を及ぼすせいで、あなたの運命を
+  読むことはできません。あなたの成功を祈ります。」
+%E
+#
+#	Wizard
+#
+%Cc Wiz 00001
+#You are suddenly in familiar surroundings.  You notice what appears to
+#be a large, squat stone structure nearby.  Wait!  That looks like the
+#tower of your former teacher, %l.
+#
+#However, things are not the same as when you were last here.  Mists and
+#areas of unexplained darkness surround the tower.  There is movement in
+#the shadows.
+#
+#Your teacher would never allow such unaesthetic forms to surround the
+#tower...  unless something were dreadfully wrong!
+突然、あなたは自分が見慣れた景色の中にいることに気がついた。傍には、
+大きくてずんぐりした石造りの建物がある。ちょっと待て！　この建造物は
+あなたのかつての師、%lの塔のように見える。
+
+だが、以前あなたがここにいた時とは、様々な面で違ってしまっている。
+霧と、名状しがたい暗黒とが塔を覆っている。闇の中では何かが蠢いている。
+
+あなたの師は、こんな悪趣味なものが塔を覆うことなど決して許しはしない
+はずだ…。何かとてつもなく恐ろしいことが起こったのでなければ！
+%E
+%Cp Wiz 00002
+#Once again, you are back at %H.
+再び、あなたは%Hに戻ってきた。
+%E
+%Cp Wiz 00003
+#You are back at %H.
+#You have an odd feeling this may be the last time you ever come here.
+あなたは%Hに戻ってきた。
+ここに来るのはこれが最後になるかもしれない、そんな奇妙な気がした。
+%E
+%Cp Wiz 00005
+#"Would you happen to have some eye of newt in that overstuffed pack, %s?"
+「%sよ、その大荷物の中に、ひょっとしてイモリの目が入っていたりはしないか？」
+%E
+%Cp Wiz 00006
+#"Ah, the spell to create the magic portal worked.  Outstanding!"
+「おお、魔法の門を作る呪文は成功だ。素晴らしい！」
+%E
+%Cp Wiz 00007
+#"Hurry!  %lC may not survive that casting of the
+#portal spell!!"
+「急げ！ 門の呪文を使った%lはもう長くはもたないかもしれない!!」
+%E
+%Cp Wiz 00008
+#"The spells of %n were just too powerful for us to withstand."
+「%nの魔術は、我々が立ち向かえないほど強力でした。」
+%E
+%Cp Wiz 00009
+#"I, too, will venture into the world, because %n is but one of
+#many evils to be vanquished."
+「わたしも世界へと旅立とう。%nですら、
+滅ぶべき多くの邪悪のひとつにすぎないのだから。」
+%E
+%Cp Wiz 00010
+#"I have some eye of newt to trade, do you have a spare blind-worm's sting?"
+「盲目虫の針を持っていたら、私のイモリの目と交換してくれないか？」
+%E
+%Cp Wiz 00011
+#"The magic portal now seems like it will remain stable for quite some time."
+「魔法の門は、今後かなり長期間安定して働くようになったようです。」
+%E
+%Cp Wiz 00012
+#"Have you noticed how much stronger %l is since %o was recovered?"
+「%oが戻って%lがどれほど強くなったか、気づいたかい？」
+%E
+%Cp Wiz 00013
+#"Thank %d!  We weren't positive you would defeat %n."
+「%dに感謝を！ お前が%nを倒せるとは思っていなかった。」
+%E
+%Cp Wiz 00014
+#"I, too, will venture into the world, because %n was but one of
+#many evils to be vanquished."
+「わたしも世界へと旅立とう。%nですら、
+滅ぶべき多くの邪悪のひとつにすぎなかったのだから。」
+%E
+%Cc Wiz 00015
+#"Come closer, %p, for my voice falters in my old age.
+#Yes, I see that you have come a long way since you went out into the
+#world, leaving the safe confines of this tower.  However, I must first
+#determine if you have all of the skills required to take on the task
+#I require of you."
+「%pよ、もっと近くに来てくれ。年のせいで声がかすれて
+  しまうのでな。ああ、おまえはこの塔の閉ざされた安全から去り、
+  世に旅立ってから、長い道程を経てきたようだな。
+  だがまずは、今から与える使命を果たす技量がおまえにあるか、
+  見極めねばならん。」
+%E
+%Cp Wiz 00016
+#"Well, %p, you have returned.  Perhaps you are now ready..."
+「よし、%p、戻ったな。おそらく今度は用意ができただろう…。」
+%E
+%Cp Wiz 00017
+#"This is getting tedious, %p, but perseverance is a sign of a true mage.
+#I certainly hope that you are truly ready this time!"
+「いい加減うんざりしてきたぞ、%p。だが忍耐強さは真の魔法使いの証。
+  今度こそは準備ができているだろうな！」
+%E
+%Cc Wiz 00018
+#"You fool, %p!  Why did I waste all of those years teaching you
+#the esoteric arts?  Get out of here!  I shall find another."
+「%p、この馬鹿者が！ 何故わたしはおまえに秘伝を教え込むなど、
+  無駄な歳月を費やしたのだろうか？
+  ここから出てゆけ！ お前なんぞに期待はせん。」
+%E
+%Cc Wiz 00019
+#"Alas, %p, you have not yet shown your proficiency as a worthy
+#spellcaster.  As %ra, you would surely be overcome in the challenge
+#ahead.  Go, now, expand your horizons, and return when you have attained
+#renown as %Ra."
+「ああ、%p。おまえはまだ、ひとかどの魔法使いとしての熟達ぶりを
+  示せておらん。%raでは、おまえをこれから待ち受ける試練に
+  確実に押し潰されてしまうだろう。行け、己が世界を広げよ。
+  %Raの地位を勝ちとった時、再び戻ってくるがよい。」
+%E
+%Cc Wiz 00020
+#"You amaze me, %p!  How many times did I tell you that the way of a mage
+#is an exacting one.  One must use the world with care, lest one leave it
+#in ruins and simplify the task of %n.
+#
+#"You must go back and show your worthiness.  Do not return until you are
+#truly ready for this quest.  May %d guide you in this task."
+「%p、おまえには呆れて物が言えん！ 魔法使いの道は厳しいものだと、
+  何度言ったらわかるのだ。世界を扱うには注意をもってせよ。さもなくば、
+  世界は廃虚と化し、%nの仕事を楽にするだけだ。
+
+  おまえはここを去り、己が価値を示さねばならん。使命を真に
+  果たせるようになるまで、ここへ戻ることは許さん。
+  %dの導きのあらんことを。」
+%E
+%Cc Wiz 00021
+#"Yes, %p, you truly are ready for this dire task.  Listen,
+#carefully, for what I tell you now will be of vital importance.
+#
+#"Since you left us to hone your skills in the world, we unexpectedly came
+#under attack by the forces of %n.  As you know, we thought
+#%n had perished at the end of the last age, but, alas, this was
+#not the case.
+#
+#"%nC sent an army of abominations against us.  Among them was a
+#minion, mindless and ensorcelled, and thus, in the confusion, it was able
+#to penetrate our defenses.  Alas, this creature has stolen
+#%o and I fear it has delivered %o
+#to %n.
+#
+#"Over the years, I had woven most of my power into this amulet, and thus,
+#without it, I have but a shadow of my former power, and I fear that I
+#shall soon perish.
+#
+#"You must travel to %i, and within its dungeons,
+#find and overcome %n, and return %o to me.
+#
+#"Go now, with %d, and complete this quest before it is too late."
+「%p、この恐るべき使命を果たす力をつけたようだな。
+  よく聞け。今からわたしの語ることは、おまえにとってきわめて重要な
+  ことなのだ。
+
+  おまえが世界の中で技を磨くため、我々を残して旅に出たのち、
+  我々は%nの軍勢による予期せぬ攻撃を受けた。知っての通り、
+  %nは先の時代の終わりに滅ぼされたものと我々は考えていた。
+  だが、ああ、そうではなかったのだ。
+
+  %nは忌まわしきものの大軍で攻め寄せてきた。その中には
+  魔法で操られた、意思のない使い魔がおり、混乱の最中に
+  我々の防衛線は突破されてしまった。その怪物は
+  %oを盗み出し、ああ、すでに%nのもとへ届けたのではないかと
+  わたしは恐れている。
+
+  長年の間、わたしは自らの力のほとんどを、あの魔除けに織り込んだ。
+  従ってあれなしでは、わたしは己がかつての力の影にすぎず、
+  そしてまもなく滅びてしまうかもしれん。
+
+  おまえは%iへ行き、その地下迷宮の中で%nを見つけ打倒し、
+  %oをわたしのもとへ取り戻さねばならない。
+
+  %dとともに行け。手遅れになる前にこの使命を果たすのだ。」
+%E
+%Cp Wiz 00025
+#"Beware, for %n is immune to most magical attacks."
+「気をつけろ。%nには大抵の魔法攻撃が効かん。」
+%E
+%Cp Wiz 00026
+#"To enter %i you must pass many traps."
+「%iに入るには、多くの罠をかわさねばならん。」
+%E
+%Cp Wiz 00027
+#"%nC may be vulnerable to physical attacks."
+「%nは、力による攻撃には弱いかもしれん。」
+%E
+%Cp Wiz 00028
+#"%d will come to your aid when you call."
+「%dは、呼べば、おまえを助けに来てくれるだろう。」
+%E
+%Cp Wiz 00029
+#"You must utterly destroy %n.  He will pursue you otherwise."
+「%nは完全に滅ぼさねばならん。でなければ、奴は報復に来るぞ。」
+%E
+%Cp Wiz 00030
+#"%oC is a mighty artifact.  With it you can
+#destroy %n."
+「%oCは強力な魔法の品だ。それがあれば、%nを倒せよう。」
+%E
+%Cp Wiz 00031
+#"Go forth with the blessings of %d."
+「%dの祝福とともにゆくがよい。」
+%E
+%Cp Wiz 00032
+#"I will have my %gP watch for your return."
+「わたしの%gPに、おまえの帰還を待たせるとしよう。」
+%E
+%Cp Wiz 00033
+#"Feel free to take any items in that chest that might aid you."
+「この箱の中のもので、役立つものがあれば何でも持っていくがよい。」
+%E
+%Cp Wiz 00034
+#"You will know when %o is near.  Proceed with care!"
+「%oが近くなれば、それを感じるだろう。用心してゆけ！」
+%E
+%Cc Wiz 00035
+#Wisps of fog swirl nearby.  You feel that %ns lair is close.
+そばで霧がたなびき、渦を巻いている。
+あなたは%nの隠れ家が近いと感じた。
+%E
+%Cp Wiz 00036
+#You believe that you may once again invade %i.
+あなたは、自分が再び、%iに侵入することになるかもしれないと
+確信した。
+%E
+%Cc Wiz 00040
+#You feel your mentor's presence; perhaps %o is nearby.
+あなたは師の存在を感じた。%oが近いのだろう。
+%E
+%Cp Wiz 00041
+#The aura of %o tingles at the edge of your perception.
+%oの気配が、あなたの知覚の境を刺激している。
+%E
+%Cc Wiz 00050
+#"Ah, I recognize you, %p.  So, %l has sent you to steal
+#%o from me, hmmm?  Well, %l is a
+#fool to send such a mental weakling against me.
+#
+#"Your destruction, however, should make for good sport.  In the end, you
+#shall beg me to kill you!"
+「ああ、お前のことは知っている、%p。すると、%lは私から
+  %oを盗むためにお前を送り込んだってわけか、ふむ？
+  よかろう、%lはこんなうすら馬鹿を私に差し向けるような
+  愚か者だったわけだ。
+
+  お前を破滅させるのも、しかし、いい気晴らしになるだろう。
+  最後には、お前は私に殺してくれと懇願するようになる！」
+%E
+%Cc Wiz 00051
+#"How nice of you to return, %p!  I enjoyed our last meeting.  Are you
+#still hungry for more pain?
+#
+#"Come!  Your soul, like %o, shall soon be mine to
+#command."
+「%pよ、よくぞ戻ってきた。前回はとても楽しかったぞ。
+  痛みにまだまだ飢えているというわけか？
+
+  来い！　%o同様、お前の魂をすぐに我が意のままにしてくれる。」
+%E
+%Cp Wiz 00052
+#"I'm sure that your perseverance shall be the subject of innumerable
+#ballads, but you shall not be around to hear them, I fear!"
+「お前の粘り強さは、無数の唄の語るところとなることだろう。
+  残念だが、お前がそれを聞くことはないだろうがな！」
+%E
+%Cp Wiz 00053
+#"Thief!  %o belongs to me, now.  I shall feed
+#your living flesh to my minions."
+「泥棒め！　%oは今や私のものだ。貴様の肉を、生きたまま
+手下どもに喰わせてやる。」
+%E
+%Cp Wiz 00060
+#"Your puny powers are no match for me, fool!"
+「愚か者が、貴様のちんけな力など私に到底及ばん！」
+%E
+%Cp Wiz 00061
+#"When you are defeated, your torment will last for a thousand years."
+「お前が敗れれば、お前の拷問は1000年に渡って続くことになろう。」
+%E
+%Cp Wiz 00062
+#"After your downfall, %p, I shall devour %l
+#for dessert!"
+「お前を斃したら、%p、デザートに%lを喰らってやろう！」
+%E
+%Cp Wiz 00063
+#"Are you ready yet to beg for mercy?  I could be lenient..."
+「慈悲を乞う準備はできたか？ 私は寛大かもしれないぞ…。」
+%E
+%Cp Wiz 00064
+#"Your soul shall join the enslaved multitude I command!"
+「お前の魂は、我が指揮下の奴隷軍に加わることとなろう！」
+%E
+%Cp Wiz 00065
+#"Your lack of will is evident, and you shall die as a result."
+「お前の意志の弱さは明らかだ。それが命取りになる。」
+%E
+%Cp Wiz 00066
+#"Your faith in %d is for naught!  Come, submit to me now!"
+「君の%dへの信心は無駄だ！　さあ、私に隷属せよ！」
+%E
+%Cp Wiz 00067
+#"A mere %r is nothing compared to my skill!"
+「%rなど、私の技に比べればものの数ではない！」
+%E
+%Cp Wiz 00068
+#"So, you are the best hope of %l?  How droll."
+「それで、お前が%lの最大の希望だと？ これは傑作だ。」
+%E
+%Cp Wiz 00069
+#"Feel my power, %c!  My victory is imminent!"
+「%c、私の力を感じよ！ 我が勝利は目前だ！」
+%E
+%Cc Wiz 00070
+#As you touch %o, its comforting power infuses you
+#with new energy.  You feel as if you can detect others' thoughts flowing
+#through it.  Although you yearn to wear %o
+#and attack the Wizard of Yendor, you know you must return it to its
+#rightful owner, %l.
+%oに触れると、その心地よい力は新たな活力となって
+あなたに流れ込んできた。まるで、魔除けに流れ込んでくる
+他者の思考を感知することができるかのようだ。
+%oを身につけてイェンダーの魔法使いと戦いたいという欲望が
+湧き上がってきたが、あなたはこれを本来の持ち主、%lに
+返さねばならないとわかっていた。
+%E
+%Cc Wiz 00080
+#%nC croaks out, as his body begins to shrivel up:
+#
+#    I shall haunt your progress until the end of time.  A thousand
+#    curses on you and %l.
+#
+#Then, the body bursts into a cloud of choking dust, and blows away.
+%nの肉体がしなびはじめ、%nは絶叫した。
+
+    貴様の行く先々、時の終りまで祟ってやる。
+    貴様と%lに千の呪いを。
+
+そして、その体は息の詰まるような灰燼の雲となって噴き上がり、
+やがてかき消えた。
+%E
+%Cc Wiz 00081
+#%lC notices %o in your possession,
+#beams at you and says:
+#
+#    I knew you could defeat %n and retrieve
+#    %o.  We shall never forget this
+#    brave service.
+#
+#    Take %o with you in your quest for
+#    the Amulet of Yendor.  I can sense that it has attuned
+#    itself to you already.
+#
+#    May %d guide you in your quest, and keep you from harm.
+%lはあなたが%oを持っていることに気づき、
+微笑んで言った。
+
+    おまえなら、%nを倒して%oを取り戻せると
+    分かっていたよ。我々はこの勇気ある行いを
+    決して忘れはしまい。
+
+    イェンダーの魔除けの探索に、%oを持って行くがよい。
+    %oがすでに自らをおまえに調和させているのが、
+    わたしには感じられる。
+
+    %dがおまえの旅を導き、災いより守らんことを。
+%E
+%Cc Wiz 00082
+#"You are the keeper of %o now.  It is time to
+#recover the /other/ Amulet.  %Z await your return through
+#the magic portal which brought you here."
+「今や、おまえが%oの守護者だ。
+  そして、『もう一つの』魔除けを取り戻す時が来た。
+  おまえをここへ運んだ魔法の門の向こうで、
+  %Zがおまえを待っているぞ。」
+%E
+%Cp Wiz 00090
+#"Come near, my %S, and share your adventures with me.  So, have you
+#succeeded in your quest for the Amulet of Yendor?"
+「わが%Sよ、近くへ寄って、冒険の話をしてくれないか。
+イェンダーの魔除けの探索は成功したか？」
+%E
+%Cc Wiz 00091
+#"Congratulations, %p.  I always knew that if anyone could succeed
+#in defeating the Wizard of Yendor and his minions, it would be you.
+#
+#"Go now, and take the Amulet to the astral plane.  Once there, present
+#the Amulet on the altar of %d.  Along the way you shall pass through the
+#four elemental planes.  These planes are like nothing you have ever
+#experienced before, so be prepared!
+#
+#"For this you were born, %s!  I am very proud of you."
+「おめでとう、%p。わたしにはいつも、イェンダーの魔法使いと
+  その一味を倒すことができる者がいるとすれば、それは
+  おまえかもしれないと思っていたよ。
+
+  さあ行け、その魔除けを天上界へともたらすのだ。そこで、
+  魔除けを%dの祭壇に捧げよ。道中、おまえは四大精霊の世界を
+  通ることになろう。これらの世界は今までに全く経験したことの
+  ないような場所だ。心して行け！
+
+  %sよ、おまえはこのために生まれてきたのだ。わたしはおまえを
+  とても誇りに思うぞ。」
+%E
+#
+#	General
+#
+%Cc - 00001
+#It is written in the Book of %d:
+#
+#    After the Creation, the cruel god Moloch rebelled
+#    against the authority of Marduk the Creator.
+#    Moloch stole from Marduk the most powerful of all
+#    the artifacts of the gods, the Amulet of Yendor,
+#    and he hid it in the dark cavities of Gehennom, the
+#    Under World, where he now lurks, and bides his time.
+#
+#Your %G %d seeks to possess the Amulet, and with it
+#to gain deserved ascendance over the other gods.
+#
+#You, a newly trained %r, have been heralded
+#from birth as the instrument of %d.  You are destined
+#to recover the Amulet for your deity, or die in the
+#attempt.  Your hour of destiny has come.  For the sake
+#of us all:  Go bravely with %d!
+これは、%dの書に述べられているものである。
+
+   天地創造の後、破壊神モーロック、創造主マルドゥークと違えて
+   反逆す。モーロック、神々の手になる品の中でも最も力ある
+   「イェンダーの魔除け」をマルドゥークより盗みだし、
+   魔除けを自らの潜む世界の底、ゲヘナの闇のあなぐらに隠して、
+   時を待てり。
+
+%G%dは「魔除け」を望み、その力をもって他の神々に対し
+自らにふさわしい権勢を得ようとしている。
+
+あなたは現在、まだ新米の%rではあるが、生まれたときから
+%dに多くを成す者と予言されている。%Gのために
+イェンダーの魔除けを取り戻すか、あるいはその道半ばで死ぬ
+運命にある。そして、今こそその時が来た。
+我々のために、%dの加護のあらんことを！
+%E
+%Cp - 00002
+#You receive a faint telepathic message from %l:
+#Your help is urgently needed at %H!
+#Look for a ...ic transporter.
+#You couldn't quite make out that last message.
+あなたは、%lからの声なきかすかなメッセージを聞いた。
+%Hは助けを火急に必要としている！
+魔…の門を探…
+あなたは最後のメッセージを完全には聞きとれなかった。
+%E
+%Cp - 00003
+#You again sense %l pleading for help.
+あなたは、再び%lが助けを求めているのを感じた。
+%E
+%Cp - 00004
+#You again sense %l demanding your attendance.
+あなたは、再び%lがあなたの来訪を強く求めているのを感じた。
+%E
+# Completed the quest by returning with artifact, but not carrying
+# the Bell of Opening; quest leader lets you know that it is needed.
+#[ Should this be role-specific so that each leader has variant text? ]
+%Cp - 00005
+#"The silver bell which was hoarded by %n will be
+#essential in locating the Amulet of Yendor."
+「%nが貯めこんだ戦利品の中に、銀のベルがある。それがなければ、
+  イェンダーの魔除けを見出すことはできないと聞いている。」
+%E
+#
+#	Angelic maledictions.
+#
+%Cp - 00010
+#"Repent, and thou shalt be saved!"
+「悔い改めよ、さすれば汝救われん！」
+%E
+%Cp - 00011
+#"Thou shalt pay for thine insolence!"
+「汝、己の働きし傲慢の報いを受けるべし！」
+%E
+%Cp - 00012
+#"Very soon, my child, thou shalt meet thy maker."
+「我が子よ、汝はすぐに己を作りたもう者にあいまみえることになろう。」
+%E
+%Cp - 00013
+#"The great %D has sent me to make you pay for your sins!"
+「偉大なる%Dが、汝に罪を償わせんがため我を遣わした。」
+%E
+%Cp - 00014
+#"The wrath of %D is now upon you!"
+「そなたは%Dの怒りに触れた！」
+%E
+%Cp - 00015
+#"Thy life belongs to %D now!"
+「汝の命は、いまや%Dのものなり！」
+%E
+%Cp - 00016
+#"Dost thou wish to receive thy final blessing?"
+「汝、最期の祝福を受けることを所望するか？」
+%E
+%Cp - 00017
+#"Thou art but a godless void."
+「汝は神に見放された虚無でしかない。」
+%E
+%Cp - 00018
+#"Thou art not worthy to seek the Amulet."
+「汝、魔除けを探し求めるに値せず！」
+%E
+%Cp - 00019
+#"No one expects the Spanish Inquisition!"
+「まさかの時のスペイン宗教裁判！」
+%E
+#
+#	Demonic maledictions.
+#
+%Cp - 00030
+#"I first mistook thee for a statue, when I regarded thy head of stone."
+「お前の石頭を見て、お前を石像と間違えたわい。」
+%E
+%Cp - 00031
+#"Come here often?"
+「ここへはよく来るのか？」
+%E
+%Cp - 00032
+#"Doth pain excite thee?  Wouldst thou prefer the whip?"
+「お前は苦痛に興奮を感じるか？ 鞭のほうがよいかな？」
+%E
+%Cp - 00033
+#"Thinkest thou it shall tickle as I rip out thy lungs?"
+「お前のはらわたを引き裂いたら楽しいと思うか？」
+%E
+%Cp - 00034
+#"Eat slime and die!"
+「スライムでも喰らって死ね！」
+%E
+%Cp - 00035
+#"Go ahead, fetch thy mama!  I shall wait."
+「帰ってお前のママでも呼んできな！ 待っててやるぞ。」
+%E
+%Cp - 00036
+#"Go play leapfrog with a herd of unicorns!"
+「ユニコーンの群れと馬飛びでもしてな！」
+%E
+%Cp - 00037
+#"Hast thou been drinking, or art thou always so clumsy?"
+「お前は酔っ払いか？ それともいつもそんなフラフラしてんのか？」
+%E
+%Cp - 00038
+#"This time I shall let thee off with a spanking, but let it not happen again."
+「今回は尻叩きだけで許しましょう。でも今度やったら許しませんよ。」
+%E
+%Cp - 00039
+#"I've met smarter (and prettier) acid blobs."
+「お前よりずっと賢くて美しい酸のブロッブを見たことがあるぞ。」
+%E
+%Cp - 00040
+#"Look!  Thy bootlace is undone!"
+「おい！ 靴紐がほどけてるぞ！」
+%E
+%Cp - 00041
+#"Mercy!  Dost thou wish me to die of laughter?"
+「わはは、やめてくれ！ お前は私を笑い死にさせるつもりか？」
+%E
+%Cp - 00042
+#"Run away!  Live to flee another day!"
+「逃げ失せろ！ 逃げ回って一日でも長く生きてみな！」
+%E
+%Cp - 00043
+#"Thou hadst best fight better than thou canst dress!"
+「その見掛けに釣り合うくらいには戦ってみせろ！」
+%E
+%Cp - 00044
+#"Twixt thy cousin and thee, Medusa is the prettier."
+「お前とお前の従兄弟を合わせても、メデューサの方がかわいいぞ。」
+%E
+%Cp - 00045
+#"Methinks thou wert unnaturally stirred by yon corpse back there, eh, varlet?"
+「そこの己の屍に尋常ならぬ動揺を覚えているとお見受けするが、ええ、小姓殿？」
+%E
+%Cp - 00046
+#"Up thy nose with a rubber hose!"
+「鼻にゴムホースでも突っこんでろ！」
+%E
+%Cp - 00047
+#"Verily, thy corpse could not smell worse!"
+「まさに、お前の死体でもお前ほど臭くはないだろうよ！」
+%E
+%Cp - 00048
+#"Wait!  I shall polymorph into a grid bug to give thee a fighting chance!"
+「そうだ、グリッドバグにでも変身してやろうか？ それなら勝ち目もあるだろう！」
+%E
+%Cp - 00049
+#"Why search for the Amulet?  Thou wouldst but lose it, cretin."
+「何故魔除けを探す？ お前のようなうつけではなくすだけだ。」
+%E
+#
+#	Banishment message (for converted hero)
+#
+%Cc - 00060
+#"You have betrayed all those who hold allegiance to %d, as you once did.
+#My allegiance to %d holds fast and I cannot condone or accept what you 
+#have done.
+#
+#Leave this place.  You shall never set foot at %H again.
+#That which you seek is now lost forever, for without the Bell of Opening, 
+#you will never be able to enter the place where he who has the Amulet 
+#resides.
+#
+#Go now!  You are banished from this place.
+「お前は%dを信ずるすべての人々、かつてのお前の同胞を裏切った。
+  %dへの忠節を誓う身なれば、お前のしてしまった行いを
+  見逃すことも、まして許すこともできない。
+
+  この地を去れ。二度と%Hに足を踏み入れてはならぬ。
+  お前の求めていたものは、今や永遠に失われた。
+  開放のベルなくしては、魔除けを持つ者のいる地に入ることはできぬ。
+
+  さあ行け！　お前はこの地から追放されたのだ。」
+%E
+#
+#	TEST PATTERN
+#
+%Cc - 00099
+ %p:	return(plname);
+ %c:	return(pl_character);
+ %r:	return((char *)rank_of(u.ulevel));
+ %R:	return((char *)rank_of(MIN_QUEST_LEVEL));
+ %s:	return((flags.female) ? "sister" : "brother" );
+ %S:	return((flags.female) ? "daughter" : "son" );
+ %l:	return((char *)ldrname());
+ %i:	return(intermed());
+ %o:	return(artiname());
+ %n:	return((char *)neminame());
+ %g:	return((char *)guardname());
+ %G:	return((char *)align_gtitle(u.ualignbase[1]));
+ %H:	return((char *)homebase());
+ %a:	return(Alignnam(u.ualignbase[1]));
+ %A:	return(Alignnam(u.ualign.type));
+ %d:	return((char *)align_gname(u.ualignbase[1]));
+ %D:	return((char *)align_gname(A_LAWFUL));
+ %C:	return("chaotic");
+ %N:	return("neutral");
+ %L:	return("lawful");
+ %x:	return((Blind) ? "sense" : "see");
+ %Z:	return("The Dungeons of Doom");
+ %%:	return(percent_sign);
+ a suffix:	return an(root);
+ A suffix:	return An(root);
+ C suffix:	return capitalized(root);
+ p suffix:	return makeplural(root);
+ P suffix:	return makeplural(capitalized(root));
+ s suffix:	return s_suffix(root);
+ S suffix:	return s_suffix(capitalized(root));
+ t suffix:	return strip_the_prefix(root);
+%E

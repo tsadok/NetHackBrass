@@ -1,0 +1,159 @@
+#	SCCS Id: @(#)vault.des	3.4	2008/03/18
+#	Copyright (c) 2008 by youkan
+# NetHack may be freely redistributed.  See license for details.
+#
+# These are the preset vaults which give some flavor to
+# The Dungeon of Doom.
+#
+# Note:	A preset vault have to be registered to a level as a 'room'.
+#	The first region is used as the shape of the room.
+#	If the room cannot be filled by the simple seedfill,
+#	specify 'rndvault' instead of 'irregular'.
+#	(ex. the rooms is separated, or it has subrooms...)
+#
+
+# rarity, minlevel, maxlevel
+#@ 10 2 15
+MAZE:"rndv-???",none
+GEOMETRY: right, random
+MAP
+////---------////
+//---.......---//
+---...-----...---
+|...---...---...|
+|...|.......|...|
+|...---...---...|
+---...--+--...---
+//---.......---//
+////---------////
+ENDMAP
+
+REGION: (00,00,16,08),random,"empty",unfilled,rndvault
+REGION: (07,03,07,03),lit,"shop",filled,irregular
+
+DOOR: closed,(08,06)
+
+#
+# test room
+#
+#@ 10 3 8
+MAZE: "rndv-???", none
+GEOMETRY: center, center
+MAP
+    -----    
+    |...|    
+    |...|    
+   --...--   
+----.....----
+|...........|
+|...........|
+|...........|
+----.....----
+   --...--   
+    |...|    
+    |...|    
+    -----    
+ENDMAP
+
+# Shape of this room
+REGION:(05,01,05,01), lit, "ordinary", unfilled, irregular
+
+# limit the position of doors at the center of walls
+REGION:(00,00,05,05), lit, "nodoor"
+REGION:(00,07,05,12), lit, "nodoor"
+REGION:(07,00,12,05), lit, "nodoor"
+REGION:(07,07,12,12), lit, "nodoor"
+OBJECT:random,fine,random
+OBJECT:random,excellent,random
+OBJECT:random,superb,random
+
+# interior of the room
+STAIR:(06,06),down
+
+#
+# test room - jail
+#
+#@ 10 20 25
+MAZE: "rndv-???", none
+
+GEOMETRY: edge, edge
+MAP
+------------------
+|....F....F.F....|
+|....F....F.F....|
+-FFF+FFFF+F.F+FFF-
+|................|
+-F+FFF.F+FFFF+FFF-
+|....F.F....F....|
+|....F.F....F....|
+------------------
+ENDMAP
+
+REGION: (00,00,17,08),lit,"empty",unfilled,rndvault
+REGION: (07,05,17,08),lit,"nodoor"
+REGION: (00,00,10,03),lit,"nodoor"
+REGION: (12,00,17,03),lit,"nodoor"
+REGION: (00,05,05,08),lit,"nodoor"
+
+DOOR: locked,(04,03)
+DOOR: locked,(09,03)
+DOOR: locked,(13,03)
+DOOR: locked,(02,05)
+DOOR: locked,(08,05)
+DOOR: locked,(13,05)
+
+MONSTER: '@',"prisoner",(03,01),peaceful
+MONSTER: '@',"prisoner",(08,01),peaceful
+MONSTER: 'T',"troll",(15,01),hostile
+MONSTER: 'h',"mind flayer",(03,07),hostile
+MONSTER: '@',"thug",(10,07),hostile
+MONSTER: '@',"prisoner",(15,07),peaceful
+
+#
+# test room - pool of eels
+#
+#@ 10 18 25
+MAZE: "rndv-???", none
+
+GEOMETRY: left, bottom
+MAP
+//////////////////##
+////////PPPP/////###
+////PPPPPPPPPP/###//
+//PPPPPPPPPP....P///
+PPPPPPPPPP......PP//
+PPPPP..PP.....PPPP//
+PPPP..........PPPPP/
+/PPP...........PPPP/
+/PPPP.........PPPP//
+//PPPPPPP..PPPPPP///
+/////PPPPPPPPP//////
+ENDMAP
+
+REGION: (00,00,19,10),unlit,"empty",unfilled,rndvault
+REGION: (00,00,18,00),lit,"nodoor"
+
+MONSTER: ';',"electric eel",(07,03)
+MONSTER: ';',"electric eel",(02,05)
+MONSTER: ';',"electric eel",(17,06)
+MONSTER: ';',"electric eel",(07,10)
+
+#
+# test room - hexagonal beehive
+#
+#@ 10 10 20
+MAZE: "rndv-???", none
+
+GEOMETRY: random, random
+MAP
+  -------  
+ --.....-- 
+--.......--
+|.........|
+--.......--
+ --.....-- 
+  -------  
+ENDMAP
+
+REGION: (03,01,03,01),random,"beehive",filled,true
+

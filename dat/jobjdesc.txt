@@ -1,0 +1,1608 @@
+#
+#	Object description text
+#
+#	%%	%
+#	%n	品物の正式名称
+#	%d	品物の不確定名
+#	%b	品物が blessed  であると判明しているときのみ以降を表示 (%b, %u, %c, %eまたは行末まで)
+#	%u	品物が uncursed であると判明しているときのみ以降を表示 (%b, %u, %c, %eまたは行末まで)
+#	%c	品物が cursed   であると判明しているときのみ以降を表示 (%b, %u, %c, %eまたは行末まで)
+#	%e	%b, %u, %c の効果を打ち消す
+#	%f	fruitオプションで指定された名前
+
+#
+#	missiles
+#
+)arrow
+	弓につがえて射る、矢だ。
+)elven arrow
+	エルフの手で作られた矢だ。
+)runed arrow
+	矢じりにルーンが刻まれている矢だ。
+)orcish arrow
+	オークの手で作られた矢だ。
+)crude arrow
+	粗雑な作りの矢だ。
+)crossbow bolt
+	クロスボウで射るための、専用の矢玉だ。
+)ya
+	侍が使う矢だ。
+)bamboo arrow
+	竹製の軸に、鋭い矢じりの取り付けられた矢だ。
+)dart
+	手で投げるように加工された針だ。
+)shuriken
+)throwing star
+	異国の暗殺者が使うといわれる、投擲武器だ。
+	中心から刃が放射状に広がり、星の形にも見える。
+)bullet
+	銃に込めて発射する弾丸だ。
+)boomerang
+	木から削り出して作られた、「く」の字型の投擲武器だ。
+	この奇妙な武器は、投げると円を描いて自分に戻ってくる。
+)spear
+	ほどよい長さの棒の先に、尖った穂先を取り付けた武器だ。
+)elven spear
+	エルフの手で作られた、片手で扱う槍だ。
+)runed spear
+	穂先にルーンの刻まれた槍だ。
+)orcish spear
+	オークが使う槍だ。
+)crude spear
+	粗末な作りの槍だ。
+)dwarvish spear
+	ドワーフの手で作られた、頑丈な片手槍だ。
+)stout spear
+	頑丈な作りの槍だ。
+)javelin
+)throwing spear
+	投擲用に作られた槍だ。
+)trident
+	3つに分かれた穂先を備えた銛だ。
+)lance
+	騎乗して突撃するための、大型の馬上槍だ。
+)dagger
+	短い直刃の刀身をもつ小型の剣、あるいは
+	大型のナイフだ。
+)elven dagger
+	エルフの手で鍛えられた、小型の短剣だ。
+)runed dagger
+	刀身にルーンが刻まれた、小型の短剣だ。
+)orcish dagger
+	オークの手で作られた、小型の短剣だ。
+)crude dagger
+	かなり粗雑な作りの短剣だ。
+)athame
+	魔術の儀式に使われる短刀だ。
+)scalpel
+	医師が患者を手術する際に使用する、
+	小さく鋭いナイフだ。
+)knife
+	ものを切るのに使う、小型の刃物だ。
+)stiletto
+	突き刺すのに特化した形式のナイフだ。
+)worm tooth
+	ロングワームの歯だ。
+)crysknife
+	ロングワームの歯から作られた、非常に鋭いナイフだ。
+	未処理のナイフが分解してしまうのを防ぐためには、
+	人間の肉体の電磁場に近づけておくことを必要とする。
+)dwarvish mattock
+	ドワーフたちが鉱石の採掘に使用しているつるはしだ。
+	武器として使っても、恐るべき威力を発揮する。
+)broad pick
+	柄の先に重く頑丈な鉄の爪を備えたつるはしだ。
+)axe
+	柄の先に厚い金属の刃を備えた、ものを断ち割るための道具だ。
+	この斧は片手で扱える。
+)battle-axe
+)double-headed axe
+	大きく重い両刃を備えた、戦闘用の強力な斧だ。
+)short sword
+	50cmほどの直刃の刀身をもつ剣だ。
+)elven short sword
+	エルフの手によって鍛えられた、
+	50cmほどの直刃の刀身をもつ剣だ。
+)runed short sword
+	50cmほどの直刃の刀身に、ルーンが刻み付けられている剣だ。
+)orcish short sword
+	オークの手で作られた、50cmほどの直刃の刀身をもつ剣だ。
+)crude short sword
+	50cmほどの直刃の刀身をもつ、かなり粗雑な作りの剣だ。
+)dwarvish short sword
+	ドワーフの手によって鍛えられた、
+	50cmほどの直刃の刀身をもつ頑強な剣だ。
+)broad short sword
+	50cmほどの直刃の刀身をもつ、頑強な作りの剣だ。
+)scimitar
+)curved sword
+	反り返った幅広の刀身をもつ曲刀だ。
+)saber
+	反った細身の刀身をもつ軍刀だ。
+)broadsword
+	刀身を広く頑丈にすることで、破壊力を高めた長剣だ。
+)elven broadsword
+	エルフの手で作られた、大型の頑強な長剣だ。
+)runed broadsword
+	刀身にルーンが刻まれた、大型の頑強な長剣だ。
+)long sword
+	100cm前後の真っ直ぐな刀身をもつ、両刃の長剣だ。
+)two-handed sword
+	人間の背丈ほどもある直刃の刀身を備えた、
+	とても大型の長剣だ。
+)katana
+)samurai sword
+	侍が使う、おそろしく切れ味の鋭い曲刀だ。
+)tsurugi
+)long samurai sword
+	侍が使う、おそろしく切れ味の鋭い曲刀だ。
+	このカタナはなかでもかなり大型のものだ。
+)runesword
+	刀身がルーンで埋め尽くされている長剣だ。
+)partisan
+)vulgar polearm
+	穂先の両脇に、斧状の刃を配置した長槍だ。
+)ranseur
+)hilted polearm
+	穂先の両脇から二本の刃が垂直に突き出ており、
+	十字刃に見える長槍だ。
+)spetum
+)forked polearm
+	中央の穂先の両脇に刃が前向きに突き出ており、
+	三叉の穂先を持った長槍だ。
+)glaive
+)single-edged polearm
+	長い棒の先に、片刃の穂先を取り付けた武器だ。
+)halberd
+)angled poleaxe
+	斧状の刃、槍の穂先、そして鈎の役割も果たすスパイクを備えた長斧だ。
+)bardiche
+)long poleaxe
+	非常に巨大な刃を持った斧、あるいは鉈のような武器だ。
+)voulge
+)pole cleaver
+	長い棒の先に、斧あるいは鉈状の刃を取り付けた武器だ。
+)fauchard
+)pole sickle
+	長い棒の先に、鎌を取り付けた格好の武器だ。
+)guisarme
+)pruning hook
+	長い棒の先に、内側が刃になっている鈎を取り付けた武器だ。
+	元々は、木の枝を剪定したり果物を収穫したりするための
+	農機具だったものだ。
+)bill-guisarme
+)hooked polearm
+	鈎やスパイク、刃などを複数備えた穂先を持つ長槍だ。
+)lucern hammer
+)pronged polearm
+	突き刺すための穂先と、振り回して打ちつけるための
+	頑強な棘を複数備えた矛槍だ。
+)bec de corbin
+)beaked polearm
+	突き刺すための穂先と、振り回して叩きつけるための鎚を持つ
+	矛槍だ。
+)mace
+	棒の先に重量のある金属塊を取り付けた鈍器だ。
+	威力を増すために、多数の突起が張り出している。
+)morning star
+	棘付きの金属塊を、長い鎖で持ち手とつないだ武器だ。
+	振り回して、離れた敵をも攻撃することができる。
+)war hammer
+	尖った頭を備えた、戦闘用の金槌だ。
+)heavy hammer
+	非常に重厚なハンマーだ。
+)club
+	（主に）堅い木で作られた、シンプルな打撃武器だ。
+)rubber hose
+	ゴムのホースだ。
+)quarterstaff
+)staff
+	身の丈ほどの長さを持つ、頑丈でまっすぐな棒だ。
+)aklys
+)thonged club
+	小型の棍棒だ。紐が取り付けられており、投擲にも適している。
+)flail
+	棘付きの金属塊をいくつか、鎖で持ち手とつないだ武器だ。
+)bullwhip
+	革で作られた長い鞭だ。
+	武器としてはやや頼りないが、罠から脱出したり、敵の武器を奪うなどの
+	使い方もできる。
+#
+#	bows
+#
+)bow
+	湾曲した木材に弦を張って作られた武器で、矢をつがえて射るために使う。
+)elven bow
+	エルフの手で作られた弓だ。
+)runed bow
+	ルーンが刻まれた弓だ。
+)orcish bow
+	オークたちが使っている、粗雑な作りの弓だ。
+)crude bow
+	粗雑な作りの弓だ。
+)yumi
+	侍が使用する、大きく強力な弓だ。
+)long bow
+	大型の弓だ。
+)sling
+	革と紐を組み合わせて作られた、振り回して石を投擲するための道具だ。
+)crossbow
+	機械仕掛けによって弦を引き、クロスボウボルトを発射する投射武器だ。
+)musket
+	長い銃身を持つ単発銃だ。
+)revolver
+	回転式の弾倉を備え、6連発可能な拳銃だ。
+#
+#	helmets
+#
+[elven leather helm
+	エルフたちが身につけている、革製の帽子だ。
+[leather hat
+	丈夫な革で作られた帽子だ。
+[orcish helm
+	オークたちが身につけている、鉄のヘルメットだ。
+[iron skull cap
+	鉄で作られた、つばのない帽子だ。
+[dwarvish iron helm
+	ドワーフたちが身につけている、頑丈な鉄の兜だ。
+[hard hat
+	鉄で作られた、頑丈な帽子だ。
+[fedora
+	中折れ帽だ。
+[cornuthaum
+	魔法使いがかぶるとんがり帽子だ。
+[conical hat
+	円錐形をした、布の帽子だ。
+[dunce cap
+	この帽子には、かぶった者の知力を低く抑える呪いがかかっている。
+[dented pot
+	へこみのある古い鉄の鍋だ。一応兜の代わりにはなる。
+[helmet
+	頭部を保護するために頭にかぶる防具だ。
+[plumed helmet
+	頭頂部にとさかのような羽飾りをあつらえた兜だ。
+[helm of brilliance
+	この魔法の兜は、着用者の知力を増強する力を持つ。
+[etched helmet
+	細かい飾り彫りの装飾が施された兜だ。
+[helm of opposite alignment
+	この呪いの兜は、着用者の属性（秩序/中立/混沌）を反転させる。
+[crested helmet
+	頭頂部に、様々な意匠を持った装飾を取り付けた兜だ。
+[helm of telepathy
+	この魔法の兜は、着用者が周囲の知性ある怪物を
+	感知することを可能にする。
+[visored helmet
+	顔面を保護する面頬を備えた兜だ。
+[headpiece
+[katyusha
+	フリルのついた、頭につける飾りだ。
+[nurse cap
+	看護婦が身につけている帽子だ。
+	幻覚作用のある毒から身を守る効果がある。
+#
+#	armor
+#
+[gray dragon scale mail
+	灰色ドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	様々な魔法攻撃から着用者を保護する。
+	ただし、保護の魔力は永遠には続かないことに注意せよ。
+[silver dragon scale mail
+	銀色ドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	着用者に向かって放たれた攻撃魔法・杖・ドラゴンのブレスなどの
+	ほとんどを跳ね返し、着用者を守る効果がある。
+	ただし、保護の魔力は永遠には続かないことに注意せよ。
+[red dragon scale mail
+	赤色ドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	着用者は、炎に対する完全な耐性を得る。
+[white dragon scale mail
+	白ドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	着用者は、冷気に対する完全な耐性を得る。
+[orange dragon scale mail
+	オレンジドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	着用者は、麻痺に対する耐性を得る。
+[black dragon scale mail
+	黒ドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	着用者は、分解・粉砕に対する完全な耐性を得る。
+	この保護効果は着用者だけでなく、所持品にも及ぶ。
+[blue dragon scale mail
+	青ドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	着用者は、電撃に対する完全な耐性を得る。
+[green dragon scale mail
+	緑ドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	着用者は、毒および病気に対する耐性を得る。
+[yellow dragon scale mail
+	黄色ドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	着用者は、酸に対する耐性を得る。
+[deep dragon scale mail
+	暗黒ドラゴンの鱗を綴って作り上げられた、強力な魔法の鎧だ。
+	着用者は、生命力吸収に対する耐性を得る。
+[plain dragon scale mail
+	ドラゴンの鱗鎧が魔力を消耗し尽くし、色を失ったものだ。
+	いまだ強力な鎧ではあるが、特別な効果はない。
+[gray dragon scales
+[silver dragon scales
+[red dragon scales
+[white dragon scales
+[orange dragon scales
+[black dragon scales
+[blue dragon scales
+[green dragon scales
+[yellow dragon scales
+[deep dragon scales
+[plain dragon scales
+	%dだ。
+[plate mail
+	全身を厚い板金で覆う、頑丈な鎧だ。
+[splint mail
+	胴回りを覆うように鉄片を敷き詰めた鎧だ。
+[banded mail
+	帯状の鉄板を曲げて連結し、胴回りを保護するように
+	作られた鎧だ。
+[dwarvish mithril-coat
+	ドワーフの手で作られた、ミスリル製の胴衣だ。
+	非常に軽く、頑丈にできている。
+[elven mithril-coat
+	エルフの手で作られた、ミスリル製の胴衣だ。
+	非常に軽く、頑丈にできている。
+[chain mail
+	鉄の鎖を編み上げて作られた鎧だ。
+[orcish chain mail
+	オークたちが身につけているチェインメイルだ。
+[crude chain mail
+	鉄の鎖を編み上げて作られた鎧だ。
+	かなり粗雑な作りをしている。
+[scale mail
+	鱗状の鉄片を、布の上に縫い付けて作られた鎧だ。
+[studded leather armor
+	金属の鋲で補強された革の鎧だ。
+[ring mail
+	鉄の輪を布の上に縫い付けて作られた鎧だ。
+[orcish ring mail
+	オークたちが身につけているリングメイルだ。
+[crude ring mail
+	鉄の輪を布の上に縫い付けて作られた鎧だ。
+	かなり粗雑な作りをしている。
+[leather armor
+	頑丈な革を組み合わせて作られた鎧だ。
+[leather jacket
+	革製の上着だ。
+[robe
+	布製の長衣だ。
+[robe of protection
+	このローブには、着用者をダメージから保護する魔法がかけられている。
+[robe of power
+	このローブは、着用者の魔法成功率を大幅に上げる。
+[robe of weakness
+	この呪われたローブは、着用者の腕力をきわめて脆弱にする。
+[black robe
+	黒い布で作られた長衣だ。
+[red robe
+	赤い布で作られた長衣だ。
+[blue robe
+	青い布で作られた長衣だ。
+[green robe
+	緑色の布で作られた長衣だ。
+[nurse uniform
+	看護婦の着る制服だ。
+	女性に限り、着用者を疾病から守る。
+[white dress
+	白い婦人服だ。
+[maid dress
+	メイドが着る黒い婦人服だ。
+[black dress
+	黒い婦人服だ。
+#
+#	cloaks
+#
+[mummy wrapping
+	ミイラのまわりを覆っていた包帯だ。
+[elven cloak
+	エルフの手で作られたクロークだ。
+	これを着る者は、周囲の景色に溶け込んだように見え、
+	敵から発見されにくくなる。
+[faded pall
+	質素な作りの外套だ。
+	まるで周囲の景色に溶け込むかのように見える。
+[orcish cloak
+	オークが身につけている、粗雑な作りのクロークだ。
+[coarse mantelet
+	粗雑な作りのマントだ。
+[dwarvish cloak
+	ドワーフが身につけているクロークだ。
+[hooded cloak
+	頭にかぶるフードのついたマントだ。
+[oilskin cloak
+[slippery cloak
+	油引きした布で作られたクロークだ。
+	このつるつるとした表面を持ったクロークは、
+	あなたを捕縛しようとする敵の攻撃を滑らせる。
+[cloak of protection
+	このクロークには、あなたをダメージから守る魔法がかけられている。
+[tattered cape
+	ぼろぼろになったケープだ。
+[cloak of invisibility
+	このクロークは、着用者を透明化する。
+[opera cloak
+	オペラで使われるマントだ。
+[cloak of magic resistance
+	このクロークは、さまざまな種類の危険な魔法からあなたを保護する。
+	ただし、防御の魔力は永久には続かないことに注意せよ。
+[ornamental cope
+	何らかの儀式のために作られたマントのようだ。
+[cloak of displacement
+	このクロークは、着用者の本来の位置から少しずれた地点に
+	着用者の幻影を映し出す。幻影にだまされた敵は、何もない空間を
+	攻撃することになるだろう。
+[piece of cloth
+	布の切れ端だ。マント代わりに羽織ることができる。
+[alchemy smock
+	錬金術師が実験の際に着用する白衣だ。
+	これを着ていると、毒や酸から身を守ることができる。
+[apron
+	エプロンだ。
+[leather cloak
+	革で作られたマントだ。
+[kitchen apron
+	料理の際に服が汚れるのを防ぐためのエプロンだ。
+[frilled apron
+	フリルの付いたエプロンだ。
+#
+#	shields
+#
+[small shield
+	木で作られた小型の盾だ。
+[elven shield
+	エルフの手で作られた、中型の木製の盾だ。
+[blue and green shield
+	青と緑の美しい装飾が施された、中型の木製の盾だ。
+[Uruk-hai shield
+	ウルク・ハイたちが使っている、中型の鉄の盾だ。
+	白い手を模した印が描かれている。
+[white-handed shield
+	白い手の印が描かれた、中型の鉄の盾だ。
+[orcish shield
+	モルドールのオークたちが使っている、中型の鉄の盾だ。
+	赤い目を模した印が描かれている。
+[red-eyed shield
+	赤い目の印が描かれた、中型の鉄の盾だ。
+[large shield
+	鉄で作られた大型の盾だ。
+[dwarvish roundshield
+	ドワーフの手で作られた、大きな鉄製の丸盾だ。
+[large round shield
+	大きな鉄製の丸盾だ。
+[shield of isolation
+	この魔法の盾は、あなたに向かって放たれた電撃を受け止め、無効化する。
+	ただし、電撃への耐性をもたらすわけではないため、盾で遮蔽できない種類の
+	攻撃に対しては無力であることに注意せよ。
+[blue-lined shield
+	青い線で文様が刻まれた、中型の盾だ。
+[shield of firebreak
+	この魔法の盾は、あなたに向かって放たれた火炎を受け止め、無効化する。
+	ただし、炎への耐性をもたらすわけではないため、盾で遮蔽できない種類の
+	攻撃に対しては無力であることに注意せよ。
+[red-lined shield
+	赤い線で文様が刻まれた、中型の盾だ。
+[shield of reflection
+	この魔法の盾は、攻撃呪文、杖から放たれる攻撃魔法、および
+	ドラゴンの吐くブレスなどのほとんどを跳ね返す。
+	ただし、反射の魔力は無限に続くわけではない。
+[polished silver shield
+	磨き上げられた銀で作られた、中型の盾だ。
+[shield
+	中型の盾だ。
+
+#
+#	underwears
+#
+[Hawaiian shirt
+	派手な柄がプリントされたシャツだ。
+[T-shirt
+	Tシャツだ。
+	どういうわけか、各種の役に立たない文言が印刷されている。
+#
+#	gloves
+#
+[leather gloves
+	革で作られた手袋だ。
+[old gloves
+	古ぼけた手袋だ。
+[gauntlets of fumbling
+	この篭手には、着用者をひどく不器用にする呪いがかけられている。
+[padded gloves
+	詰めもので補強を施した手袋だ。
+[gauntlets of power
+	この魔法の篭手は、着用者の腕力を大幅に増強する。
+[riding gloves
+	乗馬の際に身につける手袋だ。
+[gauntlets of dexterity
+	この魔法の篭手は、着用者の器用さを大幅に増強する。
+[fencing gloves
+	フェンシングの試合で着用する手袋だ。
+[gauntlets
+	手・腕を保護するための防具だ。
+#
+#	boots
+#
+[low boots
+	足首あたりまでを覆う、革製のブーツだ。
+[walking shoes
+	散歩の際に履く靴だ。
+[iron shoes
+	鉄で作られた頑丈な靴だ。
+[hard shoes
+	金属で作られた、頑丈な靴だ。
+[high boots
+	すね全体を覆う、長い革製のブーツだ。
+[jackboots
+	軍隊の兵士が着用する、長いブーツだ。
+[speed boots
+	この魔法のブーツを履くと、足が速くなる。
+[combat boots
+	戦闘用に作られた、丈夫なブーツだ。
+[water walking boots
+	この魔法のブーツを履くと、水の上を歩けるようになる。
+[jungle boots
+	密林を歩き回るのに適した、丈夫なブーツだ。
+[jumping boots
+	この魔法のブーツを履くと、離れた場所に跳躍して
+	移動できるようになる。
+[hiking boots
+	山歩きに適したブーツだ。
+[elven boots
+	エルフたちの手で作られたブーツだ。
+	これを履くと、非常に静かに歩けるようになる。
+[mud boots
+	泥地を支障なく歩けるように作られたブーツだ。
+[fumble boots
+	このブーツには、着用者をひどく不器用にする
+	呪いがかけられている。
+[riding boots
+	乗馬の際に履くブーツだ。
+[levitation boots
+	この魔法のブーツは、着用者を空中に浮遊させる。
+[snow boots
+	雪上・氷上を歩けるように作られたブーツだ。
+[kicking boots
+	この魔法のブーツを履くと、強力な蹴りを放てるようになる。
+[buckled boots
+	脱げないように固定する%dだ。
+#
+#	rings
+#
+=adornment
+	この指輪は、着用者の魅力を上昇または低下させる。
+=gain strength
+	この指輪は、着用者の腕力を上昇または低下させる。
+=gain constitution
+	この指輪は、着用者の耐久力を上昇または低下させる。
+=increase accuracy
+	この指輪は、敵を攻撃する際の命中確率を
+	上昇または低下させる。
+=increase damage
+	この指輪は、敵に攻撃を命中させた際のダメージを
+	増加または低減させる。
+=protection
+	この指輪は、着用者を物理的なダメージから保護する。
+=regeneration
+	この指輪は、着用者の怪我を急速に回復させる。
+	ただし、その分代謝を加速することに注意せよ。
+=searching
+	この指輪をはめていると、周囲に隠された罠や扉などを
+	自動的に探索することができる。
+=stealth
+	この指輪をはめた者は、非常に静かに行動できる。
+=sustain ability
+	この指輪をはめた者は、能力値が増減しなくなる。
+	ただし、増減の要因を防ぐものではない。
+=levitation
+	この指輪は、着用者を空中に浮遊させる。
+=hunger
+	この指輪は、着用者に急速に飢えをもたらす。
+=aggravate monster
+	この指輪には、着用者が反感を買う呪いがかけられている。
+=conflict
+	この指輪は、着用者を中心に無差別な闘争を引き起こす。
+=warning
+	この指輪をはめていると、近くにいる敵意ある存在を
+	感知することができる。
+=poison resistance
+	この指輪は、着用者に毒への耐性をもたらす。
+=fire resistance
+	この指輪は、着用者に炎への完全な耐性をもたらす。
+=cold resistance
+	この指輪は、着用者に冷気への完全な耐性をもたらす。
+=shock resistance
+	この指輪は、着用者に電撃への完全な耐性をもたらす。
+=free action
+	この指輪は、着用者に麻痺への耐性をもたらす。
+=slow digestion
+	この指輪は、着用者が食事を取らずに長時間行動することを
+	可能にする。
+=teleportation
+	この指輪は、着用者を無作為にテレポートさせる。
+=teleport control
+	この指輪は、着用者にテレポート制御の能力を与える。
+=polymorph
+	この指輪は、着用者を無作為に変身させる。
+	変身には危険が伴うことに注意せよ。
+=polymorph control
+	この指輪は、着用者に変身制御の能力を与える。
+=invisibility
+	この指輪は、着用者を透明化する。
+=see invisible
+	この指輪は、透明な存在を視認する能力を着用者にもたらす。
+=protection from shape changers
+	この指輪をはめていると、怪物の変身能力を封じることができる。
+#
+=black onyx
+=moonstone
+=tiger eye
+=jade
+=bronze
+=agate
+=topaz
+=sapphire
+=ruby
+=diamond
+=emerald
+=pearl
+=opal
+	%d嵌められた指輪だ。
+=wooden
+	木製の指輪だ。
+=granite
+	花崗岩で作られた指輪だ。
+=clay
+	陶器で作られた指輪だ。
+=coral
+	珊瑚で作られた指輪だ。
+=iron
+	鉄製の指輪だ。
+=brass
+	真鍮製の指輪だ。
+=copper
+	銅製の指輪だ。
+=twisted
+	鉄をねじって作られた指輪だ。
+=steel
+	鋼鉄製の指輪だ。
+=silver
+	銀製の指輪だ。
+=gold
+	金製の指輪だ。
+=ivory
+	象牙で作られた指輪だ。
+=wire
+	細い針金を成形して作られた指輪だ。
+=engagement
+	婚約指輪だ。(誰のものだろう？)
+=shiny
+	磨き上げられた鉄製の指輪だ。
+#
+#	amulets
+#
+"amulet of ESP
+	この魔除けを身につけると、一定距離内の怪物を
+	テレパシーによって感知することができる。
+"amulet of life saving
+	この魔除けは、着用者を死から一度だけ救ってくれる。
+"amulet of strangulation
+	この魔除けは、身につけた者を絞め殺そうとする！
+"amulet of restful sleep
+	この魔除けを身につけると、あなたの意思とは全く関係なしに、
+	不意に眠りに落ちるようになってしまう。
+"amulet versus poison
+	この魔除けは、着用者に毒への耐性を与える。
+"amulet of change
+	この魔除けを身につけると、あなたの性別は反転する。
+"amulet of unchanging
+	この魔除けを身につけている間、あなたの身体が
+	別種の生物に変化することはない。
+	ただし、石化は変身とみなされないことに注意せよ。
+"amulet of reflection
+	この魔除けは、着用者に向かって放たれる魔法・杖・ドラゴンのブレスなどの
+	ほとんどを跳ね返す。ただし、反射の魔力は永遠ではないことに注意せよ。
+"amulet of magical breathing
+	この魔除けを身につけた者は、通常は呼吸のできない環境においても
+	問題なく呼吸をすることができるようになる。
+"circular
+"spherical
+"oval
+"triangular
+"pyramidal
+"square
+"concave
+"hexagonal
+"octagonal
+	%d意匠が施された、首から下げるペンダント型の魔除けだ。
+"cheap plastic imitation of the Amulet of Yendor
+	イェンダーの魔除けを模した、大量生産のお土産品だ。
+"Amulet of Yendor
+	神々の手によって作られた品の中でも、最も強い力を持つと
+	伝えられる、イェンダーの魔除けだ。
+#
+#	containers
+#
+(large box
+	木製の大きな箱だ。
+(chest
+	木製の、大きく頑丈な箱だ。
+(ice box
+	中が低温に保たれている、不思議な箱だ。
+(sack
+	布製の袋だ。中に品物を入れて持ち運ぶことができる。
+(oilskin sack
+	油引きした布で作られた袋だ。
+	中に品物を入れて持ち運ぶことができ、
+	品物が水で濡れるのを防ぐことができる。
+(bag of holding
+	この驚くべき魔法の鞄は、中に入れた品物の重量を軽くする。
+(bag of tricks
+	この鞄からは、どういうわけか怪物が飛び出てくる。
+	また、不用意に手を突っ込まないこと！
+(bag
+	布製の、中に品物を入れて持ち運ぶための道具だ。
+#
+#	lock opening tools
+#
+(skeleton key
+	どんな錠前にも合う鍵だ。
+(key
+	鉄で作られた鍵だ。
+(lock pick
+	鍵穴に差し込んでこじ開けるための、棒状の金具だ。
+	開けるだけでなく、鍵をかけることもできる。
+(credit card
+	プラスチック製の小さなカードだ。
+	この世界では通貨としての価値は全くないが、
+	扉の隙間から差し込んでかんぬきを外すくらいのことはできる。
+#
+#	light sources
+#
+(tallow candle
+	獣脂を固めて作られたろうそくだ。
+(candle
+	ろうを固めて作られた、明かりをともすための道具だ。
+(wax candle
+	蜜蝋を固めて作られたろうそくだ。
+(magic candle
+	この魔法のろうそくは、いくら使っても短くなることがない。
+(brass lantern
+	電池式のランタンだ。
+(oil lamp
+(lamp
+	油を燃やして明かりをともす、一般的なランプだ。
+(magic lamp
+	この不思議な魔法のランプは、永遠に明かりをともし続けることができる。
+	こするとランプの精が出てくるかも……？
+#
+#	other tools
+#
+(expensive camera
+	大変に高級で高価なカメラだ。ただし、冒険中に現像はできない。
+	洞窟の暗闇で生活する住人の多くは、フラッシュに目が眩んでしまう。
+(mirror
+	手鏡だ。
+	怪物の中には、鏡に映った自らの姿を恐れるものもいるかもしれない。
+(crystal ball
+	水晶で作られた大きな球だ。あなたに十分な知識があれば、
+	目的のものを捜し当てるのに役立つかもしれない。
+(glass orb
+	ガラス製の大きな球体だ。何らかの魔力を秘めているようだ。
+(orb of charging
+	この魔法のオーブを使うと、魔法の品物に魔力を充填することができる。
+(orb of maintenance
+	この魔法のオーブを使うと、傷ついた品物を新品のように修復できる。
+	ただし、魔法の品物の損耗までは元には戻せない。
+(orb of destruction
+	このオーブには、破壊の魔力が込められている。不用意に解放しないこと！
+#(lenses
+#	眼鏡
+(blindfold
+	身につけると、一時的に視界を閉ざすことができる。
+(towel
+	水気や汚れを拭き取るための布だ。
+	また、目の周りに巻きつければ、目隠しの代わりにもなる。
+(saddle
+	騎乗用の生物に取り付けて、乗れるようにするための道具だ。
+(leash
+	隣接するペットに向かってこれを使うと、ペットを引き綱で
+	繋ぐことができる。
+(stethoscope
+	聴診器を使うと、怪物の健康状態を知ることができる。
+(tinning kit
+	この不思議な道具を使うと、怪物の死体から缶詰を作成することができる。
+(tin opener
+	缶詰を開けるための道具だ。
+	缶詰を食べるときにこれを手に持っていれば、素早く開けることができる。
+(can of grease
+	グリス状の脂が収められた缶だ。
+	防具に脂を塗りこんでおけば、錆から守ることができる。
+(figurine
+	怪物の姿を模した人形だ。
+	この人形には、本物の怪物へと実体化する魔法がかかっている。
+(magic marker
+	このマーカには強力な魔力が込められており、
+	白紙の巻物や魔法書の上に望みの呪文を記すことができる。
+(scissors
+	布を切るためのはさみだ。
+	包帯を切り出すために使うことができる。
+(bandage
+	怪我の応急手当をするための、細い帯状の布だ。
+	怪我を少しだけ癒し、回復させることができる。
+(glasses of magic reading
+	この眼鏡は、魔法書を読む際に少しばかりの助けをもたらしてくれる。
+(glasses of gaze protection
+	この眼鏡は、魔力を帯びた眼光からあなたを保護してくれる。
+(glasses of infravision
+	この眼鏡は、あなたに赤外線視の能力をもたらしてくれる。
+(glasses versus flash
+	この眼鏡は、閃光からあなたを守り、目が眩むのを防いでくれる。
+(glasses of see invisible
+	この眼鏡をかけていると、透明な怪物を視認できる。
+(glasses of phantasmagoria
+	この眼鏡は、あなたに幻覚を見せる。
+(wire-rimmed glasses
+(rimless glasses
+(horn-rimmed glasses
+(silver-rimmed glasses
+(thick glasses
+(gold-rimmed glasses
+	%dだ。
+#
+#	instruments
+#
+(tin whistle
+	息を吹き込むと大きな音を出す、ブリキの笛だ。
+(whistle
+	息を吹き込むと大きな音を出す、笛だ。
+(magic whistle
+	この魔法のホイッスルを吹くと、あなたのペットを瞬時に
+	あなたのそばに呼び寄せることができる。
+(wooden flute
+	木製のフルートだ。
+(flute
+	木に穴をくりぬいて作られた笛だ。
+(magic flute
+	このフルートから奏でられた魔法の音楽は、聴いた怪物を眠りにいざなう。
+(tooled horn
+	敵を威嚇し、味方を鼓舞するための角笛だ。
+(horn
+	動物の角を加工して作られた、吹いて大きな音を響かせるための道具だ。
+(frost horn
+	この魔法の角笛からは、氷雪の嵐を吹き荒れさせることができる。
+(fire horn
+	この魔法の角笛からは、火炎をほとばしらせることができる。
+(horn of plenty
+	この魔法の角笛からは、食べ物や飲み物が転がり出てくる。
+(wooden harp
+	木製の竪琴だ。
+(harp
+	木に弦を張り渡した楽器だ。
+(magic harp
+	この竪琴から奏でられた魔法の音楽は、聴いた怪物の敵対心を取り除き、
+	あるいはあなたの手下とする。
+(bell
+	手に持ち、振って音を鳴らすための小さな鐘だ。
+(bugle
+	軍用ラッパだ。イェンダーの兵士たちが合図を送るのに使っている。
+(leather drum
+	木製の胴に革を張った太鼓だ。
+(drum
+	太鼓だ。
+(drum of earthquake
+	この魔法の太鼓から打ち鳴らされた音は、地をも揺り動かす。
+(land mine
+	強力な爆発を引き起こす火薬と、通りかかった者を感知して起爆する装置を
+	備えた兵器だ。
+(beartrap
+	不用意に踏み込んだ者の足を、鉄製の歯で挟み込むように作られた罠だ。
+#
+#	tools useful as weapons
+#
+(pick-axe
+	岩を掘り崩すための道具だ。
+	武器として使うこともできる。
+(grappling hook
+	ロープの先に鉄鉤が結び付けられた道具だ。
+	離れたところにある物をひっかけてたぐり寄せたり、
+	馬上の敵を引きずりおろすのに使える。
+(iron hook
+	鉄製の鉤（フック）がロープの先に結び付けられた道具だ。
+(unicorn horn
+	ユニコーンの額に生えていた、長く鋭い角だ。
+	この角には毒を打ち消す力があると言われている。
+	また、武器として槍のように振るうこともできる。
+#
+#	special tools
+#
+(Candelabrum of Invocation
+	7本のろうそくを取り付けられる、黄金製の燭台だ。
+	この魔法の燭台から放たれる光には、不思議な力があるようだ。
+(candelabrum
+	何本かのろうそくを取り付けて明かりとする燭台だ。
+(Bell of Opening
+	この魔法の鐘から打ち鳴らされた音色は、周囲の隠された扉・通路・
+	罠などを暴き出す。また、その魔力が最大限に発揮された場合には、
+	閉ざされた扉・門などを開放する。
+	
+	さらに、この鐘には隠された力があるようだ。
+(silver bell
+	銀で作られた小さな鐘だ。
+#
+#	meat
+#
+%tripe ration
+	雑多な肉を固めた、小さな塊だ。
+#%corpse:	死体
+#%egg:		卵
+%meatball
+	小さな丸い肉の塊だ。
+%meat stick
+	どういうわけか、細長い棒状をしている肉だ。
+%huge chunk of meat
+	非常に巨大な肉の塊だ。
+%meat ring
+	どういうわけか、指輪の形をしている肉だ。
+%kelp frond
+	水中に生える海草だ。
+%eucalyptus leaf
+	ユーカリの樹の葉だ。殺菌・解毒作用があり、
+	食中毒や病気を治す効果がある。
+#
+#	fruits & veggies
+#
+%apple
+	赤い色をした、おいしい果物だ。
+%orange
+	オレンジ色の、おいしい果物だ。
+%pear
+	柔らかく甘い果肉をもつ果物だ。
+%melon
+	柔らかく甘い果肉をもつ、大きめの果物だ。
+%banana
+	湾曲した細長い形をした、黄色い果物だ。
+%carrot
+	オレンジ色の根菜だ。目に良いといわれている。
+%sprig of wolfsbane
+	猛毒を持つ植物だが、この迷宮で見つかるものは
+	安全に食べることができるようだ。
+	獣化病に対する特効薬になると言われている。
+%clove of garlic
+	強い香りをもつ植物だ。
+%slime mold
+	あなたの大好物だ。
+#
+#	human food
+#
+%lump of royal jelly
+	迷宮に棲む殺人蜂が女王を養うために分泌する物質だ。
+	非常に栄養価が高く、また不思議な薬効を秘めている。
+%cream pie
+	クリームたっぷりのパイだ。
+	食べるだけでなく、投げるのにもよい。
+%candy bar
+	棒の形をした砂糖菓子だ。
+%fortune cookie
+	小さな紙片が中に入っている、中空のクッキーだ。
+	紙片にはいろいろな噂が書かれている。
+%pancake
+	小麦粉と卵を混ぜ、焼いた食べ物だ。
+%lembas wafer
+	エルフの手で作られた、旅の糧食だ。
+	非常に軽いうえに栄養価が高く、また美味である。
+%cram ration
+	ドワーフたちが旅の際に携行する糧食だ。
+%food ration
+	携行用の保存食だ。
+%K-ration
+%C-ration
+	軍隊で配給されている、行軍用の携行保存食だ。
+%tin
+	缶詰だ。
+#
+#	potions
+#
+!gain ability
+	この水薬は、あなたの能力値を増強する。
+!restore ability
+	この水薬には、あなたの能力値を回復させる効果がある。
+!confusion
+	飲んだ者を混乱させる水薬だ。
+!blindness
+	この水薬は、飲んだ者の視力を一定期間失わせる。
+!paralysis
+	この水薬を飲んだ者は、一時的に麻痺して動けなくなる。
+!speed
+	この水薬を飲むと、しばらくの間とても速く動けるようになる。
+!levitation
+	この水薬は、飲んだ者をしばらくの間空中に浮かせてしまう。
+	あなたが浮遊を制御できるなら、'>' コマンドで地面に降りることができる。
+!hallucination
+	この水薬は、飲んだ者に幻覚を見せる。
+!invisibility
+	この水薬は、飲んだ者の身体を透明にする。
+!see invisible
+	この水薬を飲むと、透明な怪物を視認することができるようになる。
+	また、盲目からあなたを回復させる効果もある。
+!healing
+	この水薬は、あなたの怪我をある程度癒し、回復させる。
+	また、盲目からあなたを回復させる効果もある。
+!extra healing
+	この水薬は、あなたの怪我を大幅に癒し、回復させる。
+	また、盲目や幻覚、病気からあなたを回復させる効果もある。
+!gain level
+	この水薬は、あなたのレベルを1つ上げる。
+!enlightenment
+	この水薬を飲むと、あなたが現在身につけている能力、
+	およびあなたの隠された状態を知ることができる。
+!monster detection
+	この水薬を飲むと、現在この階にいる怪物を探知することができる。
+!object detection
+	この水薬を飲むと、現在この階にある品物を探知することができる。
+!gain energy
+	この水薬は、あなたの魔力を回復・増強させる。
+!sleeping
+	この水薬を飲んだ者は、眠りに落ちてしまう。
+!full healing
+	この水薬は、あなたの怪我を完全に癒し、回復させる。
+	また、盲目や幻覚、病気からあなたを回復させる効果もある。
+	さらに、レベルドレイン攻撃によって奪われたレベルを
+	ある程度回復することができる。
+!polymorph
+	この水薬には、飲んだ者を変身させる効果がある。
+!booze
+	アルコール度数の高い酒だ。
+!sickness
+	毒性の液体だ。飲むのはおすすめできない。
+	武器の種類によっては、この液体に浸すことで毒を塗ることもできる。
+!fruit juice
+	%fのジュースだ。飲めば若干の栄養になる。
+!water
+	水だ。
+#	%b祝福された%uごく普通の%c呪われた%e水だ。
+!oil
+	植物性の油だ。
+	金属の錆取りのほか、点火して投げることもできる。
+!acid
+	強い酸性の液体だ。飲むのはあまりおすすめできない。
+!ruby
+!pink
+!orange
+!yellow
+!emerald
+!dark green
+!cyan
+!sky blue
+!brilliant blue
+!magenta
+!purple-red
+!puce
+!milky
+!swirly
+!bubbly
+!smoky
+!cloudy
+!effervescent
+!black
+!white
+!brown
+!fizzy
+!dark
+!clear
+!murky
+!golden
+	%d液体が入った小瓶だ。
+#
+#	scrolls
+#
+?enchant armor
+	この巻物は、あなたが身につけている防具のいずれかを魔法で強化する。
+	ただし、強化しすぎると防具を壊してしまうこともある。
+?destroy armor
+	この巻物は、あなたが身につけている防具のいずれかを破壊する。
+?confuse monster
+	この巻物は、あなたの腕に怪物を混乱させる魔法の力を与える。
+?scare monster
+	この巻物を読むと、一時的に怪物を怯えさせることができる。
+	さらに、この巻物を床に置いてその上に乗っていれば、
+	怪物は一切あなたを攻撃できなくなる。
+?remove curse
+	この巻物は、あなたが身につけている呪いの品物から呪いを取り除く。
+?enchant weapon
+	この巻物は、あなたが構えている武器を魔法で強化する。
+	ただし、強化しすぎると武器を壊してしまうこともある。
+?create monster
+	この巻物は、あなたの傍に怪物を出現させる。
+?taming
+	この巻物は、あなたの傍の怪物から敵意を取り除き、
+	場合によっては手下にすることができる。
+	ただし、効果は確実ではない。
+?genocide
+	この恐るべき巻物は、指定した種族の怪物をすべて虐殺し、
+	永遠にこの世界に現れないようにする。
+?light
+	この巻物は、あなたの周囲を明かりで照らす。
+?teleportation
+	この巻物を読むと、テレポートすることができる。
+?gold detection
+	この巻物は、現在この階にある金を探知する。
+?food detection
+	この巻物は、現在この階にある食料を探知する。
+?identify
+	この巻物は、正体のわかっていない品物を識別することができる。
+?magic mapping
+	この巻物を読むと、現在あなたがいる階の地図を知ることができる。
+?amnesia
+	この巻物は、あなたに記憶喪失を引き起こす。
+?fire
+	この巻物は、あなたを中心に炎の爆発を引き起こす。
+?earth
+	この巻物は、あなたの頭上を中心とした天井を崩し、
+	いくつもの大岩を落下させる。
+?punishment
+	この巻物を読むと、あなたは自らの不法を罰せられ、
+	足に鉄球を繋がれる。
+?charging
+	この巻物は、魔法の品物に魔力を再充填することができる。
+?stinking cloud
+	この巻物は、毒霧を発生させる。
+#?mail
+#	あなた宛の手紙だ。
+?blank paper
+	この巻物には、何も記されていない。
+#?stamped
+#	切手の貼られた封書だ。
+?unlabeled
+	この巻物には、ラベルが貼られていない。
+##
+##	spellbooks
+##
+#+dig:			穴掘りの
+#+magic missile:		魔法の矢の
+#+fireball:		火球の
+#+cone of cold:		冷気の
+#+sleep:			眠りの
+#+finger of death:	死の指の
+#+light:			灯りの
+#+detect monsters:	怪物探知の
+#+healing:		回復の
+#+knock:			開錠の
+#+force bolt:		衝撃の
+#+confuse monster:	混乱の
+#+cure blindness:	盲目治癒の
+#+drain life:		脱力の
+#+slow monster:		鈍足化の
+#+wizard lock:		施錠の
+#+create monster:	怪物を造る
+#+detect food:		食料を探す
+#+cause fear:		恐怖喚起の
+#+clairvoyance:		千里眼の
+#+cure sickness:		病気を癒す
+#+charm monster:		魅了の
+#+haste self:		俊足の
+#+detect unseen:		霊感の
+#+levitation:		浮遊の
+#+extra healing:		超回復の
+#+restore ability:	能力回復の
+#+invisibility:		透明化の
+#+detect treasure:	財宝感知の
+#+remove curse:		解呪の
+#+magic mapping:		地図の
+#+identify:		識別の
+#+turn undead:		蘇生の
+#+polymorph:		変化の
+#+teleport away:		テレポートの
+#+create familiar:	造魔の
+#+cancellation:		無力化の
+#+protection:		守りの
+#+jumping:		跳躍の
+#+stone to flesh:	軟化の
+#+know enchantment:	武器識別の
+#+torch:			灯りの
+##
+#+parchment:	羊皮紙の
+#+vellum:	子牛皮の
+#+ragged:	ぼろぼろの
+#+dog eared:	ページの折られた
+#+mottled:	まだらの
+#+stained:	染みのある
+#+cloth:		布地の
+#+leather:	革表紙の
+#+white:		白い
+#+pink:		ピンク色の
+#+red:		赤い
+#+orange:	オレンジ色の
+#+yellow:	黄色い
+#+velvet:	ビロードの
+#+light green:	淡緑色の
+#+dark green:	濃緑色の
+#+turquoise:	青緑色の
+#+cyan:		シアン色の
+#+light blue:	淡青の
+#+dark blue:	濃青の
+#+indigo:	藍色の
+#+magenta:	マゼンタ色の
+#+purple:	紫色の
+#+violet:	スミレ色の
+#+tan:		黄褐色の
+#+plaid:		ラシャの
+#+light brown:	淡茶色の
+#+dark brown:	濃茶色の
+#+gray:		灰色の
+#+dusty:		ほこりっぽい
+#+bronze:	青銅の
+#+copper:	銅の
+#+silver:	銀の
+#+gold:		金の
+#+glittering:	きらびやかな
+#+shining:	輝く
+#+thin:		薄い
+#+thick:		厚い
+#+plain:		真っ白な
+#+dull:		鈍色の
+#+canvas:	麻表紙の
+#+hardcover:	ハードカバーの
+#+Book of the Dead:	死者の書
+#+papyrus:	パピルスの
+#+blank paper:	白紙の
+#+wrinkled:	くしゃくしゃの
+#+khaki:		カーキ色の
+#+sky blue:	空色の
+#
+#	wands
+#
+/light
+	この杖は、周囲を明るく照らす。
+/secret door detection
+	この杖を振ると、周囲に隠された扉や罠、
+	隠れている怪物などを見つけ出すことができる。
+/enlightenment
+	この杖を振ると、あなたが現在身につけている能力、
+	およびあなたの隠された状態を知ることができる。
+/create monster
+	この杖は、あなたの傍に怪物を造り出す。
+/wishing
+	この杖を振ると、あなたは望みのものを手に入れられる。
+/nothing
+	この杖には、一切何も起こさない魔法が込められている。
+/striking
+	この杖は、振った方向に破壊の魔力を投げかける。
+/make invisible
+	この杖は、振った先にいる者を透明化する。
+/slow monster
+	この杖は、振った先にいる者の動きを遅くする。
+/speed monster
+	この杖は、振った先にいる者の動きを速くする。
+/undead turning
+	この杖は、アンデッドにダメージを与え、退散させる。
+/polymorph
+	この杖は、狙った対象を変身あるいは変化させる。
+/cancellation
+	この杖は、対象の魔力を消し去り、魔法的な特殊能力を封じる。
+/teleportation
+	この杖は、振った先のものをテレポートさせる。
+/opening
+	この杖は、鍵のかけられた扉や宝箱を開錠する。
+/locking
+	この杖は、鍵のかかる扉や宝箱を施錠する。
+/probing
+	この杖を振ると、怪物の状態を詳しく知ることができる。
+/digging
+	この杖は、岩盤を掘削する魔力を放つ。
+/magic missile
+	この杖は、振った方向に魔法の矢を放つ。
+/fire
+	この杖は、振った方向に炎をほとばしらせる。
+/cold
+	この杖は、振った方向に吹雪を吹き荒れさせる。
+/sleep
+	この杖は、振った方向に眠りの魔力を放つ。
+/death
+	この杖は、振った方向に死の魔力を放つ。
+/lightning
+	この杖は、振った方向に稲妻を放つ。
+/maintenance
+	この杖には、傷んだ品物を修復する魔力が込められている。
+	ただし、魔法の品物の損耗までは元には戻せない。
+#
+/balsa
+/maple
+/pine
+/oak
+/ebony
+	%d木で作られた、長さ25～40cmほどの
+	魔法の杖だ。何らかの魔力が封じられている。
+/glass
+/crystal
+/marble
+/hexagonal
+/iron
+/steel
+	魔法の杖だ。
+	長さ25～40cmほどの%d棒で、
+	何らかの魔力が封じられている。
+/tin
+/brass
+/copper
+/silver
+/platinum
+/iridium
+/zinc
+/aluminum
+/uranium
+	魔法の杖だ。
+	長さ25～40cmほどの%d金属棒で、
+	何らかの魔力が封じられている。
+/short
+	魔法の杖だ。長さ20cmに満たない鉄の棒で、
+	何らかの魔力が封じられている。
+/long
+	魔法の杖だ。長さ50cmを超える鉄の棒で、
+	何らかの魔力が封じられている。
+/runed
+/curved
+/spiked
+/jeweled
+	魔法の杖だ。
+	%d長さ25～40cmほどの鉄の棒で、
+	何らかの魔力が封じられている。
+/forked
+	魔法の杖だ。
+	先が二又に分かれた長さ25～40cmほどの木の棒で、
+	何らかの魔力が封じられている。
+/bone
+	何かの動物の骨で作られた、長さ25～40cmほどの
+	魔法の杖だ。何らかの魔力が封じられている。
+#
+#	gold
+#
+#$gold piece:	金貨
+#
+#	gems & rocks
+#
+*dilithium crystal
+	透明な結晶構造を持つ、非常に貴重な鉱石だ。
+*diamond
+	高値で取引される、透明に輝く宝石だ。
+*ruby
+*sapphire
+*emerald
+*turquoise
+*aquamarine
+*amber
+*topaz
+*opal
+*garnet
+*amethyst
+*jasper
+*fluorite
+*jade
+*jacinth
+*black opal
+*citrine
+*chrysoberyl
+*obsidian
+*agate
+*jet
+	高値で取引される、%d宝石だ。
+*white
+*red
+*blue
+*green
+*yellowish brown
+*violet
+*orange
+*black
+*yellow
+	%d宝石だ。
+*worthless piece of white glass
+*worthless piece of blue glass
+*worthless piece of red glass
+*worthless piece of yellowish brown glass
+*worthless piece of green glass
+*worthless piece of violet glass
+*worthless piece of orange glass
+*worthless piece of black glass
+*worthless piece of yellow glass
+	%dガラスのかけらだ。
+#
+*luckstone
+	この不思議な石は、あなたの運勢に影響を与える。
+*gray
+	%d石だ。
+*loadstone
+	この石は、見かけからは想像もつかない重量を持っている。
+	さらに、捨てることができなくなる呪いがかけられている。
+*touchstone
+	宝石の鑑定士が使う石だ。
+	うまく使えば、宝石と無価値なガラスを区別することができる。
+*flint
+	硬く、角張った石だ。
+*rock
+	何の変哲もない石ころ、あるいは小さな岩のかけらだ。
+#
+#	miscellaneous
+#
+`boulder
+	巨大な岩だ。
+`statue
+	怪物の姿をかたどった彫像だ。
+0heavy iron ball
+	鉄製の非常に重い球体だ。
+_iron chain
+	鉄製の鎖だ。
+_sheaf of straw
+	一束の藁だ。
+#.blinding venom:	目潰しの毒液
+#.splash of venom:	毒液のしぶき
+#.acid venom:		酸の毒液
+#
+#	artifacts
+#
+AExcalibur
+	伝説の王の佩刀だった長剣だ。
+AStormbringer
+	生けるものの魂を吸い取り喰らう、恐るべき魔剣だ。
+	真っ黒な刀身を埋め尽くすようにルーンが刻まれている。
+AMjollnir
+	巨大な魔法のハンマーだ。命中した相手に電撃を放つ。
+	また、投げると手元に戻ってくると言われている。
+ACleaver
+	とても強力な戦斧だ。
+AGrimtooth
+	禍々しく、鋭い刃を持つ短剣だ。
+AOrcrist
+	はるか昔、名のあるエルフの持ち物だった名剣だ。
+	オークの気配を感知し、オークに致命的なダメージを与える。
+ASting
+	はるか昔、伝説のエルフの都で鍛えられた短剣だ。
+	オークの気配を感知し、オークに大ダメージを与える。
+AMagicbane
+	この奇妙な儀式ナイフには複雑な魔法がこめられており、
+	切りつけた相手に様々な効果をもたらす。
+	また、この刃は自らに魔法がかけられることを嫌い、
+	それらに抵抗し、無効化しようとする。
+AFrost Brand
+	刀身から強力な凍気を発している、強力な魔剣だ。
+	この剣は、斬りつけた敵に冷気による追加ダメージを与え、
+	また所持者を冷気から守る。
+AFire Brand
+	刀身から炎をほとばしらせている、強力な魔剣だ。
+	この剣は、斬りつけた敵に炎による追加ダメージを与え、
+	また所持者を炎から守る。
+##ADragonbane:		ドラゴンベーン
+ADragonslayer
+	ドラゴンを倒す力を秘めた剣だ。
+	ドラゴンのブレスを切り裂き、跳ね返すことができる。
+ADemonbane
+	地獄の悪魔を倒すために鍛えられた銀の長剣だ。
+	その銀の刃と、織り込まれた魔法の力によって、
+	悪魔に対して恐るべき打撃を与える。
+AWerebane
+	獣人を退治するために作られた、魔法の拳銃だ。
+AGrayswandir
+	真世界の王子が佩いていたといわれる、銀のサーベルだ。
+	その刀身には世界の理をあらわす文様の一部が埋め込まれて
+	いるらしい。
+##AGiantslayer:		ジャイアントスレイヤー
+AGiantkiller
+	巨人を倒すために鍛えられた、大型の剣だ。
+AOgresmasher
+	オーガを倒すために鍛えられた、長い柄を持つ鎚矛だ。
+ATrollsbane
+	トロルを倒すために作られた、鎖付き鉄球だ。
+	この武器にはトロルの再生能力を封じる力がある。
+AVorpal Blade
+	この剣は恐ろしく鋭い刃を持っており、敵の首を斬り飛ばして
+	即死させることがある。
+ASnickersnee
+	とても鋭利な刃を持つ、強力な業物の刀だ。
+ASunsword
+	太陽の力を宿した長剣だ。
+	不死者に対し、特に力を発揮する。
+ADisrupter
+	不浄な不死者を粉砕するために作られた、銀のメイスだ。
+ASkullcrusher
+	古代の、得体の知れない生き物の骨で作られているらしい棍棒だ。
+	この恐るべき棍棒は、敵の頭蓋骨を粉砕する。
+AQuick Blade
+	この魔法の剣は、非常に速い連撃を可能にさせる。
+AGauntlets of Defense
+	この魔法の篭手は、着用者を物理的な攻撃から強力に保護する。
+AFist of Fury
+	この魔法の篭手は、徒手空拳で戦う者の攻撃力を増強する。
+# A: 探索のオーブ
+AThe Orb of Detection
+	このオーブは並はずれた力をもつ水晶玉である。所持するだけで
+	遠視能力が得られ、危険な魔法から身を守り、攻撃的な呪文の
+	ダメージを軽減する。
+	秘められた力を使うと、持ち主の身体を透明にすることができる。
+
+# B: アーリマンの心臓
+AThe Heart of Ahriman
+	きわめて強力な魔力を秘めた宝石だ。
+
+# C: 力の王笏
+AThe Sceptre of Might
+	この素朴だが力ある王笏は、大古の昔に名もない洞窟で作られ、
+	洞窟の住人により何代もの間受け継がれてきたものである。
+	これは実に強力な王笏で、所持するものを危険な魔法から守り、
+	さらに周囲を煽動して闘争を引き起こす魔力を秘めている。
+
+# H: アスクレピオスの杖
+AThe Staff of Aesculapius
+	この杖は全ての薬師に神聖なものと考えられている。なぜなら、
+	生と死をつかさどる力を持っているからである。手にした者は、
+	エナジードレインから守られ、怪我を負っても急速に回復する
+	力を与えられる。
+	また、強力な癒しの力が秘められている。
+
+# K: マーリンの魔法の鏡
+AThe Magic Mirror of Merlin
+	この強力な魔法の鏡は、木々が歌い岩が踊っていた時代に
+	ドルイド僧マーリンによって作られたものである。
+	それは所有者を危険な魔法から守り、遠視能力を与える。
+
+# Mon: 超世界の目
+AThe Eyes of the Overworld
+	異世界からもたらされたとも伝えられる、奇妙なレンズだ。
+	このレンズを通すと、まるで周囲に壁も障害物も存在しない
+	かのように、どんなに隠されたものでも見通すことができる。
+
+# P: 聖なる法冠
+AThe Mitre of Holiness
+	この法冠は、着用者の知力を増強し、なおかつ炎によるすべての
+	攻撃から身を守る能力を有する。特別な力を使えば、使用者の
+	魔力を増幅し、より多くの呪文を唱えることを可能とする。
+
+# Ran: ダイアナの長弓
+AThe Longbow of Diana
+	狩猟の女神にして月の女神たるダイアナの名を戴いた、
+	伝説の長弓だ。この弓を持つものは、矢が尽きることが
+	ないと言われる。
+
+# R: 盗賊のマスターキー
+AThe Master Key of Thievery
+	この万能鍵は大昔に作られ、どんな鍵でも外してしまう強力な魔力が
+	吹き込まれている。持っているだけで危険を感知し、テレポートを
+	制御し、物理ダメージを半減させる。
+	隠された力を使うと、どんな罠でも解除することができる。
+
+# S: 村正の刀
+AThe Tsurugi of Muramasa
+	この古の剣は、数百年の昔から幕府の指導者によって代々受け継が
+	れてきた。所持者に幸運をもたらすといわれているが、その真の力は
+	目にするも恐しい。それは所持者に敵対するすべての生物を真っ二つに
+	し、即死させる力を持っている。
+
+# T: イェンドリアン・エクスプレスのプラチナカード
+AThe Platinum Yendorian Express Card
+	謎の物質で作られた古代の聖器。長方形の形状を持ち、とても薄く、
+	古代ルーン文字で解読不能な文字が刻まれている。持ち歩くものに
+	ESPの能力を与え、全ての魔法ダメージを半分にしてくれる。また、
+	様々な危険な魔法の効果からも身を守ってくれる。
+	その力を解放すると、品物に魔力を充填することができる。
+
+# V: 運命のオーブ
+AThe Orb of Fate
+	あるものはオーディン自身がこの古代の水晶玉を作ったと言い、
+	他の者はロキが作り、オーディンのサインを真似、底に記したの
+	だとも言われている。どちらにせよ、これは強力な聖器である。
+	持つだけで警告の力を得、所持者への物理および魔法のダメージを
+	オーブ自身が部分的に吸いとってくれる。
+	また、使用者を他の階へと瞬間移動させる秘められた力を持つ。
+
+# W: エチオピアの目
+AThe Eye of the Aethiopica
+	魔女『緑のネフェレト』が、自らの持てる力を注ぎ込んで
+	作り上げた、強力な魔除けだ。
+	この魔除けは様々な悪意ある魔法の効果から着用者を守り、
+	また攻撃的な呪文からのダメージを軽減する。さらに、
+	着用者の魔力の回復を大幅に加速してくれる。
+	
+	魔除けにはネフェレトの専門分野である空間転移の術が
+	織り込まれており、その力を解放すれば、遠く離れた地へ
+	瞬時に移動することができる。

@@ -1,0 +1,343 @@
+#	SCCS Id: @(#)Monk.des	3.4	2002/04/08
+#	Copyright (c) 1989 by Jean-Christophe Collet
+#	Copyright (c) 1991-2 by M. Stephenson
+# NetHack may be freely redistributed.  See license for details.
+#
+#	The "start" level for the quest.
+#
+#       Here you meet your (besieged) class leader, Grand Master
+#       and receive your quest assignment.
+#
+#
+#   Maps by Bill Foust (foustwf@cs.rose-hulman.edu)
+#
+MAZE: "Mon-strt",' '
+FLAGS: noteleport,hardfloor
+GEOMETRY:center,center
+MAP
+       ------      ------------ ------      ----                            
+     ---....--------..........---....----- --..|                            
+     -.........................|.........---..--                            
+     -........................................|                             
+     --..........-----------------------......|                             
+      -..........|............|........|......|--                           
+     |-..........|............|........|........---                         
+     |...........|............+........+..........---                       
+    ||...........|............|........|............---                     
+    |............|............|........|..............--------              
+    ||...........|------+-----|........|..---................-------        
+     |...........|.....|.|....|........|..| --.....................-----    
+     ||..........|.....+.+....|---+----|..|  ---.......................--   
+      |..........|.....|.|....|........|..|    --.......................-   
+      ||.........|.....|.|....|........|..|     ------------............-   
+    |||..........-----------------------..|                ---..........-   
+ ----.....................................||                 ---........--  
+ -.......--................................---                 ---.......-- 
+ --....-----...----...........--....----.....-                   |........- 
+  ------   -----  -------------------  -------                   ---------- 
+ENDMAP
+# Random Monsters
+RANDOM_MONSTERS: 'E', 'X'
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+REGION:(18,05,29,09),lit,"temple"
+# Portal arrival point
+BRANCH:(70,17,70,17),(0,0,0,0)
+# Stairs
+STAIR:(21,14),down
+# Altar
+ALTAR:(20,07),neutral,shrine
+# Doors
+DOOR:broken,(39,07)
+DOOR:broken,(30,07)
+DOOR:broken,(34,12)
+DOOR:closed,(25,12)
+DOOR:closed,(23,12)
+DOOR:closed,(24,10)
+# Grand Master
+MONSTER:'@',"Grand Master",(24,07)
+# The treasure of Grand Master
+OBJECT:'(',"chest",(23,07)
+# abbot guards for the temple
+MONSTER:'@',"abbot",(26,07)
+MONSTER:'@',"abbot",(26,08)
+MONSTER:'@',"abbot",(35,10)
+MONSTER:'@',"abbot",(35,11)
+MONSTER:'@',"abbot",(27,07)
+MONSTER:'@',"abbot",(27,08)
+MONSTER:'@',"abbot",(35,10)
+MONSTER:'@',"abbot",(35,11)
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Random traps
+TRAP:"dart",(43,06)
+TRAP:"dart",(43,08)
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Monsters on siege duty.
+MONSTER: 'E',"earth elemental",(37,02),hostile
+MONSTER: 'E',"earth elemental",(37,17),hostile
+MONSTER: 'E',"earth elemental",(11,03),hostile
+MONSTER: 'E',"earth elemental",(44,04),hostile
+MONSTER: 'E',"earth elemental",(12,11),hostile
+MONSTER: 'E',"earth elemental",(60,12),hostile
+MONSTER: 'E',"earth elemental",(14,08),hostile
+MONSTER: 'E',"earth elemental",(55,11),hostile
+MONSTER: 'X',"xorn",(18,17)
+MONSTER: 'X',"xorn",(59,10)
+MONSTER: 'X',"xorn",(13,09)
+MONSTER: 'X',"xorn",(11,17)
+
+#
+#	The "locate" level for the quest.
+#
+#	Here you have to locate the Monastery of the Earth-Lord to
+#	go further towards your assigned quest.
+#
+
+MAZE: "Mon-loca",' '
+GEOMETRY:center,center
+MAP
+             ----------------------------------------------------   --------
+           ---.................................................-    --.....|
+         ---...--------........------........................---     ---...|
+       ---.....-      --.......-    ----..................----         --.--
+     ---.....---       ---------       --..................--         --..|
+   ---...-----                       ----.----.....----.....---      --..||
+----..----                       -----..---  |...---  |.......---   --...|
+|...---                       ----....---    |.---    |.........-- --...||
+|...-                      ----.....---      ---      |..........---....|
+|...----                ----......---                 |...|.......-....||
+|......-----          ---.........-               -----...|............|
+|..........-----   ----...........---        --||||......||...........||
+|..............-----................---     ||...........|||..........|
+|.....................................---   |...........|| |.........||
+|....................------.............---||..........||  ||........|
+|..--...............--    ---.........................||    |.......||
+|..|---.............-       ---.....................--|     ||......|
+|.|-  --............----      --.................----        |.....||
+|-|    --..............--------..............-----           ||....|
+        -................................-----                |....|
+        ----------------------------------                    ------
+ENDMAP
+# Random Monsters
+RANDOM_MONSTERS: 'E', 'X'
+# Dungeon Description
+REGION:(00,00,75,20),lit,"ordinary"
+# Stairs
+STAIR:random,up
+STAIR:random,down
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,20)
+# Objects
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+
+#
+#       The "goal" level for the quest.
+#
+#       Here you meet Master Kaen your nemesis monster.  You have to
+#       defeat Master Kaen in combat to gain the artifact you have
+#       been assigned to retrieve.
+#
+
+MAZE: "Mon-goal",' '
+GEOMETRY:center,center
+MAP
+                               ||-------------------------|              
+                              ||...L...L....L..L..L..L....||             
+             ||----------------.....L....L....L.....L..L...||            
+            ||...................L.....L...L.||.L.L..L....L.||           
+           ||......................L.L..L....||....L....L....||          
+          ||.................||.L..........L....L....L......L.||         
+         ||..................||..L.L..........L....L..L...L....------||  
+         |...............................LL...........................||-
+         |...........................L..LLLL...L..L....L...L...L..L.....|
+         |...................||..L..L..LLLLLL....L..L.......L......L....|
+         |...................||...L....LLLLLL..L....L.L...L...L..L......|
+         |..........................L.L.LLLL.L...L...L......L......L....|
+         |...............................LL...........................||-
+         ||..................||...L...........L....L.L.........------||  
+          ||.................||....L...L...L...L.L...L...L....||         
+           ||....................L...L.......||...L.......L..||          
+            ||.....................L.....L.L.||.L..L..L.....||           
+             ||----------------...L..L.L...L...L........L..||            
+                              ||....L.....L..L....L..L....||             
+                               ||-------------------------|              
+ENDMAP
+# Random Monsters
+RANDOM_MONSTERS: 'X', 'E'
+# Dungeon Description
+REGION:(00,00,72,19),lit,"ordinary"
+# Stairs
+STAIR:(69,09),up
+# Altars
+ALTAR:(16,08),chaos,altar
+# Objects
+###OBJECT:'(',"lenses",(16,09),blessed,0,"The Eyes of the Overworld"
+OBJECT:'(',"glasses of see invisible",(16,09),blessed,0,"The Eyes of the Overworld"
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:"fire",random
+TRAP:"fire",random
+TRAP:"fire",random
+TRAP:"fire",random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER:'@',"Master Kaen",(16,09)
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'E',"earth elemental",random,hostile
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+MONSTER: 'X',"xorn",random
+
+#
+#	The "fill" levels for the quest.
+#
+#	These levels are used to fill out any levels not occupied by specific
+#	levels as defined above. "fila" is the upper filler, between the
+#	start and locate levels, and "filb" the lower between the locate
+#	and goal levels.
+#
+
+LEVEL: "Mon-fila"
+# Random Monsters
+RANDOM_MONSTERS: 'E', 'X'
+#
+ROOM: "ordinary" , random, random, random, random
+STAIR: random, up
+OBJECT: random,random,random
+MONSTER: 'E', random, random, hostile
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+OBJECT: random,random,random
+MONSTER: 'E', random, random, hostile
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+TRAP: random, random
+OBJECT: random,random,random
+MONSTER: 'X', "xorn", random
+MONSTER: 'E', "earth elemental", random
+
+ROOM: "ordinary" , random, random, random, random
+STAIR: random, down
+OBJECT: random, random, random
+TRAP: random, random
+MONSTER: 'E', random, random, hostile
+MONSTER: 'E', "earth elemental", random
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+TRAP: random, random
+MONSTER: 'X', random, random, hostile
+
+ROOM: "ordinary" , random, random, random, random
+OBJECT: random, random, random
+TRAP: random, random
+MONSTER: 'E', "earth elemental", random
+
+RANDOM_CORRIDORS
+
+MAZE: "Mon-filb",'L'
+INIT_MAP: '.' , 'L' , true , true , lit , false
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+MONSTER: 'X', random, random, hostile
+MONSTER: 'X', random, random, hostile
+MONSTER: 'X', random, random, hostile
+MONSTER: 'X', random, random, hostile
+MONSTER: 'X', random, random, hostile
+MONSTER: 'E', random, random, hostile
+MONSTER: 'E', random, random, hostile
+MONSTER: 'E', "earth elemental", random,hostile
+MONSTER: 'E', "earth elemental", random,hostile
+MONSTER: 'E', "earth elemental", random,hostile
+MONSTER: 'E', "earth elemental", random,hostile
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+OBJECT: random,random,random
+

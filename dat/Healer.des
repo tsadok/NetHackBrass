@@ -1,0 +1,377 @@
+#	SCCS Id: @(#)Healer.des	3.4	1995/04/16
+#	Copyright (c) 1989 by Jean-Christophe Collet
+#	Copyright (c) 1991, 1993 by M. Stephenson, P. Winner
+# NetHack may be freely redistributed.  See license for details.
+#
+#	The "start" level for the quest.
+#
+#	Here you meet your (besieged) class leader, Hippocrates
+#	and receive your quest assignment.
+#
+MAZE: "Hea-strt",' '
+FLAGS: noteleport,hardfloor
+GEOMETRY:center,center
+MAP
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+PPPP........PPPP.....PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP.P..PPPPP......PPPPPPPP
+PPP..........PPPP...PPPPP.........eee..e.eee......PPPP..PPPPP........PPPPPPP
+PP............PPPPPPPP.....e.eeeeeeeeeeeeeeeee......PPP...PPPP......PPPPPPPP
+P.....PPPPPPPPPPPPPPP...ee..eegeeeeeeeeeeggggeeeee...PPPPPPPPPPPPPPPPPPPPPPP
+PPPP....PPPPPPPPPPPP...eegggeeegggggggggggggggggeeee...PPPPP.PPPPPPPPPPPPPPP
+PPPP........PPPPP.....eegg-----------------------gge.e...PP...PPPPPPP.....PP
+PPP............PPPPP.ege--|.|......S..........S.|--ggee.PPPP.PPPPPPP.......P
+PPPP..........PPPPP..egg|.S.|......|-----------S|.|geee..PPPPPP.PPP.......PP
+PPPPPP......PPPPPP...eeg|.|.|......|...|......|.|.|geee.PPPPPP...PP.......PP
+PPPPPPPPPPPPPPPPPPP...ee+.|.|......S.\.S......|.|.+eee...PPPPPP.PPPP.......P
+PPP...PPPPP...PPPP...eee|.|.|......|...|......|.|.|gee....PPPPPPPPPPP.....PP
+PP.....PPP.....PPP..eegg|.|S-----------|......|.S.|ggee..PPPPPPPPPPPPPPPPPPP
+PPP..PPPPP...PPPP...eggg--|.S..........S......|.|--gee..PPPPPPPPP....PPPPPPP
+PPPPPPPPPPPPPPPP....eeeggg-----------------------ggeee.....PPPPP..........PP
+PPPPPPPPPPPPPPPPP....eeeeeggggggeeegggegggggggggegee.....PPPPPP............P
+PPP.............PPPPe..egeeeggeeeeeeeeeeeegggeeeee.....PPP..PPPP..........PP
+PP...............PPPPP.......eeee.e.e..eee.ee.........PPPP...PPPP........PPP
+PPP.............PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP....PPPPPP
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+# Stairs
+STAIR:(37,9),down
+# Portal arrival point
+BRANCH:(04,12,04,12),(0,0,0,0)
+# altar for the Temple
+ALTAR:(32,09),neutral,altar
+# Doors
+DOOR:locked,(24,10)
+DOOR:closed,(26,08)
+DOOR:closed,(27,12)
+DOOR:locked,(28,13)
+DOOR:closed,(35,07)
+DOOR:locked,(35,10)
+DOOR:locked,(39,10)
+DOOR:closed,(39,13)
+DOOR:locked,(46,07)
+DOOR:closed,(47,08)
+DOOR:closed,(48,12)
+DOOR:locked,(50,10)
+# Hippocrates
+MONSTER:'@',"Hippocrates",(37,10)
+# The treasure of Hippocrates
+OBJECT:'(',"chest",(37,10)
+# intern guards for the audience chamber
+MONSTER:'@',"attendant",(29,08)
+MONSTER:'@',"attendant",(29,09)
+MONSTER:'@',"attendant",(29,10)
+MONSTER:'@',"attendant",(29,11)
+MONSTER:'@',"attendant",(40,09)
+MONSTER:'@',"attendant",(40,10)
+MONSTER:'@',"attendant",(40,11)
+MONSTER:'@',"attendant",(40,13)
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Monsters on siege duty.
+MONSTER: 'r',"rabid rat",random
+MONSTER: 'r',"rabid rat",random
+MONSTER: 'r',"rabid rat",random
+MONSTER: 'r',"rabid rat",random
+MONSTER: 'r',"rabid rat",random
+MONSTER: 'r',"rabid rat",random
+MONSTER: 'r',"rabid rat",random
+MONSTER: 'r',"rabid rat",random
+MONSTER: 'r',"rabid rat",random
+MONSTER: 'r',"rabid rat",random
+MONSTER: ';',"giant eel",random
+MONSTER: ';',"shark",random
+MONSTER: ';', random, random
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+#
+#	The "locate" level for the quest.
+#
+#	Here you have to find the Temple of Coeus to go
+#	further towards your assigned quest.
+#
+
+MAZE: "Hea-loca",' '
+FLAGS: hardfloor
+#
+INIT_MAP: 'e' , 'P', true , true , lit , false
+GEOMETRY:center,center
+MAP
+PPPPPPPPPPMPPeeeeeeeMMPPPPPPPPP
+PMPPPPMMeeeeeeeeeeeeeeeMPPPPPPP
+PPPMeeeee-------------eeePPMPPP
+PPPPPeeee|.S.........|eeeeMPPPP
+PPMeeeeee+.|.........|eeeMPPPPP
+PPMeeeeee+.|.........|eeMMPPPPP
+PPPPeeeee|.S.........|eeMMPPMPP
+PMMPMeeee-------------eeeeMPPPP
+PPPPPPMMeeeeeeeeeeeeeeeMMPPPPPP
+PPPPMPPPPPMeeeeeeeeMPPMPPPMPPPP
+ENDMAP
+# Dungeon Description
+REGION:(00,00,30,09),lit,"ordinary"
+REGION:(12,03,20,06),lit,"temple"
+# Doors
+DOOR:closed,(09,04)
+DOOR:closed,(09,05)
+DOOR:locked,(11,03)
+DOOR:locked,(11,06)
+# Stairs
+STAIR:(04,04),up
+STAIR:(20,06),down
+# Non diggable walls
+NON_DIGGABLE:(11,02,21,07)
+# Altar in the temple.
+ALTAR:(13,05), chaos, shrine
+# Objects
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',random,random,hostile
+MONSTER:';',"giant eel",random
+MONSTER:';',"giant eel",random
+MONSTER:';',"giant eel",random
+MONSTER:';',"giant eel",random
+MONSTER:';',"giant eel",random
+MONSTER:';',"electric eel",random
+MONSTER:';',"electric eel",random
+MONSTER:';',"kraken",random
+MONSTER:';',"shark",random
+MONSTER:';',"shark",random
+MONSTER:';',random, random,hostile
+MONSTER:';',random, random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+
+#
+#	The "goal" level for the quest.
+#
+#	Here you meet Cyclops your nemesis monster.  You have to
+#	defeat Cyclops in combat to gain the artifact you have
+#	been assigned to retrieve.
+#
+
+MAZE: "Hea-goal", 'P'
+#
+INIT_MAP: 'e' , 'M' , false , true , lit , false
+GEOMETRY:center,center
+MAP
+eMeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeMMe
+MMeeeeeeePPPPPPPeeeePPPPPPPeeeePPPPeeeMMe
+eeePPPPPPPeeeePPPPPPPeeeeePPPPPPeePPPeeeM
+eeePPeeeeeeeeeeeeeeeeeeeeeeeeeeeeeePPPeee
+eePPeeeeeeeeeeeeeeeeeeeeeeeeeeeeeePPeeeee
+eePPeeeeeeeeeeeeeeeeeeeeeeeeeeeeeePPPeeee
+eePPPeeeeeeeeeeeeeeeeeeeeeeeeeeeeeePPeeee
+ePPPeeeeeeeeeeeeeeeeeeeeeeeeeeeeeePPPPeee
+eeePPeeeeeeeeeeeeeeeeeeeeeeeeeeeePPPeeeMM
+eePPPPeeePPPPPeePPPPeeePPPPPeeeeePPeeeMMe
+MeeeePPPPPeeePPPPeePPPPPeeePPPPPPPeeeMMee
+MMMeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeMMMe
+ENDMAP
+# Dungeon Description
+REGION:(00,00,40,11),lit,"ordinary"
+# Stairs
+STAIR:(39,10),up
+# Non diggable walls
+NON_DIGGABLE:(00,00,40,11)
+# Objects
+OBJECT:')',"quarterstaff",(20,06),blessed,0,"The Staff of Aesculapius"
+OBJECT:'/',"lightning",(20,06)
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER:'H',"Cyclops",(20,06),hostile
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',"rabid rat",random
+MONSTER:'r',random,random,hostile
+MONSTER:'r',random,random,hostile
+MONSTER:';',"giant eel",random
+MONSTER:';',"giant eel",random
+MONSTER:';',"giant eel",random
+MONSTER:';',"giant eel",random
+MONSTER:';',"giant eel",random
+MONSTER:';',"giant eel",random
+MONSTER:';',"electric eel",random
+MONSTER:';',"electric eel",random
+MONSTER:';',"shark",random
+MONSTER:';',"shark",random
+MONSTER:';',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+
+#
+#	The "fill" levels for the quest.
+#
+#	These levels are used to fill out any levels not occupied by specific
+#	levels as defined above. "filla" is the upper filler, between the
+#	start and locate levels, and "fillb" the lower between the locate
+#	and goal levels.
+#
+
+MAZE: "Hea-fila" , 'P'
+INIT_MAP: '.' , 'P' , false , true , lit , false
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+MONSTER: 'r', "rabid rat", random
+MONSTER: 'r', random, random,hostile
+MONSTER: 'r', random, random,hostile
+MONSTER: ';', "giant eel", random
+MONSTER: ';', "giant eel", random
+MONSTER: ';', "electric eel", random
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+
+MAZE: "Hea-filb" , 'P'
+INIT_MAP: 'e' , 'P' , false , true , lit , false
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+MONSTER: 'r', "rabid rat", random
+MONSTER: 'r', "rabid rat", random
+MONSTER: 'r', random, random,hostile
+MONSTER: 'r', random, random,hostile
+MONSTER: ';', "giant eel", random
+MONSTER: ';', "giant eel", random
+MONSTER: ';', "giant eel", random
+MONSTER: ';', "giant eel", random
+MONSTER: ';', "giant eel", random
+MONSTER: ';', "electric eel", random
+MONSTER: ';', "electric eel", random
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'D',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+MONSTER: 'S',random,random,hostile
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random

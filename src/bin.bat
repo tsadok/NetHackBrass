@@ -1,0 +1,2 @@
+@cd ..\binary
+@REM us

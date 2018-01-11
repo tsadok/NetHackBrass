@@ -1,0 +1,280 @@
+
+C:\E\brass\src>make /f Makefile.bcc install 
+MAKE Version 5.2  Copyright (c) 1987, 2000 Borland
+..\src\pray.c:
+警告 W8075 ..\src\pray.c 424: 問題のあるポインタの変換(関数 fix_worst_trouble )
+警告 W8075 ..\src\pray.c 488: 問題のあるポインタの変換(関数 fix_worst_trouble )
+警告 W8075 ..\src\pray.c 986: 問題のあるポインタの変換(関数 pleased )
+警告 W8075 ..\src\pray.c 1110: 問題のあるポインタの変換(関数 pleased )
+警告 W8075 ..\src\pray.c 1231: 問題のあるポインタの変換(関数 water_prayer )
+警告 W8075 ..\src\pray.c 1668: 問題のあるポインタの変換(関数 dosacrifice )
+Linking....
+NetHack is up to date.
+	..\util\makedefs -d
+	..\util\makedefs -h
+	cd ..\dat
+	echo data >dlb.lst
+	echo oracles >>dlb.lst
+	if exist options echo options >>dlb.lst
+	if exist ttyoptions echo ttyoptions >>dlb.lst
+	if exist guioptions echo guioptions >>dlb.lst
+	if exist porthelp echo porthelp >>dlb.lst
+	echo quest.dat >>dlb.lst
+	echo rumors >>dlb.lst
+	echo help >>dlb.lst
+	echo hh >>dlb.lst
+	echo cmdhelp >>dlb.lst
+	echo history >>dlb.lst
+	echo opthelp >>dlb.lst
+	echo wizhelp >>dlb.lst
+	echo dungeon >>dlb.lst
+	echo license >>dlb.lst
+	for %N in (*.lev) do echo %N >>dlb.lst
+
+C:\E\brass\dat>echo air.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Arc-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Arc-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Arc-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Arc-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Arc-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo asmodeus.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo astral.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo baalz.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Bar-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Bar-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Bar-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Bar-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Bar-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo bigrm-1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo bigrm-2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo bigrm-3.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo bigrm-4.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo bigrm-5.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo castle.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Cav-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Cav-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Cav-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Cav-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Cav-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo earth.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo fire.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Hea-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Hea-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Hea-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Hea-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Hea-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo juiblex.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Kni-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Kni-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Kni-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Kni-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Kni-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo knox.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo medusa-1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo medusa-2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minefill.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minend-1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minend-2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minend-3.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minetn-1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minetn-2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minetn-3.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minetn-4.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minetn-5.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minetn-6.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo minetn-7.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo mlcgate.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Mon-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Mon-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Mon-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Mon-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Mon-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo oracle.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo orcus.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Pri-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Pri-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Pri-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Pri-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Pri-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Ran-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Ran-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Ran-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Ran-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Ran-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo rndv-000.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo rndv-001.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo rndv-002.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo rndv-003.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo rndv-004.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Rog-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Rog-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Rog-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Rog-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Rog-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Sam-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Sam-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Sam-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Sam-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Sam-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo sanctum.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo soko1-1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo soko1-2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo soko2-1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo soko2-2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo soko3-1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo soko3-2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo soko4-1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo soko4-2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Tou-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Tou-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Tou-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Tou-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Tou-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo tower1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo tower2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo tower3.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Val-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Val-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Val-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Val-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Val-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo valley.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo water.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Wiz-fila.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Wiz-filb.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Wiz-goal.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Wiz-loca.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo Wiz-strt.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo wizard1.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo wizard2.lev  1>>dlb.lst 
+
+C:\E\brass\dat>echo wizard3.lev  1>>dlb.lst 
+	..\util\dlb_main cIf dlb.lst ..\src\nhdat
+	cd ..\src
+	copy nhdat ..\binary
+        1 個のファイルをコピーしました。
+	copy ..\dat\license ..\binary
+        1 個のファイルをコピーしました。
+	if exist ..\doc\guidebook.txt copy ..\doc\guidebook.txt ..\binary\Guidebook.txt
+        1 個のファイルをコピーしました。
+	if exist ..\doc\nethack.txt copy ..\doc\nethack.txt ..\binary\NetHack.txt
+        1 個のファイルをコピーしました。
+	copy ..\sys\winnt\defaults.nh ..\binary\defaults.nh
+        1 個のファイルをコピーしました。
+	echo install done > o\install.tag
+Done.
