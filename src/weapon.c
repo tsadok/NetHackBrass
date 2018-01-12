@@ -364,7 +364,7 @@ doubleattack_roll()
 		roll = (roll+5 < 10) ? 10 : (roll+5);	/* Quick Blade is really quick! */
 #ifdef WIZARD
 	if (wizard) pline("[x2:%d]", roll);
-#endif WIZARD
+#endif /* WIZARD */
 	return (roll < 0) ? 0 : roll;
 }
 
@@ -924,9 +924,9 @@ const static struct skill_range {
 	short first, last;
 	const char *name;
 } skill_ranges[] = {
-    { P_FIRST_H_TO_H, P_LAST_H_TO_H, E_J("Fighting Skills",	"í“¬‹Z”\") },
-    { P_FIRST_WEAPON, P_LAST_WEAPON, E_J("Weapon Skills",	"•Ší‹Z”\") },
-    { P_FIRST_SPELL,  P_LAST_SPELL,  E_J("Spellcasting Skills",	"Žô•¶‰r¥‹Z”\") },
+    { P_FIRST_H_TO_H, P_LAST_H_TO_H, E_J("Fighting Skills",	"í“¬‹Z”\\0" ) },
+    { P_FIRST_WEAPON, P_LAST_WEAPON, E_J("Weapon Skills",	"•Ší‹Z”\\0" ) },
+    { P_FIRST_SPELL,  P_LAST_SPELL,  E_J("Spellcasting Skills",	"Žô•¶‰r¥‹Z”\\0" ) },
 };
 
 /*

@@ -4106,7 +4106,7 @@ doapply()
 			    otmp->oeroded2++;
 #ifndef JP
 			    Your("%s %s!", xname(otmp),
-				 otense(otmp, is_corrodeable(otmp) ? "corrode", : "rot"));
+				 otense(otmp, is_corrodeable(otmp) ? "corrode" : "rot"));
 #else
 			    Your("%s‚Í•…%s‚½I", xname(otmp), is_corrodeable(otmp) ? "H‚µ" : "‚Á");
 #endif /*JP*/

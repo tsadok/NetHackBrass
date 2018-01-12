@@ -2724,7 +2724,7 @@ prefixes:
 		    (can_be_frozen(&mons[mntmp])
 #ifdef WIZARD
 		     || wizard
-#endif WIZARD
+#endif /* WIZARD */
 		    )
 		) return mkicefrozenmon(mntmp);
 	}

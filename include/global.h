@@ -344,9 +344,9 @@ struct version_info {
 #define MHPMAX		500	/* maximum monster hp */
 
 #ifdef JP
-#define E_J(e,j) j
+#define E_J(e,j) (j)
 #else
-#define E_J(e,j) e
+#define E_J(e,j) (e)
 #endif /*JP*/
 
 #endif /* GLOBAL_H */
