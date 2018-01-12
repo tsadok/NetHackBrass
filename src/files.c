@@ -1453,15 +1453,15 @@ const char *filename;
 
 const char *configfile =
 #ifdef UNIX
-			".nethackrc";
+			".nhbrassrc";
 #else
 # if defined(MAC) || defined(__BEOS__)
-			"NetHack Defaults";
+			"NetHack Brass Defaults";
 # else
 #  if defined(MSDOS) || defined(WIN32)
-			"defaults.nh";
+			"defaults.nhb";
 #  else
-			"NetHack.cnf";
+			"NHBrass.cnf";
 #  endif
 # endif
 #endif
@@ -1469,11 +1469,11 @@ const char *configfile =
 
 #ifdef MSDOS
 /* conflict with speed-dial under windows
- * for XXX.cnf file so support of NetHack.cnf
+ * for XXX.cnf file so support of NHBrass.cnf
  * is for backward compatibility only.
- * Preferred name (and first tried) is now defaults.nh but
+ * Preferred name (and first tried) is now defaults.nhb but
  * the game will try the old name if there
- * is no defaults.nh.
+ * is no defaults.nhb.
  */
 const char *backward_compat_configfile = "nethack.cnf"; 
 #endif
@@ -1547,9 +1547,9 @@ const char *filename;
 
 	envp = nh_getenv("HOME");
 	if (!envp)
-		Strcpy(tmp_config, "NetHack.cnf");
+		Strcpy(tmp_config, "NHBrass.cnf");
 	else
-		Sprintf(tmp_config, "%s%s", envp, "NetHack.cnf");
+		Sprintf(tmp_config, "%s%s", envp, "NHBrass.cnf");
 	if ((fp = fopenp(tmp_config, "r")) != (FILE *)0)
 		return(fp);
 # else	/* should be only UNIX left */
@@ -1563,10 +1563,10 @@ const char *filename;
 # if defined(__APPLE__)
 	/* try an alternative */
 	if (envp) {
-		Sprintf(tmp_config, "%s/%s", envp, "Library/Preferences/NetHack Defaults");
+		Sprintf(tmp_config, "%s/%s", envp, "Library/Preferences/NetHack Brass Defaults");
 		if ((fp = fopenp(tmp_config, "r")) != (FILE *)0)
 			return(fp);
-		Sprintf(tmp_config, "%s/%s", envp, "Library/Preferences/NetHack Defaults.txt");
+		Sprintf(tmp_config, "%s/%s", envp, "Library/Preferences/NetHack Brass Defaults.txt");
 		if ((fp = fopenp(tmp_config, "r")) != (FILE *)0)
 			return(fp);
 	}

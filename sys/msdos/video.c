@@ -38,24 +38,24 @@
  *
  * Assumptions (94/04/23):
  *
- *   - Supported defaults.nh file video options:
+ *   - Supported defaults.nhb file video options:
  *
- *          If OPTIONS=video:autodetect is defined in defaults.nh then 
+ *          If OPTIONS=video:autodetect is defined in defaults.nhb then
  *          check for a VGA video adapter.  If one is detected, then 
  *          use the VGA code, otherwise resort to using the 'standard' 
  *          video BIOS routines.
  *
- *          If OPTIONS=video:vga is defined in defaults.nh, then use 
+ *          If OPTIONS=video:vga is defined in defaults.nhb, then use
  *          the VGA code.
  *
- *          If OPTIONS=video:default is defined in defaults.nh use the
+ *          If OPTIONS=video:default is defined in defaults.nhb use the
  *          'standard' video BIOS routines (in the overlaid version), 
  *          or DJGPPFAST routines (under djgpp). This is equivalent to 
  *          having no OPTIONS=video:xxxx entry at all.
  *
  * Notes (94/04/23):
  *
- *   - The handler for defaults.nh file entry: 
+ *   - The handler for defaults.nhb file entry:
  * 
  *           OPTIONS=video:xxxxx 
  *
@@ -807,7 +807,7 @@ int assign_videoshades(char *choiceptr)
 }
 
 /*
- * Process defaults.nh OPTIONS=videocolors:xxx
+ * Process defaults.nhb OPTIONS=videocolors:xxx
  * Left to right assignments for:
  *	red green brown blue magenta cyan orange br.green yellow
  *	br.blue br.mag br.cyan
@@ -819,7 +819,7 @@ int assign_videocolors(char *colorvals)
 	int i,icolor;
 	uchar *tmpcolor;
 
-	init_ttycolor();	/* in case defaults.nh entry wasn't complete */
+	init_ttycolor();	/* in case defaults.nhb entry wasn't complete */
 	i = strlen(colorvals);
 	tmpcolor = (uchar *)alloc(i);
 	(void)convert_uchars(colorvals,tmpcolor,i);
@@ -876,7 +876,7 @@ convert_uchars(bufp,list,size)
 # endif /* TEXTCOLOR */
 
 /*
- * Process defaults.nh OPTIONS=video:xxxx
+ * Process defaults.nhb OPTIONS=video:xxxx
  *
  *    where (current) legitimate values are:
  *

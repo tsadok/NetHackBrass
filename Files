@@ -85,7 +85,7 @@ zap.c
 
 sys/amiga:
 (files for Amiga versions)
-Build.ami       Install.ami     Makefile.agc    Makefile.ami    NetHack.cnf
+Build.ami       Install.ami     Makefile.agc    Makefile.ami    NHBrass.cnf
 amidos.c        amidos.p        amifont.uu      amifont8.uu     amigst.c
 amii.hlp        amimenu.c       amirip.c        amisnd.c        amistack.c
 amitty.c        amiwind.c       amiwind.p       clipwin.c       colorwin.c
@@ -133,7 +133,7 @@ pcmain.c
 (files for MSDOS, OS/2, NT, and Atari versions)
 pcsys.c         pcunix.c
 (file for MSDOS, OS/2, and Atari versions)
-NetHack.cnf     pctty.c
+NHBrass.cnf     pctty.c
 (files for UNIX and Be versions)
 ioctl.c         unixtty.c
 (file for NT version)
@@ -176,7 +176,7 @@ vmsmisc.c       vmstty.c        vmsunix.c
 sys/wince:
 (files for Windows CE and PocketPC)
 Install.ce      bootstrp.mak    celib.c         cesetup.bat     cesound.c
-defaults.nh     keypad.uu       menubar.uu      mhaskyn.c       mhaskyn.h
+defaults.nhb    keypad.uu       menubar.uu      mhaskyn.c       mhaskyn.h
 mhcmd.c         mhcmd.h         mhcolor.c       mhcolor.h       mhdlg.c
 mhdlg.h         mhfont.c        mhfont.h        mhinput.c       mhinput.h
 mhmain.c        mhmain.h        mhmap.c         mhmap.h         mhmenu.c
@@ -196,7 +196,7 @@ stat.h
 sys/winnt:
 (files for Windows 9x, NT and Windows2000 version)
 Install.nt      Makefile.bcc    Makefile.gcc    Makefile.msc    console.rc
-defaults.nh     mapimail.c      nethack.def     nh340key.c      nhdefkey.c
+defaults.nhb    mapimail.c      nethack.def     nh340key.c      nhdefkey.c
 nhico.uu        nhraykey.c      nhsetup.bat     ntsound.c       nttty.c
 porthelp        win32api.h      winnt.c
 

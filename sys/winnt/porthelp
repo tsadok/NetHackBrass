@@ -17,11 +17,11 @@ New players should be sure to read GuideBook.txt which contains
 essential information about playing NetHack. It can be found in the
 same directory as your NetHack executable.
 
-The NetHack for Windows port supports some additional or enhanced 
-commands as well as some defaults.nh file options specific to 
-configuration choices used during the building of NetHack for 
-Windows. Listed below are those commands and defaults.nh file 
-options. 
+The NetHack Brass for Windows port supports some additional or
+enhanced commands as well as some defaults.nhb file options specific
+to configuration choices used during the building of NetHack for
+Windows. Listed below are those commands and defaults.nhb file
+options.
 
 Some options are applicable only to the "Graphical Interface." 
 These are discussed separately in their own section. 
@@ -148,19 +148,19 @@ Map Window options:
 
     tile_height    Used with tile_file to specify the height of each 
                    tile in pixels. This option may only be specified
-                   in the defaults.nh config file.
+                   in the defaults.nhb config file.
                    Default: [16] 
 
-    tile_width     Used with tile_file to specify the width of each 
+    tile_width     Used with tile_file to specify the width of each
                    tile in pixels. This option may only be specified
-                   in the defaults.nh config file. 
+                   in the defaults.nhb config file.
                    Default: [16]
 
 Other Window options:
 
     windowcolors   Specifies the colors for various windows
                    This option may only be specified in the
-                   defaults.nh config file and has the following
+                   defaults.nhb config file and has the following
                    format:
                        window-type foreground/background
                    Notes:

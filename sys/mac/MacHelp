@@ -19,7 +19,7 @@ and so on).
 === Configuration of a playground
     NetHack is packaged in a Dungeon Folder which includes:
         NetHack - the application file itself.
-        NetHack Defaults - text file for default option settings.
+        NetHack Brass Defaults - text file for default option settings.
         License - licensing terms for nethack.
         Guidebook - description of the game in long format.
         Recover - the application to restore save files from crashed games.
@@ -76,7 +76,7 @@ and so on).
     MACgraphics  - use enhanced dungeon map symbols [TRUE]
     page_wait    - display  --MORE--  after messages [TRUE]
 
-    Default options may be set by editing the NetHack Defaults text
+    Default options may be set by editing the NetHack Brass Defaults text
     file (using SimpleText or your favorite editor).  The following
     notation is used:
 

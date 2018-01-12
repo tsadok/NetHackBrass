@@ -169,9 +169,9 @@ II. To compile your copy of NetHack on a DOS machine:
     directory.  Copy them from src to the game directory yourself if
     necessary.
 
-    Make sure the files defaults.nh and termcap made it to your game
-    directory.  If not, go to sys\share and copy NetHack.cnf to
-    your game directory as defaults.nh.  The name in previous versions was
+    Make sure the files defaults.nhb and termcap made it to your game
+    directory.  If not, go to sys\share and copy NHBrass.cnf to
+    your game directory as defaults.nhb.  The name in previous versions was
     nethack.cnf, but the CNF extension conflicted with the MS Windows
     speed-dialer, making the file hidden on many machines.
 
@@ -182,7 +182,7 @@ II. To compile your copy of NetHack on a DOS machine:
     If it didn't, move it from sys\msdos to your game directory
     yourself.
 
-10. In your game directory, review the settings in defaults.nh and adjust
+10. In your game directory, review the settings in defaults.nhb and adjust
     them according to your style of play.
 
 11. Play NetHack.  If it works, you're done!
@@ -208,7 +208,7 @@ Appendix A - Building the "official binary"
 
     Make sure the following files have been converted from the
     unix style "^J" end of line, to the msdos style "^M^J":
-      license, defaults.nh.
+      license, defaults.nhb.
 
     Place all the files in a clean directory and test.
 

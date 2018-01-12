@@ -274,7 +274,7 @@ C:\E\brass\dat>echo wizard3.lev  1>>dlb.lst
         1 個のファイルをコピーしました。
 	if exist ..\doc\nethack.txt copy ..\doc\nethack.txt ..\binary\NetHack.txt
         1 個のファイルをコピーしました。
-	copy ..\sys\winnt\defaults.nh ..\binary\defaults.nh
+	copy ..\sys\winnt\defaults.nhb ..\binary\defaults.nhb
         1 個のファイルをコピーしました。
 	echo install done > o\install.tag
 Done.

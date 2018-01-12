@@ -1118,7 +1118,7 @@ boolean tinitial, tfrom_file;
 	}
 
 #if defined(MICRO) && !defined(AMIGA)
-	/* included for compatibility with old NetHack.cnf files */
+	/* included for compatibility with old NHBrass.cnf files */
 	if (match_optname(opts, "IBM_", 4, FALSE)) {
 		iflags.BIOS = !negated;
 		return;

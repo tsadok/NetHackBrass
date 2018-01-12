@@ -490,7 +490,7 @@ $(O)install.tag: 	$(DAT)\data	$(DAT)\rumors	 $(DAT)\dungeon \
 	if exist $(DOC)\recover.txt copy $(DOC)\recover.txt $(GAMEDIR)\recover.txt
 	@if exist $(SRC)\$(GAME).PDB copy $(SRC)\$(GAME).pdb $(GAMEDIR)\$(GAME).pdb
 	@if exist $(GAMEDIR)\$(GAME).PDB echo NOTE: You may want to remove $(GAMEDIR)\$(GAME).pdb to conserve space
-	-copy $(NTSYS)\defaults.nh   $(GAMEDIR)\defaults.nh
+	-copy $(NTSYS)\defaults.nhb   $(GAMEDIR)\defaults.nhb
 	copy $(U)recover.exe  $(GAMEDIR)
 	echo install done > $@
 

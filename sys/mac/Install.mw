@@ -39,7 +39,7 @@ for the Mac.  Copy the following files.  You may want to change News or NHDeflts
 
 		a. copy ':sys:mac:MacHelp' to ':lib:MacHelp'
 		b. copy ':sys:mac:News' to ':lib:News'
-		c. copy ':sys:mac:NHDeflts' to ':lib:NetHack Defaults'
+		c. copy ':sys:mac:NHDeflts' to ':lib:NetHack Brass Defaults'
 
 		d. copy	':dat:cmdhelp' to ':lib:cmdhelp'
 		e. copy	':dat:help' to ':lib:help'

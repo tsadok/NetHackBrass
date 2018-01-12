@@ -1,0 +1,20 @@
+
+Known Bugs:
+ * The AC display is wonky and unreliable.
+ * Attempting to #name segfaults.
+
+Desired Enhancements:
+ * menucolors
+ * MSGTYPE
+ * xlogfile
+ * livelog
+ * DUNGEONCOLOR/TRAPCOLOR
+ * MONSTERCOLOR
+ * AUTOCOMPLETE
+ * hilite_obj_piles
+ * hilite_hidden_stairs
+ * showbuc
+ * use_darkgray
+ * statuscolors or status_hilights
+ * auto-open doors
+ 

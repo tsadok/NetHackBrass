@@ -66,7 +66,7 @@ copy ..\dat\license ..\binary	\
 if exist tiles.bmp copy tiles.bmp ..\binary	\
 if exist ..\doc\Guidebook.txt copy ..\doc\Guidebook.txt ..\binary\Guidebook.txt	\
 if exist ..\doc\nethack.txt copy ..\doc\nethack.txt ..\binary\NetHack.txt	\
-copy ..\sys\winnt\defaults.nh ..\binary\defaults.nh
+copy ..\sys\winnt\defaults.nhb ..\binary\defaults.nhb
 # End Special Build Tool
 
 !ELSEIF  "$(CFG)" == "NetHackW - Win32 Debug"
@@ -106,7 +106,7 @@ copy ..\dat\license ..\binary	\
 if exist tiles.bmp copy tiles.bmp ..\binary	\
 if exist ..\doc\Guidebook.txt copy ..\doc\Guidebook.txt ..\binary\Guidebook.txt	\
 if exist ..\doc\nethack.txt copy ..\doc\nethack.txt ..\binary\NetHack.txt	\
-copy ..\sys\winnt\defaults.nh ..\binary\defaults.nh
+copy ..\sys\winnt\defaults.nhb ..\binary\defaults.nhb
 # End Special Build Tool
 
 !ENDIF 

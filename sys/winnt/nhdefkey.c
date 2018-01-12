@@ -8,11 +8,11 @@
  * Alternative keystroke handlers can be built using the
  * entry points in this file as a template.
  *
- * Use the defaults.nh "altkeyhandler" option to set a
+ * Use the defaults.nhb "altkeyhandler" option to set a
  * different dll name (without the ".DLL" extension) to
  * get different processing. Ensure that the dll referenced
- * in defaults.nh exists in the same directory as NetHack in
- * order for it to load successfully.
+ * in defaults.nhb exists in the same directory as NetHack
+ * Brass in order for it to load successfully.
  *
  */
 

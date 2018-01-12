@@ -406,7 +406,7 @@ I. Checking the installation:
     preferences, by following the comments.  As with all releases since
     3.2.1, HACKDIR defaults to the same directory as that where the
     NetHack.exe or NetHackW.exe executable resides.  You only need to
-    set HACKDIR in defaults.nh if, for some reason, you wish to override
+    set HACKDIR in defaults.nhb if, for some reason, you wish to override
     that (be careful).
   
 II. Executing the game

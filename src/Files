@@ -85,7 +85,7 @@ zap.c
 
 sys/amiga:
 (files for Amiga versions)
-Build.ami       Install.ami     Makefile.ami    Makefile.agc    NetHack.cnf
+Build.ami       Install.ami     Makefile.ami    Makefile.agc    NHBrass.cnf
 amidos.c        amidos.p        amifont.uu      amifont8.uu     amigst.c
 amii.hlp        amimenu.c       amirip.c        amisnd.c        amistack.c
 amitty.c        amiwind.c       amiwind.p       clipwin.c       colorwin.c
@@ -133,7 +133,7 @@ pcmain.c
 (files for MSDOS, OS/2, NT, and Atari versions)
 pcsys.c         pcunix.c
 (file for MSDOS, OS/2, and Atari versions)
-NetHack.cnf     pctty.c
+NHBrass.cnf     pctty.c
 (files for UNIX and Be versions)
 ioctl.c         unixtty.c
 (file for NT version)
@@ -175,7 +175,7 @@ vmsmisc.c       vmstty.c        vmsunix.c
 
 sys/winnt:
 (files for Windows 9x, NT and Windows2000 version)
-console.rc      defaults.nh     Install.nt      Makefile.bcc    Makefile.gcc
+console.rc      defaults.nhb    Install.nt      Makefile.bcc    Makefile.gcc
 Makefile.msc    mapimail.c      nethack.def     nhico.uu        nhsetup.bat
 ntsound.c       nttty.c         porthelp        win32api.h      winnt.c
 

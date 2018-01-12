@@ -514,7 +514,7 @@ endif
 	$(subst /,\,if exist $(DOC)/recover.txt copy $(DOC)/recover.txt $(GAMEDIR)/recover.txt)
 	$(subst /,\,@if exist $(SRC)/$(GAME).PDB copy $(SRC)/$(GAME).pdb $(GAMEDIR)/$(GAME).pdb)
 	$(subst /,\,@if exist $(GAMEDIR)/$(GAME).PDB echo NOTE: You may want to remove $(GAMEDIR)/$(GAME).pdb to conserve space)
-	$(subst /,\,-copy $(NTSYS)/defaults.nh   $(GAMEDIR)/defaults.nh)
+	$(subst /,\,-copy $(NTSYS)/defaults.nhb   $(GAMEDIR)/defaults.nhb)
 	$(subst /,\,copy $(U)recover.exe  $(GAMEDIR))
 	$(subst /,\,echo install done > $@)
 

@@ -215,27 +215,27 @@ EditColor( )
 		    fp = fopen( configfile, "r" );
 		    if( !fp )
 		    {
-			pline( "can't find NetHack.cnf" );
+			pline( "can't find NHBrass.cnf" );
 			break;
 		    }
 
 		    strcpy( oname, dirname( (char *)configfile ) );
 		    if( oname[ strlen(oname)-1 ] != ':' )
 		    {
-			sprintf( nname, "%s/New_NetHack.cnf", oname );
+			sprintf( nname, "%s/New_NHBrass.cnf", oname );
 			strcat( oname, "/" );
-			strcat( oname, "Old_NetHack.cnf" );
+			strcat( oname, "Old_NHBrass.cnf" );
 		    }
 		    else
 		    {
-			sprintf( nname, "%sNew_NetHack.cnf", oname );
-			strcat( oname, "Old_NetHack.cnf" );
+			sprintf( nname, "%sNew_NHBrass.cnf", oname );
+			strcat( oname, "Old_NHBrass.cnf" );
 		    }
 
 		    nfp = fopen( nname, "w" );
 		    if( !nfp )
 		    {
-			pline( "can't write to New_NetHack.cnf" );
+			pline( "can't write to New_NHBrass.cnf" );
 			fclose( fp );
 			break;
 		    }
@@ -932,7 +932,7 @@ amii_setpens( int count )
 		amii_numcolors*sizeof(amii_initmap[0]));
     }
 
-    /* If the pens are set in NetHack.cnf, we can get called before
+    /* If the pens are set in NHBrass.cnf, we can get called before
      * HackScreen has been opened.
      */
     if( HackScreen != NULL )

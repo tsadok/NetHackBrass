@@ -7,7 +7,7 @@
  * It can be built as a run-time loadable dll (nh340key.dll),
  * placed in the same directory as the nethack.exe executable,
  * and loaded by specifying OPTIONS=altkeyhandler:nh340key
- * in defaults.nh
+ * in defaults.nhb
  */
 
 static char where_to_get_source[] = "http://www.nethack.org/";

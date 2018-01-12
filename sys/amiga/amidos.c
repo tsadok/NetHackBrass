@@ -40,7 +40,7 @@ extern struct window_procs amii_procs;
 int Enable_Abort = 0;   /* for stdio package */
 #endif
 
-/* Initial path, so we can find NetHack.cnf */
+/* Initial path, so we can find NHBrass.cnf */
 char PATH[PATHLEN] = "NetHack:";
 
 static boolean record_exists(void);

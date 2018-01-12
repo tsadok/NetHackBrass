@@ -646,7 +646,7 @@ NetHackQtSettings::NetHackQtSettings(int w, int h) :
 	tileheight.setValue(30);
     }
 
-    // Tile/font sizes read from .nethackrc
+    // Tile/font sizes read from .nhbrassrc
     if (qt_tilewidth != NULL) {
 	tilewidth.setValue(atoi(qt_tilewidth));
 	free(qt_tilewidth);

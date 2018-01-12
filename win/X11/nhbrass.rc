@@ -1,7 +1,7 @@
 #
 # Nethack configuration file.
 #
-# Naming this file $(HOME)/.nethackrc (for UNIX) or setting the environment
+# Naming this file $(HOME)/.nhbrassrc (for UNIX) or setting the environment
 # variable NETHACKOPTIONS to point to its full path name elsewhere tells
 # NetHack to use X11 windowing and fonts (provided the executable was
 # compiled with that ability).

@@ -431,7 +431,7 @@ ifdef TERMLIB
 	@$(subst /,\,copy $(SSHR)/termcap $(GAMEDIR))
 endif
 	@$(subst /,\,if exist $(DAT)/*.tib copy $(DAT)/*.tib $(GAMEDIR))
-	@$(subst /,\,copy $(SSHR)/NetHack.cnf  $(GAMEDIR)/defaults.nh)
+	@$(subst /,\,copy $(SSHR)/NHBrass.cnf  $(GAMEDIR)/defaults.nhb)
 	@$(subst /,\,copy $(MSYS)/NHAccess.nh  $(GAMEDIR))
 	@$(subst /,\,copy $(DOC)/guidebo*.txt  $(GAMEDIR))
 	@$(subst /,\,if exist $(DOC)/nethack.txt copy $(DOC)/nethack.txt $(GAMEDIR))

@@ -3208,9 +3208,9 @@
           sense of the overall location of items on the screen.
 
                While it is not difficult for experienced users to edit  the
-          defaults.nh  file  to accomplish this, novices may find this task
+          defaults.nhb  file to accomplish this, novices may find this task
           somewhat daunting.  Included in  all  official  distributions  of
-          NetHack is a file called NHAccess.nh.  Replacing defaults.nh with
+          NetHack is a file called NHAccess.nh. Replacing defaults.nhb with
           this file will cause the game to run in a  manner  accessible  to
           the  blind.  After  you have gained some experience with the game
           and with editing files, you may want to alter settings to  better
@@ -3243,7 +3243,7 @@
 
           Character graphics
             Comment  out  all character graphics sets found near the bottom
-            of the defaults.nh file.  Most of these replace  NetHack's  de-
+            of the defaults.nhb file. Most of these replace  NetHack's  de-
             fault  representation of the dungeon using standard ASCII char-
             acters with fancier characters from  extended  character  sets,
             and these fancier characters can annoy screen-readers.
