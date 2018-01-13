@@ -2,6 +2,8 @@
 Known Bugs:
  * The AC display is wonky and unreliable.
  * Attempting to #name segfaults.
+ * The first time I attempted to put on a gold ring, I got
+   a message "cannot open objdesc file", OSLT.
 
 Desired Enhancements:
  * menucolors
@@ -17,4 +19,5 @@ Desired Enhancements:
  * use_darkgray
  * statuscolors or status_hilights
  * auto-open doors
+ * annotate/overview
  
