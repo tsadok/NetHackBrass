@@ -1541,6 +1541,11 @@ dosacrifice()
 		done(ESCAPED);
 	    } else { /* super big win */
 		adjalign(10);
+
+#ifdef RECORD_ACHIEVE
+        achieve.ascended = 1;
+#endif
+
 pline(E_J("An invisible choir sings, and you are bathed in radiance...",
 	"‚Ç‚±‚©‚ç‚©¹‚È‚é‰Ìº‚ª‚«‚±‚¦A‚ ‚È‚½‚ÍŒõ‚É‚Â‚Â‚Ü‚ê‚½cB"));
 		godvoice(altaralign, E_J("Congratulations, mortal!",

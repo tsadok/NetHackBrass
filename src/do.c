@@ -1461,6 +1461,9 @@ boolean at_stairs, falling, portal;
 #else
 		pline("そこら中から悲痛なうめきと苦しげなあえぎが聞こえてくる。");
 #endif /*JP*/
+#ifdef RECORD_ACHIEVE
+        achieve.enter_gehennom = 1;
+#endif
 	    } else pline(E_J("It is hot here.  You smell smoke...",
 			     "ここは熱い。煙の臭いがする…。"));
 	}

@@ -6,17 +6,16 @@ Known Bugs:
    a message "cannot open objdesc file", OSLT.
 
 Desired Enhancements:
- * menucolors
  * MSGTYPE
- * xlogfile
- * livelog
+ * change xlogfile SEP to 3.6-style htab, and make sure it has all desired fields,
+   + including a variant field that says Brass
+ * livelog, with 3.6-style htab for SEP
  * DUNGEONCOLOR/TRAPCOLOR
  * MONSTERCOLOR
  * AUTOCOMPLETE
  * hilite_obj_piles
  * hilite_hidden_stairs
  * showbuc
- * use_darkgray
  * statuscolors or status_hilights
  * auto-open doors
  * annotate/overview
