@@ -233,6 +233,10 @@ NEARDATA struct c_color_names c_color_names = {
 #endif /*JP*/
 };
 
+#ifdef MENU_COLOR
+struct menucoloring *menu_colorings = 0;
+#endif
+
 const char *c_obj_colors[] = {
 	E_J("black",		"çïÇ¢"		),	/* CLR_BLACK */
 	E_J("red",		"ê‘Ç¢"		),	/* CLR_RED */
