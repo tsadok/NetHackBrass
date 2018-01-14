@@ -247,8 +247,14 @@ struct toptenentry *tt;
 }
 
 #ifdef XLOGFILE
-#define SEP ":"
-#define SEPC ':'
+
+#ifdef LOGFILE_FIELD_SEPARATOR
+#define SEP LOGFILE_FIELD_SEPARATOR
+#else
+#define SEP "\t"
+#endif
+
+#define SEPC (SEP[0])
 
 /* copy a maximum of n-1 characters from src to dest, changing ':' and '\n'
  * to '_'; always null-terminate. */
@@ -282,7 +288,8 @@ struct toptenentry *tt;
 
   /* Log all of the data found in the regular logfile */
   (void)fprintf(rfile,
-                "version=%d.%d.%d"
+                "variant=Brass"
+                SEP "version=%d.%d.%d"
                 SEP "points=%ld"
                 SEP "deathdnum=%d"
                 SEP "deathlev=%d"
@@ -340,6 +347,13 @@ struct toptenentry *tt;
   (void)fprintf(rfile, SEP "align0=%s", 
           aligns[1 - u.ualignbase[A_ORIGINAL]].filecode);
 #endif
+
+  (void)fprintf(rfile, SEP "mode=%d",
+                (wizard ? "debug" : discover ? "explore" :
+                 "normal"));
+
+  (void)fprintf(rfile, SEP "xplevel=%d", u.ulevel);
+  (void)fprintf(rfile, SEP "exp=%d", u.uexp);
 
   (void)fprintf(rfile, "\n");
 

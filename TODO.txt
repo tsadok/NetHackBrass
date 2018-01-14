@@ -7,8 +7,6 @@ Known Bugs:
 
 Desired Enhancements:
  * MSGTYPE
- * change xlogfile SEP to 3.6-style htab, and make sure it has all desired fields,
-   + including a variant field that says Brass
  * livelog, with 3.6-style htab for SEP
  * DUNGEONCOLOR/TRAPCOLOR
  * MONSTERCOLOR
