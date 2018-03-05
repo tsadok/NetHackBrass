@@ -810,6 +810,9 @@ boolean ghostly;
 	mread(fd, (genericptr_t) levl, sizeof(levl));
 #endif	/* RLECOMP */
 
+#ifdef DUNGEON_OVERVIEW
+	mread(fd, (genericptr_t)lastseentyp, sizeof(lastseentyp));
+#endif
 	mread(fd, (genericptr_t)&omoves, sizeof(omoves));
 	mread(fd, (genericptr_t)&upstair, sizeof(stairway));
 	mread(fd, (genericptr_t)&dnstair, sizeof(stairway));

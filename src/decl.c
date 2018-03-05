@@ -151,6 +151,10 @@ NEARDATA struct flag flags = DUMMY;
 NEARDATA struct instance_flags iflags = DUMMY;
 NEARDATA struct you u = DUMMY;
 
+#ifdef DUNGEON_OVERVIEW
+schar lastseentyp[COLNO][ROWNO] = {DUMMY}; /* last seen/touched dungeon typ */
+#endif /* DUNGEON_OVERVIEW */
+
 NEARDATA struct obj *invent = (struct obj *)0,
 	*uwep = (struct obj *)0, *uarm = (struct obj *)0,
 	*uswapwep = (struct obj *)0,

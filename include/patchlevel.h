@@ -22,19 +22,16 @@
  * Incrementing EDITLEVEL can be used to force invalidation of old bones
  * and save files.
  */
-#define EDITLEVEL	0
-/*123456789012345678901234567890123456789012345678901234567890123456789012345678*/
+#define EDITLEVEL	1
+/*23456789012345678901234567890123456789012345678901234567890123456789012345678*/
 #define COPYRIGHT_BANNER_A \
-"NetHack brass, based on NetHack v3.4.3, Copyright 2002-2004 by youkan@cds.ne.jp"
-//"NetHack brass, Copyright 1985-2002"
+"NetHack brass by youkan@cds.ne.jp, based on NetHack 3.4.3; Copyright 2002-2018"
 
 #define COPYRIGHT_BANNER_B \
-"NetHack, Copyright 1985-2003"
-//"               By Stichting Mathematisch Centrum and M. Stephenson."
+"NetHack, Copyright 1985-2018"
 
 #define COPYRIGHT_BANNER_C \
 "         By Stichting Mathematisch Centrum and M. Stephenson."
-//"               See license for details."
 
 #define COPYRIGHT_BANNER_D \
 "         See license for details."

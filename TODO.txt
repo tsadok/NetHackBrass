@@ -31,4 +31,3 @@ Desired Enhancements:
    + 337e158009 (graves, bones, special levels)
      - bones tracking may depend on b88c51deae5e8e, not sure.
    + a7aaee910e (whitespace, bugfixes)
-   + 7c05c92eed99 (save/restore fix)
