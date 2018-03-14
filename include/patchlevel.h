@@ -6,10 +6,10 @@
 /*for makedefs -- picked from SlashEM */
 /*#define DEF_GAME_NAME   "SlashEM"*/
 /*#define DEF_GAME_NAME   "NetHack"*/
-#define DEF_GAME_NAME   "NetHack brass"
+#define DEF_GAME_NAME   "NetHack Brass"
 
-/* variant version (temporary) */
-#define VARIANTVER	"yymmdd"
+/* variant version */
+#define VARIANTVER	"20180401"
 
 /* NetHack 3.4.3 */
 #define VERSION_MAJOR	3

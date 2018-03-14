@@ -910,7 +910,7 @@ do_options()
 	build_savebones_compat_string();
 	Fprintf(ofp,
 #ifdef BETA
-		"\n    %s Ver.%s - based on NetHack %d.%d.%d [beta]\n",
+		"\n    %s Ver.%s [beta] - based on NetHack %d.%d.%d\n",
 #else
 		"\n    %s Ver.%s - based on NetHack %d.%d.%d\n",
 #endif
