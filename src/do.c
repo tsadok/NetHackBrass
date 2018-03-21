@@ -1260,8 +1260,14 @@ boolean at_stairs, falling, portal;
 	assign_level(&u.uz, newlevel);
 	assign_level(&u.utolev, newlevel);
 	u.utotype = 0;
-	if (dunlev_reached(&u.uz) < dunlev(&u.uz))
-		dunlev_reached(&u.uz) = dunlev(&u.uz);
+	if (!builds_up(&u.uz)) { /* usual case */
+        if (dunlev(&u.uz) > dunlev_reached(&u.uz))
+            dunlev_reached(&u.uz) = dunlev(&u.uz);
+    } else {
+        if (dunlev_reached(&u.uz) == 0
+            || dunlev(&u.uz) < dunlev_reached(&u.uz))
+            dunlev_reached(&u.uz) = dunlev(&u.uz);
+    }
 	reset_rndmonst(NON_PM);   /* u.uz change affects monster generation */
 
 	/* set default level change destination areas */

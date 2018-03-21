@@ -25,4 +25,3 @@ Desired Enhancements:
    + 9b751e7d1ca8 (Guidebook)
    + 3903381a2d1 (Astral temple ID, amnesia)
    + c64036c97bd (quest portal)
-   + 29f9a8a33d (level numbers &c) [DO BY HAND]
