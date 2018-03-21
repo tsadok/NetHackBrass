@@ -145,6 +145,7 @@ unsigned *ospecial;
 #endif
 	    cmap_color(offset);
     } else if ((offset = ((glyph - GLYPH_OBJ_OFF) >> 5)) >= 0) {	/* object */
+        if (On_stairs(x,y) && levl[x][y].seenv) special |= MG_STAIRS;
 	if (offset == BOULDER && iflags.bouldersym) ch = iflags.bouldersym;
 	else ch = oc_syms[(int)objects[offset].oc_class];
 #ifdef ROGUE_COLOR
@@ -156,10 +157,16 @@ unsigned *ospecial;
 	    }
 	} else
 #endif
-	if ( tmp = ((glyph - GLYPH_OBJ_OFF) & 0x0000001f) ) {
-	    mat_color(tmp);
-	} else
-	    obj_color(offset);
+        if ( tmp = ((glyph - GLYPH_OBJ_OFF) & 0x0000001f) ) {
+            mat_color(tmp);
+        } else {
+            obj_color(offset);
+            if (offset != BOULDER &&
+                level.objects[x][y] &&
+                level.objects[x][y]->nexthere) {
+                special |= MG_OBJPILE;
+            }
+        }
     } else if ((offset = ((glyph - GLYPH_STATUE_OFF) >> 5)) >= 0) {	/* statue */
 	ch = monsyms[(int)mons[offset].mlet];
 #ifdef ROGUE_COLOR
@@ -196,7 +203,8 @@ unsigned *ospecial;
 	    mon_color(offset);
 	    special |= MG_RIDING;
     } else if ((offset = (glyph - GLYPH_BODY_OFF)) >= 0) {	/* a corpse */
-	ch = oc_syms[(int)objects[CORPSE].oc_class];
+        if (On_stairs(x,y) && levl[x][y].seenv) special |= MG_STAIRS;
+        ch = oc_syms[(int)objects[CORPSE].oc_class];
 #ifdef ROGUE_COLOR
 	if (HAS_ROGUE_IBM_GRAPHICS && iflags.use_color)
 	    color = CLR_RED;
@@ -204,6 +212,11 @@ unsigned *ospecial;
 #endif
 	    mon_color(offset);
 	    special |= MG_CORPSE;
+        if (offset != BOULDER &&
+            level.objects[x][y] &&
+            level.objects[x][y]->nexthere) {
+            special |= MG_OBJPILE;
+        }
     } else if ((offset = (glyph - GLYPH_DETECT_OFF)) >= 0) {	/* mon detect */
 	ch = monsyms[(int)mons[offset].mlet];
 #ifdef ROGUE_COLOR

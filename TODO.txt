@@ -8,6 +8,18 @@ Known Bugs:
 Desired Enhancements:
  * MSGTYPE
  * livelog, with 3.6-style htab for SEP
+   + e04edf2af3e0c5e4db888b67ac24844adce07a12 Livelogging - set to disabled by default
+   + 15c32c4113a8af352266084235fbc1f018f0decc LLC_TURNS livelogging option in sysconf
+   + 04097a935615b952acbb376e76cbf56165c01f93 Changed livelog message for divine gifts
+   + f7a735b96acf28551fa278e97a4034286445fc86 Re-add livelog for soko achievenemt
+   + 3ee0dade8689e0cee2b2eb762955ede31a768daf Livelog Excalibur
+   + a613ab12199b34302dbd8f2e2fd437df79ff2fec Livelog overhaul part 1
+   + 9eaa225932e39eea574e7a0cc42dd6b39ec765f1 Livelog default flags tweak
+   + 5a15b2459e5531ff28ba0a4099cd5588a80ab2d4 Fixed demon-prince bribe logic accidentally broken with recent livelog change
+   + 0eb2b045ccc4f4421b5b983919b22a370e800912 Livelog overhaul Part 2
+   + 296fe1498ae35671cec16d1e851173538144c6f8 Fix artifact naming livelog message.
+   + fb4f57da97e6227a4a0541d2595776ee4a495e59 livelog - remove redundant artwish msg, and fix Excalibur msg.
+   + f4e7435f6c4fbc58b6824cd9a473162a0c4dc5f2 Fix livelog - killed "it" - to say actual monster.
  * DUNGEONCOLOR/TRAPCOLOR
  * MONSTERCOLOR
  * AUTOCOMPLETE

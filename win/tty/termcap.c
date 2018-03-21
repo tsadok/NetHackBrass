@@ -40,6 +40,8 @@ static void NDECL(kill_hilite);
 struct tc_lcl_data tc_lcl_data = { 0, 0, 0, 0,0, 0,0, FALSE };
 #endif /* OVLB */
 
+int allow_bgcolor = 0;
+
 STATIC_VAR char *HO, *CL, *CE, *UP, *XD, *BC, *SO, *SE, *TI, *TE;
 STATIC_VAR char *VS, *VE;
 STATIC_VAR char *ME;
@@ -130,6 +132,7 @@ int *wid, *hgt;
 	/* HI and HE will be updated in init_hilite if we're using color */
 		nh_HI = "\033p";
 		nh_HE = "\033q";
+        allow_bgcolor = 0;
 		*wid = CO;
 		*hgt = LI;
 		CL = "\033E";		/* last thing set */
@@ -161,6 +164,7 @@ int *wid, *hgt;
 		BC = "\033[D";
 #  endif
 		nh_HI = SO = "\033[1m";
+        allow_bgcolor = 1;
 		nh_US = "\033[4m";
 		MR = "\033[7m";
 		TI = nh_HE = ME = SE = nh_UE = "\033[0m";
@@ -316,6 +320,7 @@ int *wid, *hgt;
 	AS = Tgetstr("as");
 	AE = Tgetstr("ae");
 	nh_CD = Tgetstr("cd");
+    allow_bgcolor = 1;
 # ifdef TEXTCOLOR
 	MD = Tgetstr("md");
 # endif
@@ -1189,6 +1194,18 @@ int attr;
 	}
 }
 
+void
+term_start_bgcolor(color)
+int color;
+{
+    if (allow_bgcolor) {
+        char tmp[8];
+        Sprintf(tmp, "\033[%dm", ((color % 8) + 40));
+        xputs(tmp);
+    } else {
+        xputs(e_atr2str(ATR_INVERSE));
+    }
+}
 
 void
 term_end_attr(attr)
