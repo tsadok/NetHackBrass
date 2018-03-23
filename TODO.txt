@@ -20,11 +20,8 @@ Desired Enhancements:
    + 296fe1498ae35671cec16d1e851173538144c6f8 Fix artifact naming livelog message.
    + fb4f57da97e6227a4a0541d2595776ee4a495e59 livelog - remove redundant artwish msg, and fix Excalibur msg.
    + f4e7435f6c4fbc58b6824cd9a473162a0c4dc5f2 Fix livelog - killed "it" - to say actual monster.
- * DUNGEONCOLOR/TRAPCOLOR
  * MONSTERCOLOR
  * AUTOCOMPLETE
- * hilite_obj_piles
- * hilite_hidden_stairs
  * showbuc
  * statuscolors or status_hilights
  * auto-open doors
